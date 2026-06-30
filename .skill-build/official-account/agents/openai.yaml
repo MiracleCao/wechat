@@ -1,0 +1,4 @@
+interface:
+  display_name: "Official Account"
+  short_description: "Generate validated WeChat article content from paper materials"
+  default_prompt: "Use $official-account to analyze the paper materials and generate the validated WeChat article content files."
