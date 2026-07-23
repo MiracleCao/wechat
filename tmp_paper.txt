@@ -1,0 +1,651 @@
+Journal of Materials Science & Technology 282 (2027) 19–29 
+Contents lists available at ScienceDirect 
+Journal of Materials Science & Technology 
+journal homepage: www.elsevier.com/locate/jmst 
+Research Article 
+Oxygen-enriched layer enhancing fatigue performance of a near- α
+titanium alloy 
+Hao Sun a , 1 , Bohua Zhang b , 1 , Runchen Jia c , Chonghao Sun b , Qingjiang Wang a , Zibo Zhao b , d , ∗, 
+Yujing Liu b , ∗,W e i d o n g Zeng c , Jianrong Liu a , ∗
+a Shi-changxu Innovation Center for Advanced Materials, Institute of Metal Research, Chinese Academy of Sciences, Shenyang 110 016 , China 
+b Yuhua Institute of Advanced Materials, Baoji Xigong Titanium Alloy Products Co., Ltd, Baoji 721300, China 
+c State Key Laboratory of Solidiﬁcation Processing, School of Materials Science and Engineering, Northwestern Polytechnical University, Xi’an 710072, China 
+d Qinchuangyuan (Baoji) Institute of Industrial Innovation Co., Ltd, Baoji 7210 0 0, China 
+a r t i c l e i n f o 
+Article history: 
+Received 11 April 2026 
+Revised 17 June 2026 
+Accepted 17 June 2026 
+Available online 8 July 2026 
+Keywords: 
+Near- α titanium alloys 
+Thermal exposure 
+High-cycle fatigue 
+Interstitial oxygen atoms 
+a b s t r a c t 
+Although thermal exposure is a commonly used engineering process to enhance the properties of ti- 
+tanium alloys by diffusing oxygen onto the surface, the mechanism by which it affects fatigue perfor- 
+mance is not fully understood. This work systematically investigates the effect of thermal exposure on 
+the fatigue properties of a near- α titanium alloy through a combination of fatigue testing, in-situ nanoin- 
+dentation, micropillar compression experiments, and an integrated differential phase contrast (iDPC)- 
+scanning transmission electron microscope (STEM), particularly emphasizing the inhibitory role of sur- 
+face oxygen-enriched layer on fatigue crack propagation. Results show that after thermal exposure, the 
+oxygen-enriched layer formed on the alloy’s surface relieves surface stress concentration, thus enabling 
+the alloy to maintain high fatigue strength even after up to 107 fatigue cycles at 650 MPa. Interstitial 
+oxygen atoms within the oxygen-enriched layer induce lattice distortion and promote the formation of 
+oxygen-enriched stacking faults at fatigue crack tips. These oxygen-enriched stacking faults eﬃciently 
+absorb energy required for crack propagation, deﬂect the crack propagation path, extend the propaga- 
+tion period, and alleviate stress concentration; these effects collectively enhance the fatigue resistance 
+of the alloy. This work systematically elucidates the mechanism by which the oxygen-rich layer delays 
+crack propagation through microstructural regulation, providing a theoretical basis for designing high- 
+performance titanium alloys. 
+© 2026 Published by Elsevier Ltd on behalf of The editorial oﬃce of Journal of Materials Science & 
+Technology. This is an open access article under the CC BY-NC license 
+( http://creativecommons.org/licenses/by-nc/4.0/ ) 
+1. Introduction 
+Near- α titanium alloys possess extremely high speciﬁc strength, 
+good heat resistance, and excellent creep resistance [ 1–3 ], and they 
+are often used as critical hot-end components. Their performance 
+stability directly affects the overall reliability and safety of the 
+equipment [ 4–6 ]. However, near- α titanium alloys face increasingly 
+severe challenges in terms of operating temperature and load- 
+bearing capacity. Traditional titanium alloy strengthening methods 
+have reached their limit in improving thermal strength [ 7–9 ]; thus, 
+new approaches are needed to enhance fatigue performance under 
+extreme environments. 
+∗ Corresponding authors. 
+E-mail addresses: zbzhao@imr.ac.cn (Z. Zhao), yjliu@csust.edu.cn (Y. Liu), 
+jrliu@imr.ac.cn (J. Liu) . 
+1 These authors contributed equally to this work. 
+In recent years, introducing interstitial oxygen atoms has 
+emerged as an effective strengthening strategy, providing a new 
+technical approach to improving the fatigue properties of tita- 
+nium alloys. The strengthening mechanism of interstitial oxygen 
+in titanium alloys, as a typical interstitial solid solution, is char- 
+acterized by the dissolution of small-radius oxygen atoms in the 
+titanium lattice, preferentially dissolving in the hexagonal close- 
+packed (HCP) α-Ti phase [ 10 ]. The embedding of oxygen atoms 
+causes signiﬁcant lattice distortion, thereby creating a stress ﬁeld 
+around the oxygen atoms. When dislocations move on slip planes, 
+these stress ﬁelds must be overcome, requiring greater external 
+force to macroscopically improve the yield strength and creep re- 
+sistance of the alloy [ 11–13 ]. The strengthening effect, which is 
+closely related to the solid solubility of oxygen atoms, becomes 
+more signiﬁcant as the oxygen content increases within a cer- 
+tain range. However, while excessive oxygen can further enhance 
+strength, it promotes the formation of brittle oxides and crack 
+https://doi.org/10.1016/j.jmst.2026.06.063 
+1005-0302/© 2026 Published by Elsevier Ltd on behalf of The editorial oﬃce of Journal of Materials Science & Technology. This is an open access articleunder the CC 
+BY-NC license ( http://creativecommons.org/licenses/by-nc/4.0/ ) \nH. Sun, B. Zhang, R. Jia et al. Journal of Materials Science & Technology 282 (2027) 19–29
+Table 1 
+Chemical composition of Ti60 alloy (in wt.%). 
+Al Si Sn Zr Mo Nb Ta C Ti 
+5.8 0.4 4.0 4.0 0.4 0.7 1.5 0.06 Balance 
+initiation, thereby reducing plasticity, toughness, and fatigue re- 
+sistance. Therefore, precise control of oxygen content is crucial 
+[ 14 , 15 ]. Precise regulation of thermal exposure parameters can 
+achieve gradient control of oxygen penetration depth and concen- 
+tration, forming a high-strength, high-toughness surface layer that 
+can resist loads, inhibit early crack propagation, and lay the mi- 
+crostructural foundation for improved fatigue performance [ 16 ]. 
+The fatigue performance of near- α titanium alloys serves as 
+a critical indicator of their overall performance and is inﬂuenced 
+by a variety of complex factors, including microstructure, envi- 
+ronmental medium, temperature, and load spectrum. The fatigue 
+failure process of near- α titanium alloys includes crack initiation, 
+propagation, and ﬁnal fracture [ 17 , 18 ]. Under the combined ac- 
+tion of high temperature and cyclic loading, cracks usually initi- 
+ate at stress concentration areas [ 19 ]. Once formed, their propa- 
+gation behavior is mainly controlled by the microstructure mor- 
+phology of the material (such as α-lamella size, grain boundary 
+morphology, silicide precipitation), environmental oxygen erosion, 
+and temperature-induced creep-fatigue interaction [ 19 , 20 ]. From 
+a macroscopic perspective, crack propagation can be divided into 
+three stages: In the ﬁrst stage, crack slowly propagates along a spe- 
+ciﬁc crystal plane through shear mechanism; in the second stage, 
+crack propagation direction becomes perpendicular to the tensile 
+stress direction, and the propagation rate is signiﬁcantly acceler- 
+ated, usually conforming to the Paris law; in the third stage, the 
+crack rapidly and unstably propagates, leading to fracture. Among 
+these, the load frequency, stress ratio ( R -value), and holding time 
+(under creep-fatigue loading) are key inﬂuencing factors [ 21–23 ]. It 
+is worth noting that at high temperatures, oxygen in the environ- 
+ment penetrates along the crack tip, which not only leads to the 
+formation of brittle oxides on the metal surface but also acceler- 
+ates the local material deterioration. In addition, this phenomenon 
+becomes more severe at low frequencies and long stress holding 
+times. Therefore, strengthening through thermal exposure by in- 
+troducing interstitial oxygen is a double-edged sword, requiring 
+meticulous process design to both enhance strength and avoid the 
+formation of a continuous brittle oxide layer [ 24 , 25 ]. Ultimately, 
+this can synergistically improve the fatigue performance of near- α
+titanium alloys, meeting the performance requirements in extreme 
+applications. 
+As such, this work uses near- α titanium alloy Ti60 (Ti- 
+5.8Al-4.0Sn-4.0Zr-1.5Ta-0.4Mo-0.40Si-0.7Nb-0.06C) as an example 
+to deeply understand the mechanism by which the oxygen- 
+enriched layer (OEL) inﬂuences the selection of crack initiation 
+sites and propagation paths through thermal exposure experi- 
+ments, and to elucidate the correlation between interstitial oxy- 
+gen atoms and crack initiation. This work provides critical exper- 
+imental evidence for understanding the interstitial atom strength- 
+ening mechanism and offers important theoretical guidance for the 
+compositional design and thermal process optimization of next- 
+generation high-fatigue-resistance near- α titanium alloys. 
+2. Experimental and computational methods 
+2.1. Sample fabrication 
+Ti60 alloy bars used in this work were provided by the Insti- 
+tute of Metal Research, Chinese Academy of Sciences. Their chemi- 
+cal composition is listed in Table 1 . Ti60 alloy bars were machined 
+into smooth rod-shaped samples using wire electrical discharge 
+machining. The machined rod-shaped samples underwent a 100- 
+h thermal exposure experiment at 600 °C, followed by air cooling, 
+which was selected based on the service environment of Ti60 al- 
+loy. Hereafter, the unexposed samples were named as UE, while 
+the thermally exposed samples were named as TE. 
+2.2. Mechanical property testing 
+High-cycle fatigue (HCF) testing was conducted at room tem- 
+perature using an electrohydraulic servo fatigue testing system (K- 
+ESF104), with a stress ratio R = 0.1 and a frequency of 10 Hz. 
+The tests were terminated when the fatigue life reached 107 cy- 
+cles without fracture. The samples were 52 mm in length and 4 
+mm in gauge length with a cross-sectional area of 2.5 mm2 . To 
+ensure data reliability, the tests were conducted at ﬁve different 
+stress levels, with each stress level repeated 2–3 times. The failure 
+criterion was deﬁned as complete fracture of the specimen. 
+Microhardness testing of the thermally exposed samples was 
+performed using an in-situ nanoindenter (Oxford Femto tools, 4- 
+Pack FT S20 0 0 0 0 NI) equipped with a Berkovich indenter. The test 
+adopted a load-control mode (loading within 10 s, holding at a 
+peak load of 50 mN for 10 s, and unloading within 25 s). In-situ 
+nanoindentation experiments were conducted at ﬁve distances (ap- 
+proximately 5, 20, 40, 60, and 85 μm) from the surface of the ther- 
+mally exposed samples. At least three indentations were performed 
+at each distance to investigate the mechanism by which thermal 
+exposure enhances the mechanical properties of Ti60 alloy. 
+Micropillars at three positions (i.e., 5, 15, and 25 μm) were 
+extracted from the surface of the thermally exposed alloy using 
+a plasma-focused ion beam analyzer (PFIB, Thermo Scientiﬁc He- 
+lios 5 PFIB Cxe) and a dual-beam scanning electron microscope 
+(SEM) (FEI Helios 5 PFIB DualBeam) for compression testing. Uni- 
+axial compression tests were performed on the micropillars using 
+an in-situ nanoindenter (Oxford Femto tools, 4-Pack FT S20 0 0 0 0 
+NI) equipped with a ﬁt punch tip with a diameter of 20 μm. These 
+tests were conducted in displacement-control mode with a nomi- 
+nal strain rate of approximately 10−2 s−1 and the maximum strain 
+of 20%. 
+2.3. Microstructure characterization 
+The microstructure and fracture morphology of the samples 
+were analyzed using a SOPTOP CX40M optical microscope and a 
+SEM (Thermo Fisher, Apreo 2C) equipped with an energy dispersive 
+X-ray spectrometer (EDS, Bruker XFlash 7). Phase distribution and 
+orientation were obtained using electron back-scattered diffraction 
+(EBSD) with backscattered diffraction (Oxford NordlysNano) at an 
+accelerating voltage of 20 kV and a step size of 0.1 μm. EBSD 
+samples were polished by either electropolishing or in-situ rock- 
+ing polishing with PFIB. Thin sheets of deformed micropillars af- 
+ter compression testing and a needle-shaped atom probe tomog- 
+raphy (APT) sample were fabricated using PFIB. The oxygen distri- 
+bution characteristics of Ti60 alloy under thermally exposed con- 
+ditions were obtained using APT with a CAMECA LEAP 50 0 0 APT 
+scanner. Grain boundaries and surface cracks in the thermally ex- 
+posed sample were selectively processed into thin sheets using 
+PFIB for transmission electron microscope (TEM) analysis. A pro- 
+tective W layer was deposited on the micropillars prior to FIB pro- 
+cessing. Subsequently, the stripped sheets were thinned to approxi- 
+mately 100–150 nm using Xe+ beams. Their morphology and struc- 
+tural features were observed using a double aberration-corrected 
+TEM (FEI Spectra 200). High-angle annular dark-ﬁeld (HAADF) and 
+iDPC-STEM analyses were performed at an accelerating voltage of 
+200 kV with a probe convergence angle of 21.5 mrad, HAADF col- 
+20\nH. Sun, B. Zhang, R. Jia et al. Journal of Materials Science & Technology 282 (2027) 19–29
+Fig. 1. Microstructure of Ti60 alloy in unexposed and thermally exposed states: (a and b) UE; (c and d) TE. 
+lection angle of 65 to 200 mrad, and iDPC collection angle of 16 to 
+61 mrad at 300 kV. 
+3. Results 
+3.1. Microstructure 
+Fig. 1 shows the microstructure of the Ti60 alloy samples before 
+and after thermal exposure. Both untreated and thermally exposed 
+samples exhibit surface roughness Ra ≤ 0.4 μm, which has a negli- 
+gible effect on fatigue behavior. The UE sample exhibits a bimodal 
+microstructure ( Fig. 1 (a and b)), mainly composed of equiaxed pri- 
+mary α phase ( αP ) and lath-like secondary α phase ( αS ). After 
+thermal exposure at 600 °C for 100 h, an OEL with a thickness 
+of about 5 μm is formed on the TE sample surface. The internal 
+structure is similar to that of the UE sample, still displaying a bi- 
+modal microstructure ( Fig. 1 (c and d)). Thermal exposure did not 
+alter the microstructure of the Ti60 alloy, only forming an OEL on 
+the sample surface, while the bimodal microstructure inside the 
+alloy remains unchanged [ 26 ]. 
+3.2. Fatigue performance 
+In order to compare the effects of thermal exposure on the fa- 
+tigue performance of Ti60 alloy, HCF tests were conducted. Fig. 2 
+shows the total strain curves and cyclic loops of Ti60 samples at 
+650 MPa. The fatigue strain curves of both UE and TE samples can 
+be divided into three stages, corresponding to the accumulation 
+of plastic deformation caused by the ratcheting effect [ 27 ], plastic 
+deformation and fatigue crack propagation in the stage of fatigue 
+crack initiation or early damage, and a sharp increase in fatigue 
+crack propagation rate followed by fatigue failure. The crack initia- 
+tion point is determined by ﬁtting two oblique lines from the ris- 
+ing segments of the maximum and minimum strain curves ( Fig. 2 (a 
+and c)). Crack initiation or early damage can be identiﬁed by the 
+gradual decline of dynamic Young’s modulus with increasing cy- 
+cles [ 28 ]. According to the strain accumulation curve, the UE sam- 
+ple initiates cracks after 250 0 0 cycles and fractures after 280 0 0 cy- 
+cles, while the TE sample initiates cracks earlier (after 70 0 0 cycles) 
+and fractures later (after 47500 cycles) ( Fig. 2 (b and d)). Note that 
+only 2–3 specimens were tested per stress level in the HCF anal- 
+ysis, which may lead to data ﬂuctuations. The total fatigue strain 
+is dominated by two factors: cyclic ratcheting-induced strain and 
+fatigue damage-induced strain; these two strains are determined 
+by the change of the stress-strain curves with the number of fa- 
+tigue cycles [ 29 ], and both increase with the increase in the cycle 
+number. Fatigue damage begins with early damage, and the cyclic 
+ratcheting effect runs throughout the entire fatigue process. 
+Based on the stress-strain curves shown in Fig. 2 , the strains 
+of the cyclic ratcheting and fatigue damage were measured (as 
+shown in Fig. 3 (a)). The results reveal that the early damage cy- 
+cle of the UE sample is 3.5 times longer than that of the TE sam- 
+ple, whereas its subsequent fatigue damage stage is much shorter. 
+Under 650 MPa stress, fatigue damage contributes more than the 
+cyclic ratcheting effect to the total fatigue strain in both sample 
+groups, indicating that the crack initiation and propagation are the 
+main mechanisms of fatigue failure. The TE sample exhibits a gen- 
+tler maximum stress versus number of cycles to failure ( S - N ) curve 
+slope and superior fatigue strength at 107 cycles ( Fig. 3 (b)). The 
+fracture morphology of the UE sample exhibits a rough fracture 
+surface, consisting of dimples, cleavage steps, and irregular crack 
+propagation paths ( Fig. 3 (c and d)), which suggests that the fa- 
+tigue cracks tend to nucleate randomly at local stress concentra- 
+tions and rapidly propagate, leading to alloy failure and reduced 
+fatigue strength [ 30 , 31 ]. In contrast, the TE sample displays a ﬂat 
+and thin layered morphology in the near-edge OEL region, a broad 
+river-like layered morphology near the fracture center, and reduced 
+morphological ﬂuctuation and dimple density in the inner region 
+( Fig. 3 (e and f)). This layered fracture morphology highlights the 
+crucial role of thermal exposure in suppressing fatigue crack prop- 
+agation. The river-like structure in the fracture morphology also 
+suggests that crack propagation may be impeded by microstruc- 
+tural barriers (e.g., grain boundaries, phase boundaries, or OELs). 
+To comprehensively investigate the effects of thermal exposure on 
+21\nH. Sun, B. Zhang, R. Jia et al. Journal of Materials Science & Technology 282 (2027) 19–29
+Fig. 2. Total strain curves and cyclic curves of UE and TE samples at 650 MPa: (a) total strain curves and (b) cyclic loops of UE samples, (c) total strain curves and (d) cyclic 
+loops of TE samples. 
+the fatigue performance of Ti60 alloy, the next section will analyze 
+and discuss the mechanical properties of OEL and its hindering ef- 
+fect on crack propagation in thermally exposed Ti60 alloy. 
+4. Discussion 
+4.1. Inhibition of crack propagation by OEL 
+To further analyze the inhibitory effect of the OEL on crack 
+propagation, the distribution of cracks near the fracture surface of 
+the UE and TE samples was further investigated. Only a few ir- 
+regular microcracks can be observed near the fracture surface of 
+the UE sample, and no obvious long cracks are found ( Fig. 4 (a and 
+b)). This conﬁrms that cracks initiate at stress concentration points 
+and propagate rapidly, eventually causing fatigue fracture [ 32 ]. For 
+the TE sample, a large number of orderly arranged crack initia- 
+tion points are observed on the fracture surface. Moreover, it was 
+found that the crack propagation direction is deﬂected, forming 
+ﬁner branches ( Fig. 4 (c and d)). After fatigue fracture, the micro- 
+crack density in the TE samples is signiﬁcantly higher than that 
+in the UE samples, while the crack length is signiﬁcantly reduced, 
+and these cracks are deﬂected after passing through the OEL. Sta- 
+tistical results indicate that plenty of scattered non-fracture-related 
+microcracks emerge in TE samples, featuring an average spacing of 
+7.2 μm and an average length of 13.8 μm, while only one pene- 
+trating crack forms in UE samples. This indicates that the OEL can 
+absorb a large amount of energy during fatigue crack initiation and 
+further effectively inhibit crack propagation. 
+Further analysis was conducted on the differences in crack ini- 
+tiation between the TE and UE samples, and their surface charac- 
+teristics were analyzed using EBSD. To avoid artiﬁcial interference, 
+both surfaces were prepared by PFIB in-situ rocking polishing un- 
+der identical conditions ( Fig. 5 (a and d)). Inverse pole ﬁgures (IPFs) 
+reveal that near-surface grains in the UE sample present obvious 
+orientation scattering, while those in the TE sample remain con- 
+sistently oriented ( Fig. 5 (b and e)). Analysis of the local misorien- 
+tation distribution using Kernel Average Misorientation (KAM) im- 
+ages reveals that the near-surface region of the UE sample exhibits 
+higher KAM values both within the grains and at grain boundaries 
+( Fig. 5 (c)), corresponding to the stress concentrations near the sur- 
+face that trigger rapid crack nucleation and propagation. In con- 
+trast, high KAM values in the TE sample exist only in the range 
+of ∼3 μm from the surface ( Fig. 5 (f)), owing to the formation of 
+OEL and the elimination of surface stress concentration. In addi- 
+tion, the cracks in the TE sample split and branch after propagat- 
+ing ∼4 μm inward, accompanied by signiﬁcant orientation inho- 
+mogeneity around the crack tip ( Fig. 5 (g and h)). Due to the hin- 
+dering effect of the OEL, crack propagation is inhibited, and signif- 
+icant stress concentration is induced at the crack tip. This causes 
+crystal orientation deﬂection, and the crack branching process con- 
+sumes the propagation energy [ 33 ]. In order to understand the hin- 
+dering mechanism of the OEL on crack propagation, the surface 
+cracks of the TE sample were processed into thin sheets by PFIB for 
+TEM analysis. Bright-ﬁeld TEM image ( Fig. 5 (i)) and EDS analysis 
+( Fig. 5 (j)) reveal that the cracks stop propagating after multiple bi- 
+furcations, and oxygen enrichment and titanium depletion are ob- 
+served at the crack tip, further conﬁrming the inhibitory effect of 
+22\nH. Sun, B. Zhang, R. Jia et al. Journal of Materials Science & Technology 282 (2027) 19–29
+Fig. 3. HCF performance of UE and TE samples: (a) cyclic ratcheting and fatigue damage strains under 650 MPa; (b) S - N curves. Fatigue fractography of (c and d) UE and (e 
+and f) TE samples. 
+the OEL on crack propagation [ 34 ]. Furthermore, STEM and geo- 
+metrical phase analysis (GPA) results ( Fig. 5 (k and l)) reveal abun- 
+dant stacking faults and localized stress ﬁelds at the crack tip. Oxy- 
+gen doping in the OEL causes lattice distortion and promotes the 
+formation of oxygen-enriched stacking faults (OSFs) under stress 
+at the crack tip, thereby absorbing the effective energy for crack 
+propagation and forcing the crack to deﬂect. This phenomenon can 
+increase the length of the crack propagation path and disperse the 
+crack propagation stress, thereby effectively delaying crack propa- 
+gation [ 23 , 35 ]. 
+4.2. Formation mechanism of OEL 
+The introduction of OEL into Ti60 alloy can signiﬁcantly en- 
+hance its fatigue resistance. In order to elucidate the strengthen- 
+ing mechanism of the OEL, further investigations were conducted 
+on its formation mechanism and mechanical properties. Fig. 6 (a) 
+quantiﬁes the concentration (in at.%) of Ti and O in APT specimens 
+of Ti60 alloy within 0–20 μm depth from the surface. For the un- 
+exposed Ti60 alloy, the 3D reconstruction results of APT reveal that 
+a small amount of oxygen atoms (4–6 at.%) are relatively uniformly 
+dispersed in the α-Ti phase, while the Ti content stabilizes at 80–
+85 at.% owing to its dominant matrix role. After thermal exposure, 
+the oxygen content increases signiﬁcantly and mainly segregates 
+near grain boundaries, with a maximum content of 15 at.%, accom- 
+panied by a slight drop of Ti content within the 70–85 at.% range, 
+which is attributed to oxygen substitution at partial Ti lattice sites. 
+Such a segregation feature proves that grain boundaries serve as 
+the predominant diffusion pathways for oxygen during thermal ex- 
+posure [ 36 ]. Further TEM characterization on near-surface grain 
+boundaries of the TE sample reveals obvious lattice distortion near 
+α/ β interfaces ( Fig. 6 (b–d)). Meanwhile, inverse Fast Fourier Trans- 
+formation (FFT) analysis conﬁrms the presence of dislocations near 
+the interface ( Fig. 6 (e)), and the GPA graph clearly shows the local 
+stress ﬁeld at this location ( Fig. 6 (f)). These observations indicate 
+that oxygen atoms inﬁltrate the alloy along grain boundaries and 
+occupy interstitial positions, thereby altering the crystal structure 
+and generating local stress ﬁelds [ 37 ]. 
+The formation mechanism of the OEL is summarized by ana- 
+lyzing the fracture microstructure, crystal structure characteristics, 
+and simulation results at the grain boundaries of the TE sample. 
+During thermal exposure, oxygen atoms are ﬁrst adsorbed onto the 
+alloy surface. Owing to the lower diffusion activation energy at the 
+interfaces than inside the lattice, oxygen atoms diffuse much faster 
+23\nH. Sun, B. Zhang, R. Jia et al. Journal of Materials Science & Technology 282 (2027) 19–29
+Fig. 4. Fracture surface morphologies of UE and TE samples: (a and b) UE samples; (c and d) TE samples. 
+along the interface than through grains [ 38 , 39 ], allowing their in- 
+ﬁltration into the alloy interior. With increasing distance from the 
+surface, the migration ability of oxygen atoms along grain bound- 
+aries weakens, and the oxygen content inside the alloy gradually 
+decreases. Therefore, an OEL with a thickness of about 5 μm is 
+formed only on the alloy surface. 
+4.3. Mechanical properties of OEL 
+To verify the strengthening effect of the OEL, nanoindentation 
+and micropillar compression were employed to characterize the lo- 
+cal mechanical properties of the TE sample. In-situ nanoindenta- 
+tion experiments were conducted at ﬁve distances (approximately 
+5, 20, 40, 60, and 85 μm) from the surface. As shown in Fig. 7 (a), 
+the indentation size increases with increasing depth. The load- 
+displacement curves ( Fig. 7 (b)) indicate that both the maximum 
+and residual indentation depths rise gradually with distance from 
+the surface, and the values at 5 μm are considerably lower than 
+those at other locations. This suggests that oxygen doping signif- 
+icantly improves the hardness by inducing lattice distortion via 
+interstitial penetration into grain boundaries and the matrix. The 
+depths from 20 to 85 μm correspond to the matrix region be- 
+yond the OEL, where the mechanical properties are notably lower 
+without oxygen strengthening. The nanohardness ( Hv ) distribution 
+( Fig. 7 (c)) exhibits a decreasing trend with increasing depth, which 
+is directly attributed to the gradient oxygen content in the surface 
+layer. 
+To analyze the local mechanical properties of the OEL, micropil- 
+lar compressive tests were performed at distances of 5 μm (Mi- 
+cropillar 1), 15 μm (Micropillar 2), and 25 μm (Micropillar 3) from 
+the surface, selecting grains with < 11−20 > orientation favoring 
+< a > slip [ 40 ] via EBSD ( Fig. 8 (b)). As the engineering compres- 
+sive strain increases, a sequential evolution of deformation behav- 
+ior and its corresponding mechanical responses was observed in 
+Micropillar 1, reﬂecting the inﬂuence of oxygen doping on its de- 
+formation mechanism. The ﬁrst slip trace emerges at ε ≈ 0.04, cor- 
+responding to a yield strength of 1701 ± 8 MPa ( Fig. 8 (c and d1)). 
+The curve enters a plateau period at ε ≈ 0.08 ( Fig. 8 (c and d2)), in- 
+dicating that intragranular slip occurs along the pre-activated slip 
+plane [ 41 ]. At ε ≈ 0.1, the number of slip traces on one side of 
+the initial slip band increases, while the ﬁrst slip trace appears on 
+the other side, causing a slight upward ﬂuctuation in the stress- 
+strain curve ( Fig. 8 (c and d3)), indicating activation of multiple 
+slip planes with mutual shear [ 42 , 43 ]. With increasing strain, addi- 
+tional slip traces form gradually and distribute symmetrically at ε
+≈ 0.18 ( Fig. 8 (d4)), accompanied by a maximum strength of 2574 ±
+10 MPa. The homogeneous and coordinated deformation behavior 
+indicates that oxygen doping in the OEL suppresses localized shear 
+and promotes uniform deformation, thus signiﬁcantly enhancing 
+strength [ 44 ]. 
+Compared with Micropillar 1, Micropillar 2 exhibits different 
+deformation behavior and mechanical response ( Fig. 8 (e1–e4)). 
+Micropillar 2 yields at a lower strain ( ε ≈ 0.03) with a lower 
+yield strength of 1290 ± 5 MPa. With increasing strain, multi- 
+ple slip planes are activated, local deformation occurs along the 
+pre-activated slip plane [ 45 ], and the strength decreases signiﬁ- 
+cantly. The maximum strength reaches 2252 ± 7 MPa at ε ≈ 0.18, 
+lower than that of Micropillar 1 due to the reduced oxygen content 
+and weaker deformation constraint. Consequently, local deforma- 
+tion occurs on a few slip planes, resulting in an overall strength. 
+For Micropillar 3, which is farthest from the alloy surface, the 
+ﬁrst slip trace appears much earlier, only at ε ≈ 0.015, and yield 
+strength drops to 894 ± 9 MPa ( Fig. 8 (c and f1)). With increas- 
+ing strain, it exhibits severe localized deformation, rapid forma- 
+tion of dense slip steps, and large strength ﬂuctuations( Fig. 8 (f2–
+f4)). The maximum strength is only 1797 ± 12 MPa. The low oxy- 
+gen content provided the weakest resistance to dislocation motion, 
+leading to pronounced localized shear and low strength. Although 
+the strain rate used in micropillar compression is relatively high, it 
+may slightly increase the yield strength, but it does not change the 
+decreasing trend with distance from the surface. 
+To investigate the role of interstitial oxygen atoms during defor- 
+mation, deformed Micropillar 1 was fabricated into thin sheets us- 
+ing PFIB for TEM analysis. Bright-ﬁeld TEM image ( Fig. 9 (a)) reveals 
+24\nH. Sun, B. Zhang, R. Jia et al. Journal of Materials Science & Technology 282 (2027) 19–29
+Fig. 5. Cracks and surface characteristics of UE and TE samples. (a–c) UE sample: (a) PFIB in-situ polished surface, (b) IPF image, and (c) KAM image; (d–f) TE sample: (d) 
+PFIB in-situ polished surface, (e) IPF image, and (f) KAM image; (g and h) EBSD images of crack propagation in TE sample; (i–l) crack tips in TE sample: (i) Bright-ﬁeld TEM 
+image, (j) EDS analysis, (k) STEM image, and (l) GPA of the corresponding location in (k). 
+a large number of uniformly distributed symmetrical slip lines. 
+The β phase undergoes shear deformation but not severely, with 
+dislocations accumulating at the α/ β phase interface ( Fig. 9 (b)), 
+and symmetrical slip lines appear on the side of the interface 
+( Fig. 9 (d)), thereby restricting the movement of numerous disloca- 
+tions. EDS analysis reveals that Mo, Nb, and Si are enriched in the 
+β phase ( Fig. 9 (c)), while Ti and Al are depleted, but the distribu- 
+tion of interstitial light oxygen atoms could not be distinguished. 
+To explain the strengthening mechanisms of interstitial oxygen 
+atoms, the distribution of oxygen atoms was investigated using 
+iDPC-STEM. The results reveal strong segregation of interstitial oxy- 
+gen atoms along a [0 0 01] α direction in the HCP α phase near the 
+α/ β interface [ 46 , 47 ]. These interstitial oxygen atoms cause lattice 
+distortion ( Fig. 9 (e and f)), which hinders dislocation motion and 
+effectively pins dislocations, thus enhancing the mechanical prop- 
+erties of Ti60 alloy [ 4 8 , 4 9 ]. 
+4.4. Fatigue fracture mechanisms of thermally exposed Ti60 alloy 
+Based on the above results, introducing OEL into Ti60 alloy can 
+effectively suppress crack propagation, alter fatigue fracture be- 
+havior, and signiﬁcantly enhance its fatigue resistance. The fatigue 
+fracture mechanisms of unexposed and thermally exposed Ti60 al- 
+loy are summarized as follows. 
+Unexposed Ti60 alloy is prone to microcracks on the sample 
+surface, accompanied by local plastic deformation. These micro- 
+cracks propagate along relatively stable grain boundaries or slip 
+systems. In the continuous loading cycle, some microcracks fur- 
+ther propagate and coalesce, gradually evolving into macrocracks 
+and causing early damage [ 50 ]. At the same time, the effective 
+load-bearing area of the alloy gradually decreases. Eventually, the 
+remaining part cannot withstand the external load, leading to an 
+abrupt fracture [ 51 ]. Therefore, the overall fracture surface displays 
+signiﬁcant ﬂuctuations ( Fig. 10 ). For the thermally exposed Ti60 al- 
+loy, the OEL formed during thermal exposure would induce multi- 
+ple microcracks on the sample surface. At the same time, the OEL 
+absorbs a large amount of energy in the fatigue initiation stage, ef- 
+fectively suppressing crack propagation. Oxygen atoms in the OEL 
+occupy interstitial positions in the crystal lattice, causing lattice 
+distortion and generating a local stress ﬁeld. This stress ﬁeld inter- 
+acts with the stress at the crack tip, thus halting the propagation of 
+most microcracks within the OEL. With continued loading cycles, 
+the ratcheting effect causes stress at some microcrack tips to ex- 
+ceed the stress ﬁeld generated by the lattice distortion of the OEL 
+caused by interstitial oxygen atoms. This process leads to lattice 
+25\nH. Sun, B. Zhang, R. Jia et al. Journal of Materials Science & Technology 282 (2027) 19–29
+Fig. 6. Oxygen distribution characteristics of UE and TE samples: (a) 3D APT reconstructions of Ti and O contents near the surface, (b) bright-ﬁeld STEM image for the areas 
+at a grain boundary in TE sample, (c) HAADF-TEM image, (d1 and d2) FFT images, (e) inverse FFT image, and (f) GPA image at α/ β interface. 
+Fig. 7. In-situ nanoindentation results of TE sample: (a) indentation morphology at different depths; (b) load-depth curves; (c) hardness-distance relationship. 
+26\nH. Sun, B. Zhang, R. Jia et al. Journal of Materials Science & Technology 282 (2027) 19–29
+Fig. 8. Micropillar compressive test of TE sample: (a) morphology, (b) EBSD orientation map showing near-surface micropillar positions; (c) engineering stress-strain curves. 
+Typical surface morphology of (d1–d4) Micropillar 1, (e1–e4) Micropillar 2, and (f1–f4) Micropillar 3 during compression. 
+Fig. 9. TEM characterization of the deformed Micropillar 1: (a) bright-ﬁeld TEM image; (b) HAADF image and selected area electron diffraction (SAED) pattern, (c) EDS image 
+in the box marked in (a); HAADF images of the boxes (d and e) marked in (b); (f) iDPC-STEM image along the [0 0 01] α direction and schematic diagram of interstitial oxygen 
+occupation. 
+27\nH. Sun, B. Zhang, R. Jia et al. Journal of Materials Science & Technology 282 (2027) 19–29
+Fig. 10. Schematic fatigue fracture diagrams of Ti60 alloy in unexposed and thermally exposed conditions: (a) UE sample; (b) TE sample. 
+collapse, which forms OSFs and forces crack deﬂection or bifurca- 
+tion, thereby consuming the energy required for crack propagation, 
+dispersing the stress at the crack tips, and effectively delaying mi- 
+crocrack propagation. After multiple deﬂections and bifurcations, 
+a few microcracks gradually propagate and penetrate the OEL, al- 
+though their propagation rate is signiﬁcantly reduced. These mi- 
+crocracks then coalesce to form macrocracks, causing early dam- 
+age, and further propagate until the alloy fractures. At the inter- 
+face between the OEL and the alloy interior, the fracture surface 
+exhibits signiﬁcant ﬂuctuations, while other regions with multiple 
+unpropagated microcracks are relatively ﬂat. This conﬁrms that the 
+OEL effectively hinders crack propagation and enhances the fatigue 
+performance of Ti60 alloy. 
+5. Conclusions 
+This study investigates the mechanism by which thermal expo- 
+sure enhances the fatigue properties of Ti60 alloy, focusing on the 
+inhibitory role of the OEL on crack propagation. Thermal exposure 
+formed an OEL on the sample surface while retaining the bimodal 
+microstructure, which effectively relieved surface stress concentra- 
+tion and enabled the alloy to exhibit excellent fatigue strength at 
+650 MPa up to 107 cycles. Multiscale characterization conﬁrmed 
+that the OEL promoted the formation of massive dispersed micro- 
+cracks instead of a single dominant crack, signiﬁcantly enhancing 
+energy dissipation and suppressing unstable crack growth. Atomic- 
+scale characterizations demonstrated that oxygen atoms mainly 
+existed in interstitial form and segregated along grain bound- 
+aries as rapid diffusion paths, and the OSFs formed at crack tips 
+could absorb energy, deﬂect crack propagation paths, and alleviate 
+local stress concentration. In-situ nanoindentation and micropil- 
+lar compression experiments also conﬁrm the excellent mechani- 
+cal properties of the OEL. These ﬁndings provide a feasible engi- 
+neering strategy for enhancing the fatigue performance of high- 
+temperature titanium alloys in hot-end structural applications. 
+CRediT authorship contribution statement 
+Hao Sun: Writing – original draft, Methodology, Investiga- 
+tion. Bohua Zhang: Writing – original draft, Methodology, In- 
+vestigation. Runchen Jia: Validation, Methodology, Investigation. 
+Chonghao Sun: Writing – original draft, Methodology, Investi- 
+gation. Qingjiang Wang: Writing –r e v i e w & editing, Supervi- 
+sion, Funding acquisition, Conceptualization. Zibo Zhao: Writing 
+–r e v i e w & editing, Supervision, Methodology, Funding acquisi- 
+tion. Yujing Liu: Writing –r e v i e w & editing, Supervision, Investi- 
+gation, Conceptualization. Weidong Zeng: Validation, Supervision, 
+Methodology, Investigation. Jianrong Liu: Writing –r e v i e w & edit- 
+ing, Supervision, Investigation, Funding acquisition. 
+Declaration of competing interest 
+The authors declare that they have no known competing ﬁnan- 
+cial interests or personal relationships that could have appeared to 
+inﬂuence the work reported in this paper. 
+Acknowledgements 
+This work was ﬁnancially supported by the National Science 
+and Technology Major Project (No. J2019-VI-0 0 05-0119 ) and the 
+ECU DVC strategic research support fund (No. 23965 ). 
+Supplementary materials 
+Supplementary material associated with this article can be 
+found, in the online version, at doi:10.1016/j.jmst.2026.0 6.0 63 . 
+References 
+[1] G. Sahragard-Monfared, M.W. Zhang, T.M. Smith, A.M. Minor, J.C. Gibeling, Acta 
+Mater. 255 (2023) 119032 . 
+[2] C. Liu, X. Xu, T. Sun, R. Thomas, J.Q. da Fonseca, M. Preuss, Acta Mater. 253 
+(2023) 118957 . 
+[3] Y.M. Mao, Q.Y. Zhao, J.H. Geng, R.Q. Zhang, P. Guo, N. Wang, Y.N. Chen, 
+Y.Q. Zhao, Acta Mater. 298 (2025) 121430 . 
+[4] X. Zhong, T. Deng, W. Xiao, X. Liu, Z. Liu, Y. Yang, O.A. Ojo, J. Mater. Sci. Tech- 
+nol. 183 (2024) 1–11 . 
+[5] M. Xie, S. Huang, Z. Wang, U. Ramamurty, Acta Mater. 277 (2024) 120211 . 
+[6] P. Agrawal, S. Karthikeyan, S.K. Makineni, B. Gault, D. Banerjee, Acta Mater. 222 
+(2022) 117436 . 
+[7] B. Li, X. Li, J. Yin, Y. Ren, Y. Wang, G. Yang, J. Manuf. Process. 136 (2025) 
+162–176 . 
+[8] T.T. Yao, Y.X. Jiang, X.X. Yan, C.L. Chen, Y.F. Li, H.Q. Ye, X.L. Ma, Acta Mater. 277 
+(2024) 120226 . 
+[9] H. Zhang, C. Zhang, X. Liang, R. Guo, H. Feng, Z. Hou, J. Han, M. Cheng, 
+S. Zhang, T. Wang, P. Cao, Scr. Mater. 256 (2025) 116412 . 
+[10] Q. Qu, Y. Huang, Z. Chen, G. Haberfehlner, M.N. Popov, Y. Zhang, K. Song, 
+G. Kothleitner, Z. Zhang, Acta Mater. 299 (2025) 121442 . 
+[11] Y. Mao, Q. Zhao, J. Geng, R. Zhang, P. Guo, N. Wang, Y. Chen, Y. Zhao, Acta 
+Mater. 298 (2025) 121430 . 
+[12] X.Q. Wang, Y.S. Zhang, W.Z. Han, Acta Mater. 227 (2022) 117686 . 
+[13] C. Zhang, X. Li, S. Li, J. Zhang, J. Li, G. Liu, J. Sun, Mater. Today 75 (2024) 85–96 . 
+[14] N.S.H. Gunda, A. Van der Ven, Acta Mater. 191 (2020) 149–157 . 
+[15] S. Joseph, P. Kontis, Y. Chang, Y. Shi, D. Raabe, B. Gault, D. Dye, Acta Mater. 227 
+(2022) 117687 . 
+[16] D.P. Satko, J.B. Shaffer, J.S. Tiley, S.L. Semiatin, A.L. Pilchak, S.R. Kalidindi, 
+Y. Kosaka, M.G. Glavicic, A .A . Salem, Acta Mater. 107 (2016) 377–389 . 
+[17] H. Gaddam, T.A. Hodes, K.S. Stopka, M.D. Sangid, Int. J. Fatigue 203 (2026) 
+109299 . 
+[18] C. Lavogiez, C. Dureau, Y. Nadot, P. Villechaise, S. Hémery, Acta Mater. 244 
+(2023) 118560 . 
+28\nH. Sun, B. Zhang, R. Jia et al. Journal of Materials Science & Technology 282 (2027) 19–29
+[19] T. Ingale, M. Sen, K.K. Verma, A. Godha, S.T. Reddy, S. Balachandran, S. Suwas, 
+V. Venkatesh, D. Banerjee, Acta Mater. 281 (2024) 120414 . 
+[20] J. Shen, V. Venkatesh, R. Noraas, S. Ghosh, Acta Mater. 252 (2023) 118929 . 
+[21] M.J. Paul, Q. Liu, X. Li, J.J. Kruzic, U. Ramamurty, B. Gludovatz, Acta Mater. 293 
+(2025) 121070 . 
+[22] S. Suzuki, M. Sakaguchi, M. Domen, T. Karato, K. Suzuki, Acta Mater. 240 (2022) 
+118288 . 
+[23] F. Briffod, A. Bleuset, T. Shiraiwa, M. Enoki, Acta Mater. 177 (2019) 56–67 . 
+[24] M. Mokhles, G. Liu, B.H. Shishavan, T.R. Dandekar, A. Barouni, S. Birosca, Acta 
+Mater. 291 (2025) 120998 . 
+[25] X.Q. Wang, W.Z. Han, Acta Mater. 246 (2023) 118674 . 
+[26] B. Wang, W. Zeng, Z. Zhao, R. Jia, J. Xu, Q. Wang, Mater. Sci. Eng. A 912 (2024) 
+146989 . 
+[27] A. Ghosh, V.K. Sahu, N.P. Gurao, Mater. Sci. Eng. A 833 (2022) 142345 . 
+[28] Y.J. Liu, H.L. Wang, S.J. Li, S.G. Wang, W.J. Wang, W.T. Hou, Y.L. Hao, R. Yang, 
+L.C. Zhang, Acta Mater. 126 (2017) 58–66 . 
+[29] S.M. Bowman, X.E. Guo, D.W. Cheng, T.M. Keaveny, L.J. Gibson, W.C. Hayes, 
+T.A. McMahon, J. Biomech. Eng. Trans. ASME 120 (1998) 647–654 . 
+[30] C.P. Przybyla, W.D. Musinski, G.M. Castelluccio, D.L. McDowell, Int. J. Fatigue 57 
+(2013) 9–27 . 
+[31] K. Sadananda, A.K. Vasudevan, Int. J. Fatigue 27 (2005) 1255–1266 . 
+[32] X. Liu, C. Sun, Y. Hong, Int. J. Fatigue 92 (2016) 434–441 . 
+[33] A. Cheng, N.-Z. Chen, Y. Pu, Int. J. Fatigue 128 (2019) 105198 . 
+[34] L.Q. Xie, P. Zhang, X.H. He, C.Y. Zhou, Int. J. Fatigue 145 (2021) 106129 . 
+[35] S. Birosca, J.Y. Buﬃere, M. Karadge, M. Preuss, Acta Mater. 59 (2011) 
+1510–1522 . 
+[36] P.A.J. Bagot, A. Radecka, A.P. Magyar, Y. Gong, D.C. Bell, G.D.W. Smith, 
+M.P. Moody, D. Dye, D. Rugg, Scr. Mater. 148 (2018) 24–28 . 
+[37] W. Ding, Q. Tao, C. Liu, G. Chen, S. Yoo, W. Cai, P. Cao, B. Jia, H. Wu, D. Zhang, 
+H. Zhu, L. Zhang, X. Qu, J. Zou, M. Qin, Nat. Mater. 24 (2025) 506–512 . 
+[38] Y. Chong, R. Gholizadeh, T. Tsuru, R. Zhang, K. Inoue, W. Gao, A. Godfrey, 
+M. Mitsuhara, J.W. Morris, A.M. Minor, N. Tsuji, Nat. Commun. 14 (2023) 404 . 
+[39] T.S. Prithiv, Z. Kloenne, D. Li, R. Shi, Y. Zheng, H.L. Fraser, B. Gault, S. Antonov, 
+Scr. Mater. 207 (2022) 114320 . 
+[40] B.B. Yang, M.D. Yu, Y.W. Chen, M.A. Monclus, F.L. Wang, J.Y. Wang, J. Llorca, 
+Acta Mater. 301 (2025) 121605 . 
+[41] Q. Rizzardi, P.M. Derlet, R. Maaß, Phys. Rev. Mater 5 (2021) 043604 . 
+[42] V. Vojtech, I. Basu, J.M. Wheeler, R.E. Schäublin, J.F. Löﬄer, Acta Mater. 261 
+(2023) 119355 . 
+[43] H. Wang, J. Zhang, Y. Liu, Z. Zhao, Z. Liu, Z. Peng, Y. Wu, D. Sun, X. Wang, 
+X. Zhang, J. Mater. Sci. Technol. 264 (2026) 151–162 . 
+[44] Y. Mao, Q. Zhao, R. Zhang, P. Guo, Y. Chen, Y. Zhao, Nat. Commun. 16 (2025) 
+7168 . 
+[45] H. Li, D.E. Mason, T.R. Bieler, C.J. Boehlert, M.A. Crimp, Acta Mater. 61 (2013) 
+7555–7567 . 
+[46] T. Song, Z. Chen, X. Cui, S. Lu, H. Chen, H. Wang, T. Dong, B. Qin, K.C. Chan, 
+M. Brandt, X. Liao, S.P. Ringer, M. Qian, Nature 618 (2023) 63–68 . 
+[47] Q. Yu, L. Qi, T. Tsuru, R. Traylor, D. Rugg, J.W. Morris, M. Asta, D.C. Chrzan, 
+A.M. Minor, Science 347 (2015) 635–639 . 
+[48] L. Gao, H.Y. Song, Y. Sun, Y.G. Zhang, Comput. Mater. Sci. 95 (2014) 4 84–4 90 . 
+[49] P.D. Niu, R.D. Li, K.F. Gan, Z.Q. Fan, T.C. Yuan, C.J. Han, Adv. Mater. 36 (2024) 
+2310160 . 
+[50] M.D. Sangid, Int. J. Fatigue 197 (2025) 108928 . 
+[51] Q. Pan, L. Lu, Nat. Mater. 25 (2026) 357–365 . 
+29

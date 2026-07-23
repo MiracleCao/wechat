@@ -1,4 +1,4 @@
-"""按指定六图模板填充微信公众号文章，最多保存为草稿。"""
+"""按图片数量选择指定模板填充微信公众号文章，最多保存为草稿。"""
 
 from __future__ import annotations
 
@@ -26,7 +26,8 @@ from wechat_selectors import (
     RECENT_ARTICLES,
     SAVE_DRAFT,
     SUMMARY,
-    TEMPLATE_CARD,
+    OTHER_IMAGE_TEMPLATE_CARD,
+    SIX_IMAGE_TEMPLATE_CARD,
     TEMPLATE_SELECTED,
     TEMPLATE_TAB,
     TITLE,
@@ -38,7 +39,8 @@ MATERIALS = ROOT / "materials"
 CHROME_PROFILE = ROOT / "tmp" / "wechat_chrome_profile"
 SCREENSHOT = OUTPUTS / "debug_screenshot.png"
 DEFAULT_URL = "https://mp.weixin.qq.com"
-TEMPLATE_NAME = "Template_图片刚好六张用这个"
+SIX_IMAGE_TEMPLATE_NAME = "Template_图片刚好六张用这个"
+OTHER_IMAGE_TEMPLATE_NAME = "Template_图片不为六张用这个"
 MIN_RECENT_LINKS = 4
 SUMMARY_LIMIT = 120
 
@@ -48,7 +50,7 @@ LOG = logging.getLogger("wechat-template-filler")
 ALLOWED_CLICK_ACTIONS = {
     "进入文章编辑器",
     "打开模板面板",
-    "选择六图模板",
+    "选择文章模板",
     "添加模板到正文",
     "打开超链接面板",
     "选择往期文章",
@@ -112,8 +114,9 @@ def load_article() -> dict:
             f"摘要共 {len(data['summary'])} 字符，超过简介框 "
             f"{SUMMARY_LIMIT} 字符限制"
         )
-    if len(data["figures"]) != 6:
-        raise ValueError("metadata.json 中 figures 必须恰好包含六项")
+    figure_count = len(data["figures"])
+    if not 1 <= figure_count <= 6:
+        raise ValueError("metadata.json 中 figures 必须包含一至六项")
     numbered_images: list[tuple[int, Path]] = []
     for image in MATERIALS.rglob("*"):
         if not image.is_file() or image.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp"}:
@@ -129,10 +132,10 @@ def load_article() -> dict:
             numbered_images.append((int(match.group(1)), image))
     numbered_images.sort(key=lambda item: (item[0], item[1].name.lower()))
     data["selected_figure_numbers"] = [number for number, _ in numbered_images]
-    if len(data["selected_figure_numbers"]) != 6:
+    if len(data["selected_figure_numbers"]) != figure_count:
         raise ValueError(
-            "无法确定六个入选图号：请确认 materials/ 中恰好有六张图片，"
-            "且文件名包含 gr1、fig1 或 图1 等原始图号"
+            f"无法确定全部 {figure_count} 个入选图号：请确认 materials/ 中有一至六张图片，"
+            "图片数量与 figures 一致，且文件名包含 gr1、fig1 或 图1 等原始图号"
         )
     LOG.info(
         "已从 materials/ 识别入选图号：%s",
@@ -268,7 +271,7 @@ def fill_six_figure_cards(body: Locator, figures: list[dict]) -> None:
             const candidates = Array.from(root.querySelectorAll('p,div,span'))
                 .filter(el => el.textContent.trim() === '图' &&
                     el.getBoundingClientRect().top >= heading.getBoundingClientRect().top);
-            if (candidates.length < 6) {
+            if (candidates.length < figures.length) {
                 return {ok:false, reason:`只找到 ${candidates.length} 个“图”占位符`};
             }
             figures.forEach((item, index) => {
@@ -286,7 +289,7 @@ def fill_six_figure_cards(body: Locator, figures: list[dict]) -> None:
     )
     if not result["ok"]:
         raise RuntimeError(result["reason"])
-    LOG.info("六张图解读已按 1—6 顺序填充")
+    LOG.info("%d 张图解读已按图片顺序填充", len(figures))
 
 
 def place_caret_after_recommendation(body: Locator) -> None:
@@ -421,7 +424,7 @@ def batch_fill_template(page: Page, data: dict) -> None:
             if (markers.length < 2) {
                 return {ok:false, reason:`只找到 ${markers.length} 个“本文”占位符`};
             }
-            if (figureMarkers.length < 6) {
+            if (figureMarkers.length < data.figures.length) {
                 return {ok:false, reason:`只找到 ${figureMarkers.length} 个“图”占位符`};
             }
 
@@ -521,7 +524,7 @@ def batch_fill_template(page: Page, data: dict) -> None:
                 return {ok:false, reason:'无法替换文章导读中的“本文”占位符'};
             }
 
-            const six = figureMarkers.slice(-6);
+            const figureSlots = figureMarkers.slice(-data.figures.length);
             data.figures.forEach((item, index) => {
                 // 模板已含“图”，追加论文原始图号，不按入选顺序重新编号。
                 const originalNumber = String(item.label || '')
@@ -531,11 +534,11 @@ def batch_fill_template(page: Page, data: dict) -> None:
                     throw new Error(`第 ${index + 1} 幅图缺少论文原始图号`);
                 }
                 // 将纯文本追加到“图”字所在的同一带样式节点，继承原格式。
-                const styledNodes = Array.from(six[index].querySelectorAll('*'))
+                const styledNodes = Array.from(figureSlots[index].querySelectorAll('*'))
                     .filter(node => (node.textContent || '').trim() === '图');
                 const target = styledNodes.length
                     ? styledNodes[styledNodes.length - 1]
-                    : six[index];
+                    : figureSlots[index];
                 // description 可能来自旧数据，先移除其中重复的“图N：”前缀。
                 const description = String(item.description || '')
                     .replace(/^图(?:片)?\\s*\\d+\\s*[：:]\\s*/i, '')
@@ -614,18 +617,29 @@ def batch_fill_template(page: Page, data: dict) -> None:
     title.fill(data["title"])
     summary = first_visible(page, SUMMARY, 5_000)
     summary.fill(data["summary"])
-    LOG.info("标题、导读、六段图解、文章总结、摘要及正文末尾 DOI 已批量填充")
+    LOG.info(
+        "标题、导读、%d 段图解、文章总结、摘要及正文末尾 DOI 已批量填充",
+        len(data["figures"]),
+    )
 
 
-def apply_template(page: Page) -> None:
+def apply_template(page: Page, data: dict) -> None:
+    if len(data["figures"]) == 6:
+        template_name = SIX_IMAGE_TEMPLATE_NAME
+        template_selectors = SIX_IMAGE_TEMPLATE_CARD
+    else:
+        template_name = OTHER_IMAGE_TEMPLATE_NAME
+        template_selectors = OTHER_IMAGE_TEMPLATE_CARD
     safe_click(first_visible(page, TEMPLATE_TAB, 5_000), "打开模板面板")
-    template = first_visible(page, TEMPLATE_CARD, 5_000)
-    safe_click(template, "选择六图模板", force=True)
-    first_visible(page, TEMPLATE_SELECTED, 5_000)
-    LOG.info("模板状态已确认为“已选择”")
+    template = first_visible(page, template_selectors, 5_000)
+    safe_click(template, "选择文章模板", force=True)
+    # 当前编辑器会以卡片变灰而非“已选择”文字确认选中状态；
+    # 以“添加到正文”按钮可见作为跨版本的可操作确认。
+    first_visible(page, ADD_TO_BODY, 5_000)
+    LOG.info("模板已选中，添加到正文按钮已就绪")
     safe_click(first_visible(page, ADD_TO_BODY, 5_000), "添加模板到正文")
     active_body(page)
-    LOG.info("模板已添加到正文：%s", TEMPLATE_NAME)
+    LOG.info("模板已添加到正文：%s", template_name)
 
 
 def fill_template(page: Page, data: dict) -> None:
@@ -634,7 +648,7 @@ def fill_template(page: Page, data: dict) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="按六图模板填充公众号文章")
+    parser = argparse.ArgumentParser(description="按图片数量选择模板填充公众号文章")
     parser.add_argument("--url", default=DEFAULT_URL)
     parser.add_argument("--save-draft", action="store_true")
     parser.add_argument(
@@ -674,7 +688,7 @@ def main() -> int:
                 first_visible(page, HOME_READY, 10_000)
             data["recent_links"] = collect_recent_links(page)
             page = open_editor(page)
-            apply_template(page)
+            apply_template(page, data)
             fill_template(page, data)
             if args.save_draft:
                 safe_click(first_visible(page, SAVE_DRAFT, 5_000), "保存草稿")

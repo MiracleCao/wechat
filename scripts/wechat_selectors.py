@@ -27,9 +27,14 @@ TEMPLATE_TAB = [
     "button:has-text('模板')",
 ]
 
-TEMPLATE_CARD = [
+SIX_IMAGE_TEMPLATE_CARD = [
     "h4:has-text('Template_图片刚好六张用这个')",
     "text=Template_图片刚好六张用这个",
+]
+
+OTHER_IMAGE_TEMPLATE_CARD = [
+    "h4:has-text('Template_图片不为六张用这个')",
+    "text=Template_图片不为六张用这个",
 ]
 
 TEMPLATE_SELECTED = [

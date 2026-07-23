@@ -1,0 +1,1846 @@
+﻿A γ ″ precipitate-evolution-informed CPFEM describing mechanical 
+behavior of GH4169 under electropulsing-assisted aging
+Rui Zhao
+a , b , * , 1
+, Qiji Guo
+a , 1
+, Zirong Li
+a
+, Bao Meng
+a
+, Min Wan
+a , b
+a
+School of Mechanical Engineering and Automation, Beihang University, Beijing 100191, China
+b
+Jiangxi Research Institute of Beihang University, Jiangxi 330000, China
+ARTICLE INFO
+Keywords:
+Electropulsing-assisted aging
+γ ″ precipitates
+Crystal plasticity
+Nickel-based superalloy
+ABSTRACT
+Electropulsing-assisted aging (EAA) has emerged as a promising route for modifying the micro -
+structure and mechanical properties of thin-walled superalloy components. However, the re -
+lationships among current parameters, γ ″ precipitate evolution, and mechanical response remain 
+insufficiently understood. In this study, EAA and uniaxial tensile tests were performed on GH4169 
+sheet specimens. An electromigration-informed precipitate evolution model was established 
+based on TEM observations, and a crystal plasticity finite element model (CPFEM) incorporating 
+precipitate shearing and Orowan bypassing resistances was then developed, with a multi-phase 
+representative volume element (RVE) model. The constitutive framework was implemented in 
+Abaqus using VUMAT. Parameters were identified via inverse FE calibration with the particle 
+swarm optimization (PSO) method. The results indicate a temperature-driven enhancement of 
+electromigration during the γ ″ coarsening process and a strengthening mechanism based on multi- 
+mode shearing and bypassing. These findings provide a mechanistic basis for describing the EAA- 
+modified tensile response of GH4169 and offer useful insight for future EAA-assisted processing of 
+thin-walled superalloy components.
+1. Introduction
+Owing to its outstanding properties of high strength and good oxidation/corrosion resistance, GH4169 has been widely used in 
+critical high-temperature components of aero-engines ( Gudivada and Pandey, 2023 ). As next-generation hypersonic engines evolve 
+toward much more compact architectures and higher power densities, thin-walled GH4169 microtubes have been increasingly adopted 
+in compact heat exchangers, as well as other micro-scale structures ( Meng et al., 2021 ; Chen et al., 2022 ). To meet the forming re -
+quirements for such thin-walled components, Gao et al. (2022) investigated electrically assisted forming (EAF) and showed that it can 
+improve formability. However, applying pulsed current during forming increases process complexity and makes it difficult to ensure 
+sufficient strength and stability. Wang et al. (2022) showed that EAA can be used as an offline treatment before forming. This strategy 
+can regulate strengthening behavior and plasticity within a short treatment time without increasing process complexity. However, 
+EAA introduces mechanisms that differ from those in EAF. Traditional constitutive models cannot accurately predict the mechanical 
+properties after EAA. Therefore, this study used the CPFEM method to describe the mechanical behavior of GH4169 after EAA, 
+building on the authors ’ previous modeling work ( Tian et al., 2023 ).
+* Corresponding author.
+E-mail address: buaazhaorui@163.com (R. Zhao). 
+1
+These authors contributed equally to this work and should be considered co-first authors.
+Contents lists available at ScienceDirect
+International Journal of Plasticity
+journal homepage: www.else vier.com/loc ate/ijplas
+https://doi.org/10.1016/j.ijplas.2026.104763
+Received 16 April 2026; Received in revised form 15 June 2026;   
+International Journal of Plasticity 204 (2026) 104763 
+Available online 30 June 2026 
+0749-6419/© 2026 The Author(s). Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license 
+( http://creativecommons.org/licenses/by-nc-nd/4.0/ ). \nTo date, numerous studies have investigated the mechanisms of EAA in terms of current parameters, precipitate evolution, and 
+multi-slip deformation. Kim et al. (2020) and Lu et al. (2024)
+Nomenclature
+D
+0
+diffusion constant
+V
+m
+average molar volume
+R gas constant
+n number of moles
+e charge on an electron
+C
+e
+equilibrium concentration
+Γ interfacial energy
+ρ electrical resistivity
+Q
+Nb
+activation energy for Nb diffusion
+V
+e
+molar volume increment related to electromigration-assisted coarsening
+Z
+∗
+effective valence
+ξ current-density-dependent ratio coefficient
+C
+γ
+11
+elastic constant of the γ matrix
+C
+γ
+12
+elastic constant of the γ matrix
+C
+γ
+44
+elastic constant of the γ matrix
+C
+γ
+ʹ ʹ
+11
+elastic constant of the γ ″ precipitate
+C
+γ
+ʹ ʹ
+12
+elastic constant of the γ ″ precipitate
+C
+γ
+ʹ ʹ
+44
+elastic constant of the γ ″ precipitate
+b Burgers vector magnitude
+r
+c 0
+reference dislocation capture radius
+( continued on next page )
+Nomenclature
+D
+0
+diffusion constant
+V
+m
+average molar volume
+R gas constant
+n number of moles
+e charge on an electron
+C
+e
+equilibrium concentration
+Γ interfacial energy
+ρ electrical resistivity
+Q
+Nb
+activation energy for Nb diffusion
+V
+e
+molar volume increment related to electromigration-assisted coarsening
+Z
+∗
+effective valence
+ξ current-density-dependent ratio coefficient
+C
+γ
+11
+elastic constant of the γ matrix
+C
+γ
+12
+elastic constant of the γ matrix
+C
+γ
+44
+elastic constant of the γ matrix
+C
+γ
+ʹ ʹ
+11
+elastic constant of the γ ″ precipitate
+C
+γ
+ʹ ʹ
+12
+elastic constant of the γ ″ precipitate
+C
+γ
+ʹ ʹ
+44
+elastic constant of the γ ″ precipitate
+b Burgers vector magnitude
+r
+c 0
+reference dislocation capture radius
+p , q activation barrier shape exponents
+k
+c
+coefficient for dislocation density evolution
+k
+nc
+coefficient for non-coplanar dislocation interactions
+k
+gr
+grain size strengthening factor
+A capture radius energy
+ρ
+α
+0
+initial dislocation density on the α slip system
+˙γ
+γ
+0
+reference shear rate of the γ matrix
+F
+γ
+activation energy of the γ matrix
+a
+γ
+i
+dislocation interaction factors of the γ matrix
+˙γ
+γ
+ʹ ʹ
+0
+reference shear rate of the γ ″ precipitate
+F
+γ
+ʹ ʹ activation energy of the γ ″ precipitate
+a
+γ
+ʹ ʹ
+i
+dislocation interaction factors of the γ ″ precipitate
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+2 \n( continued )
+Nomenclature 
+p , q activation barrier shape exponents
+k
+c
+coefficient for dislocation density evolution
+k
+nc
+coefficient for non-coplanar dislocation interactions
+k
+gr
+grain size strengthening factor
+A capture radius energy
+ρ
+α
+0
+initial dislocation density on the α slip system
+˙γ
+γ
+0
+reference shear rate of the γ matrix
+F
+γ
+activation energy of the γ matrix
+a
+γ
+i
+dislocation interaction factors of the γ matrix
+˙γ
+γ
+ʹ ʹ
+0
+reference shear rate of the γ ″ precipitate
+F
+γ
+ʹ ʹ activation energy of the γ ″ precipitate
+a
+γ
+ʹ ʹ
+i
+dislocation interaction factors of the γ ″ precipitate
+showed that, besides the Joule heating effect, applied current can also introduce non-thermal effects. In particular, electromigration 
+and the electron-wind effect can significantly alter material diffusion and phase transformation behavior. Hui et al. (2025) showed that 
+pulsed current and aging time jointly influence atomic diffusion and phase transformation kinetics. As a result, the size and distribution 
+of precipitates change, which further affects the strength and plasticity of the material. In addition, Gao et al. (2022) showed that 
+electric current can affect deformation behavior by changing slip-system activity and grain rotation. It can also modify the effective 
+barriers for APB/stacking-fault (SF) formation. As a result, the hierarchy and cooperativity of multi-slip deformation may change and 
+further affect the overall mechanical behavior of the alloy. However, the coupled relationship between microstructural evolution and 
+multi-slip deformation under EAA remains poorly understood, especially in GH4169, where quantitative validation is still limited.
+Quantification of precipitates is essential for understanding the macroscopic properties of materials. Precipitate evolution pro -
+cesses under EAA exhibit similarities to those during conventional thermal aging, because the underlying physics are governed by 
+solute diffusion and phase-transformation kinetics. Therefore, current-related effects can be incorporated into classical precipitate 
+evolution theories to model and predict precipitate coarsening under EAA conditions ( Deschamps and Hutchinson, 2021 ). Developing 
+a precipitate-evolution-based model for EAA requires careful consideration of the size and distribution of the coarsening γ ″ pre -
+cipitates. Xiang and Zhang (2019) suggested that electron force and electron-wind effects can influence the evolution of dislocation 
+and defect structures, thereby promoting microstructural evolution by affecting diffusion kinetics. In addition, Xiao et al. (2019)
+proposed a model incorporating electromigration effects with reasonable accuracy. However, it has not been quantitatively calibrated 
+or validated against precipitate observations such as size or volume fraction, which limits its applicability to further prediction.
+Although the above precipitate-evolution studies can quantify EAA-induced changes in γ ″ size, distribution, and coarsening ki -
+netics, a crystal-scale constitutive framework is still required to translate these evolving precipitate characteristics into slip resistance, 
+phase-dependent plastic flow, and macroscopic mechanical response. CPFEM provides such a bridge between microstructural evo -
+lution and deformation mechanisms at the slip-system and grain scales. Representative studies have used CPFEM to describe yield- 
+locus evolution with dislocation-density hardening and anisotropic elasticity, length-scale-informed plasticity, multiaxial ratcheting 
+with microstructural effects, and strength evolution under complex stress states ( Iftikhar et al., 2022 ; Chatterjee et al., 2025 ; Li et al., 
+2022 ; Zheng and Yoon, 2024 ). In precipitation-hardened superalloys, microstructural evolution after EAA can be linked to macro -
+scopic strength through crystal-scale deformation mechanisms. Extensive research has therefore been devoted to modeling precipitate 
+strengthening mechanisms ( Cui et al., 2024 ). Gupta and Bronkhorst (2021) highlighted the fundamental differences in intra-phase slip 
+dynamics in nickel-based superalloys and proposed separate flow rules for the γ and γ ′ phases within a dislocation-density-based crystal 
+plasticity framework. Zhang et al. (2024) further proposed a constitutive model for nickel-based superalloys that incorporates 
+deformation mechanisms such as APB shearing and micro-twinning, thereby providing a more physically based description of 
+deformation and hardening. For multiphase and polycrystalline systems, the EPSC model developed by Ghorbanpour et al. (2017)
+attempted to incorporate precipitation-hardening effects within a homogeneous framework. However, its characterization of key 
+microstructural features, such as precipitate size and morphology, remains limited. More recently, Li et al. (2020) embedded 
+precipitation-hardening constitutive laws into numerical crystal-plasticity formulations and predicted constitutive responses by 
+combining the precipitate-matrix orientation relationship with precipitate morphology. At present, RVE modeling based on CPFEM 
+and homogenization theory has been widely applied to evaluate the statistically averaged response of multiphase alloys ( Cai et al., 
+2020 ; Mikula et al., 2024 ). However, many existing models still employ equivalent or single flow rules to describe multiphase 
+deformation ( Guo et al., 2025 ), making it difficult to simultaneously capture the independent dynamics of different phases, the 
+activation of multiple slip systems, and the interactions between dislocations and precipitates. Consequently, it is necessary to develop 
+a CP model considering these coupled effects under EAA conditions.
+In this study, an electromigration-informed precipitate evolution model was established to quantitatively describe microstructural 
+changes, and a crystal plasticity constitutive model was developed. A multiphase RVE framework was subsequently constructed, and 
+the constitutive model was implemented in Abaqus via VUMAT for crystal-scale simulations. Model parameters were calibrated 
+through inverse FE identification coupled with PSO, and the resulting model demonstrated good predictive accuracy under different 
+EAA conditions. Compared with existing CPFEM or precipitation-hardening models, the present framework links EAA-dependent γ ″ 
+coarsening with a two-phase γ / γ ″ CPFEM, so that the current-dependent precipitate size can be transferred into the competing shearing 
+and Orowan resistances. This enables the post-EAA tensile response of GH4169 to be predicted from γ ″ precipitate evolution within the 
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+3 \ninvestigated aging window, rather than from a fixed or homogenized precipitation-hardening description. This study provides a 
+mechanistic basis for understanding the EAA-modified tensile behavior of GH4169 and offers useful insight for future EAA-assisted 
+processing of thin-walled superalloy components.
+2. Materials and methods
+2.1. Experimental procedure
+2.1.1. Material and specimen preparation
+GH4169 sheet with a thickness of 1.0mm was selected as the experimental material, and its chemical composition is shown in 
+Table 1 .
+The tensile specimens were designed according to ASTM E8/E8M-08. Specimens were obtained by wire cutting along the RD 
+(rolling direction) of the GH4169 sheet, with their geometric dimensions shown in Fig. 1 .
+GH4169 is a precipitation-hardening nickel-based superalloy requiring solution treatment before aging. The specimens were coated 
+with an anti-oxidation coating and then solution treated at 1020
+◦
+C for 20min in a vacuum furnace, followed by water quenching to 
+room temperature. The material after solution treatment is referred to as the solution-treated condition (ST).
+Subsequently, the specimens were subjected to EAA on a pulse current-assisted vacuum heat treatment platform. This platform 
+primarily comprises a vacuum maintenance system, a power supply, a clamping system, and a temperature measurement system, as 
+illustrated in Fig. 2 . To ensure electrical and thermal conductivity, copper alloy was selected for the specimen clamps, which were 
+connected to the specimens inside the vacuum chamber. To maintain constant current during aging, the pulse power supply employed 
+constant current control. To ensure the accuracy of non-contact temperature measurement, an infrared thermal imaging camera was 
+used to measure temperatures through the barium fluoride window on the vacuum furnace. The infrared temperature measurement 
+was calibrated against a Type K thermocouple to obtain accurate aging temperatures.
+To obtain different precipitate sizes, the current settings for EAA are listed in Table 2 , while the solution treatment and EAA process 
+parameters are summarized in Fig. 3 . In this study, the pulsed aging current was set to 5, 10, 11, 12, 15, and 20 A, corresponding to 
+peak current densities J of 16.7, 33.3, 36.7, 40.0, 50.0, and 66.7 A/mm², respectively. In addition, an intermediate 11 A condition ( J =
+36.7 A/mm², steady aging temperature = 605.3
+◦
+C) was introduced as a supplementary state for TEM observation and for tensile-model 
+validation within the precipitation strengthening window. The high-frequency pulsed current had a duty cycle of 1:19 and a period of 
+0.001 s. EAA was conducted for 0.5, 1.0, and 2.0 h, and the treated material was termed the aged state (AS). Upon current application, 
+the specimen heating rate reached up to approximately 90
+◦
+C/s. The temperature was primarily governed by Joule heating and rapidly 
+stabilized. As shown in Fig. 3 , the temperature distribution within the gauge section during EAA was relatively uniform, with the center 
+slightly warmer than the ends; however, the maximum deviation from the set aging temperature was less than 10
+◦
+C, meeting the 
+temperature homogeneity requirement.
+2.1.2. Uniaxial tensile test
+To quantitatively investigate changes in mechanical properties following different EAA treatments, specimens underwent uniaxial 
+tensile tests on an MTS E44.204 universal testing machine. The machine's maximum test force was 20 kN, with a maximum crosshead 
+travel of 1150 mm. Tensile tests were conducted at room temperature with a tensile rate of 25 μ m/s, corresponding to a strain rate of 
+0.001 s ⁻ ¹. Each condition was tested three times to ensure experimental accuracy. True strain during the tensile process was measured 
+using digital image correlation (DIC).
+The true stress – strain curves of specimens under different current and aging times are shown in Fig. 4 . It should be noted that due to 
+the application of an initial preload of 25 N during the tensile test, the true stress at the onset of the curve was not zero. Fig. 4 (a), (d), 
+and (e) show that when the current was set to 5, 15, and 20 A, the mechanical response of the specimens was essentially consistent with 
+that of ST, showing no significant strengthening effect. This indicated that the corresponding equivalent temperatures lay outside the 
+precipitation window of the alloy's primary strengthening phases. In contrast, when the current was within the range of 10 – 12 A, the 
+specimens exhibited a significant strengthening response, and the strengthening effect further intensified with increasing aging time. 
+Notably, the equivalent temperature range corresponding to this strengthening interval fell within the reported precipitation tem -
+perature range for typical strengthening phases γ ′ / γ ″ in GH4169 ( Lin et al., 2017 ). Therefore, the observed improvement in mechanical 
+properties under EAA conditions can be preliminarily attributed to precipitation strengthening.
+2.1.3. Microstructural characterization
+To identify and validate the factors influencing the strengthening effect, XRD, OM, TEM, and EBSD observations were performed on 
+specimens subjected to different heat treatments.
+First, XRD testing was conducted over a 2 θ range of 30 – 100
+◦
+using Cu K α radiation ( λ = 1.54183Å), with a scanning speed of 5.28
+◦
+/ 
+Table 1 
+Chemical composition of GH4169 ultrathin sheet (in wt.%).
+Ni Cr Nb Mo Ti Al C Fe
+53.63 18.10 4.92 3.1 0.87 0.37 0.041 Bal.
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+4 \nmin, at 40kV and 40mA. Fig. 5 presents the XRD patterns of GH4169 in ST and after 1 h of different EAA treatments. Since the γ ′ / γ ″ 
+precipitates were coherent with the γ matrix, their diffraction peaks were difficult to directly separate in conventional XRD patterns. 
+Therefore, the focus was on analyzing the shift of the main diffraction peak in Fig. 5 (b). It was observed that as the equivalent 
+temperature corresponding to the effective current increased, the main peak position first shifted toward lower angles and then 
+returned, suggesting precipitation-related lattice changes and possible redissolution under changing electrothermal conditions. This 
+peak-position evolution reflected changes in the matrix lattice constant and coherency strain state during precipitate formation and 
+weakening. In essence, it indicated a shift in the dominant strengthening contribution from solid-solution strengthening in the matrix 
+to precipitation strengthening associated with solute partitioning into precipitates. Thus, the XRD results provided indirect diffraction 
+evidence for the presence of precipitation strengthening under EAA conditions. For the high-current conditions, no additional 
+Fig. 1. Geometry of the tensile specimen.
+Fig. 2. Schematic of the EAA vacuum aging platform.
+Table 2 
+Electrical and thermal parameters for electropulsing-assisted aging.
+Frequency (Hz) Duty cycle (%) Effective current (A) J (A/mm
+2
+) T (
+◦
+C)
+1000 5 5 16.7 233.6
+1000 5 10 33.3 560.6
+1000 5 11 36.7 605.3
+1000 5 12 40.0 661.3
+1000 5 15 50.0 796.7
+1000 5 20 66.7 1006.8
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+5 \ndiffraction peaks that could be clearly assigned to δ were detected in the XRD patterns of the 15A and 20A specimens. However, 
+because TEM/OM characterization was not performed specifically for these high-current specimens, a trace amount of grain-boundary 
+δ below the detection limit of XRD cannot be completely excluded. Therefore, the present γ / γ ″ two-phase model is considered most 
+applicable to the short-duration EAA window in which γ ″ is the dominant observed strengthening precipitate, and possible trace δ 
+precipitation at high-current conditions is acknowledged as a limitation.
+To identify the precipitate phase responsible for the strengthening effect, OM and TEM analyses were first performed on ST 
+specimens. The aim was to verify that the ST condition remained nearly precipitate-free after solution treatment and could serve as the 
+initial state for subsequent analysis. Metallographic specimens underwent standard mechanical polishing followed by etching in a 
+CuSO ₄ – HCl – H ₂ SO ₄ solution, enabling microstructural observation on the ND – TD cross-section. As shown in Fig. 6 (a), the ST micro -
+structure exhibited no obvious defects such as twins or cracks. Grain growth occurred during high-temperature solution treatment, but 
+Fig. 3. Temperature – time schedules for solution treatment and EAA.
+Fig. 4. True stress – strain curves under various pulsed current conditions: (a) 5 A; (b) 10 A; (c) 12 A; (d) 15 A; and (e) 20 A.
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+6 \nno abnormal coarsening was observed. Subsequently, the samples were thinned using a focused ion beam (FIB), followed by TEM/ 
+SAED observation on an FEI Talos F200X. As shown in Fig. 6 (b), diffraction patterns along the [001], [011], and [112] zone axes 
+showed only the FCC phase ( γ matrix) at these locations. Fig. 6 (c) shows no discernible precipitate diffraction features in dark-field 
+images. These results indicated that after the 1020
+◦
+C solution treatment, the precipitates associated with age hardening were 
+largely redissolved into the γ matrix. The ST condition could be regarded as an approximately uniform supersaturated solid solution, 
+thereby providing a clear baseline for subsequent comparative analysis of precipitate formation and evolution during EAA.
+Next, further characterization was performed on strengthened specimens to determine the precipitate phase and its crystallo -
+graphic characteristics. TEM observation and EDS compositional analysis were conducted on the 10A and 12A EAA specimens within 
+Fig. 5. XRD patterns of GH4169 in the ST and 1 h EAA states: (a) 30 – 100
+◦
+; (b) enlarged main peak region.
+Fig. 6. Characterization of ST. (a) ND – TD OM image. (b) SAED along [001], [011], and [112]. (c) TEM image.
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+7 \nthe precipitation strengthening temperature range, as shown in Fig. 7 . EDS element mapping in Fig. 7 (a) indicated that the disc-like 
+precipitates were significantly enriched in Ni and Nb, consistent with the chemical composition of the γ ″ precipitate (Ni ₃ Nb). Further 
+EDS line-scan results are shown in Fig. 7 (c) and (d): the scan path traversed the γ matrix through the precipitate and back to the matrix. 
+At the phase boundary, Nb content significantly increased while Ni content decreased, further confirming this precipitate as an Nb- 
+enriched strengthening phase. Concurrently, SAED analysis was performed along the [001], [011], and [112] zone axes, as shown 
+in Fig. 7 (b). Beyond the FCC primary diffraction spots of the γ matrix, faint superlattice reflections corresponding to γ ″ were observable. 
+The γ ″ precipitate exhibited a coherent orientation relationship with the γ matrix: {001} γ ″ //{001} γ and < 100 > γ ″ // < 100 > γ , consistent 
+with previous literature reports. Combined TEM, EDS, and SAED results indicated that γ ″ was the most evident strengthening pre -
+cipitate evolving within the present EAA strengthening window. The possible role of γ ′ was also considered ( Lee et al., 2025 ), since 
+phase-resolved γ / γ ′ CPFEM/XFEM studies have shown that γ ′ slip activity can affect local deformation and crack-path selection when γ ′ 
+is the dominant precipitate phase ( Karamitros et al., 2026 ). However, in the present EAA-treated GH4169, the precipitates that evolved 
+most evidently within the strengthening window were disc-like and Nb-enriched γ ″ , and no distinct Al/Ti-enriched γ ′ precipitates were 
+identified in the analyzed TEM fields. Therefore, the constitutive model focuses on γ / γ ″ interactions, and the subsequent strengthening 
+analysis is developed around γ ″ size evolution, precipitate shearing, and Orowan bypassing. The possible contribution of γ ′ is treated as 
+secondary under the present EAA conditions and is acknowledged as a limitation for future model extension.
+EBSD characterization was further performed on the aged sample to evaluate the crystallographic texture, as shown in Fig. 8 . Fig. 8
+(a) shows a dispersed distribution of grain orientations without a dominant color component over the scanned region. The corre -
+sponding {111}, {110}, and {100} pole figures in Fig. 8 (b) do not show a sharp or highly concentrated texture component, with a 
+maximum pole-figure intensity of approximately 2.41 m.u.d. The inverse pole figures along X0, Y0, and Z0 in Fig. 8 (c) also show low 
+orientation concentration, with a maximum intensity of approximately 1.45 m.u.d. These results indicate that the aged sample has 
+weak crystallographic texture and no pronounced rolling texture.
+After confirming the type of precipitation-hardening phase, dark-field TEM comparisons were further conducted under typical EAA 
+conditions within the strengthening temperature range. Conditions at 10 A and 12 A were selected for primary comparison, while the 
+11 A condition was also included in the observation sequence for subsequent validation. Fig. 9 displays dark-field micrographs of γ ″ 
+precipitates under different pulse currents and aging times, all shown at a uniform 50nm scale bar. The precipitates exhibited a 
+characteristic size of about 10 nm with numerous diffuse nuclei and well-defined morphology. As aging time increased under higher 
+current conditions, the precipitates progressively exhibited clearer disc-like features, with simultaneous increases in particle size and 
+inter-particle spacing. Concurrently, typical coarsening behavior was observed: smaller particles were readily consumed by larger ones 
+during growth, leading to a gradual reduction in particle number. Throughout this process, the material's strengthening response 
+primarily evolves with the average precipitate size, not the volume fraction ( Lee et al., 2025 ). Notably, 8 – 20 hours are required to 
+produce discernible growth and redistribution of γ ″ precipitates in conventional thermal aging, which was reduced to 0.5 – 2 hours 
+Fig. 7. Characterization of γ ″ precipitates after EAA: (a) EDS elemental maps; (b) SAED patterns; (c) line-scan path; (d) EDS line-scan profiles across 
+the γ ″ / γ interface.
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+8 \nunder EAA in this study, indicating that EAA significantly accelerated precipitate evolution.
+2.2. Numerical implementation
+2.2.1. Multiphase RVE model
+To analyze deformation and strengthening mechanisms based on crystal plasticity theory, this study constructed a polycrystalline 
+RVE model. Using Abaqus Python scripts, five polycrystalline RVEs were generated with 2744 C3D8R elements (14 × 14 × 14), and 
+their results were statistically averaged. The grain structure was generated using a three-dimensional Voronoi algorithm with 38 
+randomly distributed grain seeds. Based on the weak crystallographic texture indicated by the EBSD results, which supports the near- 
+random orientation assumption, each grain was assigned a random crystal orientation to construct the polycrystalline RVE model. 
+Fig. 8. EBSD characterization of the aged sample used to evaluate the texture assumption in the RVE: (a) EBSD orientation map; (b) {111}, {110}, 
+and {100} pole figures; and (c) X0, Y0, and Z0 inverse pole figures.
+Fig. 9. Dark-field TEM micrographs of γ ″ precipitates under EAA (50 nm scale bar): (a) 10A-30min; (b) 11A-30min; (c) 12A-30min; (d) 10A-1H; (e) 
+12A-1H.
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+9 \nConsidering the elastic symmetry of cubic crystals, the elastic behavior of single crystals was described by three independent elastic 
+constants, C ₁₁ , C ₁₂ , and C ₄₄ , whose values are listed in Table 6 .
+Within the aforementioned crystal plasticity analysis framework, to quantitatively characterize the influence of γ ″ precipitates on 
+the deformation behavior of the γ matrix in numerical simulations, γ ″ precipitate elements were further introduced into the poly -
+crystalline RVE. This established a two-phase RVE model composed of the FCC γ matrix phase and the D0 ₂₂ -structured γ ″ precipitate 
+phase, as shown in the RVE part of Fig. 10 . To reflect the material's multiphase characteristics, two partially independent sets of 
+material parameters were assigned to the γ matrix phase and the γ ″ precipitate, respectively. The influence of this random γ ″ distri -
+bution on the macroscopic response was evaluated by additional RVE realizations with different precipitate arrangements, and only 
+limited scatter in the macroscopic stress – strain response was observed. This modeling strategy focused on revealing the dominant role 
+of precipitation-related strengthening behavior under ideal polycrystalline conditions. Therefore, macroscopic defect factors such as 
+voids and cracks were not explicitly introduced, while the actual size ratio and complex geometric morphology of the precipitates 
+observed in experiments were not fully reproduced. Based on these assumptions, the number of γ ″ elements was used as a numerical 
+descriptor to represent different precipitate states under various EAA conditions.
+Based on the microstructural observations, the variation in the γ ″ fraction among the investigated EAA conditions was limited 
+compared with the changes in γ ″ size. This behavior is consistent with Ostwald ripening ( Liu et al., 2024 ), in which smaller precipitates 
+are consumed by larger ones during coarsening and the total precipitate fraction does not necessarily increase proportionally with 
+particle size. In addition, Wang et al. (2013) reported that the γ ″ volume fraction in IN718 remained approximately stable during 
+electric-field treatment over a much longer aging duration, while precipitate coarsening was evident. Therefore, this model neglected 
+the evolution of γ ″ volume fraction and instead used precipitate size as the primary parameter to characterize the strengthening 
+response.
+2.2.2. Simulation procedure
+For the constructed multiphase crystal RVE model, the loading direction was aligned with the RD, while the other two directions 
+were subjected to symmetric constraints to prevent rigid-body motion. Based on the experimental results described above, the overall 
+scheme of the present study is summarized in Fig. 10 . TEM observations of γ ″ precipitates provided the key microstructural descriptors 
+used in the present study, primarily the average precipitate size and its qualitative spatial distribution under different EAA conditions. 
+These experimental results were used on the one hand to construct the multiphase RVE model and on the other hand to calibrate the 
+microstructural evolution model in the time – current space. The predicted precipitate state was then introduced into the crystal 
+plasticity constitutive framework as a microstructural input. The RVE served as the numerical framework for the Abaqus imple -
+mentation. Because γ ″ precipitates were randomly distributed in the RVE, lattice mismatch and interfacial stress concentrations arose 
+between the γ ″ precipitates and the matrix. Therefore, the model was implemented in Abaqus using a VUMAT subroutine to improve 
+numerical stability and avoid numerical difficulties caused by stress discontinuities. Specifically, the crystal plasticity model employed 
+in Abaqus was based on an existing UMAT framework and was reimplemented as a VUMAT subroutine for the Abaqus Explicit solver. 
+Incremental updates were performed using an Euler explicit integration scheme, thereby enhancing the overall simulation stability and 
+convergence efficiency ( Asadkandi et al., 2025 ). This workflow established a closed link between EAA-induced precipitate evolution 
+and the corresponding precipitation-strengthened mechanical response.
+Within this overall scheme, two key issues remain to be clarified. First, existing studies generally suggest that significant precip -
+itation of γ ″ requires a long aging time, whereas pronounced precipitates were revealed within a short time in the EAA process. 
+Therefore, the evolution mechanism needs to be further clarified. Second, although experiments have confirmed the correlation be -
+tween precipitates and improved mechanical properties, the influence of precipitate-dislocation interactions on deformation resistance 
+and plastic response remains unclear. The following sections address these two issues separately through the microstructure evolution 
+and crystal plasticity framework. The present model was calibrated and validated for the relatively uniform gauge region of laboratory 
+Fig. 10. Overall scheme.
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+10 \nspecimens. For complex industrial-scale components, local current-density and temperature fluctuations should be evaluated through 
+coupled electro-thermal analysis before assigning the corresponding local γ ″ precipitate state to the CPFEM framework.
+3. Mechanical modeling with CPFEM
+3.1. Crystal plasticity model framework
+Total deformation is characterized by the global deformation gradient tensor F , which maps the reference configuration to the 
+current configuration. To distinguish elastic and plastic effects, an intermediate configuration is introduced, and F is multiplicatively 
+decomposed into elastic and plastic parts according to Eq. (1) . 
+F = F
+e
+F
+p
+(1) 
+The elastic deformation gradient tensor F
+e 
+represents the stretching and rotation of the lattice as given in Eq. (2) . 
+F
+e
+= R
+e
+U
+e
+(2) 
+The Green – Lagrange elastic strain E
+e
+can be calculated from the elastic deformation gradient F
+e
+, as shown in Eq. (3) . 
+E
+e
+=
+1
+2
+ 
+F
+e T
+F
+e
+  I
+)
+(3) 
+Using the obtained Green – Lagrange elastic strain E
+e
+, the stress response of the material can be derived from the elastic constitutive 
+equation given in Eq. (4) . 
+T
+e
+= ℜ : E
+e
+(4) 
+T
+e 
+denotes the elastic work conjugate stress of the Green – Lagrange elastic strain E
+e
+, and ℜ represents the fourth-order elastic tensor. 
+The relationship between T
+e 
+and the Cauchy stress T is expressed in Eq. (5) . 
+T
+e
+= ( F
+e
+)
+  1
+det ( F
+e
+) T ( F
+e
+)
+  T
+(5) 
+The plastic velocity gradient L
+p 
+is expressed as the sum of the slip rates over all slip systems, as given in Eq. (6) . 
+L
+p
+= F
+e
+˙
+F
+p
+( F
+p
+)
+  1
+( F
+e
+)
+  1
+=
+∑
+N
+α = 1
+˙γ
+α
+S
+α
+(6) 
+Among these, the Schmid tensor S
+α 
+defines the geometric characteristics of slip system α . For the γ matrix integration points, the 
+conventional 12 FCC slip systems 〈 110 〉{ 111 } were considered. For γ ″ precipitate integration points, 24 slip systems were introduced, 
+including 12 〈 110 〉{ 111 } slip systems and 12 additional 〈 112 〉{ 111 } slip systems, as listed in Table 3 . Accordingly, N = 12 for the γ 
+matrix and N = 24 for the γ ″ precipitate. S
+α
+= ̃m
+α
+⊗ ̃n
+α
+.
+The slip direction vector ̃m
+α 
+and slip plane normal vector ̃n
+α 
+defined in the reference configuration are represented in the deformed 
+configuration by Eq. (7) and Eq. (8) , respectively. 
+̃m
+α
+= F
+e
+⋅ m
+α
+(7) 
+̃n
+α
+= n
+α
+⋅ ( F
+e
+)
+  1
+(8) 
+Based on existing research ( Gupta and Bronkhorst, 2021 ), the separate flow rules are adopted for the γ matrix phase and the γ ″ 
+precipitate phase. The shear strain rate is described by a thermally activated dislocation model, as given in Eqs. (9) – (10) . 
+Table 3 
+Slip systems in the γ matrix and γ ″ precipitates.
+{ 111 } 〈 112 〉{ 111 }
+A1
+[ 01 1 ]( 111 )
+AI
+[ 1 1 2 ]( 111 )
+A2
+[ 1 01 ]( 111 )
+AII
+[ 1 2 1 ]( 111 )
+A3
+[ 1 1 0 ]( 111 )
+AIII
+[ 2 1 1 ]( 111 )
+B1
+[ 0 1 1 ]( 1 1 1 )
+BI
+[ 1 1 2 ]( 1 1 1 )
+B2
+[ 1 0 1 ]( 1 1 1 )
+BII
+[ 1 2 1 ]( 1 1 1 )
+B3
+[ 110 ]( 1 1 1 )
+BIII
+[ 211 ]( 1 1 1 )
+C1
+[ 011 ]( 1 1 1 )
+CI
+[ 1 1 2 ]( 1 1 1 )
+C2
+[ 10 1 ]( 1 1 1 )
+CII
+[ 121 ]( 1 1 1 )
+C3
+[ 1 1 0 ]( 1 1 1 )
+CIII
+[ 2 1 1 ]( 1 1 1 )
+D1
+[ 0 1 1 ]( 1 1 1 )
+DI
+[ 112 ]( 1 1 1 )
+D2
+[ 101 ]( 1 1 1 )
+DII
+[ 1 2 1 ]( 1 1 1 )
+D3
+[ 1 10 ]( 1 1 1 )
+DIII
+[ 2 1 1 ]( 1 1 1 )
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+11 \n˙γ
+α
+γ
+= ˙γ
+γ
+0
+exp
+[
+ 
+F
+γ
+kT
+〈
+1  
+〈
+| τ
+α
+|   τ
+or
+τ
+α
+ρ
+〉
+p
+〉
+q
+]
+sgn ( τ
+α
+) (9) 
+˙γ
+α
+γ
+ʹ ʹ = ˙γ
+γ
+ʹ ʹ
+0
+exp
+[
+ 
+F
+γ
+ʹ ʹ
+kT
+〈
+1  
+〈
+| τ
+α
+|   τ
+α
+shear
+τ
+α
+ρ
+〉
+p
+〉
+q
+]
+sgn ( τ
+α
+) (10) 
+Among these, γ
+0 
+is the reference shear rate constant; F
+γ 
+and F
+γ
+ʹ ʹ are the activation energies for slip within the γ matrix phase and γ ″ 
+precipitate, respectively; k is the Boltzmann constant; τ
+α
+ρ 
+is the deformation resistance induced by the dislocation structure; p and q are 
+the exponents defining the shape of the dislocation motion energy barrier; T is the absolute temperature. τ
+or 
+is the Orowan resistance; 
+τ
+α
+shear 
+is the contribution to slip resistance from the precipitate shearing on α slip system.
+The shear stress τ
+α 
+for each α slip system is computed by Eq. (11) , and the elastic measure C
+e 
+is defined in Eq. (12) . 
+τ
+α
+= T
+e
+: S
+α
+(11) 
+C
+e
+= F
+e T
+F
+e
+(12) 
+3.2. Precipitate strengthening
+3.2.1. Strengthening caused by shearing
+Unlike previous studies on dislocation shearing of γ ′ precipitates in nickel-based superalloys ( Maciejewski et al., 2013 ; Lu et al., 
+2022 ), the present experiments indicate that the γ ″ precipitate serves as the primary strengthening phase. Due to the lower symme -
+try of the D0 ₂₂ structure, the SF configurations within the γ ″ precipitate are more complex than those in the γ ′ phase. Consequently, 
+APB-only shearing resistance cannot adequately describe this behavior. The specific deformation mechanisms will be discussed in 
+Section 5.2 . When dislocations shear γ ″ precipitates, additional SFs may form in addition to APBs ( Lv et al., 2016 ). Therefore, building 
+upon prior research ( Maciejewski et al., 2013 ), this study proposes a strengthening model based on the precipitate shearing effect, as 
+given in Eq. (13) . 
+τ
+α
+shear
+= A
+α
+G
+(
+γ
+α
+GSF
+Gb
+)
+3
+2
+(
+rf
+b
+)
+1
+2
+(13) 
+Here, A
+α 
+represents the path-activation weight for each slip system, which is interpreted as an effective path-activation weight rather 
+than a directly measured fraction of slip events. G denotes the shear modulus, b represents the Burgers vector magnitude, r denotes the 
+average γ ″ precipitate size, and f is the precipitate volume fraction. The influence of the precipitate volume fraction f was evaluated 
+through sensitivity analysis, and f was taken as a reference effective value of 0.1. γ
+α
+GSF 
+represents the generalized SF energy for each slip 
+system. Previous work by Lv et al. (2016) showed that dislocation shearing of γ ″ precipitates under different displacement vectors can 
+generate different types of SFs, and the associated generalized SF energies are listed in Table 4 .
+3.2.2. Strengthening caused by Orowan bypassing
+Orowan resistance τ
+or 
+describes the resistance that dislocations must overcome when bypassing precipitate particles. This resis -
+tance arises from the process of dislocation bending and forming dislocation loops.
+The resistance expression associated with Orowan bypassing is given in Eq. (14) . 
+τ
+or
+=
+Gb
+l
+(14) 
+Here, 
+l
+ˉ 
+is the average channel spacing. For GH4169, the precipitate arrangement is less regular than that in conventional nickel-based 
+superalloys, so 
+l
+ˉ 
+is expressed as a function of f and r , as fitted from the bypassing formulation of Maciejewski et al. (2013) : l = r ( 1   f )
+/ θ f , where θ is a fitting parameter.
+Therefore, Orowan bypass resistance τ
+or 
+is recast into the form of Eq. (15) . 
+Table 4 
+Fault types and generalized SF energies for different displacement vectors in γ ″ precipitates. ( Lv et al., 
+2016 ).
+Displacement vectors Types of SFs γ
+α
+GSF 
+(mJ/m²)
+1/2 [ 01 1 ]
+APB-like 482.3
+1/2 [ 1 10 ]
+APB 592.1
+1/6 [ 11 2 ]
+ISF 2.301
+1/3 [ 1 2 1 ]
+SISF 613.6
+1/6 [ 2 11 ]
+CSF 697.9
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+12 \nτ
+or
+= θ Gb
+f
+r ( 1   f )
+(15) 
+3.3. Dislocation resistance
+The resistance due to the dislocation structure τ
+α
+ρ 
+is formulated in Eq. (16) ( Bronkhorst et al., 2019 ; Gupta and Bronkhorst, 2021 ). 
+τ
+α
+ρ
+=
+k
+gr
+̅̅̅̅̅ ̅
+d
+gr
+√ + Gb
+̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅ ̅
+∑
+β
+a
+α β
+ρ
+β
+√
+(16) 
+Here, the Taylor coefficient a
+α β 
+reflects the interaction strength between slip systems, with values ranging from 0 to 1. The interaction 
+tensor for slip systems in GH4169 has been well established ( Ghorbanpour et al., 2017 ). ρ
+β 
+denotes the dislocation density on slip 
+system β . The evolution of the dislocation density ρ
+α 
+on slip system α is given by Eq. (17) ( Dequiedt et al., 2015 ; Bronkhorst et al., 
+2019 ). 
+˙
+ρ
+α
+=
+1
+b
+⎛
+⎝
+̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅ ̅
+∑
+β
+d
+α β
+ρ
+β
+√
+  2 r
+α
+c
+ρ
+α
+⎞
+⎠
+|
+˙
+γ
+α
+| (17) 
+Here, d
+α β 
+denotes the dislocation multiplication interaction tensor, and r
+α
+c 
+is the dislocation capture radius during dislocation anni -
+hilation, as given in Eqs. (18 – 20) . 
+d
+α β
+=
+a
+α β
+k
+2
+c
+D
+for self   interaction and coplanar slip systems (18) 
+d
+α β
+=
+a
+α β
+k
+2
+nc
+for interacting non   coplanar slip systems (19) 
+r
+α
+c
+= r
+c 0
+(
+| ˙γ
+α
+|
+˙γ
+0
+)
+kT
+A
+(20) 
+k
+c 
+and k
+nc 
+represent the constants governing the interaction strengths for coplanar and non-coplanar slip systems, respectively.
+3.4. γ ″ precipitate evolution model
+The average precipitate size r directly affects dislocation-density hardening, precipitate shearing, and Orowan bypass strength -
+ening, but its evolution under different EAA conditions has not yet been incorporated into the constitutive framework. To quantita -
+tively relate EAA parameters to precipitate geometry and strengthening response, the electromigration-modified coarsening model 
+used in this work was constructed based on the classical LSW coarsening relation, following the treatment of Xiao et al. (2019) for 
+electromigration-induced solute drift flux. The purpose of this formulation is not to propose a new coarsening theory, but to apply the 
+LSW – electromigration framework to Nb-controlled γ ″ coarsening in GH4169 under EAA conditions. Because γ ″ precipitates in GH4169 
+typically exhibit a disc-like morphology ( Devaux et al., 2008 ), a modified expression is adopted, as given in Eq. (21) . 
+r
+3
+  r
+3
+0
+=
+128 Γ qDC
+e
+V
+2
+m
+9 π RT
+t = K
+t
+t (21) 
+Here, r denotes the average diameter of the disc-shaped γ ″ precipitates at time t , r
+0 
+represents the average diameter at the onset of 
+coarsening, h is the average thickness of the precipitates, q is the ratio of r to h , Γ represents the interfacial energy between the 
+precipitate particles and the matrix, D is the solute diffusion coefficient in the matrix, C
+e 
+is the solute atomic concentration at equi -
+librium with an infinitely large particle, R is the gas constant, T is the aging temperature, V
+m 
+is the molar volume, and K
+t 
+is the 
+precipitation growth rate under thermal aging conditions. Therefore, if γ ″ precipitates grow via volume diffusion, r
+3 
+should exhibit a 
+linear relationship with time t .
+Under EAA conditions, in addition to the diffusion-controlled coarsening described by LSW theory, the current-induced 
+enhancement of solute diffusion should also be considered ( Conrad, 2000 ). In particular, electromigration introduces an additional 
+Nb diffusion flux, ϕ , which can be expressed by the Nernst-Einstein equation as given in Eq. (22) . 
+ϕ =
+ND
+kT
+Z
+∗
+e ρ j (22) 
+Here, N denotes the atomic number density of solute atoms, k is Boltzmann ’ s constant, Z
+∗
+is used as an effective parameter to char -
+acterize electromigration-assisted Nb transport during γ ″ coarsening, e is the elementary charge, ρ is the material resistivity, and j is the 
+current density. Using the relationship R = k ⋅ Na, where Na is Avogadro ’ s constant, Eq. (23) can be rewritten as: 
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+13 \nϕ =
+nD
+RT
+Z
+∗
+e ρ j (23) 
+n represents the number of moles of solute atoms per unit volume. During drift from the cathode to the anode, some solute atoms 
+move toward phase boundaries and incorporate into precipitates. The coefficient ξ is introduced to characterize the contribution of 
+electromigration to coarsening; Xiao et al. (2019) also predicted electromigration-induced coarsening. Therefore, the electromigration 
+contribution to the coarsening rate, K
+e
+, can be written as shown in Eq. (24) . 
+K
+e
+= ξ ⋅ ϕ ⋅ V
+e
+= ξ
+nV
+e
+D
+RT
+Z
+∗
+e ρ j (24) 
+Here, V
+e 
+represents the molar-volume increment of the γ ″ precipitate induced by electromigration.
+According to LSW theory, the activation energy for coarsening is equal to the diffusion activation energy of solute atoms. The 
+diffusion coefficient D is given in Eq. (25) . 
+D = D
+0
+exp
+(
+ 
+Q
+Nb
+RT
+)
+(25) 
+Here, D
+0 
+represents the prefactor, and Q
+Nb 
+denotes the diffusion activation energy for Nb.
+Therefore, under EAA, considering the enhancement of solute-atom diffusion due to electromigration, the kinetic equation for γ ″ 
+coarsening is obtained in Eq. (26) . 
+r
+3
+  r
+3
+0
+= ( K
+t
++ K
+e
+) t =
+[(
+128 Γ qC
+e
+V
+2
+m
+9 π RT
++ ξ
+nV
+e
+RT
+Z
+∗
+e ρ j
+)
+D
+0
+exp
+(
+ 
+Q
+Nb
+RT
+)]
+t (26) 
+4. Calibration and validation
+4.1. Parameter calibration of the precipitate microevolution model
+Fig. 11 shows the TEM-based size distributions and mean diameters of γ ″ precipitates under different EAA conditions, based on the 
+precipitate measurements from Fig. 9 .
+Based on the ST characterization in Fig. 6 , the initial γ ″ precipitate size was approximated as r
+0
+≈ 0, because no TEM-resolvable γ ″ 
+precipitates were observed in the solution-treated condition. This approximation means that no statistically measurable initial γ ″ 
+Fig. 11. TEM-based size distributions and mean diameters of γ ″ precipitates under different EAA conditions: (a) 10A-30min; (b) 11A-30min; (c) 
+12A-30min; (d) 10A-1H; (e) 12A-1H.
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+14 \nprecipitate population was introduced into the coarsening analysis, rather than excluding possible atomic-scale solute clustering. 
+Therefore, r was used as a coarsening descriptor, and its relationship with t
+1 / 3 
+was plotted in Fig. 12 (a). The data points exhibited an 
+approximately linear relationship, supporting the use of the above linearized effective size-evolution description over the experi -
+mentally examined EAA window. Based on the expression for the total coarsening rate constant K
+total
+, Eq. (27) is obtained. 
+K
+total
+= K
+t
++ K
+e
+=
+(
+128 Γ qC
+e
+V
+2
+m
+9 π RT
++ ξ
+nV
+e
+RT
+Z
+∗
+e ρ j
+)
+D
+0
+exp
+(
+ 
+Q
+Nb
+RT
+)
+(27) 
+Taking the logarithm led to the linearized fitting relation given in Eq. (28) . 
+ln ( K
+total
+T ) = ln
+(
+128 Γ qD
+0
+C
+e
+V
+2
+m
+9 π R
++ ξ
+nV
+e
+D
+0
+Z
+∗
+e ρ j
+R
+)
+ 
+Q
+Nb
+RT
+(28) 
+Since the current density j and temperature T were correlated during EAA, and the other parameters in the equation could be 
+approximated as constants within the narrow temperature range considered here ( Devaux et al., 2008 ), the expression could be 
+rewritten as Eq. (29) . 
+Y
+i
+= ln ( A + Bj
+i
+)  
+Q
+Nb
+RT
+i
+(29) 
+To obtain the optimal values of parameters A , B , and Q
+Nb
+, nonlinear least-squares fitting was performed for Eq. (29) using γ ″ 
+coarsening data under 10A, 11A, and 12A conditions. During the fitting process, Y
+i
+, the corresponding current density j
+i
+, and tem -
+perature T
+i 
+were used as inputs, and the parameter set was determined by minimizing the residuals between model predictions and 
+Fig. 12. Experimental γ ″ coarsening and fitted parameters: (a) r – t
+1 / 3 
+data; (b) fitted Q
+Nb
+; (c) fitted ξ ( J ) .
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+15 \nexperimental results. The fitted activation energy Q
+Nb 
+is shown in Fig. 12 (b). On the other hand, to describe how the coefficient ξ in the 
+electromigration-enhancement term varies with process parameters, the experimental coarsening rates under different EAA conditions 
+were fitted using a fourth-order non-negative polynomial, as shown in Fig. 12 (c). It should be noted that ξ ( J ) is regarded as an effective 
+interpolation coefficient for the present GH4169-EAA system. This polynomial is used only within the calibrated strengthening-aging 
+current-density range.
+J = 33 . 3 ∼ 40 . 0 A / mm
+2 
+and should not be extrapolated outside this range.
+The above parameters were used in the microevolution model, including both literature-based and optimized parameters. Using the 
+parameters listed in Table 5 , LSW coarsening simulations were carried out. Fig. 13 compares the experimental data in the AS condition 
+(AS-Exp), the fitted results under different EAA conditions (AS-Sim), and the TA prediction for the relationship between r
+3 
+and t . 
+Overall, the coupled model showed good agreement with the experimental results, indicating that the calibrated parameter set can 
+reliably describe the electro-thermal coupled coarsening behavior of γ ″ precipitates.
+It is noteworthy that, under the same processing duration, the coarsening slope at 12 A was significantly higher than that at 10 A 
+and 11 A. This indicates a non-linear response of the coarsening rate to electrothermal coupling. It also suggests that the electro -
+migration effect may depend on factors such as temperature. This non-uniform coarsening acceleration is discussed further in Section 
+5.1 .
+4.2. Parameter calibration of the crystal plasticity constitutive model
+The average γ ″ precipitate size obtained in Section 4.1 was used as a fixed input for the subsequent calibration. By fitting the 
+simulated tensile stress-strain curves to the experimental results, a parameter inversion procedure was established using particle 
+swarm optimization (PSO). The overall procedure is shown in Fig. 14 .
+As illustrated in Fig. 14 , a multi-stage calibration procedure was adopted to obtain multi-phase CP model parameters applicable to 
+the ST and multiple EAA conditions. The calibration procedure was organized into two steps. Stage I and Stage II were first combined as 
+Step 1 to obtain a parameter set that satisfies both ST and the 10A-1H condition. This parameter set was then used as input for Step 2 
+(Stage III), where its performance under the remaining EAA conditions was evaluated based on E
+total
+. If E
+total 
+exceeded the prescribed 
+criterion, the procedure returned to Step 1; otherwise, the parameter set was accepted as the final result.
+In Stage I, an RVE containing only the γ matrix was constructed to represent the ST condition, and the uniaxial tensile curve of ST 
+was taken as the target for identifying the shared parameters and γ matrix parameters through PSO. In this way, a basic parameter set 
+capable of describing the matrix-dominated flow behavior was first established.
+In Stage II, the γ ″ precipitate size corresponding to the 10A-1H condition was introduced into the two-phase RVE. Based on the basic 
+parameter set identified in Stage I, the γ ″ precipitate parameters were further calibrated by PSO using the tensile response under the 
+10A-1H condition. This stage resulted in a parameter set simultaneously applicable to both ST and 10A-1H, which was then used as the 
+initial parameter set for Stage III.
+In Stage III, the tensile curves for multiple AS conditions (10A-30min, 12A-30min, and 12A-1H) were further incorporated into a 
+weighted error function. The corresponding RVEs for each condition were considered within the same PSO framework. Each particle 
+was evaluated using E
+total 
+and a predefined error criterion. The resulting parameter set was obtained for all investigated EAA con -
+ditions.
+To quantitatively evaluate the fitting accuracy of different parameter combinations under various operating conditions, this study 
+expressed the simulation – experiment deviation as the mean square error (MSE) based on the stress – strain curve. For operating con -
+Table 5 
+Microevolution parameters used in the current study.
+Parameters from literature Notation Value Refs.
+Diffusion constant D
+0
+88 mm²/s
+Devaux et al. (2008)
+Average molar volume V
+m
+2.92 × 10
+4 
+mm³/mol
+Devaux et al. (2008)
+Gas constant R 8.314 × 10
+3 
+mJ/(mol ⋅ K)
+Mohr et al. (2025)
+Number of moles n 4.7 × 10
+-2
+Mohr et al. (2025)
+Charge on an electron e 1.602 × 10
+-19 
+C
+Mohr et al. (2025)
+Equilibrium concentration C
+e
+2.56 × 10
+-6
+mol/mm³
+Wang et al. (2013)
+Interfacial energy Γ 9.5 × 10
+-5 
+mJ/mm²
+Wang et al. (2013)
+Resistivity ρ 1.33 × 10
+3 
+m Ω⋅ mm
+Special Metals Corp. (2007)
+Optimized parameters Notation Value ​
+Activation energy Q
+Nb
+2.3 × 10
+8 
+mJ/mol /
+Molar volume increment V
+e
+3.3 × 10
+4 
+mm³/mol /
+Effective valence Z
+∗
+3 /
+Ratio coefficient ξ shown in Fig. 12 (c) /
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+16 \ndition i , the single-condition error was defined in Eq. (30) . 
+E
+i
+=
+1
+N
+∑
+N
+j = 1
+ 
+σ
+sim
+i
+ 
+ε
+j
+)
+  σ
+exp
+i
+ 
+ε
+j
+))
+2
+(30) 
+Based on this, the ST condition and each pulse current – aging time combination were treated as independent target curves. The 
+overall objective function for multiple operating conditions was constructed through a weighted sum as given in Eq. (31) . 
+E
+total
+=
+∑
+n
+i = 1
+w
+i
+E
+i
+(31) 
+Here, w
+i 
+was used to adjust the contribution of each condition to the overall fitting error, and E
+total 
+served as the fitness function in the 
+PSO procedure.
+Using E
+total 
+as the fitness function, all parameters were treated as particle positions in a high-dimensional parameter space, and the 
+velocity and position of each particle were iteratively updated according to the classical PSO formulation given in Eqs. (32) and (33) . 
+v
+( t + 1 )
+i
+= w ⋅ v
+( t )
+i
++ c
+1
+⋅ r
+1
+⋅
+ 
+pbest
+i
+  x
+( t )
+i
+)
++ c
+2
+⋅ r
+2
+⋅
+ 
+gbest
+i
+  x
+( t )
+i
+)
+(32) 
+x
+( t + 1 )
+i
+= x
+( t )
+i
++ v
+( t + 1 )
+i
+(33) 
+Here, x
+( t )
+i 
+and v
+( t )
+i 
+denote the parameter vector and velocity vector of particle i at generation t , respectively; pbest
+i 
+and gbest
+i 
+represent 
+the best position found by particle i and the global best position, respectively. ω , c
+1
+, and c
+2 
+are the inertia weight and learning factors, 
+while r
+1 
+and r
+2 
+are random numbers in the interval [0, 1]. By iteratively updating the particle positions and minimizing E
+total
+, the 
+crystal plasticity parameter set satisfying the multi-condition constraints was obtained.
+The final parameters obtained through multistage inversion are summarized in Table 6 under three categories: shared parameters, γ 
+matrix parameters, and γ ″ precipitate parameters. Not all parameters were freely fitted during PSO calibration. Part of the parameter 
+values were adopted or bounded based on literature and physical considerations, whereas the remaining parameters were identified 
+from the stress – strain curves. The identified parameter set is therefore treated as a physically constrained effective solution for the 
+present EAA tensile dataset rather than a mathematically unique global optimum. As shown in Fig. 15 (a), the simulated curves agree 
+Fig. 13. Comparison of AS-Exp, AS-Sim, and TA results for the r
+3
+- t relationship of γ ″ coarsening.
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+17 \nwell with the experimental results under ST and typical EAA conditions, capturing the yield behavior, work-hardening response, and 
+overall deformation trend. These results demonstrate that the multistage PSO-RVE inversion strategy provides a physically consistent 
+parameter set capable of capturing the deformation of the γ matrix and the strengthening effect of γ ″ precipitates.
+4.3. Model validation
+To validate the predictive capability of the γ ″ -evolution-informed CPFEM, the 11A – 30min condition was first used as an 
+interpolation-type validation case because it lies between the calibrated 10A and 12A states. To further examine the model outside the 
+original calibrated aging-duration range, an additional 11.7A – 10min condition was selected. This condition remains within the 
+precipitation-strengthening current range, whereas its aging duration is shorter than the 30min – 1H duration range used in the main 
+calibration dataset. For both validation conditions, the γ ″ size was predicted from the precipitate-evolution model and then introduced 
+into the CPFEM without recalibrating the constitutive parameters. As shown in Fig. 15 (b), the predicted stress – strain responses show 
+reasonable agreement with the experimental curves, supporting the predictive capability of the model within and near the investigated 
+EAA strengthening window.
+5. Discussion
+5.1. Temperature-driven enhancement of electromigration during the γ ″ coarsening process
+The coarsening of γ ″ precipitates during EAA is influenced by both thermally activated solute diffusion and electromigration effects. 
+As shown in Fig. 16 (a), the contributions of thermal diffusion and electromigration vary with the γ ″ precipitation temperature. The 
+ratio K
+e
+/ K
+total 
+increases from approximately 0.1 at 10 A (570
+◦
+C) to approximately 0.9 at 12 A (660
+◦
+C), indicating that the contribution 
+of electromigration grows faster than that of thermal diffusion in the γ ″ coarsening process. In the lower temperature region of the γ ″ 
+precipitation window (560 – 615
+◦
+C), the thermally derived coarsening component K
+t 
+remains higher than the electromigration-related 
+component K
+e
+, suggesting that precipitate coarsening is more strongly associated with thermal diffusion in this range. In contrast, at 
+higher temperatures ( > 620
+◦
+C), K
+e 
+rises rapidly and surpasses K
+t
+. Consequently, the γ ″ coarsening rate under EAA exceeds that expected 
+from thermal aging alone. Thus, the contributions of thermal diffusion and electromigration shift with temperature, with thermal 
+diffusion dominating at low temperatures and electromigration effect being amplified and becoming dominant at high temperatures, 
+thereby further accelerating precipitate coarsening.
+The evolutionary differences across the γ ″ precipitation temperature range can be interpreted from two perspectives: vacancy 
+Fig. 14. PSO-based calibration framework.
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+18 \nactivation and diffusion flux. As shown in Fig. 16 (b), ϕ (in Eq. (22) ) increases monotonically with temperature. At lower temperatures, 
+limited vacancy concentration and mobility in the γ matrix result in low effective transition frequencies for Nb – vacancy pairs, and the 
+overall diffusion flux remains weakly activated; consequently, ϕ remains small. As a result, coarsening is primarily governed by 
+thermally activated diffusion ( Devaux et al., 2008 ). At higher temperatures, equilibrium vacancy concentration and mobility increase 
+substantially, activating Nb – vacancy diffusion pathways. Simultaneously, the electron-wind effect and electron – vacancy scattering 
+further enhance directional solute migration within the highly activated diffusion network. This markedly increases the contribution of 
+Table 6 
+Material parameters used in the current study unless stated otherwise.
+Description Notation Value Refs.
+Shared parameters ​ ​ ​
+Elastic constants for γ C
+γ
+11
+248 GPa
+Ghorbanpour et al. (2017)
+​ C
+γ
+12
+156 GPa ​
+​ C
+γ
+44
+109 GPa ​
+Elastic constants for γ ″
+C
+γ
+ʹ ʹ
+11
+307 GPa
+Ghorbanpour et al. (2017)
+​
+C
+γ
+ʹ ʹ
+12
+182 GPa ​
+​
+C
+γ
+ʹ ʹ
+44
+97 GPa ​
+Burgers vector magnitude b 2.54 × 10
+-7 
+mm Gupta et al. (2021)
+Reference dislocation capture radius r
+c 0
+2.54 × 10
+-6 
+mm
+Gupta et al. (2021)
+Activation barrier shape exponents p, q 0.7, 1.5 Obtained by PSO
+Dislocation evolution constants k
+c
+2.8
+Bronkhorst et al. (2019)
+​ k
+nc
+104.5 Obtained by PSO
+Grain size factor k
+gr
+10 MPa ⋅ mm
+1/2
+Gupta et al. (2021)
+Capture radius energy A 6.18 × 10
+-11 
+mJ Obtained by PSO
+Initial dislocation density ρ
+α
+0
+5.0 × 10
+6 
+mm
+-2
+Gupta et al. (2021)
+Matrix parameters ​ ​ ​
+Reference shear rate ˙γ
+γ
+0
+3.5 × 10
+6 
+1/s Obtained by PSO
+Activation energy F
+γ
+5.0 × 10
+-16 
+mJ Obtained by PSO
+Dislocation interaction factors a
+0
+0.068 Ghorbanpour et al. (2017)
+​ a
+1
+0.068 ​
+​ a
+2
+0.0454 ​
+​ a
+3
+0.625 ​
+​ a
+4
+0.137 ​
+​ a
+5
+0.122 ​
+Precipitate parameters ​ ​ ​
+Reference shear rate
+˙γ
+γ
+ʹ
+0
+5.6 × 10
+8 
+1/s Obtained by PSO
+Activation energy F
+γ
+ʹ ʹ 7.3 × 10
+-16 
+mJ Obtained by PSO
+Dislocation interaction factors a
+0
+1.0 Gupta et al. (2021)
+​ a
+1
+1.4 ​
+Fig. 15. Calibration and validation of the CPFEM framework: (a) representative calibrated stress – strain curves for ST and selected aged states; (b) 
+validation results for 11A – 30min and 11.7A – 10min.
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+19 \nelectromigration to overall diffusion and precipitate coarsening.
+Overall, the fitted coarsening-rate constants indicate that γ ″ coarsening is mainly associated with thermal diffusion at lower 
+temperatures, whereas the electromigration-related contribution becomes increasingly important at higher temperatures. This trend 
+supports the temperature-driven enhancement of electromigration during γ ″ coarsening. On this basis, current and aging time can be 
+rationally matched to emphasize thermal diffusion at low temperatures, whereas electromigration can be promoted at high temper -
+atures. Within the investigated EAA strengthening window, this provides a basis for regulating the precipitate growth rate and particle 
+size distribution by matching current and aging time, thereby obtaining a more favorable strengthening microstructure.
+5.2. Strengthening mechanism based on multi-mode shearing and bypassing
+Fig. 17 shows a pronounced non-monotonic trend in both yield strength and elongation under EAA conditions. As the effective 
+current increases, the yield strength in Fig. 17 (a) first rises and then falls after a distinct inflection point, whereas the elongation in 
+Fig. 17 (b) exhibits the opposite trend. Simultaneously, this inflection point moves toward a lower current's direction with an increasing 
+aging time. These results indicate that the mechanical response is governed by the coupled effects of current and aging time.
+As shown in Fig. 17 (a), noticeable strengthening occurs only within a limited current range. In the present study, the average γ ″ 
+precipitate size, r , is taken as the dominant microstructural parameter controlling strengthening, allowing different EAA conditions to 
+be represented by different r values. In general, dislocation – precipitate interactions are controlled by two competing modes, pre -
+cipitate shearing and Orowan bypassing. τ
+α
+shear 
+and τ
+or 
+reflect the difficulty of activating the corresponding modes separately. Fig. 18 (a) 
+shows the simulated evolution of τ
+or 
+and τ
+α
+shear 
+on different slip systems with r . As r increases, τ
+or 
+decreases, whereas τ
+α
+shear 
+on different 
+slip systems increases. Following the above analysis, one set of EAA parameters can be represented by a mean r value, which corre -
+sponds to both the calculated resistance state and the experimentally measured yield strength. Therefore, the experimental yield 
+strength was plotted against the corresponding γ ″ size on the right-hand axis of Fig. 18 (a). To improve the data coverage near the 
+Fig. 16. Effect of temperature on the coarsening-rate constants K and factor ϕ .
+Fig. 17. Yield strength and elongation measurements under various effective currents.
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+20 \ntransition-size range, two intermediate EAA conditions, 11.4A – 30min and 11.7A – 10min, were examined by tensile testing and TEM 
+observation. Their γ ″ sizes were approximately 50 – 60 nm, and their yield strengths showed a moderate increase compared with the 
+neighboring strengthening-window conditions. Based on the r range where the experimental yield strength increases and where the 
+calculated shearing and Orowan resistances overlap, the strengthening region was marked in Fig. 18 (a). Interestingly, this strength -
+ening region coincides with the overlap region of τ
+α
+shear 
+and τ
+or
+. This overlap region represents the transition between shearing- 
+dominated and bypassing-dominated behavior, corresponding to the critical size reported by Maciejewski et al. (2013) . Therefore, 
+the overall strengthening effect is governed by the weighting of shearing and bypassing mechanisms. Specifically, within this 
+strengthening regime, multiple dislocation-precipitate interaction mechanisms act synergistically to contribute to the overall 
+strengthening, leading to a higher macroscopic yield strength. By contrast, once the precipitate size falls outside this strengthening 
+region, only one interaction mechanism tends to dominate, and the strengthening effect is correspondingly weakened. Specifically, 
+when r falls below the strengthening region, τ
+α
+shear 
+is relatively low whereas τ
+or 
+remains high, so dislocations tend to shear γ ″ precipitates 
+and leave the corresponding SFs. In contrast, when r exceeds the strengthening region, bypassing becomes dominant and dislocation 
+motion proceeds mainly by looping around the precipitates. As shown in Fig. 18 (b), both shearing and bypassing features were 
+observed around γ ″ precipitates, providing microstructural support for the above interpretation. Thus, dominance of only one inter -
+action mode leads to a non-uniform distribution of microscopic resistance, resulting in weaker yield strengthening. Accordingly, EAA 
+can modify the relative contribution of shearing and bypassing by controlling γ ″ precipitate size, thereby providing mechanistic insight 
+for subsequent process optimization.
+The precipitate shearing can be further resolved into five shearing modes, as illustrated in Fig. 19 . These modes generate distinct SF 
+configurations, including APB/APB-like faults and SF variants such as ISF, SISF, and CSF, which are generated by shearing of different 
+displacement vectors in the D0 ₂₂ γ ″ structure, as illustrated by Lv et al. (2016) . The non-uniform activation of these shear modes may 
+affect the mechanical response in two ways. First, it may promote slip-system biasing, so that plastic activity tends to concentrate on 
+only a limited number of slip paths. Second, it can cause plastic-strain partitioning, with strain distributed unevenly among different 
+paths. This may reduce deformation compatibility and promote local strain accumulation. Taken together, precipitate shearing is 
+strongly path-dependent: each slip path corresponds to a specific shear mode and must overcome its own formation barrier. Slip paths 
+with lower barriers are therefore preferentially activated, whereas those with higher barriers contribute less. To quantify this rela -
+tionship, the slip-path activation weight A
+α 
+obtained from PSO inversion is summarized in Table 7 . Here, A
+α 
+should be interpreted as an 
+effective path-activation weight with partial physical meaning, rather than as an independently measurable physical fraction of slip 
+events. In particular, the 1/6 [ 11 2 ] slip system exhibits a much larger A
+α 
+value than the other paths, whereas the other paths have 
+similarly lower weights. This non-uniform distribution is consistent with the large differences in SF energies reported by Lv et al. 
+(2016) . Accordingly, plastic deformation tends to concentrate on slip paths with larger A
+α 
+values, which simultaneously increases 
+yield strength and the early-stage hardening exponent. In addition, the same concentration may reduce compatibility among slip paths 
+and limit cooperative deformation, thereby promoting local strain accumulation.
+6. Conclusions
+This study established a γ ″ precipitate-evolution-informed CPFEM describing the mechanical behavior of GH4169 under EAA. A 
+coupled framework integrating precipitate microevolution, the CP model, and the polycrystalline RVE model was established. The 
+main conclusions are as follows: 
+(1) A γ ″ precipitate microevolution model considering electromigration effects and a crystal plasticity constitutive model consid -
+ering precipitate shearing and bypassing were established and implemented in Abaqus via VUMAT, with a two-phase RVE 
+model. The microevolution parameters were calibrated from TEM statistical data, and the constitutive parameters were 
+Fig. 18. Shearing – bypassing transition of γ ″ precipitates: (a) resistance τ and experimental yield strength versus γ ″ size r ; (b) TEM observations of 
+dislocation shearing and bypassing around γ ″ precipitates.
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+21 \nidentified through inverse FE analysis coupled with PSO. Within this framework, the relative error in yield strength under the 
+11A-30min and the 11.7A-10min conditions is approximately 2%.
+(2) During EAA, the γ ″ coarsening behavior was governed by thermal diffusion at lower temperatures and by electromigration at 
+higher temperatures. This transition was accompanied by an increasing contribution of electromigration to the Nb diffusion 
+process, as indicated by the increase of K
+e
+/ K
+total 
+from 0.1 to 0.9.
+(3) A pronounced non-monotonic trend was shown in both yield strength and elongation. Strengthening was closely associated with 
+the precipitate size r . The strengthening region was established and found to coincide with the overlap region of shearing and 
+bypassing. Outside this region, a single interaction mechanism was dominant and weakened the strengthening effect. The non- 
+uniform activation of the five shearing modes was quantitatively confirmed, leading to path-dependent shearing, slip-system 
+biasing, and local strain accumulation.
+CRediT authorship contribution statement
+Rui Zhao: Writing – review & editing, Funding acquisition, Formal analysis, Conceptualization. Qiji Guo: Writing – original draft, 
+Validation, Methodology, Investigation. Zirong Li: Validation, Formal analysis. Bao Meng: Supervision, Data curation. Min Wan: 
+Supervision, Resources, Project administration.
+Declaration of competing interest
+We declare that we have no financial or personal relationships with others or organizations that can inappropriately influence our 
+work. No professional or other personal interest of any nature or kind in any product, service or company could be construed as 
+influencing the position presented in, or the review of, the manuscript.
+Acknowledgement
+The authors would like to acknowledge the financial support by the project (grant number 52575358) from the National Science 
+Foundation of China, the project (grant number 20232BBE50003) from the Key Research and Development Program of Jiangxi 
+Province, the project from the Fundamental Research Funds for the Central Universities, and the project (grant number 
+637202470F053 and 637202570F044) from the Jinan Special Structure Research Institute, Aviation Industry Corporation of China.
+Data availability
+Data will be made available on request.
+Fig. 19. Dislocation-precipitate interaction mechanisms.
+Table 7 
+Slip-system shearing participation factors.
+Displacement vectors
+1/2 [ 01 1 ] 1/2 [ 1 10 ] 1/6 [ 11 2 ] 1/3 [ 1 2 1 ] 1/6 [ 2 11 ]
+A
+α
+0.298 0.230 670.6 0.227 0.195
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+22 \nReferences
+Asadkandi, H.M., M ´anik, T., Holmedal, B., Hopperstad, O.S., 2025. Open-source implementations and comparison of explicit and implicit crystal-plasticity finite 
+element methods. Comput. Struct. 307, 107621 .
+Bronkhorst, C.A., Mayeur, J.R., Livescu, V., Pokharel, R., Brown, D.W., Gray III, G.T., 2019. Structural representation of additively manufactured 316L austenitic 
+stainless steel. Int. J. Plast. 118, 70 – 86 .
+Cai, Z.Y., Meng, B., Wan, M., Wu, X.D., Fu, M.W., 2020. A modified yield function for modeling of the evolving yielding behavior and micro-mechanism in biaxial 
+deformation of sheet metals. Int. J. Plast. 129, 102707 .
+Chatterjee, S., Yu, Q., Li, Y., Roche, K., Marian, J., Po, G., 2025. A spatially-resolved model of neutron-irradiated tungsten coupling stochastic cluster dynamics and 
+finite deformation plasticity. J. Nucl. Mater. 605, 155526 .
+Chen, Y., Zou, Z., Liu, H., Li, H., Li, H., Zhao, R., 2022. Verification at Mach 4 heat conditions of an annular microtube-typed precooler for hypersonic precooled 
+engines. Appl. Therm. Eng. 201, 117742 .
+Conrad, H., 2000. Effects of electric current on solid state phase transformations in metals. Mat. Sci. Eng. A-Struct. 287, 227 – 237 .
+Cui, A., Wang, X., Cui, Y., 2024. Multiscale modelling of precipitation hardening: a review. J. Mater. Sci.: Mater. Theory 8, 13 .
+Dequiedt, J.L., Denoual, C., Madec, R., 2015. Heterogeneous deformation in ductile FCC single crystals in biaxial stretching: the influence of slip system interactions. 
+J. Mech. Phys. Solids 83, 301 – 318 .
+Deschamps, A., Hutchinson, C.R., 2021. Precipitation kinetics in metallic alloys: experiments and modeling. Acta Mater. 220, 117338 .
+Devaux, A., Naz ´e, L., Molins, R., Pineau, A., Organista, A., Gu ´edou, J.Y., H ´eritier, P., 2008. Gamma double prime precipitation kinetic in Alloy 718. Mat. Sci. Eng. A- 
+Struct. 486, 117 – 122 .
+Gao, J., Li, H., Sun, X., Zhang, X., Zhan, M., 2022. Electro-thermal-mechanical coupled crystal plasticity modeling of Ni-based superalloy during electrically assisted 
+deformation. Int. J. Plast. 157, 103397 .
+Ghorbanpour, S., Zecevic, M., Kumar, A., Jahedi, M., Bicknell, J., Jorgensen, L., Beyerlein, I.J., Knezevic, M., 2017. A crystal plasticity model incorporating the effects 
+of precipitates in superalloys: application to tensile, compressive, and cyclic deformation of Inconel 718. Int. J. Plast. 99, 162 – 185 .
+Gudivada, G., Pandey, A.K., 2023. Recent developments in nickel-based superalloys for gas turbine applications. J. Alloys Compd. 963, 171128 .
+Guo, G., Zhang, W., Zhang, B., Xu, J., Chen, S., Ye, X., Zhang, Y., Zhang, Z., 2025. Effect of precipitate phase on the plastic deformation behavior of alloy 718: in-situ 
+tensile experiment and crystal plasticity simulation. Int. J. Plast. 187, 104286 .
+Gupta, S., Bronkhorst, C.A., 2021. Crystal plasticity model for single crystal Ni-based superalloys: capturing orientation and temperature dependence of flow stress. 
+Int. J. Plast. 137, 102896 .
+Hui, S., Zhan, L., Xu, Y., Zeng, Q., 2025. Electropulsing-induced rapid precipitation and strengthening in Al-Cu-Li alloys. J. Alloys Compd. 1032, 181119 .
+Iftikhar, C.M.A., Brahme, A., Inal, K., Khan, A.S., 2022. An evolution of subsequent yield loci under proportional and non-proportional loading path of ‘as-received ’ 
+extruded AZ31 magnesium alloy: experiments and CPFEM modeling. Int. J. Plast. 151, 103216 .
+Karamitros, V., Bellamy, T., MacLachlan, D.W., Dunne, F.P.E., 2026. Crystallographic fatigue crack propagation in Ni-based single crystals: Mechanistic insights into 
+cube slip activation influenced by load, orientation and temperature. J. Mech. Phys. Solids 214, 106638 .
+Kim, M.J., Yoon, S., Park, S., Jeong, H.J., Park, J.W., Kim, K., Jo, J., Heo, T., Hong, S.T., Cho, S.H., Kwon, Y.K., Choi, I.S., Kim, M., Han, H.N., 2020. Elucidating the 
+origin of electroplasticity in metallic materials. Appl. Mater. Today 21, 100874 .
+Lee, G.H., Kim, B., Jeon, J.B., Park, M., Noh, S., Kim, B.J., 2025. Precipitate phase behavior and mechanical properties of Inconel 718 according to aging heat 
+treatment time. Mat. Sci. Eng. A-Struct. 924, 147776 .
+Li, H., Yu, C., Kang, G., 2022. Crystal plasticity modeling of the multiaxial ratchetting of extruded AZ31 Mg alloy. Int. J. Plast. 152, 103242 .
+Li, Y.L., Kohar, C.P., Mishra, R.K., Inal, K., 2020. A new crystal plasticity constitutive model for simulating precipitation-hardenable aluminum alloys. Int. J. Plast. 
+132, 102759 .
+Lin, Y.C., Li, L., He, D.G., Chen, M.S., Liu, G.Q., 2017. Effects of pre-treatments on mechanical properties and fracture mechanism of a nickel-based superalloy. Mat. 
+Sci. Eng. A-Struct. 679, 401 – 409 .
+Liu, E., Ma, Q., Li, X., Gao, A., Bai, J., Yu, L., Gao, Q., Li, H., 2024. Effect of two-step solid solution on microstructure and δ phase precipitation of Inconel 718 alloy. 
+Int. J. Miner. Metall. Mater. 31, 2199 – 2207 .
+Lu, B., Tang, K., Wu, M., Yang, Y., Yang, G., 2024. Mechanism of electropulsing treatment technology for flow stress of metal material: a review. Alloys 3, 96 – 125 .
+Lu, P., Ge, Y., Jin, X., Li, P., Ji, X., Zhao, D., Wang, Z., Fan, X., 2022. A dislocation density-based model for the temperature dependent anomalous behaviors of nickel- 
+based single-crystal superalloy. Mech. Mater. 170, 104326 .
+Lv, D.C., McAllister, D., Mills, M.J., Wang, Y., 2016. Deformation mechanisms of D0 ₂₂ ordered intermetallic phase in superalloys. Acta Mater. 118, 350 – 361 .
+Maciejewski, K., Jouiad, M., Ghonem, H., 2013. Dislocation/precipitate interactions in IN100 at 650
+◦
+C. Mat. Sci. Eng. A-Struct. 582, 47 – 54 .
+Meng, B., Wan, M., Zhao, R., Zou, Z., Liu, H., 2021. Micromanufacturing technologies of compact heat exchangers for hypersonic precooled airbreathing propulsion: a 
+review. Chin. J. Aeronaut. 34, 79 – 103 .
+Mikula, J., Vastola, G., Zhang, Y.W., 2024. Dual-phase polycrystalline crystal plasticity model revealing the relationship between microstructural characteristics and 
+mechanical properties in additively manufactured maraging steel. Int. J. Plast. 180, 104058 .
+Mohr, P.J., Newell, D.B., Taylor, B.N., Tiesinga, E., 2025. CODATA recommended values of the fundamental physical constants: 2022. Rev. Mod. Phys. 97, 025002 .
+Special Metals Corp, 2007. INCONEL ® alloy 718. Special Metals Corporation. Huntington, WV, USA . 
+Tian, H., Zhao, J., Zhao, R., He, W., Meng, B., Wan, M., 2023. The modified GTN model for fracture of nickel-based superalloys considering size effect and healing 
+effect in pulsed current assisted deformation. Int. J. Plast. 167, 103656 .
+Wang, L., Wang, Y., Liu, Y., Song, X., Lü, X.D., Zhang, B.J., 2013. Coarsening behavior of γ ′ and γ ″ phases in GH4169 superalloy by electric field treatment. Int. J. 
+Miner. Metall. Mater. 20, 861 – 866 .
+Wang, Y., Chen, G., Chen, Z., Wan, H., Xiao, H., Chang, X., 2022. Electropulsing assisted aging with ultrafast hardening rate for AerMet100 steel. Mat. Sci. Eng. A- 
+Struct. 841, 143066 .
+Xiang, S., Zhang, X., 2019. Dislocation structure evolution under electroplastic effect. Mat. Sci. Eng. A-Struct. 761, 138026 .
+Xiao, H., Zhang, K., Shi, C., Lu, Z., Jiang, J., 2019. Influence of electropulsing treatment combined with pre-deformation on ageing behavior and mechanical 
+properties of 5A90 Al-Li alloy. J. Alloys Compd. 784, 1234 – 1247 .
+Zhang, J., Liu, Y., Cheng, Y., Wang, H., Sha, A., Duan, H., 2024. Modeling of creep in nickel-based superalloy based on microtwinning mechanism. Int. J. Plast. 174, 
+103916 .
+Zheng, L., Yoon, J.W., 2024. A flexible yield criterion for strength modeling from biaxial compression to biaxial tension. Int. J. Plast. 182, 104113 .
+R. Zhao et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104763 
+23 

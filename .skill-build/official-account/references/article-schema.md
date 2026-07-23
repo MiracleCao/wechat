@@ -25,4 +25,4 @@ Write UTF-8 JSON to `outputs/metadata.json` with these fields:
 }
 ```
 
-`figures` must contain exactly six objects ordered by `selected_figure_numbers`. Verify every label against the supplied image filename and the PDF caption.
+`figures` must contain one to six objects, exactly matching the number of supplied images and ordered by `selected_figure_numbers`. Verify every label against the supplied image filename and the PDF caption.

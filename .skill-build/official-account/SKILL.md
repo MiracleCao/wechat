@@ -1,6 +1,6 @@
 ---
 name: official-account
-description: Generate a Chinese WeChat Official Account paper interpretation from one PDF and six numbered figures in materials/. Use for requests to analyze paper materials and produce the DOI URL, guide, six original-number figure explanations, conclusion, short summary, ten titles, and structured outputs for later manual filling with fill_wechat_editor.py.
+description: Generate a Chinese WeChat Official Account paper interpretation from one PDF and one to six numbered figures in materials/. Use for requests to analyze paper materials and produce the DOI URL, guide, one-to-six original-number figure explanations, conclusion, short summary, ten titles, and structured outputs for later manual filling with fill_wechat_editor.py.
 ---
 
 # Official Account
@@ -10,7 +10,7 @@ Create and validate article content from the current workspace's `materials/`. D
 ## Workflow
 
 1. Inspect `materials/` recursively.
-   - Require one paper PDF and exactly six PNG/JPEG/WebP images.
+   - Require one paper PDF and one to six PNG/JPEG/WebP images.
    - Extract each image's original figure number from names containing `grN`, `figN`, `figureN`, or `图N`.
    - Sort images numerically by original figure number.
    - Do not inspect image pixels unless the PDF and filenames cannot establish the mapping.
@@ -20,7 +20,7 @@ Create and validate article content from the current workspace's `materials/`. D
    - Determine the total main-text figure count from `Fig. N`/`Figure N` captions; use the largest main-text caption number.
 3. Draft:
    - one-paragraph guide covering research background and principal work;
-   - six separate paragraphs, each formatted `图N：……`, describing only the six supplied original figures;
+   - one separate paragraph per supplied image, each formatted `图N：……`, describing only the supplied original figures;
    - one-paragraph principal conclusion;
    - one Chinese summary of at most 120 characters;
    - exactly ten accurate, non-hyped titles, each at least 25 Chinese characters.
@@ -34,6 +34,6 @@ Create and validate article content from the current workspace's `materials/`. D
 
 - Never invent missing paper facts, figure numbers, affiliations, results, or conclusions.
 - Treat `doi_url` as required; report a clear error rather than guessing when the PDF contains no DOI.
-- Keep original figure numbers; never renumber the six selected figures as 1–6.
-- Fill the figure summary exactly as `原文共有图N，本文图片选自原文中图a、b、c、d、e、f`.
+- Keep original figure numbers; never renumber the selected figures by their selection order.
+- Fill the figure summary exactly as `原文共有图N，本文图片选自原文中图a、b、……`, listing all supplied original figure numbers.
 - Do not launch Chrome, call browser-control tools, run `fill_wechat_editor.py`, or attempt to fill/save/publish a WeChat article.

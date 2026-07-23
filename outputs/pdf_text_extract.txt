@@ -1,0 +1,1444 @@
+Design and development of a wavy interlocking interface with a 
+mineral – collagen fiber-like structure to enhance the strength of Al 
+laminated alloys
+Yufeng Song
+a
+, Gang Zhao
+a
+, Yuqiang Chen
+a , *
+, Xu Zhang
+b
+, Ruilin Tang
+b
+, 
+Qin Zhang
+a
+, M.W. Fu
+c , *
+a
+School of Materials Science and Technology, Hunan University of Science and Technology, Xiangtan, 411201, China
+b
+Applied Mechanics and Structure Safety Key Laboratory of Sichuan Province, School of Mechanics and Aerospace Engineering, Southwest Jiaotong 
+University, Chengdu, 610031, China
+c
+Department of Mechanical Engineering, Joint Research Centre for Design and Net-shape Forming of Micro-/Meso-scaled Surface Functional 
+Structures, The Hong Kong Polytechnic University, Hung Hom, Kowloon, Hong Kong, China
+ARTICLE INFO
+Keywords:
+Al laminated alloy
+Wavy interlocking interface
+Heterogeneous bimodal grain structure
+Eutectoid Zn-Al phase
+Bonding strength enhancement
+ABSTRACT
+The relatively low bonding strength of Al laminates usually leads to interlayer cracks, which can 
+cause catastrophic failures of structural components during service life, restricting their further 
+application in modern industry. In this work, inspired by the natural hard – soft synergy of fish- 
+scale structure, a wavy interlocking interface with a mineral – collagen fiber-like (MCFL) struc -
+ture was designed to enhance the bonding strength. Therein, the wavy interlocking interface was 
+obtained through non-uniform compression of mineral-like (ML) particles and a soft aluminum 
+layer during hot rolling, while the MCFL structure was achieved by introducing ML particles and 
+the inhomogeneous precipitation of Zn-Al phases that form collagen fiber-like (CFL) compliant 
+domains. Notably, the interfacial fracture modes of the new laminates shifted from flat to 
+bifurcating, significantly increasing the bonding strength to 52.6 MPa, which is almost 44.46% 
+higher than that of the corresponding traditional laminate. The experimental observations and 
+finite element method-crystal plasticity-phase field (FEM-CP-PF) simulations confirm these re -
+sults. The enhanced bonding strength is mainly attributed to the transition from a flat/straight 
+interfacial fracture mode to a zigzag fracture mode. The zigzag fracture mode consists of two 
+characteristic crack-propagation forms: crack branching along the ML/ZnAl ₃ interface and crack 
+bypassing around ML particles. In addition, local repeated crack deflection within CFL-related 
+grain domains further increases the tortuosity of the crack path. Therefore, the interfacial 
+design may serve as an effective method to enhance the bonding strength of Al laminates and 
+further popularize laminated structures with other components.
+1. Introduction
+The pursuit of lightweight, high-strength structural materials for energy conservation has attracted significant attention in modern 
+society ( Guo et al., 2021 ; Han et al., 2024b ; Liu et al., 2023 ; Lu et al., 2023b ; Song et al., 2025a ; Song et al., 2026 ). Al laminated alloys, 
+* Corresponding authors.
+E-mail addresses: yqchen1984@hnust.edu.cn (Y. Chen), ming.wang.fu@polyu.edu.hk (M.W. Fu). 
+Contents lists available at ScienceDirect
+International Journal of Plasticity
+journal homepage: www.else vier.com/loc ate/ijplas
+https://doi.org/10.1016/j.ijplas.2026.104764
+Received 31 May 2026; Received in revised form 24 June 2026;   
+International Journal of Plasticity 204 (2026) 104764 
+Available online 30 June 2026 
+0749-6419/© 2026 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies. 
+due to their superior mechanical properties (e.g., higher tensile strength, favorable impact resistance) compared to homogeneous 
+alloys, are an ideal structural material for the aerospace, transportation, and military industries ( Ma et al., 2023 ; Nie et al., 2023 ; Song 
+et al., 2026 ; Wang et al., 2024b ; Zhou et al., 2023b ). However, the relatively low interfacial bonding strength between layers will limit 
+further industrial applications of this laminated aluminum alloy. The shortcoming of interfacial bonding may undoubtedly lead to 
+interlayer cracking, resulting in catastrophic failures of structural components during service life and endangering people ’ s lives ( Geng 
+et al., 2023 ; Zhang et al., 2023 ; Neogi and Janisch, 2022 ; Zhou et al., 2023 ). Hence, there is an urgent need to develop Al-laminated 
+alloys with high interfacial bonding strength to meet the requirements of modern industry.
+To enhance the interfacial bonding strength of laminates, many efforts have been made in processing technology, (e.g., surface 
+treatment, rolling process optimization, and diffusion annealing) ( Fu et al., 2022 ; Gao et al., 2025 ; Kim et al., 2021 ; Wang et al., 2024 ; 
+Zhang et al., 2024d ). For example, Fu et al. (2022) reported that proper surface-state regulation, specifically steel-side oxidation 
+combined with cold rolling, can effectively improve the bonding strength of Al/steel composite plates by promoting oxide cracking, 
+fresh metal exposure, local mechanical interlocking, and elemental diffusion at the interface. Gao et al. (2025) showed that optimizing 
+the differential-temperature rolling process can produce Ti/Al composite plates with high bonding strength and good flatness, where 
+enhanced reduction facilitates interfacial grain refinement and alleviates stress concentration, thereby improving interfacial bonding 
+strength. Kim et al. (2021) reported that diffusion annealing reduces residual stress and promotes the formation of strengthening 
+phases, thereby enhancing metallurgical bonding and improving the interfacial strength of Al/Cu composite plates. According to the 
+above studies, the laminate interface can be optimized through metallurgical bonding. However, without a doubt, the flat interface 
+produced by current processing technology makes it prone to tearing fractures ( Fig. 1 (a)) ( Hern ´andez-Escobar et al., 2024 ; Li et al., 
+2023c ; Liu et al., 2021 ; Zhang et al., 2024b ). Further improvement in the bonding strength of laminates requires evaluation.
+In addition to processing technology, the design of a three-dimensional spatial interface has emerged as another effective method to 
+improve the bonding strength of laminates ( Cai et al., 2025 ; Cheng et al., 2024 ; Li et al., 2023 ; Luo et al., 2025 , 2022 ). Unlike the 
+traditional flat interface, a newly formed wavy interface can be created by the current three-dimensional spatial interface design ( Paul 
+et al., 2022 ; Yang et al., 2023 ; Zhang et al., 2022 ). For instance, Yang et al. (2023) indicated that the wavy interface originated from 
+non-uniform impact deformation during explosion welding, which can improve bonding strength by optimizing processing parame -
+ters. Paul et al. (2022) noted that optimizing explosion welding and subsequent annealing can tailor the interfacial morphology of Al 
+Fig. 1. Schematic illustrating the motivation and design strategy of the proposed ML – CFL (MCFL) interfacial structure to enhance bonding strength 
+while avoiding the limitations of conventional processing methods, (a) Rolling processes, (b) explosive welding process, (c) prototype of miner -
+al – collagen fiber-like structure concept ( Yang et al., 2013 ).
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+2 
+laminates, thereby increasing bonding strength. Therefore, a wavy three-dimensional spatial interface that enhances laminate bonding 
+strength can be prepared by explosion welding followed by subsequent heat treatment. However, the hazardous and costly method is 
+detrimental to the environment ( Fig. 1 (b)), which is a significant disadvantage for modern industry ( Chu et al., 2022 ). Hence, 
+considering the advantage of the wavy interface, a more suitable processing method should be proposed to enhance the bonding 
+strength of laminates.
+Essentially, insufficient interfacial bonding promotes shear-crack initiation and subsequent propagation, leading to laminate 
+failure ( Zhang et al., 2023e ). In natural fish scales, a tightly bonded hard-soft architecture, typically consisting of mineralized hard 
+constituents and collagen fiber-rich compliant interlayers, efficiently dissipates shear energy by enforcing crack deflection, branching, 
+and interfacial sliding rather than allowing a straight-through fracture path. Inspired by this concept, we ask whether introducing a 
+mineral-collagen fiber-like (MCFL) microstructure into the interlayer can reduce the effective shear-driving energy by promoting crack 
+bifurcation and increasing crack-path tortuosity, thereby improving the bonding strength of Al laminates.
+Inspired by fish-scale hard-soft synergy, we introduce a ceramic-particle-strengthened interface featuring an MCFL microstructure 
+into Al laminates. Firstly, the hard constituent is realized by mineral-like (ML) ceramic particles (i.e., SiC particles). Recent studies 
+have shown that hard ceramic building blocks can promote pronounced crack deflection and increase crack-path tortuosity, thereby 
+enhancing energy dissipation during fracture ( Lu et al., 2025 ). Secondly, the compliant interlayer analog is realized by inhomogeneous 
+precipitation of Zn-Al phases, forming collagen fiber-like (CFL). Lee et al. (2025) found that in Al-Zn-Mg-Cu alloys, the evolution of 
+precipitate type, size, and number density strongly governs the local mechanical response and fracture resistance. Zhu et al. (2024)
+reported that in Al-Zn-Mg-Cu-(Ag) alloys, Ag addition refines the precipitates and narrows the PFZs, which helps preserve fracture 
+elongation and improve structural stability; such a heterogeneous precipitate arrangement is analogous to a collagen fiber-like (CFL) 
+distribution. Han et al. (2024) pointed out that in Al-Li alloys, stress concentration will be formed at the interface between CFL 
+sub-grains and recrystallization zones, which will lead to the generation of crack sources. Therefore, the collagen fiber-like (CFL) 
+domains formed by non-uniform precipitation in different alloys significantly affect the material's deformation resistance through 
+multiple mechanisms.
+Furthermore, during the rolling process (fabrication), the non-uniform distribution of hard ceramic particles may promote non- 
+uniform deformation of laminates due to differences in the deformation resistance between Al plates and ceramic particles, thereby 
+yielding a wavy, three-dimensional interface. However, previous studies suggest that the introduction of ceramic particles may 
+facilitate crack formation and propagation at the laminate interface, thereby reducing interfacial bonding strength ( Ran et al., 2024 ; 
+Zhang et al., 2024c ). Whether the new interface improves the laminates' bonding strength remains unknown.
+The finite element method (FEM) can be widely used to simulate stress and strain fields, predict crack propagation behavior during 
+deformation ( Shen et al., 2025 ; Tancogne-Dejean et al., 2021 ; Zhang et al., 2023c ; Zhao et al., 2022 ), and thereby further illustrate the 
+bonding-strengthening mechanisms of the laminates. Shen et al. (2025) integrated FEM simulations with detailed interfacial char -
+acterization to analyze the evolution of thermal stress in LPBF-fabricated eutectic ceramic composites, identify 
+maximum-principal-stress-driven macro-cracking and interfacial-energy-mismatch-induced micro-cracking, and elucidate the un -
+derlying mechanisms of crack formation. Zhao et al. (2022) combined crystal plasticity, XFEM, and cohesive zone modeling to simulate 
+fatigue crack propagation across grain boundaries, highlighting the capability of FEM-based methods for describing 
+microstructure-sensitive crack growth. Obviously, FEM plays a key role in understanding crack initiation and propagation paths. 
+However, according to the FEM simulation, understanding crack propagation remains at a relatively macro level. It is essential to 
+examine crack propagation mechanisms thoroughly.
+To comprehensively assess microscopic crack propagation mechanisms, a coupled CP-PF model has emerged as the preferred 
+choice for metallic materials. Li et al. (2022) described the dislocation behaviors and crack evolution of tungsten by coupling the 
+crystal plasticity constitutive relation and phase-field (CP-PF) model, with the coupled model uncovering tungsten ’ s brittle-ductile 
+transition (BDT) and four typical temperature-dependent fracture processes. Vakili et al. (2022) adopted a coupled crystal 
+plasticity-phase field (CP-PF) model to describe the ductile fracture of the aluminum matrix and the brittle fracture of Mg
+2
+Si pre -
+cipitates in aluminum alloys, predicting the effects of precipitate morphology, orientation, and matrix critical energy release rate on 
+damage evolution. Xiong et al. (2025) employed a nonlocal CP-PF model (with dislocation flux and GNDs) to characterize MMCs' crack 
+initiation/propagation. Furthermore, they revealed the effects of particle distribution (in-grain/on-boundary) and strength on the 
+ductility of MMCs. It is certain that the CP-PF model enables a deeper understanding of damage mechanisms, i.e., their interaction with 
+the microstructure under various loading conditions, providing a theoretical basis for tailoring the microstructure and optimizing 
+mechanical properties.
+In this work, aiming to develop lightweight and high-strength laminated structural materials for energy conservation, a new 
+interface, i.e., a wavy interlocking interface with an MCFL structure, was designed to enhance the bonding strength of Al-laminated 
+alloy. Initially, the wavy interlocking interface was obtained by the non-uniform compression of hard SiC particles and a soft aluminum 
+layer during hot rolling. At the same time, the MCFL structure can be achieved by adding SiC phases (ML) and by inhomogeneous 
+precipitation of Zn-Al phases (CFL) during aging treatment. To further analyze the crack propagation law and damage mechanism, this 
+study, based on finite element simulation (FEM), also introduced crystal plasticity-cohesive zone model (CP-PF) simulations, estab -
+lishing a dual simulation system of “ FEM + CP-PF simulations ” . The combined results of experimental observations and dual simu -
+lations indicate that the shear interfacial fracture mode of the new interface is “ bifurcation ” rather than the traditional flat mode. The 
+“ bifurcation ” fracture mode, originating from the additive effect of strengthening, including the wavy interlocking interface and MCFL 
+structure, causes the significant energy dissipation of crack propagation, thereby achieving an increase of bonding strength to 52.6 
+MPa, 44.46% higher than the corresponding traditional one. The results are expected to provide a basic theoretical framework and 
+technical support for developing lightweight laminates with high interfacial bonding strength for applications in the aerospace, 
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+3 
+transportation, and military industries.
+2. Materials and methods
+2.1. Materials
+The aluminum alloy plates were commercial cold-rolled Al-Cu-Mg alloy with the sizes of 150 mm × 100 mm × 6 mm and 130 mm ×
+80 mm × 2 mm from Aluminum Corporation of China, with chemical compositions as follows: Cu: 3.5, Mg: 1.4, Mn: 0.4, impurity 
+elements: ~0.2, and balanced Al (wt %). Among them, the surface of a 130 mm × 80 mm × 2 mm cold-rolled Al-Cu-Mg alloy is coated 
+with a ~50 μ m-thick layer of pure aluminum. The SiC and ZnAl ₃ powders were supplied by Changsha Tianjiu Metal Materials Co., Ltd. 
+(Changsha, China), and both powders had a nominal particle size of approximately 100 μ m.
+2.2. Experiment
+The middle part of the cold-rolled Al-Cu-Mg alloy, measuring 150 mm × 100 mm × 6 mm, was cut into a 130 mm × 80 mm × 6 mm 
+groove using laser cutting technology, serving as an aluminum alloy forming die. The ZnAl
+3 
+and SiC powders were mixed evenly by ball 
+milling for 4 h at 300 r/min in a ball mill at ratios of 4:1, 3:1, 2:1, and 1:1. Firstly, the 2 mm Al-Cu-Mg alloy plate was inserted into the 
+bottom of the aluminum alloy forming die. Pure ZnAl
+3 
+powder, 4:1, 3:1, 2:1, and 1:1 SiC-ZnAl
+3 
+powders were placed in the grooves of 
+five aluminum alloy forming dies with a thickness of ~ 2 mm. Then, another 2 mm Al-Cu-Mg alloy plate was inserted into the groove to 
+form a sandwich structure comprising a layer of Al-Cu-Mg alloy plate, a layer of powder, and another layer of Al-Cu-Mg alloy plate 
+(total thickness ~ 6 mm). Finally, the gap between the aluminum alloy forming die and the aluminum alloy plate was sealed with a 
+high-temperature-resistant adhesive at 1000 
+◦
+C. Five sets of laminated composites were wrapped in aluminum foil to prevent oxygen 
+exposure. Therefore, five groups of samples were obtained: pure powder Al-Cu-Mg alloy laminated composites (PPLC), 4:1 mixed 
+powder Al-Cu-Mg alloy laminated composites (4 – 1MPLC), 3:1 mixed powder Al-Cu-Mg alloy laminated composites (3 – 1MPLC), 2:1 
+mixed powder Al-Cu-Mg alloy laminated composites (2 – 1MPLC), and 1:1 mixed powder Al-Cu-Mg alloy laminated composites 
+(1 – 1MPLC). The five groups of samples were hydraulically treated in a hydraulic press at 12 MPa for 3 min. Then, hot rolling treatment 
+was performed after solution treatment at 520 
+◦
+C for 1 h. The rolling deformation was 50%, and the strain rate was 4.92 s
+-1
+. Finally, the 
+sample was aged at 180 
+◦
+C for 24 h. The preparation process flowchart is shown in Fig. 2 (a), and the SEM morphologies of the SiC and 
+ZnAl ₃ powders are shown in Fig. 2 (b).
+Fig. 2. Raw powders and laminated structure fabrication, (a) Preparation process flow chart of SiC particle reinforced Al laminated alloys, (b) SEM 
+of SiC powders and ZnAl
+3 
+powders.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+4 
+2.3. Characterization
+Three shear specimens were processed using wire electrical discharge machining (WEDM), and the tests were conducted on an 
+Instron 3369 mechanical testing machine to determine interfacial bond strength. The interface morphology and elemental composition 
+of the samples were observed using a Tescan Mira4 scanning electron microscope (SEM) and a 1720H Electron Probe X-ray Micro- 
+Analyzer (EPMA). The microstructure of the samples was characterized using a JSM 7200F electron backscatter diffraction system 
+(EBSD). SEM observations and EBSD measurements were performed at an accelerating voltage of 15 kV with a 120 μ m aperture. 
+Secondary electron (SE) and backscattered electron (BSE) imaging modes were used to observe surface morphology and compositional 
+contrast, respectively. The local interfacial microstructure was further analyzed using a TaloxF200X transmission electron microscope 
+(TEM) and high-resolution transmission electron microscopy (HRTEM). Additionally, micro-X-ray diffraction (micro-XRD) was per -
+formed using a Bruker D8 Focus diffractometer to identify the second phases. The measurements were conducted at room temperature 
+with a micro-beam spot size of 1 mm, a tube voltage of 45 kV, and a tube current of 40 mA. The scanning range was 10
+◦
+  90
+◦
+, and the 
+scanning rate was 10
+◦
+min
+-
+¹. The obtained diffraction patterns were analyzed using MDI Jade 6 software.
+2.4. Finite element simulation of the ML hard-particle interlayer
+The FEM simulation of the shear test for Al-Cu-Mg alloy composite plates was conducted using Abaqus software. The size of the 
+FEM model is consistent with the actual shear test specimens, as shown in Fig. 3 (a). The models without SiC particles (non-SiC model) 
+and with SiC particles (SiC model) are illustrated in Fig. 3 (b-c), respectively. Among them, Al-Cu-Mg layer uses conventional elastic- 
+plastic parameters. In contrast, the ZnAl
+3 
+powder layer uses an elastic-plastic, progressive-damage constitutive model, in which 
+damage evolution is employed to characterize the material's stiffness degradation beyond its ultimate strength. The progressive 
+damage model assumes that the equivalent plastic strain at the onset of damage, ε
+pl
+D
+, is a function of stress triaxiality and strain rate, 
+denoted as ( Johnson and Cook, 1985 ): 
+ε
+pl
+D
+ 
+η ,
+˙
+ε
+pl
+)
+(1) 
+where η = -p/q is the stress triaxiality, p represents the pressure stress, q means the Mises equivalent stress, and 
+˙
+ε
+pl 
+refers to the 
+equivalent plastic strain rate. The criterion for damage initiation is met when the following condition is satisfied ( Hooputra et al., 
+2004 ): 
+ω
+D
+=
+∫
+d
+ε
+pl
+/
+ε
+pl
+D
+ 
+η ,
+˙
+ε
+pl
+)
+= 1 (2) 
+where ω
+D 
+represents a state variable that increases monotonically with plastic deformation. At each increment during the analysis, the 
+Fig. 3. Schematic of the finite element tensile simulation, (a) Shear specimen, (b) Non-SiC model, (c) SiC model.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+5 
+incremental increase in ω
+D 
+is computed as ( Johnson and Cook, 1985 ): 
+Δ ω
+D
+= Δ ε
+pl
+/
+ε
+pl
+D
+ 
+η ,
+˙
+ε
+pl
+)
+≥ 0 (3) 
+Meanwhile, due to the considerable stiffness and small deformation of SiC particles, the linear elastic constitutive model is adopted. 
+Total stress is defined from the total elastic strain as: 
+σ = D
+el
+ε
+el
+(4) 
+where σ denotes the total stress, D
+el 
+means the fourth-order elasticity tensor, and ε
+el 
+represents the total elastic strain. The SiC particles 
+are connected to the powder layer, while a unit-common-node approach has been used to connect the powder layer to the aluminum 
+alloy. The element type used throughout the model is CPE3, representing linear triangle elements, with a total of 36,000 elements. The 
+shear process in the simulation is consistent with the experimental procedure, in which the specimen is stretched at both ends at a rate 
+of 2 mm/min. The entire shear process is simulated quasi-statically using the Abaqus/Explicit solver.
+2.5. Crystal plasticity finite element method with damage phase field model
+2.5.1. Crystal plasticity model
+To clarify the micro-mechanism of crack initiation and deflection in the CFL-domain structure, a dislocation-density-based non- 
+local crystal plasticity model was employed. The constitutive framework follows established non-local crystal plasticity models for 
+describing dislocation evolution and slip-induced plastic deformation in metallic materials ( Reuber et al., 2014 ; Toursangsaraki et al., 
+2026 ; Zhang et al., 2023d ) In the present work, this model was introduced to describe the heterogeneous plastic deformation and 
+dislocation-density evolution in the coarse/fine-grained Zn-Al eutectoid interlayer. Only dislocation-slip-induced plasticity was 
+considered in the model. Therefore, the plastic velocity gradient in the framework of continuum mechanics can be described by the 
+plastic shear rate as follows: 
+L
+p
+=
+∑
+N
+slip
+α = 1
+˙γ s
+α
+⊗ n
+α
+(5) 
+where s
+α
+⊗ n
+α
+is the Schmid tensor. The simulation object is HCP zinc alloy, with basal and prismatic slip considered. Thus, the total 
+number of slip systems considered in this study is N
+slip
+= 6.
+The relationship between the plastic slip rate and the dislocation density can be established through the dislocation motion 
+mechanism in the following: 
+˙γ
+α
+= ρ
+α
+bv
+α
+(6) 
+where ρ
+α 
+is the dislocation density on the slip system, b is the Burgers vector, and v
+α 
+is the dislocation motion velocity. The dislocation 
+multiplication rate is designated as: 
+mult ˙ρ
+α
+=
+k
+1
+  ⃒
+⃒
+˙γ
+α
+e +
+⃒
+⃒
++
+⃒
+⃒
+˙γ
+α
+e  
+⃒
+⃒
+)
++
+  ⃒
+⃒
+˙γ
+α
+s +
+⃒
+⃒
++
+⃒
+⃒
+˙γ
+α
+s  
+⃒
+⃒
+)
+bk
+2
+λ
+α
+(7) 
+where k
+1 
+and k
+2 
+are the dislocation multiplication coefficients, and λ
+α 
+is the mean free path.
+Considering the influence of obstacles encountered during dislocation motion on the dislocation motion velocity, the dislocation 
+motion velocity can be written as: 
+v
+α
+=
+(
+t
+s
+b
+/
+̅̅̅̅̅ ̅
+c
+at
+√ +
+t
+p
+b
+)
+sign ( τ
+α
+) (8) 
+where t
+s 
+and t
+p 
+are the waiting times for solute atoms and Peierls obstacles, respectively.
+The critical resolved shear stress on each slip system can be written as: 
+τ
+cr
+= Gb
+̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅ ̅
+∑
+N
+slip
+β = 1
+ξ
+α β
+ρ
+α
+√
+√
+√
+√
+(9) 
+where G is the shear modulus and ξ
+α β 
+is the slip system interaction strength coefficient.
+This model also considers dislocation flow. By defining the dislocation flux on the slip system f
+α
+= ρ
+α
+v
+α
+, the governing equation of 
+dislocation flow can be derived 
+˙ρ
+α
++ ∇ ⋅ f
+α
+= 0 (10) 
+The difference in the magnitudes of positive and negative dislocation densities caused by dislocation flow leads to the generation of 
+the geometrically necessary dislocation (GND) density 
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+6 
+ρ
+α
+GND
+=
+⃒
+⃒
+ρ
+α
++
+  ρ
+α
+ 
+⃒
+⃒
+(11) 
+2.5.2. Damage phase-field model
+A brittle damage phase-field method is used in this work to simulate crack initiation, propagation, and damage-induced stress 
+degradation. The damage phase-field formulation was coupled with the crystal plasticity model following the stiffness-degradation 
+strategy proposed by Shanthraj et al. (2016) In this framework, the phase-field variable represents the progressive degradation of 
+local stiffness, thereby allowing crack nucleation and propagation to be driven by local strain-energy concentration under hetero -
+geneous elastoplastic deformation. The phase field variable describes the damage φ , where φ = 1 represents the undamaged state and 
+φ = 0 represents the fully damaged state. The crack surface is diffused by a characteristic length l
+c
+. The surface energy of the crack can 
+be expressed as: 
+ψ
+surf
+=
+G
+c
+l
+c
+( 1   φ ) +
+1
+2
+l
+c
+G
+c
+|∇ φ |
+2
+(12) 
+where G
+c 
+is the critical energy release rate. The strain energy is given by 
+ψ
+mech
+= φ
+2
+(
+1
+2
+E
+e
+: C : E
+e
+)
+(13) 
+where E
+e 
+is the strain tensor and C is the fourth-order elastic matrix.
+Considering the elastic strain energy as the main driving force for crack propagation, the evolution of the damage variable can be 
+written as: 
+Fig. 4. Periodic polycrystalline model.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+7 
+˙φ = M
+δ ψ
+δφ
+= M
+[
+∇ ⋅ l
+c
+G
+c
+∇ φ +
+G
+c
+l
+c
+  φ E
+e
+: C : E
+e
+]
+(14) 
+where M is the kinetic coefficient.
+The coupling between the damage phase field and the crystal plasticity model is achieved by incorporating the damage variable 
+into the elastic matrix. Thus, the degraded elastic stiffness tensor is defined as: 
+̃
+C = φ
+2
+C (15) 
+Based on the heterogeneous grain morphologies from EBSD, generate approximate distribution of seed point coordinates via Py -
+thon scripts, and create a polycrystalline model using the Voronoi method ( Fig. 4 ). The model dimensions are 200 μ m × 160 μ m × 2 μ m 
+(X × Y × Z), with 100 × 80 × 1 grids considering the computational efficiency and convergence, about 168 grains are included in it. 
+The model employed periodic boundary conditions, and a shear load was applied in the x ‑ direction. The shear deformation was 
+defined by the following rate of deformation gradient and the first Piola-Kirchhoff stress: 
+˙
+F =
+⎡
+⎣
+∗ 1 × 10
+  3
+0
+0 ∗ 0
+0 0 ∗
+⎤
+⎦
+s
+  1
+, P =
+⎡
+⎣
+0 ∗ ∗
+∗ 0 ∗
+∗ ∗ 0
+⎤
+⎦
+Pa (16) 
+where ‘ ∗ ’ represents unspecified boundary constraints.
+Numerical simulations of the developed crystal plasticity-phase-field coupled model in this section were conducted using the 
+DAMASK (Düsseldorf Advanced Material Simulation Kit) framework ( Table 2 ). The model parameters are summarized in the 
+Tables 1 – 3 .
+3. Results and discussion
+3.1. Interface bonding behavior
+The bonding behavior of the ML-CFL laminated structure was evaluated using shear testing in combination with multiscale 
+microstructural characterization. The results show that the interfacial strength depends on the relative proportions of ZnAl ₃ and SiC in 
+the intermediate layer, reaching a maximum of approximately 52.6 MPa in the 3 – 1 MPLC configuration. SEM, EPMA, and TEM an -
+alyses reveal the formation of a Zn-Al reaction layer, the precipitation of fine Zn-Al eutectoid phases along grain boundaries, and dense 
+atomic-scale bonding at the SiC/ZnAl ₃ interface. These coupled effects-including grain-boundary pinning, diffusion-induced interfacial 
+reactions, and the mechanical obstruction provided by the ML-CFL architecture-collectively enhance the interfacial bonding and 
+structural reliability of the laminated composite.
+3.1.1. Interface bonding properties
+Fig. 5 presents the bonding performance of different ML particle-reinforced Al-Cu-Mg laminated composites, including the 
+Table 1 
+Crystal plasticity parameters for Zinc alloys.
+Parameter Symbol Value Reference
+Elastic moduli (GPa) C
+11
+126.68 ( Liu et al., 2025b )
+C
+12
+36.40 ( Liu et al., 2025b )
+C
+33
+63.47 ( Liu et al., 2025b )
+C
+13
+53.00 ( Liu et al., 2025b )
+C
+44
+19.79 ( Liu et al., 2025b )
+Number of slip systems N
+slip
+[3, 3] ​
+Initial overall dislocation density (m
+-2
+) ρ
+0
+1.44 × 10
+13
+experiment
+Edge contribution to multiplication k
+1
+0.1 fitted
+Dislocation multiplication coefficient k
+2
+[25,25] fitted
+Length of Burgers vector(m) b [2.71 × 10
+– 10
+, 2.71 × 10
+– 10
+] ( Zhang et al., 2023 )
+Minimum edge dipole separation (m) d
+e , low
+[1.6 × 10
+– 9
+, 1.6 × 10
+– 9
+] ( Liu et al., 2025b )
+Minimum screw dipole separation (m) d
+s , low
+[1.0 × 10
+– 9
+, 1.0 × 10
+– 9
+] ( Liu et al., 2025b )
+Self-diffusivity activation entropy (J) Δ H
+SD
+0.0 ( Liu et al., 2025b )
+Self-diffusivity coefficient (m
+2
+s
+-1
+) D
+0
+SD
+2.0027 × 10
+– 19
+( Liu et al., 2025b )
+Atomic volume (m
+3
+) Ω 1.7 × 10
+– 29
+( Liu et al., 2025b )
+Solid-solution concentration c
+at
+5.5 × 10
+– 8
+fitted
+Attack frequency (HZ) f 5 × 10
+10
+( Liu et al., 2025b )
+Strength of obstacle (MPa) τ
+s
+[0.1, 0.1] ( Liu et al., 2025b )
+Strength of obstacle (MPa) τ
+p
+[0.1, 0.1] ( Liu et al., 2025b )
+Solid-solution size (b) d
+obst
+2 ( Liu et al., 2025b )
+Double kink width (b) w 10 ( Xiong et al., 2025 )
+Energy barrier profile constants p 1 ( Xiong et al., 2025 )
+Energy barrier profile constants q 1 ( Xiong et al., 2025 )
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+8 
+load – displacement curves obtained from shear testing and a comparison with previously reported Al laminated composites. As the ML- 
+particle fraction in the interlayer increased, the fracture load of the samples first increased and then decreased. The 3 – 1MPLC sample 
+exhibited the highest fracture load of 2917.57 N, as shown in Fig. 5 (a). The corresponding average interfacial bonding strengths of the 
+different laminated samples were 36.39 MPa for PPLC, 46.16 MPa for 4 – 1MPLC, 52.57 MPa for 3 – 1MPLC, 40.38 MPa for 2 – 1MPLC, 
+Table 2 
+The interaction types and strength coefficients of HCP crystals 
+( Luo and Zaiser, 2023 ).
+Interaction type Value
+basal self-interaction 0.150
+basal/basal coplanar 0.150
+basal/prismatic collinear 0.535
+basal/prismatic non-collinear 0.054
+prismatic self-interaction 0.150
+prismatic/prismatic 0.038
+prismatic/basal collinear 0.535
+prismatic/basal non-collinear 0.060
+Table 3 
+Phase field parameters.
+Parameter Symbol Value Reference
+Critical energy release rate(Jm
+-2
+) G
+c
+35 fitted
+Characteristic length( μ m) l
+c
+2 Double grid size
+Mobility parameter(s
+-
+) M 0.1 ( Liu et al., 2025b )
+Fig. 5. Bonding performance of the laminated composites, (a) Load-displacement curves from shear testing, (b) bonding strength of different Al-Cu- 
+Mg laminated composites, (c) representative bonding strength of Al alloy laminated composites.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+9 
+and 37.48 MPa for 1 – 1MPLC, respectively, as shown in Fig. 5 (b). These values were obtained from three repeated shear tests for each 
+condition, and the error bars represent the corresponding standard deviations. With increasing ML-particle fraction, the interfacial 
+bonding strength of the Al-Cu-Mg laminated composites exhibited an initial increase followed by a decrease. When the ratio of ZnAl ₃ 
+powder to ML particles was 3:1, the interfacial bonding strength reached the maximum value of 52.57 MPa, corresponding to an 
+increase of approximately 44.46% compared with the PPLC sample.
+Numerous scholars have conducted research on layered materials using various interlayer designs ( Guo et al., 2019 ; Li et al., 2025 ; 
+Liu et al., 2022 ; Sadeghi et al., 2025 ; Wang et al., 2021 , 2020 ; Yu et al., 2022 ; Zhang et al., 2014 , 2014 , 2013 ; Zhang et al., 2021 ; Zhu 
+et al., 2011 ), achieving favorable interfacial bonding strengths, as shown in Fig. 5 (c). For Al/Mg layered materials, Zhang et al. 
+(2014b) achieved a specific interfacial bonding strength (~25 MPa) by introducing a Ni foil interlayer to facilitate diffusion 
+bonding between Al and Mg. To further enhance interfacial bonding, Guo et al. (2019) increased the interfacial bond strength to 38.5 
+MPa by adjusting the thickness of the intermediate Zn alloy layer. Most subsequent studies have improved interfacial bonding in Al/Mg 
+laminated materials through hot rolling ( Li et al., 2025 ; Wang et al., 2021 , 2020 ; Yu et al., 2022 ; Zhang et al., 2021 ). In contrast, the 
+ZnAl ₃ /ML-particle mixed interlayer developed in this work leads to a high interfacial bonding strength of 52.57 MPa in hot-rolled 
+Al-Cu-Mg laminated composites. Fig. 5 (c) compares representative laminated systems with different constituent combinations, 
+interlayer configurations, and processing histories. Nevertheless, the present laminate exhibits a comparable or higher bonding 
+strength than representative reported systems. This result demonstrates that the powder-assisted interlayer design, together with the 
+regulated wavy interlocking interface, can effectively enhance load transfer and crack-path resistance in laminated metallic materials.
+3.1.2. Macro-micro interface morphology
+The interfacial bonding strength of Al-laminated alloys is closely related to the macro-micro interfacial morphology, in which the 
+mechanical interlocking effect at the macro scale, atomic diffusion bonding, and micro-scale interlayer strengthening phase particles 
+are key factors ( Zhang et al., 2025a ). Fig. 6 illustrates the macro-micro interfacial morphology and element distribution of the PPLC 
+and 1 – 1MPLC laminated alloys. Energy-dispersive X-ray spectroscopy (EDS) analysis reveals that the intermediate transition layer of 
+Fig. 6. Elemental distribution and second-phase identification in PPLC and 1 – 1MPLC samples, (a) EDS mapping of the PPLC sample, (b) local EDS 
+analysis of the magnified interlayer region in the PPLC sample, (c) EDS mapping of the 1 – 1MPLC sample, and (d) point-scan results of the second- 
+phase region in the interlayer.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+10 
+the PPLC sample primarily consists of Al (red region) and Zn (green region), with a typical flat morphology ( Fig. 6 (a)). EDS surface 
+scanning analysis of the selected area in Fig. 6 (a) shows that the second-phase particles in the middle layer consist of Zn and Al ( Fig. 6
+(b)). It is confirmed that the non-uniformly precipitated second-phase particles in the middle layer form a Zn-Al eutectoid structure. In 
+the 1 – 1MPLC sample, the primary elements are Zn, Al, and Si ( Fig. 6 (c)), with the interfacial morphology transitioning from flat to 
+wavy, exhibiting distinct three-dimensional features. This morphological transformation notably enhances interfacial bonding per -
+formance via two mechanisms: (I) a significant increase in the interfacial surface area; (II) the formation of a mechanical interlocking 
+effect, which improves the load-transferring capacity of the interface.
+However, as the content of “ ML ” particles increases, the interfacial bonding strength exhibits a non-monotonic trend, an initial 
+increase, and then a decrease, as shown in Fig. 5 . This behavior is closely related to the formation of void defects in the interlayer. The 
+absence of elements in the red region of Fig. 6 (c) indicates that an excess of ML particles can cause local agglomeration, leading to the 
+formation of micro-pores. During subsequent shear deformation, these void defects act as stress-concentration sources, promoting 
+crack initiation and propagation, ultimately leading to interface failure. The synergistic effect of ML particles and the Zn-Al eutectoid 
+phase on crack propagation will be systematically discussed in later sections. Furthermore, the EPMA point analysis results ( Fig. 6 (d)) 
+show that the Zn and Al content in the second-phase structure of the intermediate layer is similar, confirming that the non-uniformly 
+distributed second phase is the Zn-Al eutectoid phase.
+From a microscopic perspective, the interface between ML particles and ZnAl ₃ alloy is another major factor affecting the interfacial 
+bonding strength of the Al-laminated alloy. To comprehensively characterize the interfacial properties between ML particles and ZnAl ₃ 
+within the intermediate layer, we employed a combination of Focused Ion Beam (FIB) cutting and SEM and TEM to analyze the 
+interfacial quality in depth. The region of FIB cutting is indicated by the white area in Fig. 7 (a). The SEM image in Fig. 7 (b) clearly 
+shows that there are no cracks at the interface between “ ML ” particles and ZnAl ₃ alloy. TEM analysis was then conducted on the FIB-cut 
+sample, with the bright-field TEM image of the 3 – 1MPLC sample shown in Fig. 7 (c). Compared with traditional powder metallurgy and 
+vacuum sintering processes, hot-rolling treatment can also achieve outstanding interfacial bonding ( Yuan et al., 2025 ). Combined with 
+the corresponding EDS mappings shown in Fig. 7 (c1 – c4), we confirmed that the particles in the upper right corner are SiC particles (ML 
+particles), while those in the lower left corner are ZnAl ₃ . The contents of Zn, Si, Al, and C are 44.5, 23.4, 18.7, and 13.4 wt%, 
+respectively ( Fig. 7 (d)). The interface between ML particles and ZnAl ₃ is well-connected, with crack-free, atomic bonding. The in-plane 
+Fig. 7. Microstructural characterization of the SiC/ZnAl ₃ interface in the 3 – 1MPLC sample: (a) FIB cutting region observed by SEM; (b) SEM 
+morphology of the SiC/ZnAl ₃ interface; (c) TEM bright-field image of the SiC/ZnAl ₃ interface; (c1 – c4) corresponding EDS mappings of Zn, Si, C, and 
+Al; (d) elemental contents obtained from the region in (c); (e) IFFT image of the SiC/ZnAl ₃ interface; (f) in-plane strain field map (Exx) obtained by 
+GPA from (e); and (g) diffraction spots of ZnAl ₃ .
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+11 
+strain field maps (Exx) obtained from the GPA analysis of Fig. 7 (e) are shown in Fig. 7 (f), revealing localized strain concentration near 
+the SiC/ZnAl ₃ interface, indicating lattice distortion induced by atomic diffusion and interfacial mismatch. The corresponding 
+diffraction spots of ZnAl ₃ are shown in Fig. 7 (g), further confirming the crystalline nature of the interfacial phase.
+In general, the interfacial bonding strength of Al laminated alloys first increases and then decreases with the increasing content of 
+ML particles. The optimal bonding strength (shear bonding strength: 52.57 MPa) is achieved when the ratio of ZnAl ₃ to SiC particles is 
+3:1. In this situation, the SiC particles can be used adequately to strengthen the interface, without introducing extra defects, i.e., pores 
+and cracks caused by excessive agglomeration of particles. Meanwhile, two types of interfaces form: one is the wavy interlocking 
+interface between the Zn-Al intermediate layer and the matrix. The dense interface, characterized by uniform element diffusion and 
+mechanical interlocking, is advantageous for enhancing bonding strength. The other is the interface formed between ML particles and 
+ZnAl ₃ . The crack-free, atomically bonded interlayer can also enhance interfacial bonding. The synergy between the two interface types 
+yields excellent interfacial bonding strength. To further elucidate the formation mechanism of the interlaminar structure and the law of 
+Fig. 8. The intermediate layer BSE morphology image of different samples, (a) PPLC, (b) 3 – 1MPLC, (c) 1 – 1MPLC, (d) MCFL structure sche -
+matic diagram.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+12 
+crack propagation, in-depth analyses are presented in the following section.
+3.2. Formation and mechanism of interlamellar structure
+Based on the above macro-micro interfacial morphology characterization results, the interlayer structure of the research system 
+primarily consists of Zn-Al eutectoid phase and ML particles. The relationship between microstructure and inter-lamellar structure can 
+be systematized as follows. Firstly, the Zn-Al eutectoid phase forms a precipitation network with a typical CFL precipitation domain 
+during non-equilibrium solidification. Secondly, the introduced SiC reinforcement particles are dispersed in the matrix as an ML hard- 
+particle distribution. This dual-phase, synergistic distribution mode further tailors the interfacial microstructure, as shown below. (I) 
+The non-uniform precipitation of the Zn-Al eutectoid phase induces the formation of a unique bimodal grain structure; (II) SiC- 
+reinforced particles exert a directional extrusion effect on the pure aluminum layer during thermomechanical processing, thereby 
+constructing a wavy interface morphology with three-dimensional interlocking characteristics. Therefore, this section will mainly 
+explain the formation and mechanisms of the key microstructures, including the MCFL structure, the wavy interlocking interface, and 
+the bimodal grain structure.
+3.2.1. Formation of MCFL structure
+The MCFL structure was constructed based on the synergistic effect of SiC particles and Zn-Al eutectoid phase. Fig. 8 illustrates the 
+backscattering electron (BSE) images of Al laminated alloys with different “ ML ” particle contents. When ML reinforcement particles 
+are not introduced into the intermediate layer, a CFL structure forms in the intermediate layer of the PPLC samples, as shown in Fig. 8
+(a). The formation of this CFL structure is primarily related to the non-uniform precipitation of the second phase in the intermediate 
+layer. Fig. 8 (a1) shows a local magnified view of this second-phase structure. As the number of ML particles increases, the morphology 
+of the CFL structure transforms from straight to curved, with the distribution area decreasing ( Fig. 8 (b, c)). Moreover, from the BSE 
+morphology images of the 3 – 1MPLC sample, it can be observed that there are no cracks present at the interface between ML particles 
+and ZnAl
+3 
+powders, indicating excellent interfacial bonding ( Fig. 8 (b1)). However, in the BSE morphology images of the 1 – 1 MPLC 
+samples, a higher ML particle density results in a non-uniform distribution, leading to ML particle aggregation zones. When ML 
+particles aggregate excessively in a single region, this may lead to the formation of larger microscale holes ( Fig. 8 (c1)), consistent with 
+the results shown in Fig. 6 (c).
+This study introduces an innovative MCFL structure, illustrated in Fig. 8 (d), that exhibits distinct “ ML-CFL ” characteristics. The 
+Fig. 9. EPMA of Al laminated alloys with different SiC powder contents, (a) PPLC, (b) 3 – 1MPLC, (c) 1 – 1MPLC, (d) schematic diagram of the wavy 
+interlocking interface.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+13 
+formation mechanism of this structure is as follows: SiC-reinforced particles act as ML hard constituents to regulate local stress and 
+hinder straight crack advance, while the Zn-Al eutectoid phase forms curved CFL compliant domains through non-equilibrium so -
+lidification and deformation, mimicking the tightly bonded mineral-collagen fiber layering in natural fish scales.
+3.2.2. Formation of a wavy interlocking interface induced by an ML
+According to Fig. 6 (c), the introduction of the ML phase results in a wavy, interlocking interface. To further analyze the relationship 
+between the interlayer and the interface of the Al-Cu-Mg matrix layer, the BSE images and EPMA element distribution of the PPLC, 
+3 – 1MPLC, and 1 – 1MPLC interfaces are shown in Fig. 9 . The main elements in the PPLC samples are Al and Zn. The 3 – 1MPLC and 
+1 – 1MPLC samples primarily consist of Al, Zn, and Si. The precipitate-free region (deep-red, Al-rich) between the interlayer and the Al- 
+Cu-Mg matrix layer is the pure Al layer. The width of the pure Al layer in different samples was measured using ImageJ software to be 
+39.75 μ m (PPLC), 39.83 μ m (3 – 1MPLC), and 38.53 μ m (1 – 1MPLC), respectively, as shown in Fig. 9 (a-c). These values indicate that the 
+thickness of the pure Al layer remains relatively stable after processing. Moreover, the schematic illustration in Fig. 9 (d) further shows 
+that the soft pure Al layer provides a deformable region for constructing a wavy interlocking interface between the intermediate layer 
+and the Al-Cu-Mg matrix.
+The formation mechanism of this special interface morphology can be systematically explained as follows: with the increase of the 
+content of ML particles, the extrusion probability of the soft pure Al layer during the rolling process is significantly increased, resulting 
+in the interface morphology gradually evolving from the initial flat state to a curved structure with periodic wave-like, as shown in 
+Fig. 10 . Specifically, under the action of rolling compressive stress, the ML particles gather at the interface and act as rigid components 
+to produce directional plastic deformation on the pure Al layer, and finally form a wavy interlocking interface with a wavelength of 
+about 50 ~ 100 μ m and a wave height of 10 ~ 30 μ m. The strengthening mechanism of this wavy interlocking interface is mainly 
+reflected in three aspects: (I) enhancing the mechanical interlocking effect by increasing the surface area ( Zhang et al., 2025b ); (II) 
+Changing the crack propagation path to consume more energy for crack propagation ( Cheng et al., 2024 ); (III) Optimizing the interface 
+stress distribution and reducing the stress concentration ( Zhang et al., 2023b ). The experimental results ( Fig. 5 ) show that the interface 
+shear strength increases from 36.39 MPa (flat interface) to 52.6 MPa (wavy interlocking interface), representing a 44.46% increase.
+3.2.3. The formation of bimodal grain induced by CFL
+To identify the effect of the CFL Zn-Al eutectoid phase on the grain structure, EBSD tests were performed on three groups of 
+samples. Fig. 11 shows the inverse pole figures (IPFs) and elemental distributions of different regions in the Al-laminated alloys after 
+various processing treatments. In the Al-Cu-Mg alloy layer of the PPLC sample, grains are elongated along the rolling direction and 
+exhibit a long strip-like morphology, with the elemental composition mainly consisting of Al, as shown in Fig. 11 (a). The interlayer of 
+the PPLC sample can be divided into three distinct regions, as shown in Fig. 11 (b): (I) The coarse grain is non-uniformly distributed in 
+the upper layer. (II) The smaller equiaxial grain is distributed relatively uniformly in the middle layer. (III) The grains in the bottom 
+layer exhibit distinct rolling characteristics consistent with the grain features observed in Fig. 11 (a). These different grain distributions 
+are mainly associated with the distinct elemental compositions across the layers. Specifically, the upper, middle, and bottom layers 
+correspond to the pure Zn layer, the Zn-Al eutectoid phase precipitation layer, and the pure Al rolling layer, respectively. The Zn-Al 
+eutectoid phase can hinder grain growth, resulting in a finer grain size in the middle layer than in the upper and lower layers. After the 
+introduction of ML particles, the grain size near the ML particle region in the 3 – 1MPLC sample is further reduced compared with other 
+regions, as shown in Fig. 11 (c). The main elements in the intermediate layer of the 3 – 1MPLC sample are Zn, Al, and Si.
+The grain-size statistics for each layer were generated using the orientation imaging microscopy (OIM) software to quantify grain- 
+size changes across layers. Fig. 12 illustrates the grain boundary maps and grain size distribution graphs for various samples in 
+different regions. In the Al-Cu-Mg alloy layer of PPLC samples, the grain boundary types include sub-grain boundaries (SGBs), low- 
+angle grain boundaries (LAGBs), and high-angle grain boundaries (HAGBs), represented in red, green, and blue, respectively, with 
+SGBs predominant ( Fig. 12 (a)). The grain boundary types of the interlayer of PPLC and 3 – 1MPLC samples are mainly HAGBs ( Fig. 12
+(b, c)). The average grain sizes for the regions 1, 2, and 3 of the PPLC samples, and the interlayer of the 3 – 1MPLC samples are 7.04 μ m 
+( Fig. 12 (d)) (Al-Cu-Mg alloy layer in PPLC samples), 7.18 μ m ( Fig. 12 (e)) (the pure Zn element layer), 1.7 μ m ( Fig. 12 (f)) (Zn-Al 
+eutectoid phase precipitation layer), and 1.57 μ m ( Fig. 12 (g)), respectively. The grain size of the Al-Cu-Mg alloy layer in PPLC samples 
+is essentially consistent with that of the pure Zn element layer. After introducing ML particles into the interlayer, the grain size of the 
+Fig. 10. Schematic illustration of the ML-particle-induced formation mechanism of the wavy interlocking interface during hot rolling.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+14 
+interlayer of the 3 – 1MPLC samples is slightly smaller than that of the Zn-Al eutectoid phase precipitation layer. Therefore, the non- 
+uniform precipitation behavior of the Zn-Al eutectoid phase leads to the formation of a unique bimodal grain structure in the inter -
+layer. The specific performance is as follows: the fine-grain zone (average grain size of ~ 1 – 2 μ m) and the coarse-grain zone (average 
+Fig. 11. IPFs and element distribution of different regions in Al laminated alloys treated by different processes, (a) Al alloy layer in PPLC samples, 
+(b) interlayer of PPLC samples, and (c) interlayer of 3 – 1MPLC samples.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+15 
+grain size of ~ 7 – 8 μ m) are alternately distributed, forming a typical bimodal microstructure feature. The bimodal grain structure can 
+significantly improve the strength of the Al-laminated alloy interlayer through the synergistic effects of grain-boundary strengthening 
+and the strain-gradient effect ( Guo et al., 2025 ).
+The non-uniform Zn-Al eutectoid phase formed in the ML particles /ZnAl
+3 
+interlayer ( Fig. 7 ), promoting the formation of the 
+bimodal grain structure ( Fig. 13 ). To analyze the Zn-Al eutectoid phase more accurately, Fig. 13 presents the TEM bright field image 
+and IFFT image of the Zn-Al eutectoid phase. The formation of the Zn-Al eutectoid phase is mainly related to the diffusion between Zn 
+atoms and Al atoms ( Liu et al., 2022b ; Zhao et al., 2023 ). To quantitatively describe the diffusion process responsible for the formation 
+of the Zn-Al eutectoid phase, the diffusion flux can be expressed using Fick ’ s first law Eq. (17) ( Zhao et al., 2023 ): 
+J =   D × dC / dX (17) 
+Fig. 12. Grain boundary maps and grain size distribution of different regions in Al laminated alloys, (a) Al-Cu-Mg alloy layer in PPLC samples, (b) 
+interlayer of PPLC samples, (c) interlayer of 3 – 1MPLC samples, (d) grain size distribution of region 1 in PPLC samples, (e) grain size distribution of 
+region 2 in PPLC samples, (f) grain size distribution of region 3 in PPLC samples, and (g) grain size distribution of the interlayer of 
+3 – 1MPLC samples.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+16 
+where, J represents the diffusion flux (mol/(m
+2
+⋅ s)), D stands for the diffusion coefficient (m
+2
+⋅ s
+-1
+), dC/dX denotes the concentration 
+gradient. In addition, the temperature dependence of the diffusion coefficient can be described by the Arrhenius-type equation ( Eq. 
+(18) ) ( Verma et al., 2024 ): 
+D = D
+0
+exp (  Q / RT ) (18) 
+where D
+0
+, Q, R, and T are represented as the ratio constant (m
+2
+⋅ mol
+-1
+), molar gas constant (8.314 J mol
+-1 
+◦
+C-1
+), and temperature ( 
+◦
+C), 
+respectively. According to Eq. (17) and Eq. (18) , under the combined influence of temperature and concentration gradient of alloying 
+elements, alloy elements spontaneously diffuse from the Zn layer to the Al layer to form a Zn-Al eutectoid phase. It is reported that the 
+Fig. 13. TEM characterization and formation mechanism of the Zn-Al eutectoid phase, (a) TEM bright-field image of the Zn-Al eutectoid phase, (b) 
+morphology of the Zn-Al eutectoid phase, (b1, b2) EDS maps of Al and Zn corresponding to (b), (c) IFFT image of the Zn-Al diffusion layer, (c1) 
+enlarged image of the marked region in (c), (d) in-plane strain field map obtained by GPA analysis of (c1), (e) SAED pattern of Zn, and (f) schematic 
+illustration of the Zn-Al diffusion mechanism.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+17 
+diffusion coefficient of Zn in Al is much larger than that of Al in Zn ( Zhao et al., 2023 ). As a result, the actual diffusion process is mainly 
+the diffusion from Zn atoms to Al atoms.
+The bright field phase diagram of the Zn-Al eutectoid phase is shown in Fig. 13 (b), with dislocations observed around it. The Zn-Al 
+eutectoid phase exhibits a blocky structure, with differences between its edge and center ( Fig. 13 (c)). Fig. 13 (c1, c2) depicts EDS 
+analyses corresponding to Fig. 13 (c), where green indicates Al atoms and blue represents Zn atoms. Combining the results from Fig. 13
+(c) and 13(c1, c2), the elemental compositions of the white, gray, and black regions are Zn, Zn-Al, and Al, respectively, thereby 
+validating the formation of the Zn-Al eutectoid phase via Zn diffusion into Al. In Fig. 13 (d), the IFFT of the Zn-Al eutectoid phase and 
+the Zn interface are described. Many Zn atoms diffuse into Al, forming a Zn-Al interface reaction layer. The in-plane strain field map 
+(E
+xx
+) obtained by GPA analysis of Fig. 13 (d) is shown in Fig. 13 (e), revealing local strain concentration and lattice distortion near the 
+Zn-Al diffusion layer. The corresponding SAED pattern of Zn ( Fig. 13 (f)) confirms its crystalline nature with clear diffraction spots 
+indexed to the Zn phase. These results indicate that atomic interdiffusion induces interfacial strain and promotes the formation of a 
+coherent Zn-Al reaction layer. Fig. 13 (f) illustrates the formation mechanism of the Zn-Al eutectoid phase. Driven by the gradient of 
+elemental concentration, Zn atoms continually diffuse into Al atoms, leading to the formation of the Zn-Al eutectoid phase. However, 
+incomplete diffusion leaves some Al in the central area. The non-uniform precipitation of the Zn-Al eutectoid phase hinders grain 
+growth, resulting in significant differences in grain size between the middle layer and the surrounding layers, forming an CFL grain 
+Fig. 14. The crack propagation path of different Al-Cu-Mg alloy laminated samples after shear fracture, (a) PPLC, (b) 1 – 1MPLC, (c, d) 3 – 1MPLC, 
+fracture behavior mechanism diagram of (e) PPLC, (f) 1 – 1MPLC, (g) 3 – 1MPLC.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+18 
+structure.
+Zn-Al eutectoid phase generally precipitates at grain boundaries, hindering the growth of grains ( Zhao et al., 2023 ). In the 
+SiC/ZnAl
+3 
+interlayer, Zn atoms gradually diffuse to Al atoms and form the Zn-Al eutectoid phase. Zn-Al eutectoid particles play a key 
+Fig. 15. Comparison of simulations with and without SiC particle, (a) Non-SiC model, (b) SiC model, (c) Stress distribution of Non-SiC model, (d) 
+Stress distribution of SiC model.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+19 
+role in pinning grain boundaries, hindering their slip and migration ( Jiang et al., 2024 ), thereby inhibiting grain growth. The 
+non-uniform precipitation of the Zn-Al eutectoid phase impedes grain growth in some areas, leading to the formation of a bimodal 
+grain structure.
+In summary, the intermediate layer of Al-laminated alloys comprises three synergistic structures: the MCFL structure, a wavy 
+interlocking interface, and a bimodal grain structure. Their formation mechanisms are as follows: (1) MCFL structure: SiC particles act 
+as ML to tailor interfacial stress via mechanical hindrance; Owing to the non-equilibrium solidification and ML-regulated local 
+deformation, curved CFL-type precipitates can be observed by Zn-Al eutectoid phases and further form the MCFL structure. (2) Wavy 
+interlocking interface: during hot rolling, the flat interface transformed into a wavy morphology, achieving mechanical interlocking. 
+(3) Bimodal grain structure: inhomogeneous precipitation of Zn-Al eutectoids inhibits grain growth, forming alternating fine-grained 
+(1–2 μ m average) and coarse-grained (7–8 μ m average) regions; This structure enhances interlaminar strength via grain boundary 
+strengthening and strain gradient effects. Therefore, an “MCFL structure-wavy interface-bimodal grains” can be formed in Al- 
+laminated alloys, thus optimizing interfacial morphology and stress distribution. Further study on the strengthening mechanism 
+will be discussed in relation to fracture behavior.
+3.3. Crack propagation mechanism
+Shear strength is closely related to crack propagation, which directly reflects a material's ability to resist failure under external 
+stress ( Ran et al., 2024 ). Various crack propagation modes not only indicate the direction and behavior of the crack, but also reflect the 
+energy consumption due to shear stress, correlating with its interfacial bonding strength ( Liu et al., 2025 ; Zhao et al., 2023b ). 
+Therefore, we will analyze the interfacial bonding strength of laminated aluminum alloys using shear-crack behavior.
+3.3.1. Macroscopic 'zigzag' extension mechanism
+A key question is whether ML particle structures influence fracture behavior during shear fracture in laminated composites. In this 
+regard, Fig. 14 illustrates the crack propagation paths following shear fracture of different Al-Cu-Mg laminated samples. The crack 
+trajectories in PPLC samples primarily propagate along the interface between the intermediate layer and the Al-Cu-Mg alloy, showing a 
+straight-line fracture morphology ( Fig. 14 (a)). However, when the number of ML particle structures is excessively high, shear cracks in 
+the 1–1MPLC sample initiate around pores formed by the aggregation of ML particle structures, with fractures occurring in the central 
+region of the intermediate layer ( Fig. 14 (b)). The shift in fracture location from the interface to the central region suggests that the 
+wavy interface creates a mechanical interlocking effect, enhancing interfacial bonding strength ( Fig. 5 ).
+A comparison of the shear fracture positions between the PPLC and 1–1MPLC samples shows that the wavy interlocking interface 
+improves the bonding property between the Al-Cu-Mg alloy and ZnAl
+3
+, resulting in higher interfacial bonding strength (36.39 MPa for 
+PPLC and 37.48 MPa for 1–1MPLC, as shown in Fig. 5 (b). The crack propagation path in 3–1MPLC samples is more complex than in 
+PPLC and 1–1MPLC samples, exhibits ' zigzag ' extension, primarily displaying two types of propagation: (I) the crack propagates along 
+the interface between ML particles and ZnAl₃, causing branching (yellow arrow in Fig. 14 (c)); (II) the crack deviates from its path after 
+bypassing ML particles (green arrow in Fig. 14 (d)). ML particles, acting as hard constituents within the interlayer, effectively block the 
+direct propagation path of the cracks. When a shear crack encounters ML particles, it may split into multiple, more minor cracks, 
+making it difficult to form a large crack.
+Fig. 14 (e-g) illustrates the fracture behavior mechanisms of different samples, with green and blue arrows indicating crack 
+propagation directions. Under shear loading stress, the PPLC sample fractured near the interface ( Fig. 14 (e)), while the 1–1MPLC 
+sample fractured along cracks formed by the accumulation of an ML in the center ( Fig. 14 (f)). This indicates that the corrugated 
+interlocking interface has higher bonding strength. In the 3–1MPLC samples, crack propagation continues along or around the ML, 
+increasing the complexity of the crack trajectory ( Fig. 14 (g)). During crack propagation, the cracks are deflected or bent by the ceramic 
+particles, making their direction more complex and causing them to scatter within the intermediate layer, which reduces the prop -
+agation rate and increases the bonding property ( Ding et al., 2024 ; Ran et al., 2024 ).
+FEM is an essential tool widely used to analyze crack propagation behavior, predict the crack growth path and fracture mode of 
+materials under loading, and thereby reflect interfacial bonding strength ( Jin et al., 2024 ; Ran et al., 2024 ; Shen et al., 2025 ; Zhang 
+et al., 2023 ). In this study, ABAQUS software is used for numerical simulation with the establishment of two models: the non-SiC model 
+and the SiC model, to simulate shear tests under different conditions, as shown in Fig. 15 . During the loading process, crack propa -
+gation in the non-SiC model begins at the interface between the Al-Cu-Mg alloy and the ZnAl₃ alloy layer, with the interface acting as 
+the crack initiation source. After the load is applied, the simulation results show that the shear fracture mode of this model exhibits a 
+straight fracture characteristic ( Fig. 15 (a)). This straight fracture mode is typically caused by a stress concentration at the interface, 
+where the interfacial bonding strength is insufficient to resist further crack propagation, leading to uniform crack extension along the 
+interface. In contrast, the crack propagation path in the SiC model is significantly influenced by the intermediate region of the 
+ZnAl₃/SiC layer. During loading, the presence of SiC particles effectively alters the crack propagation path, resulting in a deflected 
+fracture mode where the crack either follows or bypasses the particles ( Fig. 15 (b)). This deflected fracture mode indicates that the 
+composite structure of SiC particles and ZnAl₃ powder can significantly alter shear crack propagation, thereby enhancing the material's 
+resistance to crack growth. Compared to the non-SiC model, the SiC model exhibits more complex crack-propagation behavior, 
+highlighting the critical role of hard SiC particles in enhancing interface bonding strength and improving the resistance to crack 
+propagation. To further compare the crack-propagation characteristics of the two FEM models, an image-based semi-quantitative 
+analysis was performed by identifying crack-steering events and secondary crack sources from the simulated fracture morphology. In 
+the non-SiC model, the fracture is dominated by a straight interfacial tearing mode. The crack propagates continuously along the ZnAl₃ 
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+20 
+alloy layer/interfacial region and rapidly separates the adjacent layers, indicating that the single ZnAl ₃ interlayer provides limited 
+obstruction to direct crack extension. In contrast, in the SiC-containing model, the crack path is repeatedly disturbed by the SiC 
+particles. At least three obvious crack-steering events can be identified around the SiC particles. Meanwhile, the fracture morphology 
+features a primary tortuous crack path and secondary crack sources near the particle/interlayer regions, indicating that crack prop -
+agation shifts from single-path, straight tearing to multi-site, deflected propagation. These features indicate that SiC particles 
+Fig. 16. SEM and EBSD images of shear fracture in different regions of 3 – 1MPLC samples, (a) SEM images of shear fracture, (b) EBSD diagram of 
+shear fracture, (c) EBSD diagram of region 1 in the shear fracture, (d) Kernel Average Misorientation (KAM) diagram of region 1 in the shear 
+fracture, (e) EBSD diagram of region 2 in the shear fracture, (f) Schmid factor distribution of region 2 in the shear fracture.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+21 
+effectively interrupt the straight crack path, promote crack deflection and branching, and increase the tortuosity of crack propagation.
+Additionally, studies have shown that the presence of a second phase in a material often serves as the starting point for microcrack 
+initiation, promoting crack bridging and thereby accelerating crack propagation, ultimately reducing the material's overall strength ( Li 
+et al., 2024 ). However, in this study, due to the relatively high hardness of the SiC particles, cracks cannot directly bridge them. 
+Instead, cracks must bypass SiC particles, leading to more complex crack paths. The strong interfacial bonding between SiC and ZnAl
+3 
+helps prevent crack initiation and propagation. Therefore, it is further demonstrated that SiC particles can effectively improve the 
+material's bonding strength.
+The uniform distribution of SiC particles helps distribute external loads, reducing stress concentrations and effectively resisting 
+external stresses, thereby minimizing material deformation under loading ( Peng et al., 2025 ). Fig. 15 (c, d) illustrates the stress dis -
+tribution of models with and without SiC under various loading conditions. For the non-SiC model, when shear force is applied, stress 
+first concentrates in the ZnAl
+3 
+alloy layer. As the load increases, significant deformation occurs in this layer ( Fig. 15 (a)). In the SiC 
+model, under the same loading conditions, stress first concentrates on the Al-Cu-Mg alloy layer. After loading, no significant defor -
+mation is observed in the material ( Fig. 15 (b)). A comparative analysis of the stress distributions shows that the critical stress required 
+for crack propagation in the SiC model is significantly higher than in the non-SiC model, indicating that SiC particles enhance the 
+overall bonding strength.
+Moreover, the presence of SiC particles results in a cross-mesh stress distribution in the middle layer, facilitating stress sharing and 
+leading to repeated crack deflection rather than linear extension. In contrast, without SiC particles, the intermediate layer experiences 
+higher stress, with a more uniform distribution. The absence of stress sharing causes the crack to expand directly at the interface, 
+leading to linear tearing. Consequently, the ZnAl
+3
+/SiC composite layer exhibits higher strength and greater deformation resistance 
+Fig. 17. The multi-scale characterization and simulation of crack propagation in the CFL-dominated grain-domain region, (a) Grain boundaries 
+diagram of shear fracture in different regions of 3 – 1MPLC samples, (b) SEM diagram of region 1 in the shear fracture, (c) SEM diagram of region 2 in 
+the shear fracture, (d) Damage process, (e) Mises stress, (f) GND density.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+22 
+than the single ZnAl
+3 
+alloy layer, with a significant improvement in interfacial bonding strength.
+3.3.2. Micro-crack deflection mechanism
+When the crack propagates along the ML particles interface or bypasses the ML particles, the crack path is shown to propagate along 
+the boundary of the Zn-Al eutectoid precipitation zone and the non-precipitation zone ( Fig. 14 ). Therefore, the MCFL structure 
+significantly influences crack propagation, warranting further analysis of its effect on crack behavior and the bonding strength 
+mechanism.
+Grain boundaries are among the main obstacles to crack propagation by hindering dislocation slip ( Ji et al., 2024 ; Zhang et al., 
+2024 ). Fig. 16 shows SEM and EBSD images of the shear fracture in various regions of the 3 – 1MPLC sample. When shear fracture 
+occurs in the 3 – 1MPLC samples, the main crack propagates along a reciprocating, tortuous path because the presence of “ ML ” particles 
+continuously hinders and deflects its propagation. At the same time, several microcracks with different shapes are observed near the 
+fracture ( Fig. 16 (a)). These microcracks mainly propagate in two ways ( Fig. 16 (b)): 
+(I) The CFL-dominated bimodal grain-domain structure consists primarily of coarse and fine grains. During the shearing process, 
+the crack starts from the outside of the CFL-dominated domain (fine-grained region), and it gradually extends to the edge of the 
+CFL-dominated domain (the boundary of coarse-grained and fine-grained regions) ( Fig. 16 (c)): This crack propagation path 
+results from significant differences in grain size between the coarse- and fine-grained regions. The low dislocation density in the 
+coarse-grained region and the high dislocation density in the fine-grained region create a non-uniform dislocation density at the 
+boundary ( Fig. 16 (d)), thereby generating a stress gradient. The stress gradient difference leads to a localized stress concen -
+tration, which becomes the primary pathway for crack propagation ( Bahl et al., 2024 ; Jiang et al., 2024 ; Roth et al., 2025 ).
+(II) The cracks initiate and continuously propagate outside of the CFL-dominated domain region, forming reciprocating deflections 
+( Fig. 16 (e)): This crack propagation pattern arises due to the smaller grain size and closer spacing between grains, resulting in 
+less hindrance from grain boundaries to crack propagation. Cracks are more likely to traverse through fine-grained regions. 
+Additionally, grains with lower Schmid factors have difficulty activating slip systems during deformation, and crack propa -
+gation in the crack-tip region relies on dislocation slip within the grains ( Lu et al., 2023 ; Pei et al., 2023 ). Therefore, when cracks 
+encounter grains with different Schmid factor values, they are more likely to propagate towards the softer grains (higher Schmid 
+factor values) ( Lu et al., 2023 ), resulting in crack deflection and reciprocation ( Fig. 16 (f)). These two forms of crack propagation 
+enhance the resistance to crack propagation by increasing the path of crack propagation, thereby reducing the rate of crack 
+propagation and increasing the interfacial bonding strength of the 3 – 1MPLC sample.
+To further investigate the shear fracture behavior of Al laminated alloys, Fig. 17 (a) presents the grain boundary diagrams of 
+different regions of the shear fracture in the 3 – 1MPLC sample. The propagation paths of the two microcracks follow a transgranular 
+fracture mode. Transgranular fracture helps disperse stress concentrations at the crack tip, reduce the crack-propagation rate, and 
+Fig. 18. Evolution of normalized strain energy during crack initiation and propagation in the Al laminated alloy with an island-like interfacial 
+microstructure.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+23 
+delay the onset of failure ( Lu et al., 2023 ; Yan et al., 2023 ). Additionally, trans-granular fracture propagates between grains, creating 
+more tortuous and complex crack paths. Fig. 17 (b) shows the SEM image of the shear fracture region 1 of the 3 – 1MPLC sample. The 
+CFL-dominated grain-domain structure is mainly composed of a coarse-grain zone and a fine-grain zone. The Zn-Al eutectoid phase 
+inhibits grain growth, promoting the formation of the fine grain zone, while the precipitate-free zone results in the formation of a 
+coarse grain zone. This is consistent with the results shown in Figs. 14 – 15 . The SEM images of shear fracture region 2 ( Fig. 14 (c)) reveal 
+that microcracks propagate from ML particle interfaces, with crack deflection occurring as the cracks traverse the fine-grained regions 
+formed by Zn-Al eutectic phases.
+The nonlocal crystal plasticity model based on dislocation density is employed to validate crack propagation behavior in CFL 
+structures ( Gao et al., 2023 ). The evolution of crack initiation and propagation, the Mises stress distribution, and the geometrically 
+necessary dislocation density during the shear process are simulated sequentially. During the initial stage of shear, no significant crack 
+initiation, stress concentration, or abnormal dislocation-density distribution was observed in the material ( Fig. 17 (d-f)). As strain 
+increases, four crack sources form in the transition zones between coarse and fine grains, gradually expanding along the grain 
+boundary junction. The simulation results closely match the experimental observations presented in Fig. 16 . Interface crack initiation 
+is primarily attributed to the difference in dislocation density between the fine- and coarse-grained regions: dislocation density is 
+higher in the fine-grained region and lower in the coarse-grained region, creating a significant stress gradient. This stress gradient 
+Fig. 19. Mechanical characterization of PPLC samples in different regions: (a) Schematic of load-penetration depth curves of PPLC samples in 
+different regions, (b) Hardness of Zn, pure Al, and Zn-Al eutectoid phase; nanoindentation morphology in different regions, (c) Pure Al, (d) Zn, (e) 
+Zn-Al eutectoid phase, (f) KAM diagram of PPLC samples in different regions, (g) Dislocation density of different regions.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+24 
+induces a local stress concentration near the interface, leading to crack nucleation and preferential expansion in this region.
+To further clarify the energy-based mechanism of crack deflection and branching in the CFL-domain structure, the evolution of 
+normalized strain energy during crack initiation and propagation was analyzed, as shown in Fig. 18 . At the initial deformation stage, 
+the strain energy is preferentially concentrated in the transition zones between coarse- and fine-grained regions, indicating that these 
+local high-energy sites are more susceptible to crack nucleation. With increasing shear strain, the crack tends to propagate along the 
+high-energy path, whereas the neighboring coarse-grained regions maintain relatively low strain energy and thus impede direct crack 
+penetration.
+Fig. 18 illustrates the evolution of normalized strain energy distribution in the CFL-dominated grain-domain structure under 
+increasing shear strain. High-strain-energy regions consistently coincide with preferential sites for crack nucleation, confirming that 
+local energy concentration drives crack initiation. Along the propagation path, strain energy remains elevated, indicating that crack 
+advancement is constrained by heterogeneous microstructural features. Notably, in Fig. 18 (b, c), when the crack attempts to penetrate 
+the coarse-grained region, its forward propagation is significantly impeded, and the progression into the grain interior is arrested. 
+Concurrently, adjacent interfacial regions exhibit further accumulation of strain energy, promoting the nucleation of secondary cracks.
+As shown in Fig. 18 (d), the crack bypasses the low-energy coarse-grained domains and exhibits pronounced deviation. Meanwhile, 
+a newly activated high-energy crack source on the right side gradually coalesces with the main crack, forming a continuous and 
+tortuous interfacial fracture path. The repeated crack deflection and coalescence suggest that the heterogeneous CFL-domain structure 
+can effectively redistribute local strain energy and increase the energy consumption required for crack propagation. Collectively, these 
+results demonstrate that the CFL-domain structure modulates the local stress/strain energy field, enhances crack-path tortuosity, 
+promotes energy dissipation during fracture, and thus contributes to the improvement of interfacial shear strength.
+The formation of the fine-grain zone not only promotes the reciprocating deflection of cracks in this region, increasing the 
+complexity of crack propagation and slowing its speed, but also significantly improves the overall strength of the intermediate layer 
+( Xu et al., 2026 ). The increase in strength will enhance the interlayer's resistance to shear-induced deformation ( Sun et al., 2024 ). To 
+isolate the strengthening contribution of the CFL-related eutectoid domains, local mechanical characterization was performed on 
+different regions of the PPLC sample, free from the influence of ML particles. Fig. 19 shows the load-penetration-depth curves of PPLC 
+samples from different regions, measured by nanoindentation. As shown in Fig. 19 (a), the indentation depth of the Zn region is the 
+largest, while the Zn-Al eutectoid phase region shows the smallest depth, corresponding to the nano-hardness ( Fig. 19 (b)). Fig. 19 (c-e) 
+presents the indentation morphology for different regions. The results indicate that the indentation area in the Zn region is the largest 
+(with a triangle side length of approximately 6.01 μ m). In comparison, the Zn-Al eutectoid phase region exhibits the smallest 
+indentation area (with a triangle side length of approximately 4.59 μ m). In summary, the load-penetration depth curves, 
+nano-hardness, and indentation morphologies exhibit a positive correlation.
+The increase in hardness indicates that the Al-laminated alloys exhibit greater resistance to external forces and deformation, 
+thereby enhancing interfacial bonding strength ( Han et al., 2024c ; Li et al., 2023b ; Zhang et al., 2025 ). Higher hardness indicates that 
+Fig. 20. Mechanism diagram of MCFL structure-induced crack deflection.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+25 
+the dislocation density in materials increases or that dislocation movement is hindered ( Lyu et al., 2025 ; Song et al., 2025b ; Yang et al., 
+2024 ). Fig. 19 (f) shows KAM diagrams of PPLC samples across different regions. The Upper layer, Intermediate layer, and Sublayer are 
+the pure Zn layer, the Zn-Al eutectoid layer, and the Al matrix layer, respectively. The formation of the Zn-Al eutectoid phase 
+significantly increases the KAM value in the interlayer region, with the dislocation density reaching approximately 7.01 × 10¹
+3 
+m
+-
+² 
+( Fig. 19 (g)). The Zn-Al eutectoid phase inhibits grain growth, thereby enhancing the hardness of specific regions in the interlayer. 
+Higher hardness indicates either an increase in dislocation density or hindered dislocation movement. These results indicate that the 
+Zn-Al eutectoid/CFL-related regions locally enhance hardness and deformation resistance, thereby contributing to the multiscale 
+crack-deflection strengthening mechanism together with ML-particle obstruction and the wavy interlocking interface.
+Overall, the MCFL structure enhances interfacial bonding by regulating crack propagation and increasing energy dissipation: (1) 
+Macroscopic “ zigzag ” propagation: Unlike linear crack growth along traditional flat interfaces, ML hard constituents block direct crack 
+paths, forcing cracks to bypass ML particles or propagate along ML/CFL interfaces, thereby forming a tortuous trajectory. (2) 
+Microscopic coarse-fine grain deflection: Bimodal grains (1 – 2 μ m fine grains, 7 – 8 μ m coarse grains) from the “ CFL ” structure induce 
+stress gradient and dislocation density differences; cracks initiate in fine grains, deflect reciprocally at coarse-fine grain boundaries due 
+to stress concentration, and further deflect toward slip-prone soft grains Therefore, when cracks encounter grains with different 
+Schmid factor values, they are more likely to propagate toward grains with higher Schmid factors, where slip systems are more readily 
+activated. This promotes crack deflection and reciprocating crack propagation, thereby increasing crack-path tortuosity and crack- 
+propagation resistance. Synergistic regulation of these two mechanisms greatly improves the interfacial bonding strength of Al 
+laminated alloys.
+Therefore, through the triple synergy of the MCFL structure, the wavy interlocking interface, and the bimodal grain structure, the 
+interfacial system of Al-laminated alloys realizes a multi-scale crack-deflection strengthening mechanism ( Fig. 20 ). The first one 
+originates from the stress field gradient generated by the MCFL structure, forcing the crack path to deflect multiple times; the second 
+one relies on the three-dimensional morphological characteristics of the wavy interlocking interface to extend the crack propagation 
+path through the mechanical interlocking effect; The third one can be attributed to the non-uniform deformation characteristics of the 
+bimodal grain structure, forming a strain gradient between the fine grain zone and the coarse grain zone, which further consumes the 
+crack propagation energy. The interfacial bonding strength can be significantly improved by a multi-level synergistic strengthening 
+mechanism, which also provides a vital interface design direction for the development of new high-performance layered composites 
+and opens new avenues for deeper understanding of the interfacial strengthening and toughening mechanisms in heterogeneous 
+materials.
+4. Conclusion
+The wavy interlocking interface and MCFL structure of Al-Cu-Mg laminated alloys were first achieved through interlayer design, 
+and the mechanism underlying their influence on interface bonding strength was identified. The following conclusions can thus be 
+drawn: 
+(1) Al-Cu-Mg laminated alloys with high interfacial bonding strength were successfully obtained through MCFL-inspired interlayer 
+design. The optimized 3 – 1MPLC sample exhibited an interfacial shear strength of 52.57 MPa, which was 44.46% higher than 
+that of the corresponding PPLC sample. Meanwhile, the fracture behavior changed from a flat/straight interfacial fracture mode 
+to a zigzag fracture mode, indicating enhanced crack-path regulation capability.
+(2) The MCFL-inspired interlayer was constructed by combining a wavy interlocking interface with a mineral-like/collagen fiber- 
+like hard-soft architecture. The wavy interlocking interface was generated by the non-uniform compression between the soft 
+pure Al layer and mineral-like (ML) hard constituents during hot rolling. In addition, the non-uniform precipitation of the Zn-Al 
+eutectoid phase hindered grain growth and promoted the formation of collagen fiber-like (CFL) domain structures in the 
+interlayer.
+(3) The wavy interlocking interface and ML structure mainly contributed to interfacial strengthening through mechanical locking 
+and crack-path deflection. Experimental fracture observations showed that the uniformly distributed ML particles promoted 
+crack bypassing and crack branching. FEM results further revealed that the wavy interface and ML particles induced local stress 
+redistribution, increased the resistance to direct interfacial crack propagation, and thereby improved the interfacial bonding 
+strength.
+(4) The CFL domain structure further enhanced fracture resistance by regulating local crack propagation within the interlayer. 
+Experimental observations showed that cracks underwent repeated local deflection within the CFL-related domains. CP-PF 
+simulations further demonstrated that the heterogeneity in strain energy, stress gradient, and grain orientation promoted 
+crack initiation, crack deflection, and secondary crack activation. These experimental and modeling results jointly confirm that 
+the enhanced bonding strength originates from the cooperative effects of crack-path tortuosity and energy dissipation.
+CRediT authorship contribution statement
+Yufeng Song: Investigation, Conceptualization, Writing – original draft, Funding acquisition, Methodology, Writing – review & 
+editing. Gang Zhao: Data curation, Validation, Methodology, Writing – original draft. Yuqiang Chen: Methodology, Funding 
+acquisition, Writing – review & editing. Xu Zhang: Supervision, Resources, Formal analysis. Ruilin Tang: Writing – original draft, 
+Data curation, Validation. Qin Zhang: Writing – original draft, Data curation, Validation. M.W. Fu: Supervision, Formal analysis, 
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+26 
+Methodology, Writing – review & editing, Funding acquisition.
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to 
+influence the work reported in this paper.
+Acknowledgements
+This work was supported by the National Natural Science Foundation of China (Grant No. 52375332); the Natural Science 
+Foundation of Hunan Province, China (2023JJ10019 and 2024JJ4020); the projects (Nos. 15228621, 15229922, 15222825) from the 
+General Research Fund of the Hong Kong Government; and the Hunan Graduate Research Innovation Project (Grant No. CX20251562).
+Data availability
+The data supports the findings of this study are available from the corresponding authors upon reasonable request.
+References
+Bahl, S., Wu, T., Michi, R.A., An, K., Yu, D., Allard, L.F., Rakhmonov, J.U., Poplawsky, J.D., Fancher, C.M., Dunand, D.C., Plotkowski, A., Shyam, A., 2024. An 
+additively manufactured near-eutectic Al-Ce-Ni-Mn-Zr alloy with high creep resistance. Acta Mater. 268, 119787. https://doi.org/10.1016/j. 
+actamat.2024.119787 .
+Cai, P.C., Zhang, G.H., Chou, K.C., 2025. Enhanced deformability through interface and structure tailoring in immiscible metal matrix composites: a case study of W- 
+Cu. Int. J. Plast. 193, 104460. https://doi.org/10.1016/j.ijplas.2025.104460 .
+Cheng, J.Y., Wang, J., Chen, Y., Xu, S., Barriocanal, J.G., Baldwin, J.K., Beyerlein, I.J., Mara, N.A., 2024. 3D interfaces enhance nanolaminate strength and 
+deformability in multiple loading orientations. Acta Mater. 267, 119697. https://doi.org/10.1016/j.actamat.2024.119697 .
+Chu, Q., Xia, T., Zhao, P., Zhang, M., Zheng, J., Yan, F., Cheng, P., Yan, C., Liu, C., Luo, H., 2022. Interfacial investigation of explosion-welded Al/steel plate: the 
+microstructure, mechanical properties and residual stresses. Mater. Sci. Eng. A 833, 142525. https://doi.org/10.1016/j.msea.2021.142525 .
+Ding, B., liu, G., Du, J., Wang, J., 2024. Interface shearing promoted plastic flow instability of nanolaminated composites. Int. J. Mech. Sci. 270, 109114. https://doi. 
+org/10.1016/j.ijmecsci.2024.109114 .
+Fu, L., Xiao, H., Yu, C., Lv, Q., Zhang, S., Xie, H., 2022. Bonding enhancement of cold rolling Al/steel composite plates via self-nano film modification. J. Mater. 
+Process. Technol. 300, 117427. https://doi.org/10.1016/j.jmatprotec.2021.117427 .
+Gao, B., Hao, Y., Yu, C., Wu, Y., Xiao, H., 2025. Study on temperature control and bonding properties of Ti/Al composite plates rolled by differential temperature 
+rolling with mobile induction heating. J. Manuf. Processes. 134, 348 – 359. https://doi.org/10.1016/j.jmapro.2024.12.054 .
+Gao, P.F., Fei, M.Y., Zhan, M., Fu, M.W., 2023. Microstructure- and damage-nucleation-based crystal plasticity finite element modeling for the nucleation of multi- 
+type voids during plastic deformation of Al alloys. Int. J. Plast. 165, 103609. https://doi.org/10.1016/j.ijplas.2023.103609 .
+Geng, P., Ma, H., Li, W., Murakami, K., Wang, Q., Ma, N., Aoki, Y., Fujii, H., Chen, C., 2023. Improving bonding strength of Al/CFRTP hybrid joint through modifying 
+friction spot joining tools. Compos. Part B 254, 110588. https://doi.org/10.1016/j.compositesb.2023.110588 .
+Guo, X., Sun, C., Wang, C., Jiang, J., Fu, M.W., 2021. Study of dislocation-twin boundary interaction mechanisms in plastic deformation of twip steel by discrete 
+dislocation dynamics and dislocation density-based modeling. Int. J. Plast. 145, 103076. https://doi.org/10.1016/j.ijplas.2021.103076 .
+Guo, Y., Quan, G., Ren, L., Liu, B., Al-Ezzi, S., Pan, H., 2019. Effect of Zn interlayer thickness on the microstructure and mechanical properties of two-step diffusion 
+bonded joint of ZK60Mg and 5083Al. Vacuum 161, 353 – 360. https://doi.org/10.1016/j.vacuum.2018.12.036 .
+Guo, Z., Li, X., Wang, S., Tan, Z., Yue, Z., Cui, B., Fan, G., Li, Z., Zhang, D., 2025. Prolonged work hardening in bimodal grain structured aluminum matrix composites: 
+a sequential heterostructure effect. Int. J. Plast. 194, 104485. https://doi.org/10.1016/j.ijplas.2025.104485 .
+Han, C., Yu, M., Jia, X., Zhao, Z., Zhang, C., Xiao, J., Li, S., Liu, J., 2024a. Effect of inhomogeneous microstructures on stress corrosion cracking sensitivity of 2050-T84 
+Al-Li alloy thick plate. Corros. Sci. 235, 112213. https://doi.org/10.1016/j.corsci.2024.112213 .
+Han, M., Wu, Y., Zong, X., Shen, Y., Zhang, F., Lou, H., Dong, X., Zeng, Z., Peng, X., Hou, S., Lu, G., Xiong, L., Yan, B., Gou, H., Yang, Y., Du, X., Yuan, X., Zhang, Y., 
+Jiao, M., Liu, X., Jiang, S., Wang, H., Rempel, A.A., Zhang, X., Zeng, Q., Lu, Z.P., 2024b. Lightweight single-phase Al-based complex concentrated alloy with high 
+specific strength. Nat. Commun. 15, 15. https://doi.org/10.1038/s41467-024-51387-6 , 1 15, 7102. 
+Han, R.C., Song, H.Y., Li, S., Guo, T., 2024c. Atomistic simulation of nanoindentation behavior of amorphous/crystalline dual-phase high entropy alloys. J. Mater. Sci. 
+Technol. 197, 46 – 56. https://doi.org/10.1016/j.jmst.2024.01.057 .
+Hern ´andez-Escobar, D., Slagter, A., Perosanz Amarillo, S., Mortensen, A., 2024. Room-temperature strength of the interfacial bond between silica inclusions and iron. 
+Acta Mater. 263, 119502. https://doi.org/10.1016/j.actamat.2023.119502 .
+Hooputra, H., Gese, H., Dell, H., Werner, H., 2004. A comprehensive failure model for crashworthiness simulation of aluminium extrusions. Int. J. Crashworthiness 9, 
+449 – 464. https://doi.org/10.1533/IJCR.2004.0289 .
+Ji, F., Xin, T., Zhao, Y., Yang, W., Bai, G., Tang, S., Guo, E., Zhou, M., Shi, Q., Cui, L., Chen, L.Q., He, B., 2024. Enhancing plasticity in BCC Mg-Li-Al alloys through 
+controlled precipitation at grain boundaries. Int. J. Plast. 181, 104105. https://doi.org/10.1016/j.ijplas.2024.104105 .
+Jiang, H., Xing, H., Xu, Z., Feng, J., Zhang, J., Sun, B., 2024. Achieving superior strength-ductility balance in novel heterogeneous lamella structures of Al-Zn-Mg-Cu 
+alloys. J. Mater. Sci. Technol. 184, 122 – 135. https://doi.org/10.1016/j.jmst.2023.08.074 .
+Jin, Y., Yu, X., Liu, H., Politis, D.J., Wang, L., 2024. Single-point incremental forming (SPIF) of AA5754 aluminium alloy blanks: experimental and numerical studies. 
+MATEC Web Conf. 401, 01005. https://doi.org/10.1051/matecconf/202440101005 .
+Johnson, G.R., Cook, W.H., 1985. Fracture characteristics of three metals subjected to various strains, strain rates, temperatures and pressures. Eng. Fract. Mech. 21, 
+31 – 48. https://doi.org/10.1016/0013-7944(85)90052-9 .
+Kim, M.J., Lee, K.S., Han, S.H., Hong, S.I., 2021. Interface strengthening of a roll-bonded two-ply Al/Cu sheet by short annealing. Mater. Charact. 174, 111021. 
+https://doi.org/10.1016/j.matchar.2021.111021 .
+Lee, S.H., Ahn, T.Y., Baik, S.Il, Seidman, D.N., Lee, S.J., Lee, Y.K., Euh, K., Jung, J.G., 2025. Unravelling precipitation behavior and mechanical properties of 
+Al – Zn – Mg – Cu alloy. J. Mater. Sci. Technol. 204, 177 – 189. https://doi.org/10.1016/j.jmst.2024.03.021 .
+Li, Guodong, Jiang, J., Ma, H., Zheng, R., Gao, S., Zhao, S., Ma, C., Ameyama, K., Ding, B., Li, X., 2023a. Superior strength – ductility synergy in three-dimensional 
+heterogeneous-nanostructured metals. Acta Mater. 256, 119143. https://doi.org/10.1016/j.actamat.2023.119143 .
+Li, Guangya, Zhang, J., Yang, Y., Wang, Y., Wang, L., Lu, Y., Luan, J., Liu, G., Sun, J., 2023b. Symbiotically engineered crystalline-amorphous nanostructure in a 
+strong-yet-stable Al alloy with large twinning-induced plasticity. Acta Mater. 257, 119192. https://doi.org/10.1016/j.actamat.2023.119192 .
+Li, G., Zhao, D., Zhao, Y., Zhou, B., Wang, H., 2016. Interfacial microstructure and mechanical properties of Al alloy /Mg alloy laminated composite plates fabricated 
+by equal channel angular processing. J. Wuhan Univ. Technol. Mater. Sci. Ed. 31, 417 – 421. https://doi.org/10.1007/s11595-016-1385-9 .
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+27 
+Li, L., Peng, J., Tang, S., Fang, Q., Wei, Y., 2024. Micromechanism of strength and damage trade-off in second-phase reinforced alloy by strain gradient plasticity 
+theory. Int. J. Plast. 176, 103970. https://doi.org/10.1016/j.ijplas.2024.103970 .
+Li, Q., Huang, S., Zhao, Y., Gao, Y., Ramamurty, U., 2023c. Simultaneous enhancements of strength, ductility, and toughness in a TiB reinforced titanium matrix 
+composite. Acta Mater. 254, 118995. https://doi.org/10.1016/j.actamat.2023.118995 .
+Li, Z.J., Wang, T., Chu, D.Y., Liu, Z.L., Cui, Y.N., 2022. A coupled crystal-plasticity and phase-field model for understanding fracture behaviors of single crystal 
+tungsten. Int. J. Plast. 157, 103375. https://doi.org/10.1016/j.ijplas.2022.103375 .
+Liu, H., Li, T., Chen, C., Wan, M., Huang, C., Li, J., 2025a. Unraveling the fracture behavior of AlCoCrFeNi2.1 eutectic high-entropy alloy under impact loading. 
+J. Mater. Sci. Technol. 214, 170 – 179. https://doi.org/10.1016/j.jmst.2024.06.040 .
+Liu, M., Zhang, C., Meng, Z., Zhao, G., Chen, L., 2021. TiAl3 nucleation mechanism and atomic-scale interface features in the Al/Ti composite structures. Compos. Part 
+B 226, 109331. https://doi.org/10.1016/j.compositesb.2021.109331 .
+Liu, Q., Hong, L., Dong, X., Zhai, W., 2023. 3D printed hierarchical interpenetrating phase composites with multi-scale mechanical energy absorption mechanisms. 
+Compos. Part B 264, 110911. https://doi.org/10.1016/j.compositesb.2023.110911 .
+Liu, S., Xiong, Y., Zhao, J., Liu, B., Wu, W., Zhang, X., 2025b. Nonlocal crystal plasticity and damage modeling of dual-heterostructured steel for strengthening and 
+failure analysis. Int. J. Plast. 187, 104270. https://doi.org/10.1016/j.ijplas.2025.104270 .
+Liu, T., Song, B., Huang, G., Jiang, X., Guo, S., Zheng, K., Pan, F., 2022a. Preparation, structure and properties of Mg/Al laminated metal composites fabricated by roll- 
+bonding, a review. J. Magnes. Alloy. 10, 2062 – 2093. https://doi.org/10.1016/j.jma.2022.08.001 .
+Liu, Y., Yin, F., Yu, H., Feng, J., Ji, P., Zhang, J., Jiao, Z., Liu, L., Wang, Q., 2022b. Microstructural evolution, damping and tensile mechanical properties of multilayer 
+Zn – 22Al alloy fabricated by accumulative roll bonding (ARB). Mater. Sci. Eng. A 840, 142911. https://doi.org/10.1016/j.msea.2022.142911 .
+Lu, D., Lin, B., Liu, T., Deng, S., Guo, Y., Li, J., Liu, D., 2023a. Effect of grain structure on fatigue crack propagation behavior of Al-Cu-Li alloys. J. Mater. Sci. Technol. 
+148, 75 – 89. https://doi.org/10.1016/j.jmst.2022.10.085 .
+Lu, Q., Wang, J., Li, H., Jin, S., Sha, G., Lu, J., Wang, L., Jin, B., Lan, X., Li, L., Li, K., Du, Y., 2023b. Synergy of multiple precipitate/matrix interface structures for a 
+heat resistant high-strength Al alloy. Nat. Commun. 14, 14. https://doi.org/10.1038/s41467-023-38730-z . :1 14, 2959-. 
+Lu, Y.J., Meng, X.Sen, Sun, Q.A., Wang, J., Song, J.J., Wang, P.F., Wang, G.R., Yu, C.X., Zhang, Y.S., Mao, L.B., Yu, S.H., 2025. Scalable and shapable nacre-like 
+ceramic-metal composites based on deformable microspheres. Natl. Sci. Rev. 12. https://doi.org/10.1093/nsr/nwaf006 .
+Luo, H., Li, J., Ye, J., Lu, Y., Tan, J., Song, J., Chen, X., Zheng, K., Pan, F., 2022. High-strength Ti-Mg interface with 3D interlocking structure via Ti mesh interlayer: 
+fabrication, microstructure, and mechanical properties. J. Mater. Process. Technol. 191, 112154. https://doi.org/10.1016/j.matchar.2022.112154 .
+Luo, X., Zaiser, M., 2023. A computationally efficient implementation of continuum dislocation dynamics: formulation and application to ultrafine-grained Mg 
+polycrystals. J. Mech. Phys. Solids 172, 105166. https://doi.org/10.1016/j.jmps.2022.105166 .
+Luo, X., Zhao, K., He, X., Bai, Y., De Andrade, V., Zaiser, M., An, L., Liu, J., 2022. Evading strength and ductility trade-off in an inverse nacre structured magnesium 
+matrix nanocomposite. Acta Mater. 228, 117730. https://doi.org/10.1016/j.actamat.2022.117730 .
+Lyu, S., Xia, Y., Li, W., Zhu, T., Chen, Y., Ngan, A.H.W., 2025. Statistical mechanics, entropy and temperature analog of dislocations moving on fluctuating resistance 
+landscapes. Acta Mater. 291, 121002. https://doi.org/10.1016/j.actamat.2025.121002 .
+Ma, Y., Chen, H., Zhang, M.X., Addad, A., Kong, Y., Lezaack, M., Gan, W., Chen, Z., Ji, G., Lezaack, M.B., 2023. Break through the strength-ductility trade-off dilemma 
+in aluminum matrix composites via precipitation-assisted interface tailoring. Acta Mater. 242, 118470. https://doi.org/10.1016/j.actamat.2022.118470 .
+Neogi, A., Janisch, R., 2022. Unravelling the lamellar size-dependent fracture behavior of fully lamellar intermetallic γ -TiAl. Acta Mater. 227, 117698. https://doi. 
+org/10.1016/j.actamat.2022.117698 .
+Nie, J., Chen, Y., Song, L., Fan, Y., Cao, Y., Xie, K., Liu, S., Liu, X., Zhao, Y., Zhu, Y., 2023. Enhancing strength and ductility of Al-matrix composite via a dual- 
+heterostructure strategy. Int. J. Plast. 171, 103825. https://doi.org/10.1016/j.ijplas.2023.103825 .
+Paul, H., Petrzak, P., Chulist, R., Maj, Ł ., Mania, I., Pra ˙zmowski, M., 2022. Effect of impact loading and heat treatment on microstructure and properties of multi- 
+layered AZ31/AA1050 plates fabricated by single-shot explosive welding. Mater. Des. 214, 110411. https://doi.org/10.1016/j.matdes.2022.110411 .
+Pei, Y., Hao, Y., Zhao, J., Yang, J., Teng, B., 2023. Texture evolution prediction of 2219 aluminum alloy sheet under hydro-bulging using cross-scale numerical 
+modeling. J. Mater. Sci. Technol. 149, 190 – 204. https://doi.org/10.1016/j.jmst.2022.11.037 .
+Peng, Y., Song, M., Li, C., Xu, Z., Fu, L., Liu, Liyuan, Liu, Liang, Chen, X., Yi, J., Eckert, J., 2025. Strength and ductility synergy of SiC reinforced aluminum matrix 
+composites through interface replacement strategy. Int. J. Plast. 193, 104450. https://doi.org/10.1016/j.ijplas.2025.104450 .
+Ran, Y., Sun, J., Kang, R., Dong, Z., Bao, Y., 2024. Towards understanding the machining process in grinding of ceramic matrix composites: a review. Compos. Part B 
+284, 111657. https://doi.org/10.1016/j.compositesb.2024.111657 .
+Reuber, C., Eisenlohr, P., Roters, F., Raabe, D., 2014. Dislocation density distribution around an indent in single-crystalline nickel: comparing nonlocal crystal 
+plasticity finite-element predictions with experiments. Acta Mater. 71, 333 – 348. https://doi.org/10.1016/J.ACTAMAT.2014.03.012 .
+Roth, C.C., Morgeneyer, T.F., Helfen, L., Mohr, D., Tancogne-Dejean, T., 2025. Quantifying damage mechanisms through FE-based void tracking: application to shear 
+and tension in-situ laminography experiments on AA2198-T851. Acta Mater. 288, 120783. https://doi.org/10.1016/j.actamat.2025.120783 .
+Sadeghi, B., Cavaliere, P., Velashjerdi, M., Lamberti, L., Pruncu, C., Esfahani, A.E., Eckert, J., 2025. A 3D interconnected CNT-RGO hybrid networks for Al matrix 
+composites: unveiling a new pathway to superior strength-ductility balance. Compos. Part B 305, 112746. https://doi.org/10.1016/j.compositesb.2025.112746 .
+Shanthraj, P., Sharma, L., Svendsen, B., Roters, F., Raabe, D., 2016. A phase field model for damage in elasto-viscoplastic materials. Comput. Methods Appl. Mech. 
+Eng. 312, 167 – 185. https://doi.org/10.1016/J.CMA.2016.05.006 .
+Shen, Z., Su, H., Yu, M., Cao, Y., Guo, Y., Jiang, H., Liu, Y., Li, X., Dong, D., Yang, P., Zhang, Z., Guo, M., Yan, W., 2025. Unveiling exotic multi-scale microstructure 
+transformation and crack formation mechanisms in eutectic ceramic composite by laser powder bed fusion. Compos. Part B 288, 111883. https://doi.org/ 
+10.1016/j.compositesb.2024.111883 .
+Song, Y., Teng, Z., Chen, Y., Lu, D., Hu, Q., Ding, X., Liu, W., 2026. Achieving isotropic deformation and enhanced compressive properties in laminated aluminum 
+alloys through micron-scale pure aluminum interlayers. J. Mater. Sci. Technol. 272, 71 – 82. https://doi.org/10.1016/j.jmst.2026.01.059 .
+Song, Y., Wang, L., Chen, Y., Liu, W., Teng, Z., Hu, Q., Fu, M., 2026. Enhancing the strength and plasticity of laminated aluminum alloy by introducing micron-scale 
+pure aluminum interlayers. Int. J. Plast. 197, 104601. https://doi.org/10.1016/j.ijplas.2025.104601 .
+Song, Y., Zhang, Q., Li, H., Yuan, X., Chen, Y., Lu, D., Liu, W., 2025b. A novel cobweb-like sub-grain structured Al-Cu-Mg alloy with high strength-plasticity synergy. 
+Int. J. Plast. 184, 104178. https://doi.org/10.1016/j.ijplas.2024.104178 .
+Sun, Y., Zhang, C., Ning, Z., Sun, J., Ngan, A.H.W., Huang, Y., 2024. Additively manufactured low-gradient interfacial heterostructured medium-entropy alloy 
+multilayers with superior strength and ductility synergy. Compos. Part B 280, 111522. https://doi.org/10.1016/j.compositesb.2024.111522 .
+Tancogne-Dejean, T., Roth, C.C., Morgeneyer, T.F., Helfen, L., Mohr, D., 2021. Ductile damage of AA2024-T3 under shear loading: mechanism analysis through In-situ 
+laminography. Acta Mater. 205, 116556. https://doi.org/10.1016/j.actamat.2020.116556 .
+Toursangsaraki, M., Tang, R., Du, D., Zhang, X., Dong, A., Leen, S.B., Xuan, Y., Zhang, Z., Sun, B., 2026. Non local crystal plasticity and in-situ EBSD of deformation 
+anisotropy in LPBF-ed Inconel 718. Int. J. Mech. Sci. 310, 111136. https://doi.org/10.1016/J.IJMECSCI.2025.111136 .
+Vakili, S., Shanthraj, P., Roters, F., Mianroodi, J.R., Raabe, D., n.d. Phase-field modeling of coupled brittle-ductile fracture in aluminum alloys. arXiv. https://doi.org/ 
+10.48550/arXiv.2204.13994 .
+Verma, A., Johnson, O.K., Thompson, G.B., Ogata, S., Homer, E.R., Verma, Akarsh, Johnson, K., O, Thompson, B., G, Ogata, Shigenobu, Homer, R., E, 2024. Solute 
+influence in transitions from non-arrhenius to stick-slip Arrhenius grain boundary migration. Acta Mater. 265, 119605. https://doi.org/10.1016/j. 
+actamat.2023.119605 .
+Wang, H.Wei, Wang, C.Ju, Deng, K.Kun, Nie, K.Bo, Liang, W., 2021. Microstructure and mechanical properties of Al/Mg/Al composite sheets containing trapezoidal 
+shaped intermediate layer. Mater. Sci. Eng. A 811, 140989. https://doi.org/10.1016/j.msea.2021.140989 .
+Wang, K., Yao, G., Lv, M., Wang, Z., Huang, Y., Xi, W., 2024a. The nucleation and growth mechanism of solid-state amorphization and diffusion behavior at the W – Cu 
+interface. Compos. Part B 279, 111452. https://doi.org/10.1016/j.compositesb.2024.111452 .
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+28 
+Wang, T., Huang, Y., Yang, L., Ma, Y., Wu, L., Yan, H., Liu, Y., Liu, W., 2020. Preparation of 2024-Al/AZ31-Mg laminated composite by Powder metallurgy integrated 
+forming and sintering. JOM 72, 3547–3557. https://doi.org/10.1007/s11837-020-04303-4.
+Wang, T., Zhao, C., Zhang, G., Zhao, W., Huang, Q., 2024b. A continuum damage model for Mg/Al composite sheets rolling: theoretical development and application. 
+Compos. Part B 275, 111347. https://doi.org/10.1016/j.compositesb.2024.111347.
+Xiong, Y., Zhao, J., Zeng, Q., Yuan, F., Zhang, X., 2025. Crack propagation behavior in metal matrix composites: a coupled nonlocal crystal plasticity and phase field 
+modelling. J. Mech. Phys. Solids 200, 106164. https://doi.org/10.1016/j.jmps.2025.106164.
+Xu, J., Li, Y., Zhang, H., Ji, X., Zeng, W., Li, M., Wang, X., Zhu, Z., Li, H., 2026. Overcoming strength-ductility/toughness trade-off in ultra-high strength titanium alloy 
+via fork multi-scale structure. J. Mater. Sci. Technol. 263, 1–15. https://doi.org/10.1016/j.jmst.2025.10.064.
+Yan, J., Yu, S., Ding, R., Li, H., Rabiei, A., Bowen, P., 2023. Dwell-fatigue crack growth behaviour of Alloy 709. Acta Mater. 249, 118808. https://doi.org/10.1016/j. 
+actamat.2023.118808.
+Yang, B., Wang, J., Ferdowsi, M.R.G., Chao, Q., Gao, X., Li, Y., Zhu, Y., Barnett, M., LLorca, J., 2024. Effect of precipitates on the dominant active slip systems in Mg- 
+4.5Zn (wt.%) alloy. Acta Mater. 278, 120231. https://doi.org/10.1016/j.actamat.2024.120231.
+Yang, W., Gludovatz, B., Zimmermann, E.A., Bale, H.A., Ritchie, R.O., Meyers, M.A., 2013. Structure and fracture resistance of alligator gar (Atractosteus spatula) 
+armored fish scales. Acta Biomater. 9, 5876–5889. https://doi.org/10.1016/j.actbio.2012.12.026.
+Yang, Y., Wei, C., Yao, Y., Chen, X., Li, W., Jia, Y., Chen, Z., Hu, J., 2023. Explosive cladding of Monel alloy tube and copper rod. Int. J. Mech. Sci. 247, 108173. 
+https://doi.org/10.1016/j.ijmecsci.2023.108173.
+Yu, Z., Wang, T., Liu, C., Ma, Y., Liu, W., 2022. Investigation on microstructure, mechanical properties and fracture mechanism of Mg/Al laminated composites. 
+Mater. Sci. Eng. A 848, 143410. https://doi.org/10.1016/j.msea.2022.143410.
+Yuan, Y., Yuyong, C., Yuyong, C., Yu, Z., Shuzhi, Z., Jianfei, S., 2025. Interfacial and mechanical properties of TiAl/Ti laminated composites by hot rolling bonding. 
+J. Alloys Compd. 1024 .
+Zhang, C., Zhang, J., Bao, X., Li, J., Zhang, D., Liu, G., Sun, J., 2024a. Hierarchically ordered coherent interfaces-driven ultrahigh specific-strength and toughness in a 
+nano-martensite titanium alloy. Acta Mater. 263, 119540. https://doi.org/10.1016/j.actamat.2023.119540.
+Zhang, C., Zhou, H., Liu, L., 2014a. Laminar Fe-based amorphous composite coatings with enhanced bonding strength and impact resistance. Acta Mater. 72, 
+239–251. https://doi.org/10.1016/j.actamat.2014.03.047.
+Zhang, J., Luo, G., Wang, Y., Xiao, Y., Shen, Q., Zhang, L., 2013. Effect of Al thin film and Ni foil interlayer on diffusion bonded Mg-Al dissimilar joints. J. Alloys 
+Compd. 556, 139–142. https://doi.org/10.1016/j.jallcom.2012.12.106.
+Zhang, J., Luo, G.Q., Shen, Q., Zhang, L.M., Huang, Z.J., 2016. Characterization of diffusion-bonded joint between Al and Mg using a Ni interlayer. Rare Met. 35, 
+537–542. https://doi.org/10.1007/s12598-014-0394-0. :7 35, 537–542. 
+Zhang, J., Wang, X., Gao, J., Zhang, Lei, Song, B., Zhang, Lijun, Yao, Y., Lu, J., Shi, Y., 2023a. Additive manufacturing of Ti–6Al–4V/Al–Cu–Mg multi-material 
+structures with a Cu interlayer. Int. J. Mech. Sci. 256, 108477. https://doi.org/10.1016/j.ijmecsci.2023.108477.
+Zhang, J.Y., Li, F., Bao, F.Y., Jia, Y., Cao, M.Z., 2025a. Configuration evolution and bond-strengthening mechanism of multiscale interfaces in HPR Al/Mg/Al 
+composite plates. Mater. Sci. Eng. A 944, 148887. https://doi.org/10.1016/j.msea.2025.148887.
+Zhang, J.Y., Li, F., Niu, W.T., Wang, Z.Y., Cao, M.Z., 2025b. Formative manufacturing of heterogeneous composite plates: a review. Mater. Today 86, 548–574. 
+https://doi.org/10.1016/j.mattod.2025.04.002.
+Zhang, L., Li, P., Li, S., Nie, F., Wu, B., Li, C., Li, J., Zhang, Z., Jiang, X., Zhao, B., Dong, H., 2024b. Superior shear strength subject to the regulation of plastic 
+toughness in K4169 alloy/TiAl intermetallic joints vacuum brazed with gradient composite amorphous filler metals. Compos. Part B 274, 111288. https://doi. 
+org/10.1016/j.compositesb.2024.111288.
+Zhang, L., Su, S., Fu, W., Sun, J., Ning, Z., Ngan, A.H.W., Huang, Y., 2023b. Strain-induced structural evolution of interphase interfaces in CuZr-based metallic-glass 
+composite reinforced by B2 crystalline phase. Compos. Part B 258, 110698. https://doi.org/10.1016/j.compositesb.2023.110698.
+Zhang, S., Qin, H., Li, Z., Wei, C., Zhang, C., Li, X., 2023c. In-situ observation of damage evolution in Mo-SiCf/SiC heterogeneous composite. Compos. Part B 264, 
+110901. https://doi.org/10.1016/j.compositesb.2023.110901.
+Zhang, X., Zhao, D., Shi, R., Zhu, S., Ma, L., He, C., Zhao, N., 2022. Investigations on the interface-dominated deformation mechanisms of two-dimensional MAX-phase 
+Ti3Al(Cu)C2 nanoflakes reinforced copper matrix composites. Acta Mater. 240, 118363. https://doi.org/10.1016/j.actamat.2022.118363.
+Zhang, X., Zhao, J., Kang, G., Zaiser, M., 2023d. Geometrically necessary dislocations and related kinematic hardening in gradient grained materials: a nonlocal 
+crystal plasticity study. Int. J. Plast. 163, 103553. https://doi.org/10.1016/J.IJPLAS.2023.103553.
+Zhang, Yali, Fang, Y., Kim, M.K., Duan, Z., Yuan, Q., Oh, E., Suhr, J., 2024c. In-situ TiCxNy nanoparticle reinforced crack-free CoCrFeNi medium-entropy alloy matrix 
+nanocomposites with high strength and ductility via laser powder bed fusion. Compos. Part B 273, 111237. https://doi.org/10.1016/j.compositesb.2024.111237.
+Zhang, Yifan, Nizolek, T.J., Capolungo, L., Li, N., Carpenter, J.S., McCabe, R.J., 2024d. Strong interfaces: the key to high strength in nano metallic laminates. Acta 
+Mater. 280, 120298. https://doi.org/10.1016/j.actamat.2024.120298.
+Zhang, Y., Zecevic, M., Chakraborty, A., McCabe, R.J., Nizolek, T.J., Lebensohn, R.A., Carpenter, J.S., Li, N., Capolungo, L., 2023e. Unraveling kinking: a plasticity 
+enhancing failure mode in high strength nano metallic laminates. Acta Mater. 260, 119342. https://doi.org/10.1016/j.actamat.2023.119342.
+Zhang, Z., Jiang, W., Li, G., Wang, J., Guan, F., Jie, G., Fan, Z., 2021. Improved interface bonding of Al/Mg bimetal fabricated by compound casting with Nd addition. 
+Mater. Sci. Eng. A 826, 141998. https://doi.org/10.1016/j.msea.2021.141998.
+Zhang, Z., Zhang, C., Chen, L., Zhong, S., Zhao, G., 2025. Regulating interface structure and shear performance of extruded NiTi fiber reinforced Al-based composites 
+via heat treatments. Compos. Part B 305, 112741. https://doi.org/10.1016/j.compositesb.2025.112741.
+Zhao, P., Li, Z., Du, X., Xu, Z., Yan, J., 2023a. High-strength joining of 6063Al alloys by an Zn–Sn hypereutectic interlayer in air based on liquid and solid phase 
+diffusion. J. Mater. Res. Technol. 26, 6108–6120. https://doi.org/10.1016/j.jmrt.2023.08.310.
+Zhao, Q., Abdel Wahab, M., Ling, Y., Liu, Z., 2022. Fatigue crack propagation across grain boundary of Al-Cu-Mg bicrystal based on crystal plasticity XFEM and 
+cohesive zone model. J. Mater. Sci. Technol. 126, 275–287. https://doi.org/10.1016/j.jmst.2022.03.020.
+Zhao, Y., Zang, J., Jia, B., Yang, J., Wan, X., Wang, W., Chen, X., 2023b. Revealing the interlaminar shear failure behavior of unidirectional laminate under combined 
+compression–shear loads. J. Mater. Sci. Technol. 157, 110–119. https://doi.org/10.1016/j.jmst.2023.01.049.
+Zhou, S., Cai, Q., Tirichenko, I.S., Vilchez, V., Gavalda-Diaz, O., Bouville, F., Saiz, E., 2023a. Additive manufacturing of Al2O3 with engineered interlayers and high 
+toughness through multi-material co-extrusion. Acta Mater. 246, 118704. https://doi.org/10.1016/j.actamat.2023.118704.
+Zhou, Y., Wang, Z., Zhao, J., Jiang, F., 2023b. Effect of ultrasonic amplitude on interfacial characteristics and mechanical properties of Ti/Al laminated metal 
+composites fabricated by ultrasonic additive manufacturing. Addit. Manuf. 74, 103725. https://doi.org/10.1016/j.addma.2023.103725.
+Zhu, B., Liang, W., Li, X., 2011. Interfacial microstructure, bonding strength and fracture of magnesium–aluminum laminated composite plates fabricated by direct hot 
+pressing. Mater. Sci. Eng. A 528, 6584–6588. https://doi.org/10.1016/j.msea.2011.05.015.
+Zhu, Q., Wu, X., Cao, L., Zou, Y., Song, H., Liu, Y., Song, K., Couper, M.J., 2024. Precipitation evolution of Al-Zn-Mg-Cu-(Ag) alloys with a low Zn/Mg ratio. J. Mater. 
+Sci. Technol. 195, 177–196. https://doi.org/10.1016/j.jmst.2023.12.071.
+Y. Song et al.                                                                                                                                                                                                           International Journal of Plasticity 204 (2026) 104764 
+29 

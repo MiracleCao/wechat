@@ -95,8 +95,8 @@ institution, journal_abbr, doi_url, original_title, translated_title, correspond
 corresponding_country, total_figure_count,
 guide, figures, conclusion, summary, alternative_titles, keywords,
 cover_image_suggestion, publish_time_suggestion。
-figures 必须恰好为 6 个对象，每个对象含 label 和 description；优先选择能构成完整证据链的图，
-若素材不足以确认 6 幅图，必须报错字段 error 说明缺失，不得猜测。summary 不超过 120 个汉字。
+figures 的对象数量必须与用户提供的图片数量完全一致（允许 1 至 6 张），每个对象含 label 和 description；
+若素材不足以确认每张图片，必须报错字段 error 说明缺失，不得猜测。summary 不超过 120 个汉字。
 每个 figure.label 必须保留论文中的原始图号（如“图2”“图5”），不得按照入选顺序重新编号。
 corresponding_affiliation 必须翻译成中文；figure.description 不得以“图N：”开头，
 只写说明性正文。
@@ -114,9 +114,9 @@ def read_materials() -> tuple[list[Path], str]:
     if not files:
         raise FileNotFoundError("materials/ 中没有论文素材；请先放入 PDF、Markdown 或文本文件")
     image_files = [path for path in files if path.suffix.lower() in SUPPORTED_IMAGES]
-    if image_files and len(image_files) != 6:
+    if not 1 <= len(image_files) <= 6:
         raise ValueError(
-            f"检测到 {len(image_files)} 张重点图片；使用图片模式时请恰好提供 6 张"
+            f"检测到 {len(image_files)} 张重点图片；使用图片模式时请提供 1 至 6 张"
         )
 
     chunks: list[str] = []
@@ -144,7 +144,7 @@ def parse_json(raw: str) -> dict:
     return json.loads(cleaned)
 
 
-def validate(data: dict) -> None:
+def validate(data: dict, expected_figure_count: int) -> None:
     if data.get("error"):
         raise ValueError(f"素材不足：{data['error']}")
     required = (
@@ -156,8 +156,8 @@ def validate(data: dict) -> None:
     missing = [key for key in required if not data.get(key)]
     if missing:
         raise ValueError("模型输出缺少字段：" + ", ".join(missing))
-    if len(data["figures"]) != 6:
-        raise ValueError("重点图解读必须恰好 6 项")
+    if len(data["figures"]) != expected_figure_count:
+        raise ValueError(f"重点图解读必须恰好 {expected_figure_count} 项")
     if len(data["alternative_titles"]) != 10:
         raise ValueError("候选标题必须恰好 10 个")
     if len(re.sub(r"\s+", "", data["summary"])) > 120:
@@ -172,7 +172,7 @@ def markdown_document(data: dict) -> str:
     title = data["alternative_titles"][0]
     parts = [
         f"# {title}", "", f"DOI：{data['doi_url']}", "",
-        "## 导读", "", data["guide"], "", "## 六幅关键图解读", "",
+        "## 导读", "", data["guide"], "", f"## {len(data['figures'])} 幅关键图解读", "",
     ]
     for figure in data["figures"]:
         parts.extend([f"**{figure['label']}：**{figure['description']}", ""])
@@ -194,7 +194,7 @@ def html_document(data: dict) -> str:
 <p style="line-height:1.85;color:#555;">DOI：{esc(data["doi_url"])}</p>
 <h2 style="font-size:19px;border-left:4px solid #1f5f8b;padding-left:10px;margin-top:28px;">导读</h2>
 <p style="line-height:1.85;color:#333;">{esc(data["guide"])}</p>
-<h2 style="font-size:19px;border-left:4px solid #1f5f8b;padding-left:10px;margin-top:28px;">六幅关键图解读</h2>
+<h2 style="font-size:19px;border-left:4px solid #1f5f8b;padding-left:10px;margin-top:28px;">{len(data["figures"])} 幅关键图解读</h2>
 {figure_html}
 <h2 style="font-size:19px;border-left:4px solid #1f5f8b;padding-left:10px;margin-top:28px;">主要结论</h2>
 <p style="line-height:1.85;color:#333;">{esc(data["conclusion"])}</p>
@@ -235,7 +235,8 @@ def main() -> int:
                 "type": "input_text",
                 "text": (
                     "请根据以下论文素材生成文章。务必核对图号与图注。"
-                    "若提供了图片，figures 必须按图片文件名排序逐一解读：\n"
+                    f"本次共提供 {len(image_files)} 张图片，figures 必须恰好包含 "
+                    f"{len(image_files)} 项，并按图片文件名排序逐一解读：\n"
                     + material_text
                 ),
             }
@@ -275,7 +276,7 @@ def main() -> int:
                 figure["label"] = f"图{number}"
         if total_figure_count is not None:
             data["total_figure_count"] = total_figure_count
-        validate(data)
+        validate(data, len(image_files))
         OUTPUTS.mkdir(parents=True, exist_ok=True)
 
         metadata = {
