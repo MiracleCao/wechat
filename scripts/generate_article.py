@@ -15,6 +15,13 @@ from pathlib import Path
 
 from pypdf import PdfReader
 
+from article_summary import (
+    research_summary_items,
+    research_summary_lines,
+    validate_background_quotes,
+    validate_research_summary,
+)
+
 ROOT = Path(__file__).resolve().parents[1]
 MATERIALS = ROOT / "materials"
 OUTPUTS = ROOT / "outputs"
@@ -93,7 +100,7 @@ SYSTEM_PROMPT = """你是严谨的材料科学论文编辑。只能依据用户�
 实验结果、图号或结论。输出一个合法 JSON 对象，不要 Markdown 代码围栏。JSON 必须含：
 institution, journal_abbr, doi_url, original_title, translated_title, corresponding_affiliation,
 corresponding_country, total_figure_count,
-guide, figures, conclusion, summary, alternative_titles, keywords,
+guide, figures, conclusion, research_summary, summary, alternative_titles, keywords,
 cover_image_suggestion, publish_time_suggestion。
 figures 的对象数量必须与用户提供的图片数量完全一致（允许 1 至 6 张），每个对象含 label 和 description；
 若素材不足以确认每张图片，必须报错字段 error 说明缺失，不得猜测。summary 不超过 120 个汉字。
@@ -103,10 +110,28 @@ corresponding_affiliation 必须翻译成中文；figure.description 不得以�
 alternative_titles 必须恰好 10 个，每个至少 25 个字。若通讯作者单位在中国，格式为
 “机构名 | 刊名缩写 | 描述”；若通讯作者单位不在中国，省略机构名，格式为“刊名缩写 | 描述”。
 标题应准确说明创新点和主要工作，不夸张。guide 用一整段介绍研究背景和主要工作；
-每个 figure description 用一整段；conclusion 用一整段。"""
+每个 figure description 用一整段；conclusion 用一整段。
+
+research_summary 必须是包含 why、how、next 的对象：
+1. why 必须含 key_background_quotes、author_stated_motivation、inferred_deeper_motivation、
+pain_point、existing_approach_limitations、core_driver、expected_contribution。
+key_background_quotes 必须是 1 至 3 个对象，每项含 quote 和 supports；quote 必须逐字摘自论文原文，
+supports 用中文解释该引句支持什么动机判断。author_stated_motivation 只写作者明确陈述的动机；
+inferred_deeper_motivation 写有文本依据的深层动机，不得冒充作者结论；字段和呈现小标题已经负责区分，
+正文不要再写“本文推导”“基于全文证据链”“并非作者逐字给出”等自我解释。
+2. how 必须含 author_claimed_approach、research_objects_and_data、technical_route、
+validation_and_evaluation、methodological_innovation、inferred_implementation_details，按“数据→方法→验证”展开。
+author_claimed_approach 只写论文明确声称的做法；inferred_implementation_details 只写由方法上下文支持、
+但论文未直接交代的潜在细节。字段和小标题已经表达其性质，正文直接说具体细节及其依据。
+规模、来源、预处理、基线、消融、指标或统计检验若未报告，不得补造；只有缺失会影响读者判断时才简洁说明。
+3. next 必须含 author_stated_remaining_work、inferred_open_questions、recommended_next_steps。
+作者若没有明确提出局限或后续工作，应简洁说明，再把开放问题与建议写在各自字段中。
+三栏应信息密集、避免与 guide、逐图解读和 conclusion 原句式重复。语言要像有经验的科研编辑：
+直接写判断、证据和实际限制，不解释自己的写作过程；不要机械使用“需要强调的是”“值得注意的是”开头，
+也不要用“并非……”“不能等同于……”“仍需进一步……”为每一点例行收尾。真正影响结论适用范围的限制照常写清。"""
 
 
-def read_materials() -> tuple[list[Path], str]:
+def read_materials() -> tuple[list[Path], str, list[str]]:
     files = sorted([
         path for path in MATERIALS.rglob("*")
         if path.is_file() and path.suffix.lower() in SUPPORTED and path.name.lower() != "readme.md"
@@ -120,6 +145,7 @@ def read_materials() -> tuple[list[Path], str]:
         )
 
     chunks: list[str] = []
+    paper_texts: list[str] = []
     for path in files:
         LOG.info("读取素材：%s", path.relative_to(ROOT))
         if path.suffix.lower() in SUPPORTED_IMAGES:
@@ -128,13 +154,16 @@ def read_materials() -> tuple[list[Path], str]:
         if path.suffix.lower() == ".pdf":
             reader = PdfReader(path)
             text = "\n".join(page.extract_text() or "" for page in reader.pages)
+            paper_texts.append(text)
         else:
             text = path.read_text(encoding="utf-8")
         if text.strip():
             chunks.append(f"\n===== {path.name} =====\n{text.strip()}")
     if not chunks:
         raise ValueError("素材文件存在，但没有提取到可用文本；扫描版 PDF 请先进行 OCR")
-    return files, "\n".join(chunks)
+    if len(paper_texts) != 1:
+        raise ValueError(f"materials/ 必须恰好包含一篇论文 PDF；当前检测到 {len(paper_texts)} 篇")
+    return files, "\n".join(chunks), paper_texts
 
 
 def parse_json(raw: str) -> dict:
@@ -144,11 +173,11 @@ def parse_json(raw: str) -> dict:
     return json.loads(cleaned)
 
 
-def validate(data: dict, expected_figure_count: int) -> None:
+def validate(data: dict, expected_figure_count: int, paper_texts: list[str]) -> None:
     if data.get("error"):
         raise ValueError(f"素材不足：{data['error']}")
     required = (
-        "institution", "journal_abbr", "guide", "figures", "conclusion", "summary",
+        "institution", "journal_abbr", "guide", "figures", "conclusion", "research_summary", "summary",
         "doi_url", "original_title", "translated_title", "corresponding_affiliation",
         "corresponding_country", "total_figure_count",
         "alternative_titles", "keywords", "cover_image_suggestion", "publish_time_suggestion",
@@ -156,6 +185,8 @@ def validate(data: dict, expected_figure_count: int) -> None:
     missing = [key for key in required if not data.get(key)]
     if missing:
         raise ValueError("模型输出缺少字段：" + ", ".join(missing))
+    validate_research_summary(data["research_summary"])
+    validate_background_quotes(data["research_summary"], paper_texts)
     if len(data["figures"]) != expected_figure_count:
         raise ValueError(f"重点图解读必须恰好 {expected_figure_count} 项")
     if len(data["alternative_titles"]) != 10:
@@ -176,7 +207,12 @@ def markdown_document(data: dict) -> str:
     ]
     for figure in data["figures"]:
         parts.extend([f"**{figure['label']}：**{figure['description']}", ""])
-    parts.extend(["## 主要结论", "", data["conclusion"], "", "## 120 字内概括", "", data["summary"],
+    parts.extend(["## 主要结论", "", data["conclusion"], "", "## 文章总结", ""])
+    for heading, section in (("为什么做？", "why"), ("怎么做的？", "how"), ("还需要做什么？", "next")):
+        parts.extend([f"### {heading}", ""])
+        parts.extend(research_summary_lines(data["research_summary"], section))
+        parts.append("")
+    parts.extend(["## 120 字内概括", "", data["summary"],
                   "", "## 备选标题", ""])
     parts.extend(f"{index}. {title}" for index, title in enumerate(data["alternative_titles"], 1))
     return "\n".join(parts).strip() + "\n"
@@ -189,6 +225,16 @@ def html_document(data: dict) -> str:
         f'<strong style="color:#1f5f8b;">{esc(item["label"])}：</strong>{esc(item["description"])}</p>'
         for item in data["figures"]
     )
+    summary_html = "".join(
+        f'<h3 style="font-size:17px;margin:20px 0 8px;">{esc(heading)}</h3>'
+        + "".join(
+            f'<p style="margin:8px 0;line-height:1.85;color:#333;">'
+            f'<strong style="color:#007aaa;">{item["number"]}. {esc(item["label"])}：</strong>'
+            f'{esc(item["text"])}</p>'
+            for item in research_summary_items(data["research_summary"], section)
+        )
+        for heading, section in (("为什么做？", "why"), ("怎么做的？", "how"), ("还需要做什么？", "next"))
+    )
     return f"""<section style="max-width:680px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;color:#222;">
 <h1 style="font-size:24px;line-height:1.45;margin:20px 0;">{esc(data["alternative_titles"][0])}</h1>
 <p style="line-height:1.85;color:#555;">DOI：{esc(data["doi_url"])}</p>
@@ -198,6 +244,8 @@ def html_document(data: dict) -> str:
 {figure_html}
 <h2 style="font-size:19px;border-left:4px solid #1f5f8b;padding-left:10px;margin-top:28px;">主要结论</h2>
 <p style="line-height:1.85;color:#333;">{esc(data["conclusion"])}</p>
+<h2 style="font-size:19px;border-left:4px solid #1f5f8b;padding-left:10px;margin-top:28px;">文章总结</h2>
+{summary_html}
 <h2 style="font-size:19px;border-left:4px solid #1f5f8b;padding-left:10px;margin-top:28px;">论文概括</h2>
 <p style="line-height:1.85;color:#333;">{esc(data["summary"])}</p>
 </section>
@@ -213,7 +261,7 @@ def main() -> int:
     try:
         if not os.getenv("OPENAI_API_KEY"):
             raise EnvironmentError("未设置 OPENAI_API_KEY 环境变量")
-        files, material_text = read_materials()
+        files, material_text, paper_texts = read_materials()
         image_files = [path for path in files if path.suffix.lower() in SUPPORTED_IMAGES]
         selected_figure_numbers = [material_figure_number(path) for path in image_files]
         if image_files and any(number is None for number in selected_figure_numbers):
@@ -276,7 +324,7 @@ def main() -> int:
                 figure["label"] = f"图{number}"
         if total_figure_count is not None:
             data["total_figure_count"] = total_figure_count
-        validate(data, len(image_files))
+        validate(data, len(image_files), paper_texts)
         OUTPUTS.mkdir(parents=True, exist_ok=True)
 
         metadata = {
@@ -292,6 +340,7 @@ def main() -> int:
             "guide": data["guide"],
             "figures": data["figures"],
             "conclusion": data["conclusion"],
+            "research_summary": data["research_summary"],
             "keywords": data["keywords"],
             "cover_image_suggestion": data["cover_image_suggestion"],
             "publish_time_suggestion": data["publish_time_suggestion"],

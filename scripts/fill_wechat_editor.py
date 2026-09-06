@@ -15,6 +15,11 @@ from playwright.sync_api import Locator, Page, TimeoutError as PlaywrightTimeout
 from playwright.sync_api import sync_playwright
 from pypdf import PdfReader
 
+from article_summary import (
+    research_summary_items,
+    validate_background_quotes,
+    validate_research_summary,
+)
 from wechat_selectors import (
     ADD_TO_BODY,
     BODY,
@@ -103,10 +108,12 @@ def load_article() -> dict:
         "guide",
         "figures",
         "conclusion",
+        "research_summary",
     )
     missing = [key for key in required if not data.get(key)]
     if missing:
         raise ValueError("metadata.json 缺少模板填充字段：" + ", ".join(missing))
+    validate_research_summary(data["research_summary"])
     if not re.fullmatch(r"https://doi\.org/10\.\d{4,9}/\S+", data["doi_url"]):
         raise ValueError("metadata.json 中 doi_url 不是标准 DOI 地址")
     if len(data["summary"]) > SUMMARY_LIMIT:
@@ -158,6 +165,8 @@ def load_article() -> dict:
     if not pdf_texts or not any(doi.lower() in text.lower() for text in pdf_texts):
         raise ValueError(f"metadata.json 中 DOI 未出现在 materials/ 的论文 PDF：{doi}")
     LOG.info("已从论文 PDF 核验 DOI：%s", data["doi_url"])
+    validate_background_quotes(data["research_summary"], pdf_texts)
+    LOG.info("已从论文 PDF 核验文章总结中的关键背景引句")
     if caption_numbers:
         data["total_figure_count"] = max(caption_numbers)
         LOG.info("已从论文正文图注识别原文共有图%d", data["total_figure_count"])
@@ -370,14 +379,18 @@ def open_editor(page: Page) -> Page:
         with page.context.expect_page(timeout=12_000) as page_info:
             safe_click(entry, "进入文章编辑器")
         editor = page_info.value
-        editor.wait_for_load_state("domcontentloaded")
+        # 微信会先创建 about:blank，再异步跳转至编辑器；仅等待
+        # domcontentloaded 会在空白页上立即返回，导致过早判定失败。
+        editor.wait_for_url(
+            "**/cgi-bin/appmsg**", wait_until="domcontentloaded", timeout=12_000
+        )
         if urlparse(editor.url).path != "/cgi-bin/appmsg":
             raise RuntimeError(f"新标签页不是文章编辑器：{editor.url}")
         first_visible(editor, TITLE, 5_000)
         LOG.info("文章编辑器已在新标签页打开：%s", editor.url)
         return editor
     except PlaywrightTimeoutError:
-        LOG.warning("未捕获到新页面事件，检查当前页面是否已跳转")
+        LOG.warning("新页面未在时限内进入文章编辑器，检查当前页面是否已跳转")
         if urlparse(page.url).path == "/cgi-bin/appmsg":
             first_visible(page, TITLE, 5_000)
             LOG.info("文章编辑器已在当前标签页打开：%s", page.url)
@@ -412,6 +425,11 @@ def open_editor(page: Page) -> Page:
 
 def batch_fill_template(page: Page, data: dict) -> None:
     """一次性填充除往期链接之外的全部字段。"""
+    data = dict(data)
+    data["research_summary_items"] = {
+        section: research_summary_items(data["research_summary"], section)
+        for section in ("why", "how", "next")
+    }
     body = active_body(page)
     result = body.evaluate(
         """(root, data) => {
@@ -432,6 +450,28 @@ def batch_fill_template(page: Page, data: dict) -> None:
                 node.append(document.createTextNode(text));
                 node.dispatchEvent(new InputEvent('input', {
                     bubbles:true, inputType:'insertText', data:text
+                }));
+            };
+
+            const appendSummaryItems = (node, items) => {
+                items.forEach(item => {
+                    node.append(document.createElement('br'));
+                    const label = document.createElement('span');
+                    label.textContent = `${item.number}. ${item.label}：`;
+                    label.style.color = '#007aaa';
+                    label.style.fontWeight = '700';
+                    node.append(label);
+                    const text = document.createElement('span');
+                    text.textContent = item.text;
+                    text.style.fontWeight = '400';
+                    node.append(text);
+                });
+                node.dispatchEvent(new InputEvent('input', {
+                    bubbles:true,
+                    inputType:'insertText',
+                    data:items.map(item =>
+                        `${item.number}. ${item.label}：${item.text}`
+                    ).join('\\n')
                 }));
             };
 
@@ -552,6 +592,21 @@ def batch_fill_template(page: Page, data: dict) -> None:
                 return {ok:false, reason:'无法替换文章总结中的“本文”占位符'};
             }
 
+            const researchSummarySections = [
+                ['为什么做？', data.research_summary_items.why],
+                ['怎么做的？', data.research_summary_items.how],
+                ['还需要做什么？', data.research_summary_items.next],
+            ];
+            for (const [heading, items] of researchSummarySections) {
+                const node = paragraphs.find(item =>
+                    (item.textContent || '').trim().startsWith(heading)
+                );
+                if (!node) {
+                    return {ok:false, reason:`未找到“${heading}”文章总结栏`};
+                }
+                appendSummaryItems(node, items);
+            }
+
             const disclaimer = paragraphs.find(node =>
                 (node.textContent || '').trim().startsWith('①本公众号解读的文献')
             );
@@ -618,7 +673,7 @@ def batch_fill_template(page: Page, data: dict) -> None:
     summary = first_visible(page, SUMMARY, 5_000)
     summary.fill(data["summary"])
     LOG.info(
-        "标题、导读、%d 段图解、文章总结、摘要及正文末尾 DOI 已批量填充",
+        "标题、导读、%d 段图解、主要结论、文章总结三栏、摘要及正文末尾 DOI 已批量填充",
         len(data["figures"]),
     )
 

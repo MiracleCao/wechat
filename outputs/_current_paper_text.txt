@@ -1,0 +1,1892 @@
+Achieving strength-ductility synergy in Fe
+40
+Co
+20
+Cr
+20
+Ni
+20 
+high-entropy 
+alloys at room and cryogenic temperatures via Al-Si 
+synergistic optimization
+Jie Gao
+a , b
+, Fanglve Xu
+a , b
+, Chuhuan Huang
+a , b
+, Li Chen
+c
+, Zhanjiang Li
+d
+, Jianeng Huang
+a , b
+,  
+Fa Chang
+a , b
+, Pinqiang Dai
+a , b , *
+a
+School of Materials Science and Engineering, Fujian University of Technology, Fuzhou, 350118, China
+b
+Fujian Provincial Key Laboratory of New Material Preparation and Forming Technology, Fuzhou, 350108, China
+c
+College of Zhicheng, Fuzhou University, Fuzhou, 350002, China
+d
+School of Naval Architecture & Intelligent Manufacturing, Jiangsu Maritime Institute, Nanjing, 211170, China
+ARTICLE INFO
+Keywords:
+High-entropy alloy
+Al/Si addition
+Stacking fault energy
+TWIP/TRIP effects
+Mechanical properties
+ABSTRACT
+The Fe
+40
+Co
+20
+Cr
+20
+Ni
+20 
+high-entropy alloy (HEA) exhibits high ductility, good corrosion resistance, and relatively 
+low cost, but its low strength limits engineering applications. In this work, based on the Fe
+40
+Co
+20
+Cr
+20
+Ni
+20 
+high- 
+entropy alloy, Si and Al were added simultaneously to adjust the stacking fault energy (SFE) and promote BCC- 
+phase precipitation, respectively, thereby achieving the synergistic operation of the TWIP/TRIP effects and 
+multiple strengthening mechanisms. The results show that as the Al and Si content increase, the alloy gradually 
+evolves from a single-phase FCC structure to an FCC + BCC dual-phase structure. Appropriate additions of Al and 
+Si enhance strength and ductility simultaneously, whereas excessive additions increase strength at the expense of 
+plasticity loss. Among all compositions, the homogenized alloy with the addition of 7 (at. %) Al and 5 (at. %) Si 
+(abbreviated as Al
+7
+Si
+5
+-HO alloy) possesses an optimal combination of mechanical properties. Compared to the 
+base alloy, the room-temperature tensile properties are significantly enhanced, with increases of 121% in ulti -
+mate tensile strength (to 743 MPa) and 33% in elongation at break (to 56%). At 77 K, the tensile strength of 
+Al
+7
+Si
+5
+-HO alloy further increases to 1127 MPa. Lowering the temperature leads to a reduction in the SFE, and the 
+deformation mechanism transitions from a combination of dislocation slip and the TWIP effect at room tem -
+perature to a mechanism dominated by TWIP and supplemented by TRIP at cryogenic temperatures. The analysis 
+indicates that the overall strengthening mainly comes from grain boundary strengthening and precipitation 
+strengthening, accompanied by a small amount of solid solution strengthening. This study provides a useful 
+compositional design strategy for the development of low-cost, high-performance HEAs.
+1. Introduction
+High-entropy alloys (HEAs) have become a focus of research, stem -
+ming from their unique compositional flexibility and outstanding me -
+chanical performance [ 1 – 3 ]. Face-centered cubic (FCC) HEAs generally 
+exhibit favorable plasticity at room and cryogenic temperatures; how -
+ever, the comparatively low strength remains a limiting factor, impeding 
+their application in scenarios requiring high load-bearing capacity [ 4 , 5 ]. 
+Established methodologies for improving alloy strength encompass 
+precipitation strengthening, solid-solution strengthening, 
+grain-boundary strengthening, and work hardening. Recent studies have 
+demonstrated that optimized processing routes can construct heteroge -
+neous lamellar structures in non-eutectic high-entropy alloys, thereby 
+simultaneously enhancing strength and ductility [ 6 ]. Furthermore, 
+directional solidification combined with aging treatment can achieve 
+bidirectional precipitation in dual-phase high-entropy alloys, which 
+simultaneously tailors the nanoprecipitates in both the FCC and BCC 
+phases, significantly reducing the property mismatch between the two 
+phases and thus overcoming the strength – ductility trade-off [ 7 ]. How -
+ever, compared with complex thermomechanical processing routes, the 
+tuning of alloy composition to achieve strength – ductility synergy is 
+more convenient.
+* Corresponding author. School of Materials Science and Engineering, Fujian University of Technology, Fuzhou, 350118, China.
+E-mail address: pqdai@126.com (P. Dai). 
+Contents lists available at ScienceDirect
+Materials Science & Engineering A
+journal homepag e: www.else vier.com/loc ate/msea
+https://doi.org/10.1016/j.msea.2026.151021
+Received 26 May 2026; Received in revised form 4 August 2026; Accepted 28 August 2026  
+Materials Science & Engineering A 976 (2026) 151021 
+Available online 29 August 2026 
+0921-5093/© 2026 Published by Elsevier B.V. 
+Since the advent of the HEAs concept, a wide variety of alloying 
+additions have been exploited to tailor their performance metrics, 
+including hardness, ultimate tensile strength, fatigue tolerance, wear 
+resistance, ferromagnetic characteristics, electrical conductivity, and 
+electrochemical performance [ 8 – 15 ]. Among them, one of the most 
+frequently used alloy elements in transition metal high-entropy alloys is 
+the Al element. The Al content is crucial for controlling the phase 
+composition, promoting the formation of BCC-based phases and influ -
+encing their degree of ordering [ 16 ], thereby enhancing mechanical 
+properties. Compared to common transition-metal elements, Al pos -
+sesses a larger atomic radius, this also causes pronounced lattice 
+distortion, impedes dislocation motion, and increases strength. He et al. 
+[ 17 ] demonstrated that Al addition progressively drives the FeCo -
+NiCrMn system from an FCC solid solution through an FCC + BCC 
+duplex phase to a fully BCC structure, highlighting Al's crucial 
+strengthening role. Moreover, Al can promote precipitation [ 18 ], 
+thereby contributing additional precipitation strengthening. Kenta et al. 
+[ 19 ] added a trace amount of N (0.3 at.%) to the Co
+20
+Cr
+20
+Fe
+34
+Mn
+20
+Ni
+6 
+medium-entropy alloy. The nitrogen addition enhanced the 
+solid-solution strengthening effect and simultaneously produced pro -
+nounced strengthening. Chen et al. [ 20 ] regulated the Nb content in a 
+single-phase BCC structure to exploit localized solute pinning effects, 
+which effectively suppress dynamic recovery and recrystallization dur -
+ing high-temperature deformation, thereby significantly enhancing the 
+high-temperature strength while retaining favorable ductility. Si is also 
+a commonly used alloying element in high-entropy alloys, which can 
+significantly reduce the SFE of the alloys. The deformation behavior of 
+FCC HEAs depends critically on intrinsic SFE. Li et al. [ 21 ] reported that 
+Si addition in the CoCrNi medium-entropy alloy enhances strength via 
+increased lattice distortion. Moreover, the addition of Si reduces SFE and 
+facilitates deformation twinning and stress-induced phase trans -
+formation from FCC to HCP.
+The Fe
+40
+Co
+20
+Cr
+20
+Ni
+20 
+high-entropy alloy was fabricated in this work 
+via increasing the Fe content of the CoCrFeNi alloy, resulting in a single- 
+phase FCC structure. Increasing the Fe content not only reduces the 
+material cost, but also allows Fe to act as an FCC stabilizer [ 22 ], thereby 
+ensuring the ductility of the alloy. In the preliminary work of our 
+research group, Al and Si elements were added to the Fe
+40
+Co
+20
+Cr
+20
+Ni
+20 
+alloy, respectively, and a moderate addition of Al and Si elements 
+notably enhanced both the strength and ductility of the alloy. Al en -
+hances strength by promoting BCC phase formation, whereas Si im -
+proves plasticity by reducing the SFE, thereby activating the TRIP and 
+TWIP effects. Recent studies have demonstrated that a favorable com -
+bination of strength and ductility can be achieved in high-entropy alloys 
+through the addition of Al alone [ 23 ]. In the present work, however, Al 
+is introduced primarily to promote the precipitation of secondary pha -
+ses; nevertheless, it is also known that Al addition tends to increase the 
+SFE [ 24 ], which may suppress the activation of TWIP and TRIP effects. 
+To counteract this undesirable effect, Si is simultaneously added to 
+lower the SFE, thereby preserving the deformation mechanisms essential 
+for enhanced mechanical performance. However, the synergistic effects 
+of Al and Si co-addition remain largely unexplored in FCC-structured 
+high-entropy alloys. Therefore, this paper uses Fe
+40
+Co
+20
+Cr
+20
+Ni
+20 
+as the 
+base alloy; both Al and Si were co-added to the alloy to enhance its 
+strength and ductility synergistically. Accordingly, FeCoCrNiAlSi series 
+high-entropy alloys were developed; the strengthening mechanisms 
+operative in these alloys under room and cryogenic temperatures have 
+been systematically studied.
+2. Materials and Methods
+Commercial-purity (99.9%) Fe, Co, Cr, Ni, Al, and Si were used as 
+raw materials. Alloy ingots with nominal compositions of 
+Fe
+40
+Co
+20
+Cr
+20
+Ni
+20 
+and (Fe
+40
+Co
+20
+Cr
+20
+Ni
+20
+)
+100   x   y
+Al
+x
+Si
+y 
+(where x = 3, 7, 
+and 10; y = 3 and 5, at. %) were prepared by vacuum arc melting in a 
+copper crucible. The raw materials were stacked in order of increasing 
+melting point before melting. Each ingot was remelted at least five times 
+and turned over between melts to ensure chemical homogeneity, fol -
+lowed by furnace cooling. The as-cast ingots were then homogenized at 
+1050 
+◦
+C for 5 h and water-quenched.
+Specimens for microstructural characterization and tensile testing 
+were sectioned from both as-cast and homogenized ingots using wire 
+electrical discharge machining. Phase identification was performed by 
+X-ray diffraction (D8 Advance, Germany) using Cu K α radiation 
+( λ = 0.15406 nm) at 40 kV and 40 mA, with a 2 θ range of 10 – 100
+◦
+and a 
+scanning speed of 6
+◦
+/min. Microstructures were examined by scanning 
+electron microscopy (SEM; FEI Nova Nano SEM 450, USA), electron 
+backscatter diffraction (EBSD; Oxford Nordlys and JSM-IT800), and 
+transmission electron microscopy (TEM; FEI Talos F200X, 200 kV). 
+Cross-sectional EBSD and TEM analyses were conducted to trace 
+microstructural evolution. For EBSD, samples were electropolished in a 
+solution of 77% ethanol and 23% perchloric acid. TEM foils were pre -
+pared by mechanical grinding to ~80 μ m, dimple grinding (Gatan Model 
+657, USA) to ~5 μ m, and final ion milling (Gatan 691, USA).
+Uniaxial tensile tests were performed at room temperature (298 K) 
+and in a liquid nitrogen bath (77 K) using a universal testing machine 
+(INSTRON 2382, USA). Flat dog-bone specimens with a gauge dimen -
+sion of 10 × 2 × 1 mm
+3 
+were deformed at a constant strain rate of 
+1 × 10
+  3
+s
+  1
+. A minimum of three samples were tested at each condition. 
+The sample designations used in this study are summarized in Table 1 .
+3. Results
+3.1. Mechanical properties
+The engineering stress-strain curves shown in Fig. 1 (a) describe the 
+tensile characteristics of the FeCoCrNiAlSi alloy series at room tem -
+perature. The results show that mechanical properties are significantly 
+improved by adding Al and Si. While greater increases in Al and Si 
+content continue to boost strength at the expense of plasticity loss, 
+moderate additions of Al and Si concurrently improve strength and 
+ductility. Among all compositions, an optimal balance of mechanical 
+properties is obtained for the Al
+7
+Si
+5
+-HO alloy, with the ultimate tensile 
+strength (UTS) of 743 MPa and a fracture elongation of 56%. Compared 
+with the base alloy, which shows a UTS of 335 MPa and an elongation of 
+42%, these values represent increases of 121% and 33%, respectively. 
+Interestingly, the homogenized Al
+7
+Si
+5
+-HO alloy improves ductility and 
+retains the as-cast strength level. This behavior appears to result from 
+the microstructure changes during homogenization. At 77 K, the engi -
+neering stress – strain responses of the M   HO and Al
+7
+Si
+5
+-HO alloys are 
+presented in Fig. 1 (b), denoted as M-HO-77K and Al
+7
+Si
+5
+-HO-77K, 
+respectively. Compared with the corresponding room-temperature 
+curves (denoted M-HO-RT and Al
+7
+Si
+5
+-HO-RT), M-HO-77K exhibits 
+simultaneous increases in strength and ductility, with a remarkable 
+fracture elongation of 88%. In contrast, Al
+7
+Si
+5
+-HO-77K shows a sub -
+stantial increase in strength, reaching a UTS of 1127 MPa; although its 
+plasticity has decreased, it still has about 30%. Fig. 1 (c) and (d) show the 
+true stress – strain curves and work-hardening curves, respectively. The 
+strain-hardening responses of the two alloys show a similar evolutionary 
+Table 1 
+Corresponding specimen codes.
+Alloy Specimen composition
+As-cast Homogenization treatment
+Fe
+40
+Co
+20
+Cr
+20
+Ni
+20
+M M-HO
+(Fe
+40
+Co
+20
+Cr
+20
+Ni
+20
+)
+94
+Al
+3
+Si
+3
+Al
+3
+Si
+3
+Al
+3
+Si
+3
+-HO
+(Fe
+40
+Co
+20
+Cr
+20
+Ni
+20
+)
+92
+Al
+3
+Si
+5
+Al
+3
+Si
+5
+Al
+3
+Si
+5
+-HO
+(Fe
+40
+Co
+20
+Cr
+20
+Ni
+20
+)
+90
+Al
+7
+Si
+3
+Al
+7
+Si
+3
+Al
+7
+Si
+3
+-HO
+(Fe
+40
+Co
+20
+Cr
+20
+Ni
+20
+)
+88
+Al
+7
+Si
+5
+Al
+7
+Si
+5
+Al
+7
+Si
+5
+-HO
+(Fe
+40
+Co
+20
+Cr
+20
+Ni
+20
+)
+87
+Al
+10
+Si
+3
+Al
+10
+Si
+3
+Al
+10
+Si
+3
+-HO
+(Fe
+40
+Co
+20
+Cr
+20
+Ni
+20
+)
+85
+Al
+10
+Si
+5
+Al
+10
+Si
+5
+Al
+10
+Si
+5
+-HO
+J. Gao et al.                                                                                                                                                                                                                                      Materials Science & Engineering A 976 (2026) 151021 
+2 
+trend at both room temperature and 77 K. Furthermore, the curves can 
+be categorized into three distinct stages. Stage I — the elastic-plastic 
+transition stage ( ε < 2%) — manifests as a sharp decline in the strain- 
+hardening rate. Stage II features a progressive decline in the hard -
+ening rate. When plastic flow is accommodated predominantly by 
+dislocation glide, both the M   HO and Al
+7
+Si
+5
+-HO alloys exhibit a quasi- 
+steady or gently decreasing hardening rate. Upward excursions in the 
+slope signal the activation of supplementary mechanisms, such as the 
+generation of deformation twins or stacking faults (SFs), which will be 
+discussed in detail in a later section. As the strain-hardening capacity 
+becomes exhausted, Stage III is characterized by a precipitous decay in 
+the hardening rate with increasing true strain, ultimately leading to 
+necking and fracture.
+The comparison with other HEAs in Fig. 2 demonstrates that the cast- 
+processed Al
+7
+Si
+5 
+and Al
+7
+Si
+5
+-HO alloys have a desirable strength-ductility 
+balance at room temperature.
+3.2. Microstructure
+The XRD pattern in Fig. 3 (a) reveals that the base alloy M is char -
+acterized by a single-phase FCC structure. Upon alloying with Al and Si, 
+diffraction peaks corresponding to the BCC phase appear. Notably, the 
+BCC (110) peak is clearly discernible in the Al
+3
+Si
+3 
+alloy. The BCC peak 
+intensity scales with the increasing concentration of Al and Si, and the 
+Al
+7
+Si
+5 
+alloy exhibits a BCC (211) diffraction peak that is not observed in 
+the other alloys. Fig. 3 (b) is a magnified view of Fig. 3 (a) in the range 
+50
+◦
+– 52
+◦
+. The FCC (200) diffraction peak shifts progressively to lower 
+angles with higher Al and Si contents, revealing an increase in the 
+interplanar spacing. This shift is primarily due to the larger atomic 
+radius of Al atoms, which leads to lattice expansion and thus an increase 
+in interplanar spacing. Further comparison among Al
+3
+Si
+3
+, Al
+7
+Si
+3
+, and 
+Al
+10
+Si
+3 
+alloys with the same Si content indicates that higher Al content 
+enhances the formation of the BCC phase, manifested by the appearance 
+of the (110) peak, demonstrating the pronounced influence of Al on BCC 
+Fig. 1. Mechanical properties of the FeCoCrNiAlSi alloy series. (a) Engineering stress – strain curves obtained at room temperature. (b) Comparison of the engineering 
+stress – strain curves for the M   HO and Al
+7
+Si
+5
+-HO alloys at room temperature and 77 K. (c) True stress – strain curves of the M   HO and Al
+7
+Si
+5
+-HO alloys at room 
+temperature and 77 K. (d) Work hardening rate curves plotted against true strain for the M   HO and Al
+7
+Si
+5
+-HO alloys at room temperature and 77 K.
+Fig. 2. Comparison of tensile mechanical properties at room temperature be -
+tween Al
+7
+Si
+5 
+and Al
+7
+Si
+5
+-HO with other HEAs [ 17 , 25 – 37 ].
+J. Gao et al.                                                                                                                                                                                                                                      Materials Science & Engineering A 976 (2026) 151021 
+3 
+precipitation. At the same Al content, a similar trend is seen between 
+Al
+7
+Si
+3 
+and Al
+7
+Si
+5
+, suggesting that Si addition also promotes BCC 
+formation.
+Due to its superior comprehensive properties, the Al
+7
+Si
+5 
+alloy was 
+selected for detailed microstructural characterization via SEM, EBSD, 
+and TEM. Fig. 4 shows SEM microstructures of the Al
+7
+Si
+5 
+and Al
+7
+Si
+5
+-HO 
+alloys. As shown in Fig. 4 (a), the Al
+7
+Si
+5 
+alloy exhibits a typical dendritic 
+microstructure, with an FCC matrix and BCC phase in the interdendritic 
+regions. Homogenization induces the decomposition of the interden -
+dritic BCC phase, breaking it down into micrometer-scale spherical 
+precipitates inside the grains and strip-like phase along the grain 
+boundaries ( Fig. 4 (c – d)).
+Fig. 5 shows the EBSD microstructures of different alloys. By com -
+parison, both M and M   HO alloys exhibit coarse grains, with average 
+grain sizes of 380 μ m and 393.94 μ m, respectively. After homogeniza -
+tion treatment, the grain morphology changed from the columnar grains 
+( Fig. 5(a1) ) to equiaxed grains ( Fig. 5(b1) ), and the same evolution trend 
+was observed in the Al
+7
+Si
+5 
+alloy ( Fig. 5 (c – d)). The phase distribution 
+diagram further reveals that the alloy transformed from a single-phase 
+FCC structure to the FCC + BCC duplex structure. The grain size dis -
+tribution diagram ( Fig. 5 (c3-d4)) quantitatively indicates that the 
+addition of Al and Si elements significantly refined the grains. The 
+strengthening effect brought by grain refinement is one of the important 
+contributing factors for the significant improvement in the mechanical 
+properties of the Al
+7
+Si
+5 
+alloy.
+Fig. 6 presents TEM observations of Al
+7
+Si
+5
+-HO. Fig. 6 (a) shows the 
+microstructure, consisting of an FCC matrix and BCC precipitates. The 
+BCC phase appears in various morphologies, including spherical, rod- 
+like, and strip-like along grain boundaries. SAED patterns identify the 
+FCC matrix ( Fig. 6(a1) ) and BCC phase ( Fig. 6(b1) ). Corresponding EDS 
+analysis ( Fig. 6 (c)) further reveals that Al and Ni show a preference for 
+the BCC phase, whereas Fe, Cr, and Si preferentially reside in the FCC 
+matrix, and Co distributes relatively uniformly. From a thermodynamic 
+perspective, the large negative mixing enthalpy between Al and Ni 
+drives their preferential enrichment in the BCC phase, which greatly 
+lowers the system energy when Al and Ni atoms combine to form 
+compounds and thus leads to a highly stable state [ 38 ].
+The inverse pole figure (IPF) and phase map of the fractured M-HO- 
+RT sample are shown in Fig. 7 (a) and (b), respectively. These results 
+indicate that no secondary phase was generated by the deformation 
+process. Furthermore, TEM observations ( Fig. 7 (c – e)) reveal no stacking 
+faults or twins; the primary deformation features observed are a high 
+density of dislocations and slip bands. Owing to the absence of pinning 
+or obstruction effects from twins and second phases, dislocation move -
+ment is difficult to restrict, leading to a low work-hardening capacity. 
+This accounts for the reduced strength of the M-HO-RT sample.
+Fig. 8 presents the fracture microstructure of Al
+7
+Si
+5
+-HO-RT. No new 
+phase is formed in the specimen ( Fig. 8 (a – b)), but a high density of 
+deformation twins is observed ( Fig. 8 (g – i)). During deformation, well- 
+defined slip bands were generated ( Fig. 8 (c)), and SFs and twins 
+developed with high density around the BCC particle. During plastic 
+deformation, BCC particles contribute to a higher work-hardening rate 
+by acting as obstacles to dislocation movement and twin boundary 
+migration. Fig. 8 (e) shows dislocation pile-up inside a BCC particle, 
+indicating that, in order to relieve local stress concentration during 
+deformation, the BCC particles gradually accommodate plastic defor -
+mation and deform cooperatively with the softer FCC phase. The high 
+density of intersecting stacking faults ( Fig. 8 (f – h)) also forms 
+Lomer – Cottrell locks (L-C locks), which further enhance the strength of 
+the Al
+7
+Si
+5
+-HO-RT specimen by impeding dislocation motion.
+Fig. 3. The XRD of FeCoCrNiAlSi HEAs.
+Fig. 4. SEM microstructure of Al
+7
+Si
+5 
+and Al
+7
+Si
+5
+-HO HEAs. (a-b) Al
+7
+Si
+5 
+alloy, (c- 
+d) Al
+7
+Si
+5
+-HO alloy.
+J. Gao et al.                                                                                                                                                                                                                                      Materials Science & Engineering A 976 (2026) 151021 
+4 
+During tensile deformation, the M-HO-77K specimen exhibits both 
+TRIP and TWIP effects. The presence of a small amount of HCP phase, 
+initially observed in Fig. 9 (b), is further corroborated by TEM analysis 
+( Fig. 9 (g) and (h)). Clear slip bands are visible in Fig. 9 (c), demon -
+strating that dislocation slip is also involved in the deformation process. 
+Moreover, the large number of twins ( Fig. 9 (d – f)) is responsible for the 
+remarkable ductility of M   HO at 77 K. Notably, the strengthening 
+effect of M   HO at cryogenic temperatures arises from abundant twin 
+boundaries, which effectively impede dislocation and stacking fault 
+motion, thereby increasing its strength relative to the room-temperature 
+condition. Compared to room temperature, the cryogenic deformation 
+of the M   HO alloy promotes the activation of stacking faults and twins, 
+due to the lowered critical stress required for their nucleation [ 39 ].
+Similarly, the Al
+7
+Si
+5
+-HO-77K specimen also activates the TRIP effect 
+during deformation, although only a small amount of HCP phase forms 
+( Fig. 10 (b)). Compared with Al
+7
+Si
+5
+-HO-RT, the BCC phase fraction 
+resolved in Fig. 10 (b) is higher than that in Fig. 8 (b). Due to the densities 
+of dislocations and SFs generated during deformation being higher, 
+Al
+7
+Si
+5
+-HO-RT shows the UTS of 743 MPa and the fracture elongation of 
+56%. Furthermore, a local stress field results from the accumulation of 
+numerous dislocations and stacking faults around the BCC phase, which 
+leads to zero solution during EBSD data acquisition. This may conse -
+quently result in an underestimation of the measured BCC phase 
+fraction. Fig. 10 (c – e) show that BCC particles block dislocations, SFs, 
+and deformation twins, which is similar to the deformation behavior of 
+the Al
+7
+Si
+5
+-HO-RT specimen, and that high-density nanoscale stacking- 
+fault networks and twins are present ( Fig. 10 (d – g)). Dislocation pile- 
+up inside BCC particles is also observed in Fig. 10 (d) and (e), which is 
+characteristic of severely deformed samples. During plastic deformation, 
+the co-deformation of the FCC and BCC phases across their hetero- 
+interfaces primarily relies on mechanisms such as slip transmission 
+and strain partitioning. The effectiveness of slip transmission depends on 
+the geometric orientation of slip systems across the phase boundary as 
+well as on the size of the BCC phase (approximately 1 μ m being optimal 
+for slip transmission) [ 40 ]. Additionally, a high density of twins plays a 
+dual role: it enhances toughness by relieving stress concentration and 
+retarding crack propagation, and it simultaneously refines the micro -
+structure by subdividing coarse grains [ 41 ].
+4. Discussion
+4.1. SFE calculation of the FeCoCrNiAlSi HEAs
+The stacking fault energy (SFE), a key intrinsic parameter of FCC 
+alloys, dictates their plastic-deformation mechanism by governing 
+dislocation slip modes, cross-slip ability, and twinning propensity, 
+Fig. 5. EBSD microstructure of different alloys. (a1-a3) IPF map, phase distribution diagram, and grain size distribution diagram of M alloy. (b1-b3) IPF map, phase 
+distribution diagram, and grain size distribution diagram of M   HO alloy. (c1-c4) IPF map, phase distribution diagram, and grain size distribution diagram of Al
+7
+Si
+5 
+alloy. The grain size distribution diagram of the FCC phase in (c3), and the grain size distribution diagram of the BCC phase in (c4). (d1-d4) IPF map, phase dis -
+tribution diagram, and grain size distribution diagram of Al
+7
+Si
+5
+-HO alloy. The grain size distribution diagram of the FCC phase in (d3), and the grain size distribution 
+diagram of the BCC phase in (d4).
+J. Gao et al.                                                                                                                                                                                                                                      Materials Science & Engineering A 976 (2026) 151021 
+5 
+thereby controlling both microscopic deformation and macroscopic mechanical behavior. Therefore, any discussion of the deformation 
+Fig. 6. (a)TEM Microstructure and EDS of Al
+7
+Si
+5
+-HO. (b)TEM Morphology of Al
+7
+Si
+5
+-HO Alloy. The SAED pattern from the FCC matrix is shown in (a1), and that from 
+the BCC phase is in (b1). (c) EDS Spectrogram of Al
+7
+Si
+5
+-HO alloy.
+Fig. 7. M-HO-RT microstructure of fracture sample. (a) Inverse pole figure (IPF) map obtained from EBSD analysis. (b) Phase distribution presented in the EBSD 
+phase map. (c) Slip traces generated during deformation. (d) Dislocation tangle generated by tensile deformation. (e) HRTEM image within the white circle 
+in Figure (d).
+J. Gao et al.                                                                                                                                                                                                                                      Materials Science & Engineering A 976 (2026) 151021 
+6 
+mechanisms of M   HO and Al
+7
+Si
+5
+-HO at room and cryogenic temper -
+atures must include an evaluation of the SFE. The intrinsic SFE of an FCC 
+alloy is often determined using the well-established thermodynamic 
+model developed by Olson and Cohen [ 42 ]: 
+γ
+SFE
+= 2 ρ
+m
+Δ G
+γ → ε
++ 2 σ
+γ / ε
+(1) 
+Here, ρ
+m 
+is the areal density of atoms on the {111} plane, Δ G
+γ → ε 
+cor -
+responds to the change in molar Gibbs free energy during the γ 
+(austenite) to ε (HCP martensite) transformation. σ
+γ / ε 
+represents the 
+energy of the γ / ε interface. Previous studies have reported that σ
+γ / ε 
+for 
+FCC alloys lies in the range 5 – 15 mJ/m
+2 
+[ 43 ]. In the present work, σ
+γ / ε 
+was taken as 8 mJ/m
+2 
+[ 44 ]. The quantity ρ
+m 
+is obtained as: 
+ρ
+m
+=
+4
+̅̅ ̅
+3
+√
+1
+a
+2
+N
+(2) 
+Here, a = 3 . 61 × 10
+  10
+m is the FCC lattice constant, N = 6 . 022 ×
+10
+23
+mol
+  1 
+is Avogadro's number, and Δ G
+γ → ε 
+is the molar Gibbs free 
+energy difference for the γ → ε transformation, which takes the following 
+form within a regular-solution model: 
+Δ G
+γ → ε
+=
+∑
+i
+X
+i
+Δ G
+γ → ε
+i
++
+1
+2
+∑
+ij
+X
+i
+X
+j
+ΔΩ
+γ → ε
+ij
+(3) 
+In this expression, X
+i 
+corresponds to the mole fraction of element i , and 
+Δ G
+γ → ε
+i 
+characterizes the Gibbs free energy change of the FCC → HCP 
+transformation in the pure element i . The parameter ΔΩ
+γ → ε
+ij 
+represents 
+the interaction energy between components i and j . Due to the low 
+concentrations of Al and Si, interaction parameters involving Al or Si 
+with elements other than Fe are neglected, and only the interactions 
+between Al/Si and Fe are considered. The numerical values of all pa -
+rameters are provided in Table 2 .
+Room-temperature calculation yields γ
+SFE 
+values of 45.55 mJ/m
+2 
+for 
+the base alloy M and 33.89 mJ/m
+2 
+for the Al
+7
+Si
+5 
+alloy. Upon cooling to 
+77 K, these values decline to 14.02 and 15.72 mJ/m
+2
+. This temperature- 
+driven decrease in SFE aligns with earlier observations [ 48 , 49 ]. Ac -
+cording to classical descriptions, deformation in high-SFE alloys 
+( > 45 mJ/m
+2
+) occurs predominantly through dislocation slip accompa -
+nied by shear band formation. The operative deformation mechanism 
+shifts from twinning in the intermediate SFE range (18 – 45 mJ/m
+2
+) [ 50 ,
+51 ] to stress- or strain-induced phase transformation when the SFE drops 
+below 18 mJ/m
+2 
+[ 52 ].
+According to the calculated SFE values, the dominant deformation 
+mechanism of M-HO-RT is dislocation slip, Al
+7
+Si
+5
+-HO-RT undergoes the 
+TWIP effect, and the dominant deformation mechanism of M-HO-77K 
+and Al
+7
+Si
+5
+-HO-77K is stress- or strain-induced phase transformation. 
+The excellent agreement between predictions and experiments attests to 
+Fig. 8. Al
+7
+Si
+5
+-HO-RT microstructure of fracture sample. (a) IPF map obtained from EBSD analysis. (b) Phase distribution presented in the EBSD phase map. (c) 
+Dislocation slip band in matrix. (d) Many stacking faults and twins are accumulated around the BCC particles. (e) Dislocations pile up in BCC. (f) A lot of intersecting 
+SFs form the L-C lock, illustrated in the SAED mode. (g-i) Many DTs and SFs are present in the FCC matrix. (j) Many nano-spaced SF networks exist in the matrix.
+J. Gao et al.                                                                                                                                                                                                                                      Materials Science & Engineering A 976 (2026) 151021 
+7 
+the reliability of the adopted calculation methodology for SFE. There -
+fore, the SF-dominated deformation in Al
+7
+Si
+5
+-HO arises from its rela -
+tively low SFE, which facilitates dislocation dissociation into stacking 
+faults and thereby suppresses cross-slip.
+4.2. Deformation and strengthening mechanisms
+Before the quantitative analysis of the strengthening mechanisms, it 
+is necessary to first elucidate the intrinsic relationship among the 
+various morphologies of the BCC precipitates and their interfacial 
+characteristics with the FCC matrix. As described above, the BCC phase 
+in the as-cast state exhibits an interdendritic morphology, which arises 
+from the segregation of Al and Ni solutes in the interdendritic regions 
+during non-equilibrium solidification [ 53 ]. During homogenization 
+annealing, the blocky BCC phase decomposes, and some Al and Ni atoms 
+diffuse into the grain interiors, leading to the formation of rod-like or 
+spherical precipitates. Simultaneously, the remaining fraction in the 
+interdendritic regions transforms into long strip-like precipitates 
+distributed along the grain boundaries. It is noteworthy that these pre -
+cipitates with distinct morphologies have the same crystal structure and 
+chemical composition, and their morphological differences arise solely 
+from divergent evolutionary pathways under different thermodynamic 
+and kinetic conditions.
+To investigate the interfacial coherency between the BCC pre -
+cipitates of different morphologies and the FCC matrix, TEM analyses 
+were conducted on both types of precipitates. Based on HRTEM imaging 
+and corresponding FFT diffractograms ( Fig. 11 ), it can be determined 
+that regardless of whether the BCC phase is particle or long strip-like, a 
+specific crystallographic orientation relationship exists between the FCC 
+matrix and the BCC phase, forming a typical semi-coherent interface 
+[ 54 ]. The FFT ( Fig. 11 ) analysis reveals that the FCC phase is oriented 
+along the [111] zone axis, while the BCC phase is oriented along the 
+[110] zone axis, satisfying the classical Kurdjumov – Sachs orientation 
+relationship [ 55 ]. The interfacial region exhibits broad dark contrast 
+bands ( Fig. 11 ), which originate from the local periodic strain fields and 
+interfacial misfit dislocation arrays induced by the substantial lattice 
+mismatch between the two phases [ 56 ]. Since both spherical and long 
+strip-like BCC precipitates exhibit similar semi-coherent interfacial 
+characteristics with the FCC matrix, this provides a microstructural basis 
+for the subsequent unified application of the Orowan model in esti -
+mating the precipitation strengthening contribution.
+The yield strength of polycrystalline materials can be decomposed 
+into contributions from four primary mechanisms: solid-solution hard -
+ening, grain-boundary strengthening, precipitation hardening, and 
+dislocation strengthening. Thus, the overall strength is commonly 
+considered as a linear superposition of these components. Al contributes 
+to strengthening through two primary mechanisms. First, its larger 
+atomic radius (compared to Co, Cr, Fe, and Ni) induces lattice distortion 
+in the FCC matrix, leading to solid-solution hardening. Second, Al pro -
+motes the precipitation of a BCC phase, which enhances strength via 
+precipitation hardening. The phase constitution of the Al
+7
+Si
+5
+-HO alloy, 
+as determined by XRD and TEM investigations, is the FCC matrix con -
+taining BCC phase, so the precipitation contribution is mainly associated 
+with the BCC phase. Accordingly, the yield strength is modeled by 
+Ref. [ 57 ]: 
+Fig. 9. M-HO-77K microstructure of fracture sample. (a) IPF map obtained from EBSD analysis. (b) Phase distribution presented in the EBSD phase map. (c) 
+Dislocation slip band in matrix. (d-f) The deformation generates many DTs, SFs, and dislocation slip bands. (d1) The SAED diagram in Figure (d). (g) Figure (f) 
+HRTEM plot of the white circle area. (h) The deformation produces the HCP phase, illustrated by an SAED pattern for the FCC and HCP phases.
+J. Gao et al.                                                                                                                                                                                                                                      Materials Science & Engineering A 976 (2026) 151021 
+8 
+σ
+y
+= σ
+y   M
++ Δ σ
+S
++ Δ σ
+G
++ Δ σ
+BCC
+(4) 
+where σ
+y - M 
+is the yield strength of the base alloy M. Here, 
+σ
+y   M 
+= 96 MPa, which is derived from the yield strength of the M   HO 
+alloy. The terms Δ σ
+S
+, Δ σ
+G
+, and Δ σ
+BCC 
+denote the strengthening contri -
+butions from solid solution, grain boundaries, and the BCC phase, 
+respectively.
+The Fe
+40
+Co
+20
+Cr
+20
+Ni
+20 
+alloy was treated as the solvent, whereas Al 
+and Si were treated as solute species that can partially dissolve in the 
+Fe
+40
+Co
+20
+Cr
+20
+Ni
+20 
+alloy. A model is therefore employed to quantify the 
+solid solution strengthening contribution that accounts for the 
+dislocation-solute interaction via solute displacement fields, written as 
+[ 58 ]: 
+Δ σ
+S
+=
+MG ε
+s
+3 / 2
+⋅ c
+1 / 2
+700
+(5) 
+where M = 3.06 is the Taylor factor, and G is the shear modulus of 
+Fe
+40
+Co
+20
+Cr
+20
+Ni
+20 
+alloy. According to the work of Lei et al. [ 59 ], 
+G = 79 GPa. Here, c denotes the total atomic fraction of Al and Si in the 
+FCC phase and is taken as 0.05, accounting for their synergistic effect in 
+the Fe
+40
+Co
+20
+Cr
+20
+Ni
+20 
+alloy. The interaction term ε
+s 
+is given by: 
+ε
+s
+=
+⃒
+⃒
+⃒
+⃒
+ε
+G
+1 + 0 . 5 ε
+G
+⃒
+⃒
+⃒
+⃒
+  3 ⋅ ε
+a
+(6) 
+This equation incorporates the effects of both elastic-modulus 
+mismatch ( ε
+G
+) and atomic-size mismatch ( ε
+a
+), which are defined as: 
+ε
+G
+=
+1
+G
+∂ G
+∂ c
+(7) 
+ε
+a
+=
+1
+a
+∂ a
+∂ c
+(8) 
+Fig. 10. Al
+7
+Si
+5
+-HO-77K microstructure of fracture sample. (a) IPF map obtained from EBSD analysis. (b) Phase distribution presented in the EBSD phase map. (c-d) 
+BCC precipitation effectively hinders the movement of dislocations, SFs, and DTs, forming a large area of nano-spaced SF networks and DTs pile-up. (f) High-density 
+networks of SFs and DTs. (f1) The SAED diagram in Figure (f). (g) Enlarged white dashed area in Figure (f). (h) Enlarged white dashed area in Figure (g) and 
+Illustration of the SAED mode of the HCP phase.
+Table 2 
+Thermodynamic function describing the change in the Gibbs free energy Δ G
+γ → ε
+i 
+of the FCC to HCP phase transformation for the pure elements and the excess free 
+energy coefficients Ω
+γ → ε
+ij
+.
+Parameter Thermodynamic function(J/mol) references
+Δ G
+γ → ε
+Fe
+  2243.38 + 4.309T [ 45 ]
+Δ G
+γ → ε
+Co
+  427.59 + 0.615T [ 46 ]
+Δ G
+γ → ε
+Cr
+1370-0.163T [ 45 ]
+Δ G
+γ → ε
+Ni
+1046 + 1.255T [ 45 ]
+Δ G
+γ → ε
+Al
+558.85 [ 47 ]
+Δ G
+γ → ε
+Si
+  560-8T [ 45 ]
+Ω
+γ → ε
+FeCo
+785.3 [ 48 ]
+Ω
+γ → ε
+FeCr
+2095 [ 45 ]
+Ω
+γ → ε
+FeNi
+2095 [ 45 ]
+Ω
+γ → ε
+FeAl
+3328 [ 45 ]
+Ω
+γ → ε
+FeSi
+2850 + 3520( X
+Fe
+  X
+Si
+) [ 45 ]
+Ω
+γ → ε
+CoCr
+2158.24 [ 46 ]
+Ω
+γ → ε
+CoNi
+  820   1.65T [ 46 ]
+Ω
+γ → ε
+CrNi
+4190 [ 45 ]
+J. Gao et al.                                                                                                                                                                                                                                      Materials Science & Engineering A 976 (2026) 151021 
+9 
+Here, a = 0.3561 nm is the lattice constant of Fe
+40
+Co
+20
+Cr
+20
+Ni
+20
+, which 
+can be obtained from the more accurate XRD patterns, and in practice, 
+the contribution of ε
+a 
+dominates over that of ε
+G
+, making the latter often 
+negligible. Therefore, ε
+s 
+can be estimated with sufficient accuracy, the 
+final contribution value for solid solution strengthening is 20.9 MPa.
+By refining grain size, alloy strength can be enhanced through the 
+introduction of more grain boundaries, which act as obstacles to dislo -
+cation motion. This strengthening contribution is quantitatively 
+described by the classical Hall – Petch relationship [ 59 , 60 ]: 
+Δ σ
+G
+=
+k
+y
+d
+1 / 2
+(9) 
+Δ σ
+G
+= f
+FCC
+k
+y
+d
+1 / 2
+FCC
++ f
+BCC
+k
+y
+d
+1 / 2
+BCC
+(10) 
+where k
+y 
+is the strengthening coefficient. In this work, k
+y
+= 677MPa ⋅ 
+μ m
+1 / 2 
+was adopted based on the CoCrFeMnNi alloy [ 61 ]. In this study, 
+the Al
+7
+Si
+5
+-HO alloy contains two phases: FCC and BCC. Therefore, it is 
+necessary to calculate the strengthening effects of both types of grains 
+separately. Thus, formula (9) has been updated to formula (10) . Here, 
+f
+FCC
+= 0 . 916 and f
+BCC
+= 0 . 08 represent the phase fractions of FCC and 
+BCC ( Fig. 5(d2) ), and d
+FCC 
+= 39.92 μ m and d
+BCC
+= 6 . 44 μ m represent the 
+average grain sizes of FCC and BCC ( Fig. 5 (d3-d4)). Finally, Δ σ
+G
+=
+119 . 5 MPa is obtained.
+Depending on their size and intrinsic nature, precipitates dictate the 
+operative strengthening mechanism [ 62 ]. For instance, shearing be -
+comes dominant for small precipitates ( < 50 nm) or those coherent with 
+the matrix. In contrast, the Orowan mechanism applies to large pre -
+cipitates with incoherent interfaces with the matrix [ 63 ]. As a result, the 
+Orowan bypass mechanism should be predominantly operative upon the 
+impingement of dislocations on the hard and brittle BCC precipitates. 
+Treating these BCC particles as spheres, the strengthening arising from 
+the Orowan process can be formulated as follows [ 64 ]: 
+Δ σ
+BCC
+= M ⋅
+0 . 4 Gb
+π
+̅̅̅̅̅̅̅̅̅̅ ̅
+1   υ
+√ ⋅
+ln
+(
+2 r
+b
+)
+λ
+p
+(11) 
+where b =
+̅ ̅
+2
+√
+2
+a is the Burgers vector, υ is the Poisson ratio, taken as 0.27 
+for the CoCrFeNi HEA, r =
+̅ ̅
+2
+3
+√
+r is the precipitate width on the slip plane, 
+r = 350 nm is the average width of precipitates in the alloy, and 
+λ
+p
+= 2 r
+(
+̅̅̅ ̅
+π
+4 f
+√
+  1
+)
+is the effective average spacing between precipitate 
+particles, with f = 8.0% denoting the precipitate volume fraction ( Fig. 5 
+(d2) ). The calculation result is 57.9 MPa. However, in this study, the 
+values calculated by this formula still need to be corrected. Sonderegger 
+proposed a model to represent different shaped precipitated phases 
+using shape factors or aspect ratios [ 65 ]: 
+σ
+ellipsoid
+= K
+  1
+σ
+spheres
+(12) 
+Here, σ
+ellipsoid 
+and σ
+spheres 
+represent the strengthening contribution 
+values of ellipsoidal (i.e., particles of different shapes) and spherical 
+particles, respectively. In this paper, σ
+spheres 
+= 57.92 MPa (the strength -
+ening contribution value calculated based on spherical particles using 
+the classical Orowan formula). K is the correction factor for particle 
+spacing. Since the precipitates in this paper are divided into two types: 
+rod-shaped particles with smaller area and BCC phase with larger area, 
+to make the calculation results more accurate, formula (12) is optimized 
+as the following model: 
+σ
+BCC
+= f
+s
+K
+  1
+s
+σ
+spheres
++ f
+l
+K
+  1
+l
+σ
+spheres
+(13) 
+Here, f
+s 
+= 0.15 and f
+l 
+= 0.85 represent the volume fractions of the small- 
+area rod-shaped particles and the large-area BCC phase, respectively. 
+The aspect ratios of the different-shaped precipitates also vary, so K
+  1 
+is 
+adjusted to K
+  1
+s 
+and K
+  1
+l
+, with specific values being 1.22 and 1.63 [ 65 ], 
+respectively. The final calculation result is Δ σ
+BCC 
+= 90.85 MPa.
+The final theoretical value obtained for the yield strength is 
+σ
+y 
+= 327.25 MPa, which has some errors compared to the experimental 
+value of 363 MPa. The slightly lower theoretical value may arise from 
+several factors. First, interphase interactions within the Al – Si-induced 
+dual-phase structure could provide an additional strengthening contri -
+bution (The heterojunction formed between the precipitated phase and 
+the FCC matrix brings additional HDI strengthening [ 6 , 66 ]). Second, 
+some parameters used in the calculations were taken from other alloys 
+rather than from the actual alloy studied here. Thus, the yield strength 
+values reported here should be regarded as an approximation.
+As the temperature is lowered from room temperature (298 K) to 
+77 K, the yield strength ( σ
+y
+) of Al
+7
+Si
+5
+-HO increases significantly. FCC 
+alloys generally exhibit a pronounced temperature dependence. From an 
+energetic point of view, σ
+y 
+can be divided into a thermal component ( σ
+th
+) 
+and an athermal component ( σ
+ath
+) [ 67 , 68 ]. The thermal component σ
+th 
+originates from thermally activated dislocation motion overcoming the 
+Peierls stress ( σ
+0
+) and is associated with the pinning effect of solute 
+atoms ( σ
+ss
+); both are regarded as short-range barriers [ 69 , 70 ]. Under 
+cryogenic conditions, the limited thermal activation cannot facilitate the 
+overcoming of the Peierls – Nabarro potential by dislocations, which 
+leads to an increase in σ
+0 
+and is closely related to the increase in σ
+y 
+[ 71 ]. 
+For Al
+7
+Si
+5
+-HO, the severe lattice perturbation introduced by Al and Si 
+atoms in solid solution causes σ
+0 
+to increase markedly at 77 K, thereby 
+strongly enhancing the low-temperature yield strength.
+Based on the analysis of coordinated plastic deformation in Al
+7
+Si
+5
+- 
+HO reported in previous studies [ 72 , 73 ], the following mechanism can 
+be summarized. Regions of high stress concentration arise at the 
+FCC-BCC interfaces under uniaxial tensile stress, owing to the contrast in 
+mechanical properties between the soft and hard phases. Because the 
+FCC phase has lower lattice resistance, dislocations nucleate first in this 
+phase and initiate plastic deformation [ 74 ]. At this stage, the BCC phase 
+Fig. 11. TEM microstructure of BCC phases with different shapes. (a-b) 
+Microstructure and HRTEM image of a particle BCC. (c-d) Microstructure and 
+HRTEM image of long strip-like BCC. The illustrations in (b) and (d) are 
+respectively the FFT diagrams of the FCC phase (on the left) and the BCC phase 
+(on the right).
+J. Gao et al.                                                                                                                                                                                                                                      Materials Science & Engineering A 976 (2026) 151021 
+10 
+remains elastically deformed because of its higher strength and elastic 
+modulus [ 75 ], which causes dislocations to pile up at the FCC/BCC 
+hetero-interface, thereby localizing stress on certain crystallographic 
+planes and orientations of the BCC lattice.
+With increasing applied stress and interfacial stress concentration, 
+slip systems that are originally difficult to activate in the BCC phase 
+gradually become operative. Because dislocations in the FCC phase 
+possess relatively high energy per unit length, partial dislocations piled 
+up near the FCC/BCC interface tend to transfer into the BCC phase in 
+order to reduce the total system energy [ 76 , 77 ]. Such a phenomenon 
+promotes cooperative deformation of the ductile and hard phases, 
+thereby effectively raising the overall tensile elongation.
+In addition, higher yield strength of the BCC precipitates compared 
+to the FCC matrix thus enables them to act as a strengthening phase. 
+Specifically, the BCC phase not only increases strength by impeding 
+dislocation motion, but can also serve as a new dislocation source to 
+promote dislocation multiplication and propagation, thereby retaining 
+good plasticity while strengthening the alloy. This mechanism provides 
+important support for the excellent strength – ductility balance achieved 
+by Al
+7
+Si
+5
+-HO. Deformation twins also contribute significantly to 
+enhancing both strength and plasticity.
+Based on existing research, the following analysis is conducted 
+regarding the different mechanical properties exhibited by M   HO and 
+Al
+7
+Si
+5
+-HO alloys at cryogenic temperatures. At cryogenic temperatures, 
+the M   HO alloy responds favorably by achieving concurrent gains in 
+both strength and ductility. The underlying mechanisms are as follows: 
+owing to its close-packed arrangement, the FCC structure retains suffi -
+cient operative slip systems even at cryogenic temperatures, enabling 
+plastic deformation, thereby providing a solid foundation for homoge -
+neous deformation of the material. In parallel, the reduction in SFE 
+encourages the simultaneous occurrence of TWIP and TRIP effects, re -
+flected in the formation of mechanical twins and the HCP martensite 
+from the FCC phase. The exceptional cryogenic ductility of the M   HO 
+alloy is largely accounted for by these two effects. In addition to 
+contributing to plastic deformation, the deformation twins generate 
+twin boundaries that hinder dislocation motion, enabling continuous 
+strengthening of the material during deformation [ 78 ]. For the 
+Al
+7
+Si
+5
+-HO alloy, by comparing the KAM diagrams of the fracture sur -
+faces of the Al
+7
+Si
+5
+-HO alloy at room temperature and cryogenic tem -
+perature ( Fig. 12 ), it can be seen that the dislocation distribution of the 
+Al
+7
+Si
+5
+-HO alloy at room temperature is more uniform, indicating that 
+the strain during the room temperature deformation process can be 
+effectively dispersed, thereby inhibiting local necking and ultimately 
+achieving excellent plasticity. However, the KAM diagram of the frac -
+ture sample at cryogenic temperature shows that the dislocations are 
+significantly distributed around the BCC phase ( Fig. 10 (b)). This inho -
+mogeneous dislocation aggregation is very prone to causing stress con -
+centration, thereby triggering crack initiation. This is the fundamental 
+reason for the difference in plasticity of the Al
+7
+Si
+5
+-HO alloy between 
+room temperature and cryogenic temperature. In terms of strength, the 
+deformation at cryogenic temperature lacks a thermal activation 
+mechanism, and the resistance that dislocation movement needs to 
+overcome significantly increases, thus the yield strength increases [ 79 ,
+80 ].
+5. Conclusions
+This work designed and developed a FeCoCrNiAlSi-series high-en -
+tropy alloy (HEA), followed by a systematic investigation into the syn -
+ergistic effects of Al and Si on its microstructure and mechanical 
+properties. The principal findings are summarized as follows:
+The addition of Al and Si facilitates the precipitation of the BCC 
+phase, forming a dual-phase FCC + BCC microstructure. Elemental 
+partitioning is observed: Al and Ni enrich the BCC phase, while Si resides 
+primarily in the FCC matrix. The BCC phase produced in its original cast 
+form appears as interdendritic stripes. After homogenizing, the strip-like 
+BCC partially decomposes into intragranular spherical or nearly spher -
+ical particles, as well as strip-like particles along the grain boundary.
+The Al
+7
+Si
+5
+-HO alloy exhibits an outstanding strength-ductility com -
+bination at both room temperature and 77 K. At 77 K, a UTS of 1127 MPa 
+is achieved, attributed to the synergistic action of cryogenically induced 
+TWIP and TRIP effects.
+Experimental observations corroborate the calculated SFE values, 
+underscoring the decisive role of SFE in deformation mechanism control.
+Quantitative analysis indicates that the yield strength mainly origi -
+nates from grain boundary strengthening and precipitation strength -
+ening, while solid solution strengthening contributes relatively little.
+During deformation, the BCC phase strengthens the alloy not only 
+through the Orowan mechanism, but also by promoting coordinated 
+plasticity between the two phases, consequently alleviating the long -
+standing strength – ductility trade-off dilemma.
+This work establishes compositional regulation as a viable route to 
+achieve multi-mechanism synergistic strengthening, thereby offering 
+both theoretical and experimental guidance for developing cost- 
+effective, high-performance HEAs.
+CRediT authorship contribution statement
+Jie Gao: Writing – original draft, Methodology, Investigation, 
+Formal analysis. Fanglve Xu: Methodology, Investigation. Chuhuan 
+Huang: Methodology. Li Chen: Investigation, Funding acquisition. 
+Zhanjiang Li: Investigation. Jianeng Huang: Formal analysis. Fa 
+Chang: Supervision. Pinqiang Dai: Writing – review & editing, Super -
+vision, Methodology, Conceptualization.
+Declaration of competing interest
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper.
+Fig. 12. The KAM diagram of the fractured sample. (a)Al
+7
+Si
+5
+-HO-RT. (b)Al
+7
+Si
+5
+-HO-77K.
+J. Gao et al.                                                                                                                                                                                                                                      Materials Science & Engineering A 976 (2026) 151021 
+11 
+Acknowledgement
+This work was supported by the Natural Science Foundation of 
+Fujian Province (Grant number 2025J01531).
+Data availability
+Data will be made available on request.
+References
+[1] D.B. Miracle, O.N. Senkov, A critical review of high entropy alloys and related 
+concepts, Acta Mater. 122 (2017) 448 – 511, https://doi.org/10.1016/j. 
+actamat.2016.08.081 .
+[2] A. Schmoldt, H.F. Benthe, G. Haberland, Digitoxin metabolism by rat liver 
+microsomes, Biochem. Pharmacol. 24 (1975) 1639 – 1641, https://doi.org/ 
+10.1016/0006-2952(75)90094-5 .
+[3] M.-H. Tsai, Physical properties of high entropy alloys, Entropy 15 (2013) 
+5338 – 5345, https://doi.org/10.3390/e15125338 .
+[4] B. Liu, L. Liu, X. Cao, S. Wang, W. Chen, Q. Jiang, Y. Zhang, F. Wu, J. Shang, 
+R. Zhao, J. Qi, A new strategy for enhancing the work hardening ability and 
+strength of FCC high entropy alloys: simultaneously regulating the stacking fault 
+energy and precipitated phases, Mater. Sci. Eng., A 909 (2024) 146829, https:// 
+doi.org/10.1016/j.msea.2024.146829 .
+[5] T.-N. Lam, M.-Y. Luo, T. Kawasaki, S. Harjo, J. Jain, S.-Y. Lee, A.-C. Yeh, E.- 
+W. Huang, Tensile response of As-Cast CoCrFeNi and CoCrFeMnNi high-entropy 
+alloys, Crystals 12 (2022) 157, https://doi.org/10.3390/cryst12020157 .
+[6] G. Qin, X. Yang, L. Feng, Q. Wang, L. Wang, Y. Su, R. Chen, Hetero-lamellar design 
+alleviates the ubiquitous strength-ductility trade-off in high-entropy alloys, 
+Intermetallics 194 (2026) 109316, https://doi.org/10.1016/j. 
+intermet.2026.109316 .
+[7] X. Yang, G. Qin, L. Feng, Q. Wang, L. Wang, Y. Su, R. Chen, Synergistic 
+strengthening via reduced phase property mismatch in a dual-phase high-entropy 
+alloy enabled by bidirectional precipitation engineering, J. Alloys Compd. 1071 
+(2026) 188785, https://doi.org/10.1016/j.jallcom.2026.188785 .
+[8] L.M. Martyushev, V.D. Seleznev, Maximum entropy production principle in 
+physics, chemistry and biology, Phys. Rep. 426 (2006) 1 – 45, https://doi.org/ 
+10.1016/j.physrep.2005.12.001 .
+[9] H.-P. Chou, Y.-S. Chang, S.-K. Chen, J.-W. Yeh, Microstructure, thermophysical and 
+electrical properties in AlxCoCrFeNi (0 ≤ x ≤ 2) high-entropy alloys, Mater. Sci. Eng., 
+B 163 (2009) 184 – 189, https://doi.org/10.1016/j.mseb.2009.05.024 .
+[10] Y. Geng, J. Chen, H. Tan, J. Cheng, S. Zhu, J. Yang, Tribological performances of 
+CoCrFeNiAl high entropy alloy matrix solid-lubricating composites over a wide 
+temperature range, Tribol. Int. 157 (2021) 106912, https://doi.org/10.1016/j. 
+triboint.2021.106912 .
+[11] J. Miao, H. Liang, A. Zhang, J. He, J. Meng, Y. Lu, Tribological behavior of an 
+AlCoCrFeNi2.1 eutectic high entropy alloy sliding against different counterfaces, 
+Tribol. Int. 153 (2021) 106599, https://doi.org/10.1016/j.triboint.2020.106599 .
+[12] K. Grajewska, M. Lieder, Functionalization of graphene oxide coatings with 
+phosphorus atoms and their corrosion resistance in sodium chloride environment, 
+Diam. Relat. Mater. 118 (2021) 108533, https://doi.org/10.1016/j. 
+diamond.2021.108533 .
+[13] K.-M. Hsu, S.-H. Chen, C.-S. Lin, Microstructure and corrosion behavior of 
+FeCrNiCoMnx (x = 1.0, 0.6, 0.3, 0) high entropy alloys in 0.5 M H2SO4, Corros. 
+Sci. 190 (2021) 109694, https://doi.org/10.1016/j.corsci.2021.109694 .
+[14] Y. Wang, J. Jin, M. Zhang, F. Liu, X. Wang, P. Gong, X. Tang, Influence of plastic 
+deformation on the corrosion behavior of CrCoFeMnNi high entropy alloy, 
+J. Alloys Compd. 891 (2022) 161822, https://doi.org/10.1016/j. 
+jallcom.2021.161822 .
+[15] W. Li, P. Liu, P.K. Liaw, Microstructures and properties of high-entropy alloy films 
+and coatings: a review, Mater. Res. Lett. 6 (2018) 199 – 229, https://doi.org/ 
+10.1080/21663831.2018.1434248 .
+[16] Z. Li, K.G. Pradeep, Y. Deng, D. Raabe, C.C. Tasan, Metastable high-entropy dual- 
+phase alloys overcome the strength – ductility trade-off, Nature 534 (2016) 
+227 – 230, https://doi.org/10.1038/nature17981 .
+[17] J.Y. He, W.H. Liu, H. Wang, Y. Wu, X.J. Liu, T.G. Nieh, Z.P. Lu, Effects of Al 
+addition on structural evolution and tensile properties of the FeCoNiCrMn high- 
+entropy alloy system, Acta Mater. 62 (2014) 105 – 113, https://doi.org/10.1016/j. 
+actamat.2013.09.037 .
+[18] J.Y. He, H. Wang, H.L. Huang, X.D. Xu, M.W. Chen, Y. Wu, X.J. Liu, T.G. Nieh, 
+K. An, Z.P. Lu, A precipitation-hardened high-entropy alloy with outstanding 
+tensile properties, Acta Mater. 102 (2016) 187 – 196, https://doi.org/10.1016/j. 
+actamat.2015.08.076 .
+[19] K. Yamanaka, M. Mori, K. Yoshida, Y. Onuki, S. Sato, Enhancing dislocation 
+strengthening in face-centered cubic high-entropy alloys through interstitial 
+nitrogen, Appl. Mater. Today 45 (2025) 102834, https://doi.org/10.1016/j. 
+apmt.2025.102834 .
+[20] Y. Chen, G. Qin, L. Chen, Q. Wang, L. Wang, Y. Su, R. Chen, Suppression of 
+dynamic recovery via localized solute pinning for superior high-temperature 
+strength in a lightweight refractory medium-entropy alloy, Acta Mater. 316 (2026) 
+122459, https://doi.org/10.1016/j.actamat.2026.122459 .
+[21] Z. Li, L. Chen, P. Fu, H. Su, P. Dai, Q. Tang, The effect of Si addition on the 
+heterogeneous grain structure and mechanical properties of CrCoNi medium 
+entropy alloy, Mater. Sci. Eng., A 852 (2022) 143655, https://doi.org/10.1016/j. 
+msea.2022.143655 .
+[22] R. Mayahi, Phase stability and deformation behavior of AlCoCr0.3FexPd2.3 high 
+entropy alloys with identical valence electron concentration, Mater. Today 
+Commun. 38 (2024) 107884, https://doi.org/10.1016/j.mtcomm.2023.107884 .
+[23] A. Mahato, S. Chahar, R. Singh, G. Bajargan, S. Mula, Compositional engineering of 
+CoCrCuFeNiAlx high entropy alloys to achieve superior yield strength-ductility 
+synergy, Mater. Sci. Eng., A 915 (2024) 147235, https://doi.org/10.1016/j. 
+msea.2024.147235 .
+[24] X. Zhang, R. Dong, Q. Guo, H. Hou, Y. Zhao, Predicting the stacking fault energy in 
+FCC high-entropy alloys based on data-driven machine learning, J. Mater. Res. 
+Technol. 26 (2023) 4813 – 4824, https://doi.org/10.1016/j.jmrt.2023.08.194 .
+[25] F. Wang, Y. Zhang, G. Chen, H.A. Davies, TENSILE AND COMPRESSIVE 
+MECHANICAL BEHAVIOR OF A CoCrCuFeNiAl
+0.5 
+HIGH ENTROPY ALLOY, Int. J. 
+Mod. Phys. B 23 (2009) 1254 – 1259, https://doi.org/10.1142/ 
+S0217979209060774 .
+[26] S. Niu, H. Kou, T. Guo, Y. Zhang, J. Wang, J. Li, Strengthening of 
+nanoprecipitations in an annealed Al0.5CoCrFeNi high entropy alloy, Mater. Sci. 
+Eng., A 671 (2016) 82 – 86, https://doi.org/10.1016/j.msea.2016.06.040 .
+[27] T. Zuo, S. Ren, P.K. Liaw, Y. Zhang, Processing effects on the magnetic and 
+mechanical properties of FeCoNiAl0.2Si0.2 high entropy alloy, Int. J. Miner. 
+Metall. Mater. 20 (2013) 549 – 555, https://doi.org/10.1007/s12613-013-0764-x .
+[28] J. Zhang, F. An, G. Chen, C. Hu, C. Song, Q. Zhai, Phase regulation of high-entropy 
+alloys through C element and its influence on the mechanical properties, J. Alloys 
+Compd. 1018 (2025) 179192, https://doi.org/10.1016/j.jallcom.2025.179192 .
+[29] D.G. Shaysultanov, G.A. Salishchev, YuV. Ivanisenko, S.V. Zherebtsov, M. 
+A. Tikhonovsky, N.D. Stepanov, Novel Fe36Mn21Cr18Ni15Al10 high entropy alloy 
+with bcc/B2 dual-phase structure, J. Alloys Compd. 705 (2017) 756 – 763, https:// 
+doi.org/10.1016/j.jallcom.2017.02.211 .
+[30] T.-T. Shun, Y.-C. Du, Microstructure and tensile behaviors of FCC Al0.3CoCrFeNi 
+high entropy alloy, J. Alloys Compd. 479 (2009) 157 – 160, https://doi.org/ 
+10.1016/j.jallcom.2008.12.088 .
+[31] H.M. Daoud, A. Manzoni, R. V ¨olkl, N. Wanderka, U. Glatzel, Microstructure and 
+tensile behavior of Al8Co17Cr17Cu8Fe17Ni33 (at.%) high-entropy alloy, JOM 65 
+(2013) 1805 – 1814, https://doi.org/10.1007/s11837-013-0756-3 .
+[32] L.J. Zhang, P.F. Yu, J.T. Fan, M.D. Zhang, C.Z. Zhang, H.Z. Cui, G. Li, Investigating 
+the micro and nanomechanical properties of CoCrFeNi-C high-entropy alloys 
+containing eutectic carbides, Mater. Sci. Eng., A 796 (2020) 140065, https://doi. 
+org/10.1016/j.msea.2020.140065 .
+[33] X. Gu, Y. Zhuang, P. Jia, Evolution of the microstructure and mechanical properties 
+of as-cast Al0.3CoCrFeNi high entropy alloys by adding Si content, Mater. Sci. Eng., 
+A 840 (2022) 142983, https://doi.org/10.1016/j.msea.2022.142983 .
+[34] W.H. Liu, J.Y. He, H.L. Huang, H. Wang, Z.P. Lu, C.T. Liu, Effects of Nb additions 
+on the microstructure and mechanical property of CoCrFeNi high-entropy alloys, 
+Intermetallics 60 (2015) 1 – 8, https://doi.org/10.1016/j.intermet.2015.01.004 .
+[35] Z. Wang, I. Baker, Effects of annealing and thermo-mechanical treatment on the 
+microstructures and mechanical properties of a carbon-doped FeNiMnAl multi- 
+component alloy, Mater. Sci. Eng., A 693 (2017) 101 – 110, https://doi.org/ 
+10.1016/j.msea.2017.03.099 .
+[36] G.A. Salishchev, M.A. Tikhonovsky, D.G. Shaysultanov, N.D. Stepanov, A. 
+V. Kuznetsov, I.V. Kolodiy, A.S. Tortika, O.N. Senkov, Effect of Mn and V on 
+structure and mechanical properties of high-entropy alloys based on CoCrFeNi 
+system, J. Alloys Compd. 591 (2014) 11 – 21, https://doi.org/10.1016/j. 
+jallcom.2013.12.210 .
+[37] Y. Lu, X. Gao, L. Jiang, Z. Chen, T. Wang, J. Jie, H. Kang, Y. Zhang, S. Guo, 
+H. Ruan, Y. Zhao, Z. Cao, T. Li, Directly cast bulk eutectic and near-eutectic high 
+entropy alloys with balanced strength and ductility in a wide temperature range, 
+Acta Mater. 124 (2017) 143 – 150, https://doi.org/10.1016/j.actamat.2016.11.016 .
+[38] D. Shi, B. Wen, R. Melnik, S. Yao, T. Li, First-principles studies of Al – Ni 
+intermetallic compounds, J. Solid State Chem. 182 (2009) 2664 – 2669, https://doi. 
+org/10.1016/j.jssc.2009.07.026 .
+[39] Y.L. Wang, K.C. Chan, Remarkable cryogenic properties by deformation twinning 
+in a coherent precipitation-containing high entropy alloy, J. Alloys Compd. 971 
+(2024) 172572, https://doi.org/10.1016/j.jallcom.2023.172572 .
+[40] C.W. Sinclair, J.D. Embury, G.C. Weatherly, Basic aspects of the co-deformation of 
+bcc/fcc materials, Mater. Sci. Eng., A 272 (1999) 90 – 98, https://doi.org/10.1016/ 
+S0921-5093(99)00477-3 .
+[41] X. Ma, P. Zhang, N. Li, Z. Luo, L. Yang, Microstructural evolution and deformation 
+mechanisms of heterogeneous dual-phase high-entropy alloys under in-situ 
+compression, Mater. Sci. Eng., A 936 (2025) 148424, https://doi.org/10.1016/j. 
+msea.2025.148424 .
+[42] G.B. Olson, M. Cohen, A general mechanism of martensitic nucleation: part I. 
+General concepts and the FCC → HCP transformation, Metall. Trans. A 7 (1976) 
+1897 – 1904, https://doi.org/10.1007/BF02659822 .
+[43] S. Allain, J.-P. Chateau, O. Bouaziz, S. Migot, N. Guelton, Correlations between the 
+calculated stacking fault energy and the plasticity mechanisms in Fe – Mn – C alloys, 
+Mater. Sci. Eng., A 387 – 389 (2004) 158 – 162, https://doi.org/10.1016/j. 
+msea.2004.01.059 .
+[44] S. Curtze, V.-T. Kuokkala, A. Oikari, J. Talonen, H. H ¨anninen, Thermodynamic 
+modeling of the stacking fault energy of austenitic steels, Acta Mater. 59 (2011) 
+1068 – 1076, https://doi.org/10.1016/j.actamat.2010.10.037 .
+[45] H. Chang, T.W. Zhang, S.G. Ma, D. Zhao, R.L. Xiong, T. Wang, Z.Q. Li, Z.H. Wang, 
+Novel Si-added CrCoNi medium entropy alloys achieving the breakthrough of 
+strength-ductility trade-off, Mater. Des. 197 (2021) 109202, https://doi.org/ 
+10.1016/j.matdes.2020.109202 .
+J. Gao et al.                                                                                                                                                                                                                                      Materials Science & Engineering A 976 (2026) 151021 
+12 
+[46] H. Essoussi, S. Ettaqi, E. Essadiqi, On the prediction of stacking fault energy on 
+medium MN steels, Phys. Metals Metallogr. 122 (2021) 1507 – 1512, https://doi. 
+org/10.1134/S0031918X21140076 .
+[47] R.J. Lefkowitz, Identification of adenylate cyclase-coupled beta-adrenergic 
+receptors with radiolabeled beta-adrenergic antagonists, Biochem. Pharmacol. 24 
+(1975) 1651 – 1658, https://doi.org/10.1016/0006-2952(75)90001-5 .
+[48] Q. Li, T.W. Zhang, J.W. Qiao, S.G. Ma, D. Zhao, P. Lu, Z.H. Wang, Mechanical 
+properties and deformation behavior of dual-phase Al0.6CoCrFeNi high-entropy 
+alloys with heterogeneous structure at room and cryogenic temperatures, J. Alloys 
+Compd. 816 (2020) 152663, https://doi.org/10.1016/j.jallcom.2019.152663 .
+[49] X.-H. Gu, Y.-Q. Meng, H. Chang, T.-X. Bai, S.-G. Ma, Y.-Q. Zhang, W.-D. Song, Z.- 
+Q. Li, Enhanced strength and plasticity of CoCrNiAl0.1Si0.1 medium entropy alloy 
+via deformation twinning and microband at cryogenic temperature, Materials 14 
+(2021) 7574, https://doi.org/10.3390/ma14247574 .
+[50] B.C. De Cooman, Y. Estrin, S.K. Kim, Twinning-induced plasticity (TWIP) steels, 
+Acta Mater. 142 (2018) 283 – 362, https://doi.org/10.1016/j.actamat.2017.06.046 .
+[51] B.C. De Cooman, O. Kwon, K.-G. Chin, State-of-the-knowledge on TWIP steel, 
+Mater. Sci. Technol. 28 (2012) 513 – 527, https://doi.org/10.1179/ 
+1743284711Y.0000000095 .
+[52] R.E. Schramm, R.P. Reed, Stacking fault energies of seven commercial austenitic 
+stainless steels, Metall. Trans. A 6 (1975) 1345 – 1351, https://doi.org/10.1007/ 
+BF02641927 .
+[53] V.S. Hariharan, B. Nithin, L. Ruban Raj, S.K. Makineni, B.S. Murty, G. Phanikumar, 
+Modeling microsegregation during metal additive manufacturing: impact of 
+dendrite tip kinetics and finite solute diffusion, Crystals 13 (2023) 842, https://doi. 
+org/10.3390/cryst13050842 .
+[54] L.C.A. Stoop, J.H. Van Der Merwe, Misfit accommodation in epitaxial monolayers 
+on (111) f.c.c. and (110) b.c.c. substrates III: analytical approach to monolayers in 
+the Kurdjumov-Sachs orientation, Thin Solid Films 98 (1982) 65 – 74, https://doi. 
+org/10.1016/0040-6090(82)90628-9 .
+[55] R. Arnold, P. Jupp, H. Schaeben, Orientation relationships, orientational variants 
+and the embedding approach, J. Appl. Crystallogr. 56 (2023) 725 – 736, https://doi. 
+org/10.1107/S1600576723003187 .
+[56] N. Abdolrahim, M.J. Demkowicz, Determining coherent reference states of general 
+semicoherent interfaces, Comput. Mater. Sci. 118 (2016) 297 – 308, https://doi. 
+org/10.1016/j.commatsci.2016.02.002 .
+[57] N. Kamikawa, K. Sato, G. Miyamoto, M. Murayama, N. Sekido, K. Tsuzaki, 
+T. Furuhara, Stress – strain behavior of ferrite and bainite with nano-precipitation in 
+low carbon steels, Acta Mater. 83 (2015) 383 – 396, https://doi.org/10.1016/j. 
+actamat.2014.10.010 .
+[58] Y. Chen, S. Zhu, X. Wang, B. Yang, G. Han, L. Qiu, Microstructure evolution and 
+strengthening mechanism of Al 0.4 CoCu 0.6 NiSi x (x = 0 – 0.2) high entropy alloys 
+prepared by vacuum arc melting and copper injection fast solidification, Vacuum 
+150 (2018) 84 – 95, https://doi.org/10.1016/j.vacuum.2018.01.031 .
+[59] H. Lei, C. Chen, X. Ye, H. Kang, Z. Li, J. Fu, T. Zhang, Z. Gao, B. Li, D. Fang, 
+L. Wang, Synergistic effect of Nb and W alloying on the microstructure and 
+mechanical properties of CoCrFeNi high entropy alloys, J. Mater. Res. Technol. 28 
+(2024) 3765 – 3774, https://doi.org/10.1016/j.jmrt.2024.01.003 .
+[60] E.O. Hall, The deformation and ageing of mild steel: III discussion of results, Proc. 
+Phys. Soc. B 64 (1951) 747 – 753, https://doi.org/10.1088/0370-1301/64/9/303 .
+[61] W.H. Liu, Y. Wu, J.Y. He, T.G. Nieh, Z.P. Lu, Grain growth and the Hall – Petch 
+relationship in a high-entropy FeCrNiCoMn alloy, Scr. Mater. 68 (2013) 526 – 529, 
+https://doi.org/10.1016/j.scriptamat.2012.12.002 .
+[62] K. Ming, X. Bi, J. Wang, Realizing strength-ductility combination of coarse-grained 
+Al0.2Co1.5CrFeNi1.5Ti0.3 alloy via nano-sized, coherent precipitates, Int. J. Plast. 
+100 (2018) 177 – 191, https://doi.org/10.1016/j.ijplas.2017.10.005 .
+[63] Y.L. Zhao, T. Yang, Y. Tong, J. Wang, J.H. Luan, Z.B. Jiao, D. Chen, Y. Yang, A. Hu, 
+C.T. Liu, J.-J. Kai, Heterogeneous precipitation behavior and stacking-fault- 
+mediated deformation in a CoCrNi-based medium-entropy alloy, Acta Mater. 138 
+(2017) 72 – 82, https://doi.org/10.1016/j.actamat.2017.07.029 .
+[64] Q. Gao, X. Zhang, S. Feng, Z. Han, C. Chen, T. Wang, S. Wu, Y. Cai, F. Li, R. Wei, 
+Achieving ultra-high mechanical properties in metastable Co-free medium entropy 
+alloy via hierarchically heterogeneous microstructure, J. Mater. Sci. Technol. 183 
+(2024) 175 – 183, https://doi.org/10.1016/j.jmst.2023.10.022 .
+[65] B. Sonderegger, E. Kozeschnik, C. Sommitsch, Modeling particle distances of 
+coherent Prolate- and oblate-shaped precipitates in bcc systems, MSF 706 – 709 
+(2012) 1521 – 1526. https://doi.org/10.4028/www.scientific.net/MSF.706 
+-709.1521 .
+[66] D. Liang, C. Wei, F. Ren, Introducing laves phase strengthening into an ultrafine- 
+grained equiatomic CrFeNi alloy by niobium addition, Mater. Sci. Eng., A 806 
+(2021) 140611, https://doi.org/10.1016/j.msea.2020.140611 .
+[67] D.T. Pierce, J.A. Jim ´enez, J. Bentley, D. Raabe, J.E. Wittig, The influence of 
+stacking fault energy on the microstructural and strain-hardening evolution of 
+Fe – Mn – Al – Si steels during tensile deformation, Acta Mater. 100 (2015) 178 – 190, 
+https://doi.org/10.1016/j.actamat.2015.08.030 .
+[68] G. Laplanche, J. Bonneville, C. Varvenne, W.A. Curtin, E.P. George, Thermal 
+activation parameters of plastic flow reveal deformation mechanisms in the 
+CrMnFeCoNi high-entropy alloy, Acta Mater. 143 (2018) 257 – 264, https://doi. 
+org/10.1016/j.actamat.2017.10.014 .
+[69] D.D. Zhang, J.Y. Zhang, J. Kuang, G. Liu, J. Sun, Superior strength-ductility 
+synergy and strain hardenability of Al/Ta co-doped NiCoCr twinned medium 
+entropy alloy for cryogenic applications, Acta Mater. 220 (2021) 117288, https:// 
+doi.org/10.1016/j.actamat.2021.117288 .
+[70] L. Tang, L. Wang, M. Wang, H. Liu, S. Kabra, Y. Chiu, B. Cai, Synergistic 
+deformation pathways in a TWIP steel at cryogenic temperatures: in situ neutron 
+diffraction, Acta Mater. 200 (2020) 943 – 958, https://doi.org/10.1016/j. 
+actamat.2020.09.075 .
+[71] T. Yang, Y.L. Zhao, Y. Tong, Z.B. Jiao, J. Wei, J.X. Cai, X.D. Han, D. Chen, A. Hu, J. 
+J. Kai, K. Lu, Y. Liu, C.T. Liu, Multicomponent intermetallic nanoparticles and 
+superb mechanical behaviors of complex alloys, Science 362 (2018) 933 – 937, 
+https://doi.org/10.1126/science.aas8815 .
+[72] J. Li, X. Ma, K. Lu, Y. Wang, Y. Zhu, Unusual deformation mechanisms evoked by 
+hetero-zone interaction in a heterostructured FCC high-entropy alloy, Acta Mater. 
+282 (2025) 120516, https://doi.org/10.1016/j.actamat.2024.120516 .
+[73] Q. Li, M. Wang, X. Wang, Y. Lu, T. Wang, Partially recrystallized heterostructure 
+via Mo-doping endows CoCrNi medium-entropy alloy with exceptional strength 
+and ductility, Scr. Mater. 253 (2024) 116297, https://doi.org/10.1016/j. 
+scriptamat.2024.116297 .
+[74] S. Gangireddy, B. Gwalani, V. Soni, R. Banerjee, R.S. Mishra, Contrasting 
+mechanical behavior in precipitation hardenable AlXCoCrFeNi high entropy alloy 
+microstructures: single phase FCC vs. dual phase FCC-BCC, Mater. Sci. Eng., A 739 
+(2019) 158 – 166, https://doi.org/10.1016/j.msea.2018.10.021 .
+[75] H. Jiang, D. Qiao, W. Jiao, K. Han, L. Yiping, P.K. Liaw, Tensile deformation 
+behavior and mechanical properties of a bulk cast Al0.9CoFeNi2 eutectic high- 
+entropy alloy, J. Mater. Sci. Technol. 61 (2021) 119 – 124, https://doi.org/ 
+10.1016/j.jmst.2020.05.053 .
+[76] Y. Jia, Q. Wu, F. He, Z. Yang, L. Liu, X. Liu, X. Bai, B. Guo, H.S. Kim, J. Li, J. Wang, 
+Z. Wang, Promoting strength – ductility synergy by mitigating heterogeneity in 
+precipitation-strengthened FCC/B2 dual-phase high-entropy alloy, Int. J. Plast. 184 
+(2025) 104213, https://doi.org/10.1016/j.ijplas.2024.104213 .
+[77] I. Basu, V. Ocelík, J.ThM. De Hosson, BCC-FCC interfacial effects on plasticity and 
+strengthening mechanisms in high entropy alloys, Acta Mater. 157 (2018) 83 – 95, 
+https://doi.org/10.1016/j.actamat.2018.07.031 .
+[78] J. Xin, H. Zhang, B. Lyu, P. Liang, M. Boubeche, F. Shen, W. Wang, W. Sun, L. Shi, 
+R. Ma, X. Shan, C. Huang, L. Li, Mechanical performance and deformation 
+mechanisms of ultrastrong yield strength Fe-Cr-Ni-Mn-N austenitic stainless steel at 
+4.2 Kelvin, J. Mater. Sci. Technol. 189 (2024) 191 – 202, https://doi.org/10.1016/j. 
+jmst.2023.12.027 .
+[79] W. Tang, B. Guo, Y. Ma, D. Cui, Z. Yang, L. Wang, Z. Wang, J. Li, J. Wang, X.- 
+L. Wang, F. He, Tailored dislocation kinematic enhances the ductility of 
+mechanically-stable complex concentrated alloys, Acta Mater. 289 (2025) 120935, 
+https://doi.org/10.1016/j.actamat.2025.120935 .
+[80] A. Allera, T.D. Swinburne, A.M. Goryaeva, B. Bienvenu, F. Ribeiro, M. Perez, M.- 
+C. Marinica, D. Rodney, Activation entropy of dislocation glide in body-centered 
+cubic metals from atomistic simulations, Nat. Commun. 16 (2025) 8367, https:// 
+doi.org/10.1038/s41467-025-62390-w .
+J. Gao et al.                                                                                                                                                                                                                                      Materials Science & Engineering A 976 (2026) 151021 
+13 

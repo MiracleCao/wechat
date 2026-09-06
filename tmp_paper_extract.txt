@@ -1,0 +1,1369 @@
+Additively manufactured high strength-ductility 9Cr ODS alloy: 
+Inducing multi-heterogeneous structure via Y
+6
+WO
+12
+@W core-shell 
+nanoscale precursor
+Mingsheng Yang
+a
+, Yisheng Dong
+b
+, Zhichen Wang
+a
+, Yuxiao Gong
+a
+, Wanyuan Gui
+b
+, 
+Tong Liu
+a , *
+a
+Key Laboratory of Aerospace Materials and Performance (Ministry of Education), School of Materials Science and Engineering, Beihang University, 
+Beijing 100191, PR China
+b
+National Center for Materials Service Safety, University of Science and Technology Beijing, Beijing 100191, PR China
+ARTICLE INFO
+Keywords:
+Strength-ductility trade-off
+Core-shell precursor
+Heterogeneous structure
+Orowan strengthening
+Multi-slip systems
+ABSTRACT
+Overcoming the strength-ductility trade-off in additively manufactured 9Cr oxide dispersion 
+strengthened (ODS) alloys is a significant challenge in structural materials design. In this work, 
+multi-heterogeneous microstructures are orchestrated to overcome the strength-ductility trade-off 
+by employing Y
+6
+WO
+12
+@W (YWO@W) nanoscale core-shell precursor. The multi-heterogeneous 
+structures comprise YWO@W/YWO nanoparticles (NPs), bimodal grains, heterogeneous de -
+fects, and heterogeneous deformation zones. The W shell alleviates the density mismatch between 
+YWO NPs and molten matrix, thereby suppressing YWO NPs flotation during additive 
+manufacturing. Concurrently, partial dissolution of W triggers asynchronous martensitic trans -
+formations and forms heterogeneous defect zones. The heterogeneous structure interfaces 
+generate substantial geometrically necessary dislocations, resulting in a back stress strengthening 
+of 357 MPa. The uniformly dispersed ~25 nm YWO/YWO@W NPs provide a contribution of 123 
+MPa from Orowan strengthening. Quantitative strengthening modeling incorporating Orowan, 
+grain boundary, dislocation, solid solution and back stress contributions predicts a yield strength 
+of 880 MPa, consistent with experimental measurements. During plastic deformation, the low- 
+defect and deformation zones within the heterogeneous structures facilitate dislocation storage, 
+while the YWO/YWO@W NPs promote dislocation cross-slip. The non-coherent interface between 
+YWO NPs and the matrix may induce dislocation slip along the {1 2 1} < 1 1 1 > system, which in 
+turn enables multi-slip systems to operate simultaneously. Finally, the YWO@W sample exhibits 
+tensile strength of 1214 MPa and elongation of 10.3%, representing increases of 45.6% and 
+145.2%, respectively, compared to Y
+2
+O
+3 
+sample. This work offers a novel strategy to overcome 
+the strength-ductility trade-off in additively manufactured ODS alloys.
+1. Introduction
+Owing to unique combination of high mechanical strength, excellent corrosion resistance, and outstanding tolerance to radiation- 
+induced damage, oxide dispersion strengthened (ODS) alloys have become a promising candidate material for manufacturing critical 
+* Corresponding author.
+E-mail address: tongliu@buaa.edu.cn (T. Liu). 
+Contents lists available at ScienceDirect
+International Journal of Plasticity
+journal homepage: www.else vier.com/loc ate/ijplas
+https://doi.org/10.1016/j.ijplas.2026.104730
+Received 1 March 2026; Received in revised form 17 May 2026;   
+International Journal of Plasticity 203 (2026) 104730 
+Available online 20 May 2026 
+0749-6419/© 2026 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies. \nstructural components in next-generation nuclear fission reactors ( Bai et al., 2024 ; Spartacus et al., 2024 ; Zhao et al., 2020 ). Metal 
+additive manufacturing (AM) offers significant advantages, including a streamlined production process, high material utilization, and 
+net shape ( Liu et al., 2023 ; Su et al., 2025 ; Tan et al., 2024 ; Wu et al., 2025 ). Therefore, employing AM to fabricate ODS alloys presents 
+a more promising application prospect ( Su et al., 2025 ; Wilms et al., 2023 ).
+The inherent differences in physical properties — such as density — between the metal and oxide phases cause the oxide particles to 
+float and agglomerate in the melt pool during AM ( Chang et al., 2015 ; Wilms et al., 2023 ). This buoyancy-induced aggregation poses a 
+significant barrier to homogeneous dispersion of nano-oxides in matrix. As a result, the expected dispersion strengthening effect is 
+undermined, and the oxide clusters act as stress concentrators for crack initiation, which severely degrades the overall mechanical 
+performance ( Wilms et al., 2023 ). The in-situ dispersion method represents a highly promising strategy for fabricating AM ODS alloys 
+( Ma et al., 2026 ; Zhao et al., 2024 ). However, its primary constraint lies in achieving uniform oxidation, a challenge critically governed 
+by matrix composition. Reactive elements such as Al tend to form detrimental, coarse Y – Al – O or Al
+2
+O
+3 
+phases, which compromise 
+ductility. Furthermore, the transient nature and ultra-high cooling rates inherent to the millisecond-scale molten pool impede ho -
+mogeneous oxide distribution ( Zheng et al., 2025 ), ultimately diminishing the Orowan dispersion strengthening effect. Therefore, The 
+AM process of ODS alloys faces significant challenges.
+At the same time, the high residual stresses generated from non-uniform thermal contraction during the severe thermal cycles 
+( Doumenc et al., 2024 ; Niu et al., 2024 ; Tekumalla et al., 2024 ), along with the significant lattice strain at the coarse oxide-matrix 
+interfaces ( Dong et al., 2021 ), will further reduce the ductility of the additively manufactured ODS alloy ( Sohail et al., 2024 ). 
+Thermal treatments, such as hot isostatic pressing (HIP), are commonly employed to mitigate the high residual stresses inherent in 
+printed alloys ( Li et al., 2025a ; Shi et al., 2019 ; Smith et al., 2023 ). However, achieving high ductility through this approach often 
+comes at the cost of sacrificing the dislocation strengthening effect ( Lee et al., 2020 ). For 9Cr martensitic ODS steels, HIP also carries 
+the risk of destabilizing the martensitic structure, promoting its transformation to ferrite ( Li et al., 2025a ; Shi et al., 2019 ; Yang et al., 
+2026 ). In recent years, researchers have successfully engineered multi-heterogeneous structure in different alloys through various 
+strategies, including compositional design ( An et al., 2024 ), multi-stage heat treatments ( Wang et al., 2024 ), and alterations in AM 
+parameters ( Kim et al., 2024 ; Lv et al., 2025 ). Heterogeneous structure enhances material strength by creating deformation in -
+compatibility between the "soft zones" and "hard zones" within them, which generates strong back stress and additional work hard -
+ening at the interfaces ( Chu et al., 2024 ; Peng et al., 2025 ). Simultaneously, this structure enables plastic deformation to progressively 
+spread from the soft zones to the hard zones, avoiding deformation localization, thereby maintaining good ductility even while 
+achieving high strength ( Li et al., 2023 ; Shen et al., 2025 ). Although heterogeneous structures help overcome the strength-ductility 
+trade-off. Introducing a multi-level heterogeneous structure incorporating heterogeneous oxide dispersoids into additively manu -
+factured 9Cr ODS steel presents a significant challenge. Firstly, the buoyancy-driven floating of oxides within the molten pool prevents 
+their uniform distribution throughout the matrix, thereby inhibiting the formation of abundant hetero-interfaces between the oxides 
+and the matrix ( Wilms et al., 2023 ). This undermines the synergistic strengthening effects of Orowan looping and back stress. 
+Additionally, the coarse agglomerates formed by these oxides induce severe stress concentration, leading to a deterioration in ductility 
+( Wilms et al., 2023 ). Furthermore, the inherently high cooling rates of DED induce a uniform martensitic transformation, while 
+suppressing the full precipitation of secondary phases, thereby inhibiting the formation of matrix heterogeneous structures.
+To address this, we employ a YWO@W precursor design strategy. This approach achieves the uniform distribution of nano-oxides 
+within the crystal lattice, establishing abundant oxide-matrix hetero-interfaces while simultaneously forming a coarse/fine-grained 
+heterogeneous structure. Moreover, leveraging the characteristic of incomplete dissolution of W during Directed Energy Deposition 
+(DED), we constructed high- and low-density defect zones. Ultimately, this multi-level heterogeneous structure overcome the strength- 
+ductility trade-off of 9Cr ODS steels.
+2. Experimental section
+2.1. Materials preparation
+YWO@W NPs core-shell precursor synthesis : YWO@W core-shell NPs were prepared by a two-step method: (1) YWO cores were 
+synthesized via hydrothermal treatment of Y (NO
+3
+)
+3
+⋅ 6H
+2
+O (pH~10, 80 
+◦
+C, 6 h), followed by ammonium metatungstate addition/ 
+sonication and calcination at 750 
+◦
+C; (2) the cores were dispersed in N,N-Dimethylformamide (DMF), mixed with WCl
+6
+/DMF solution, 
+aged for 24 h, and reduced at 850 
+◦
+C under H
+2
+-Ar atmosphere.
+ODS-YWO@W alloys preparation : a typical 9Cr steel composition (CLAM: Fe-9Cr-1.5W-0.5Mn-0.2V-0.1C-0.1Ta; wt%) was 
+selected as the matrix, Mix the YWO@W precursor (0.6 wt% YWO NPs ( Cai et al., 2023 ; Liu et al., 2016 , 2015 ; Zhao et al., 2020 )) and 
+CLAM steel spherical powder (15 – 53 μ m) using an all-directional mechanical mixer for 16 min. The blocks of 9Cr-ODS alloy were 
+Table 1 
+The additive manufacturing parameters used in this work.
+Samples Laser power (W) Scanning speed (mm/s) Powder feed rate (rpm)
+YWO@W-1600 1600 15 0.6
+YWO@W-1800 1800 15 0.6
+YWO@W-2000 2000 15 0.6
+Y
+2
+O
+3
+– 2000 2000 15 0.6
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+2 \nfabricated in the dimension of 70 × 20 × 10 mm using direct energy deposition (DED) device. Scanning strategy is zigzag scan vectors, 
+and overlap rate is 80%. The additive manufacturing process took place in a closed chamber filled with Ar atmosphere. The content of 
+O
+2 
+and H
+2
+O were below 80 ppm and 30 ppm in the working chamber. The processing parameters used in this study are listed in Table 1 . 
+This study investigates ODS alloys using YWO@W precursor under different power (designated as YWO@W-1600, YWO@W-1800 and 
+YWO@W-2000, respectively). Meanwhile, The Y
+2
+O
+3
+– 2000 sample was prepared by mechanical mixing of CLAM spherical powder 
+with 0.6 wt% Y
+2
+O
+3 
+NPs (~50 nm), followed by direct forming via DED.
+2.2. Microstructure characterization and tensile tests
+Helium pycnometry was employed to measure the true density of Y
+6
+WO
+12 
+and Y
+6
+WO
+12
+@W NPs at room temperature. Meanwhile, 
+the relative density of as-built alloy was measured via the Archimedes drainage method ( Yang et al., 2026 ). To further accurately 
+characterize the porosity, a rectangular specimen (with its height direction parallel to the build direction) was extracted from the 
+YWO@W-2000 alloy. X ‑ ray computed tomography (XCT) was conducted using a Royma ‑ CT4000 system to reconstruct the 
+three ‑ dimensional pore morphology, achieving a voxel resolution of 5 μ m. The DRAGONFLY software was then used to quantify the 
+pore surface area and volume ( Yang et al., 2024 ). X-ray diffractometer (XRD, Bruker AXS D8) with monochromatic Cu K α radiation was 
+used to determine the YWO NPs, YWO@WO
+3
+, YWO@W NPs and as-built alloys. The scanning rate was 6
+◦
+/min from 20
+◦
+  90
+◦
+Then the 
+as-built alloys were analyzed by scanning electron microscopy (SEM, JSM 7500) at 25 kV. As-built alloys for electron back scatter 
+diffraction (EBSD, JSM 7001F) characterization were electro-polished in a solution of HClO
+4
+:C
+2
+H
+5
+OH (1:4) at a voltage of 20 V. The 
+EBSD of as-built alloys exhibited high confidence index ( > 0.85) and shared a nearest-neighbor parameter of 7. The EBSD scans were 
+Fig. 1. (a) Process flow diagram of novel additively manufactured ODS alloy. (b) Gibbs free energy (G) of various oxides. (c) Comparison of physical 
+parameters (melting point, density, diffusion coefficient, and solid solubility) of different metallic elements. (d) The density regulation of YWO@W 
+core-shell structure via adjusting the mass ratio of YWO to W.
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+3 \nperformed over an area of 200 μ m × 150 μ m using a step size of 0.1 μ m.
+The transmission electron microscope (TEM) samples (as-built alloy) were prepared using the Struers Tenupol-3 twinjet electro- 
+polisher at   30 
+◦
+C with an electrolyte of 10% HClO
+4 
+and 90% CH
+3
+CH
+2
+OH. TEM and high-resolution TEM (HRTEM) observations 
+of NPs and as-built alloys were carried out on the JEOL-JEM-2100F TEM equipped with energy dispersive spectrometer (EDS) at an 
+accelerating voltage of 200 kV. HRTEM images were analyzed by the fast Fourier transform (FFT) method. Geometric phase analysis 
+(GPA) for HRTEM was conducted with the Strain ++ software.
+Tensile test specimens were prepared along the scanning direction (X-Y plane) of the ODS alloy. Three repeated tensile tests were 
+conducted for each sample, with a tolerance of < 5%. The tensile tests were conducted on 100 kN full-temperature electro-hydraulic 
+servo fatigue testing machine. The gauge length was designed to comply with the subsize sample dimensional requirements specified in 
+the ASTM E8 /E8M standard. The tensile sample with a cross-section of 3 × 1.5 mm
+2 
+and a parallel length of 33 mm (gauge length: 12 
+mm) was used for tensile testing at room temperature, and the strain rate was 2 × 10
+– 3 
+s
+-1
+.
+2.3. Simulation
+The melting point and density of CLAM steel were simulated using the stainless steels database in JMatPro software. The martensite 
+transformation temperature and austenite phase fraction diagrams ( Figs. 9 (g) and S10) were calculated under equilibrium conditions 
+using the JMatPro software's thermodynamic models. Calculations of the Gibbs free energy for the various oxides presented in Fig. 1
+(b) were performed with HSC Chemistry 6.0 software. The melting point, density and solid solubility of Fig. 1 (c) were simulated using 
+the JMatPro software.
+3. Results and discussion
+3.1. Additive manufacturing process
+This work proposes a novel additive manufacturing process to produce 9Cr ODS steels. Y
+6
+WO
+12
+@W NPs are incorporated directly 
+as the dispersion phase in 9Cr steels. A schematic of the specific fabrication route is provided in Fig. 1 (a). YWO NPs are prepared using 
+hydrothermal method. The Gibbs free energy curve in Fig. 1 (b) indicates that Y
+6
+WO
+12 
+NPs exhibits higher stability compared to Y
+2
+O
+3
+, 
+TiO
+2 
+and other composite oxides. This enhanced stability prevents YWO NPs from reacting with matrix components and residual 
+oxygen during the printing process, thereby avoiding the formation of coarse precipitates (such as Y
+3
+Al
+5
+O
+12
+) ( Liu et al., 2015 ).
+Fig. 1 (d) shows that the density of YWO (6.0 g/cm³, Helium pycnometry) is lower than that of molten steel (7.25 g/cm³). 
+Therefore, to prevent the floating of YWO NPs, a metal shell needs to be constructed on the surface of the YWO core. Fig. 1 (c) presents 
+the physical parameters of different pure metals, specifically including melting point and density, solid-state diffusion coefficient, solid 
+solubility in 1516.8 
+◦
+C (matrix alloy melting temperature). Among the various pure metals, tungsten (W) possesses a density signif -
+icantly higher than that of the matrix alloy, which effectively compensate for the low density of YWO NPs. Simultaneously, W possesses 
+a higher melting point, and the solute diffusion coefficient ( Zhang et al., 2014 ) and solid solubility in the matrix are markedly lower 
+compared to other metals, which ensures that the W shell maintains higher structural stability in the molten pool. Therefore, the 
+combination of superior physical properties makes W a highly advantageous choice as the outer shell of YWO NPs.
+W is coated onto the surface of the YWO NPs through chemical process. Note S1 and Fig. S1 (Supporting Material) describes 
+determination method of density of YWO@W NPs. When the YWO-to-W mass ratio is 2.92, the density of the YWO@W NPs reaches 
+7.29 g/cm
+3
+, which is very close to the density of molten steels ( Fig. 1 (d)). For other alloy systems (Such Ni-based superalloy, ~8 g/ 
+cm
+3
+), the density of YWO@W NPs can be precisely matched to that of matrix by adjusting the YWO-to-W mass ratio, thereby 
+demonstrating the universal applicability of this strategy.
+Per the Young equation ( Chibowski, 2007 ), the intrinsic properties of the powders yield a YWO/9Cr steels contact angle > 90
+◦
+Consequently, YWO NPs are poorly wetted by the molten steel, leading to their rapid floatation and coarsening even within extremely 
+short timeframes. W possesses a high density (19.35 g/cm
+3
+) and melting point (~3400 
+◦
+C) ( Gohil et al., 2023 ). Coating the surface of 
+YWO with a stable W shell can suppress its flotation and coarsening in melt pool. The YWO@W NPs are mechanically mixed with 
+CLAM powder, and the ODS alloy is subsequently fabricated using laser-directed energy deposition (DED). The conventional powder 
+metallurgy process for preparing ODS alloys involves a complex procedure and has low production efficiency ( Li et al., 2025b ; Wang 
+et al., 2025a ). In contrast, the AM with YWO@W core-shell as precursor for preparing 9Cr ODS steels can significantly improve 
+production efficiency.
+3.2. Microstructure of YWO@W precursor
+YWO NPs are prepared via a hydrothermal-precipitation method using yttrium nitrate hexahydrate and AMT as raw materials. 
+Fig. S2 (a, e, f, g) indicates that the NPs consist of single-phase Y
+6
+WO
+12
+. Yttrium nitrate hexahydrate serves as the yttrium source, 
+forming yttrium hydroxide under alkaline conditions, which subsequently undergoes a co-precipitation reaction with metatungstate 
+ions ( Dong et al., 2021 ). In traditional ODS alloys, nano-oxides (such as Y
+2
+O
+3 
+or Y
+2
+Ti
+2
+O
+7 
+NPs) are primarily fragmented by mechanical 
+alloying (MA) to achieve a dispersed distribution with a size of 10 – 30 nm in the bulk alloy ( Deng et al., 2023 ; Liu et al., 2014 , 2015 ). In 
+contrast, as shown in Fig. S2, the YWO NPs prepared by the hydrothermal-precipitation method achieve an ultrafine size (22.0 ± 3.7 
+nm) without the need for mechanical alloying, which significantly improves the production efficiency of nano-oxides. The synthesis of 
+ultrafine YWO NPs can significantly enhance the dispersion strengthening contribution in 9Cr ODS alloys.
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+4 \nReduced nanoparticles are found to be predominantly composed of Y
+6
+WO
+12 
+(R-3 (148), PDF#20 – 1420) and W (PDF#04 – 0806), as 
+evidenced by the XRD pattern in Fig. 2 (a). As shown in Fig. 2 (b, c), YWO@W NPs are well-dispersed and have an average particle size 
+of 27.6 ± 2.8 nm. Moreover, the YWO NPs are encapsulated by an outer layer of W, forming a YWO@W core-shell structure ( Fig. 2
+(d – g)). Further investigation ( Fig. 2 (e, f)) reveals a coherent interfacial orientation relationship between YWO and W ([4 -1 -4]
+YWO
+‖ [0 
+1 1]
+W
+, (1 -4 2)
+YWO
+‖ (0 1 -1)
+W
+). The lattice mismatch ( δ ) between the two phases (1-4 2)
+YWO 
+and (0 1 -1)
+W 
+is 2.28% and calculated via 
+Eq. (1) ( Cai et al., 2023 ), where d
+1 
+and d
+2 
+represent the interplanar spacings of (-1 -4 2)
+YWO 
+and (0 1-1)
+W
+, respectively. This coherent 
+interface between YWO and W effectively prevents the premature detachment of W shell from the YWO NPs surface under the stress 
+and temperature fields of the molten pool. 
+δ =
+2 ( d
+1
+  d
+2
+)
+( d
+1
++ d
+2
+)
+(1) 
+It can be observed form the Fig. 3 (a – c) that the CLAM steel powder exhibits a spherical shape with a remarkably smooth surface, 
+and grain boundaries on the powder surface are clearly visible. Fig. 3 (d – f) presents the morphology and particle size distribution of the 
+powder after mechanical mixing of CLAM and YWO@W NPs. It can be observed that a layer NPs is distributed on the surface of the 
+CLAM alloy powder after the mixing process. The particle sizes of the powder before and after mixing are almost identical. Fig. 3 (g) 
+indicates that the NPs are rich in Y, W and O elements, confirming as the YWO@W NPs. Fig. S3 shows that under the action of multi- 
+directional forces of all-directional mechanical mixer, the YWO@W NPs tend to be uniformly distributed on the surface of CLAM 
+powder.
+3.3. YWO@W alloys
+Fig. 4 presents the porosity analysis of the YWO@W alloys fabricated at different laser powers. Fig. 4 (a) reveal that with the 
+increase in laser power, the relative density of the samples first increases and then decreases, peaking 99.5 ± 0.2% at 2000 W. SEM 
+images in Fig. S4 present similar densification with Fig. 4 (a), which indicates that the YWO@W-1600 sample underwent insufficient 
+densification due to inadequate laser power. The degradation of relative density in YWO@W-2200 sample is attributed to the 
+Fig. 2. (a) XRD pattern of YWO@W NPs. (b, c) TEM analysis and size distribution of YWO@W NPs. (d) Morphology of YWO@W NPs at high 
+magnification. (e, f) HRTEM and corresponding FFT analysis of YWO@ NPs. (g) HAADF and STEM-maps of YWO@W NPs.
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+5 \nformation of keyhole-induced porosity at higher laser powers, consistent with established literature on AM processing ( King et al., 
+2014 ).
+To further analyze the porosity in detail, XCT was performed on the YWO@W-2000 sample. As shown in Fig. 4 (b), the porosity 
+measured by XCT (0.5%) is in strong agreement with that obtained via the Archimedes method ( Fig. 4 (a)). The 2D-XCT image in Fig. 4
+(c) further reveals that these pores are uniformly distributed throughout the matrix, with no significant local clustering observed. The 
+average diameter of pores in the YWO@W-2000 alloy is 11.40 ± 1.88 μ m. Furthermore, Fig. 4 (d) indicates that the pore sizes are 
+predominantly in the range of 10 – 30 μ m, exhibiting a random distribution in sphericity. The relative density of pore in YWO@W-2000 
+sample achieve the higher levels reported for DED-printed ODS steels ( Shi et al., 2019 ), while exhibiting a smaller effective pore 
+diameter.
+XRD analysis in Fig. 5 (a) reveals the presence of a W phase (PDF #88 – 2339) alongside the BCC matrix in the YWO@W-2000 alloy 
+on both the X-Y and X-Z planes. A comparison with the CLAM powder pattern reveals that the W diffraction peaks are exclusive to the 
+bulk alloy, confirming that the W primarily originates from the YWO@W precursor. The high sensitivity of W to XRD allows for the 
+detection of even trace amounts ( Lv et al., 2023 ). The diffraction peaks of YWO, which has lower X-ray sensitivity, are not observed in 
+Fig. 5 (a), a result consistent with prior literature ( Xing et al., 2020 ). EBSD phase distribution in Fig. 5 (b, c) further confirms that W are 
+uniformly distributed in both the X-Y and X-Z planes of the YWO@W-2000 alloy. TEM analysis in Fig. 6 (a) reveals a homogeneous 
+dispersion of numerous nanoparticles in the X-Y plane of the YWO@W-2000 sample, with a number density of (4.8 ± 0.8) × 10
+21 
+cm
+– 3 
+and an average size of 24.8 ± 6.4 nm ( Fig. 7 (a)). HRTEM and EDS-mapping analyses (X-Y plane) of two randomly selected nano -
+particles with different sizes ( Fig. 6 (b,c)) reveal distinct configurations of YWO NPs in the as-built alloy: the W shell are separated from 
+the YWO NPs in sub-50 nm YWO@W NPs ( Fig. 6 (b, d)), whereas larger ones maintain a YWO@W core-shell structure ( Fig. 6 (c)). Fig. 6
+(e) shows that nanoparticles remain uniformly distributed in the X-Z plane, with a number density of (4.0 ± 1.1) × 10
+21 
+cm
+– 3 
+and an 
+average size of 25.4 ± 7.8 nm ( Fig. 7 (b)). Consistent with the observation in the X-Y plane, nanoparticles smaller than 50 nm are 
+primarily classified as YWO NPs ( Fig. 6 (f)), while those larger than 50 nm are identified as YWO@W NPs ( Fig. 6 (g,h)). Fig. 1 (d) shows 
+that the mass ratio of YWO to W is 2.92:1. Since 0.81 wt% YWO@W NPs is added to the CLAM steels, the mass of the W shell in the alloy 
+Fig. 3. SEM morphology and particle size distribution of (a-c) CLAM powder; (d-f) the mixture of CLAM powder and YWO@W NPs. (g) EDS 
+mapping of the mixed powders (CLAM and YWO@W NPs).
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+6 \npowder is 0.21 wt%. Based on the EBSD phase distribution shown in Fig. 5 (b), the mass ratio of W in the as-printed bulk 
+YWO@W-2000 alloy is determined to be 0.08 wt%. Therefore, approximately 0.13 wt% of W has formed a solid solution.
+In the molten pool, the bonding force between the YWO core and the W shell is influenced by a combination of chemical bonds, 
+thermal stress, and van der Waals force ( Li et al., 2004 ). The coherent interface formed between YWO and W shell in YWO@W 
+precursor and matrix alloy ( Figs. 2 (e) and 5 (f)) revel that the thermal stress that drives W shell exfoliation is significantly reduced in 
+the molten pool. At the same time, the YWO core and W shell are bound by both chemical bonds and van der Waals attraction, further 
+reducing the segregation between YWO and W in the molten pool. Furthermore, the extremely short duration of the molten pool, 
+combined with the sluggish diffusion coefficient of W in the matrix ( Fig. 1 (c)), further suppresses the dissolution of the W shell within 
+the molten pool. The W shell — which combines a high melting point, a low diffusion coefficient in the matrix, and a coherent interface 
+with YWO — maintains excellent structural stability in the molten pool, effectively impeding the agglomeration and coarsening of YWO 
+NPs. Ultimately, the average size of the oxide nanoparticles distributed in the three-dimensional space of the YWO@W alloy is 25 nm 
+( Fig. 7 (a,b)). Finely dispersed oxide nanoparticles provide excellent work-hardening capability by hindering dislocation motion at 
+both room and elevated temperatures ( Xu et al., 2025 ).
+However, during the rapid cooling and the thermal effects generated by the next printing pass process (predominantly solid phase), 
+residual stress caused by the difference of coefficient of thermal expansion develops between the YWO core and the W shell ( Das et al., 
+2014 ; Zhang et al., 2021 ), which directly prompts the detachment of W atoms from the shell layer and their subsequent dissolution into 
+the matrix. Studies have shown that the diffusion rate of atoms of shell is faster on smaller core ( Ding et al., 2024 ), thereby leading to 
+the faster dissolution of W shell on smaller YWO core within an extremely short time. The dissolution of W primarily occurs during the 
+stage of molten pool solidification and the subsequent stage of high thermal input from other printing passes. Due to the short 
+dissolution time and the slow diffusion rate of W in the matrix, compositional inhomogeneity may result.
+It can be observed from Fig. 7 (c, d) that a marked reduction in the maximum, minimum, and average dimensions of the YWO@W/ 
+YWO NPs has been achieved compared to other additively manufactured ODS alloys ( Wilms et al., 2023 ), in the absence of significant 
+oxides coarsening (exceeding 200 nm). The uniform distribution of YWO@W/YWO NPs within the matrix indicates that the YWO@W 
+core-shell structure plays a dual role by maintaining good structural stability during AM process: (1) W shell prevents the floating of 
+YWO NPs, (2) the W shell provides effective protection against coarsening of YWO NPs.
+Fig. 8 (a – j) presents EBSD analysis of individual grain for the YWO@W-2000 sample. From the Image quality-Grain boundary (IQ- 
+GB) and Inverse pole figure (IPF) maps in Fig. 8 (a, b), a large number of fine grains are distributed within the coarse grains. Note S2 
+and Fig. S5 (Supplementary Materials) indicate the presence of a large number of heterogeneous grains in the YWO@W-2000 alloy, 
+Fig. 4. (a) Relative density of YWO@@W alloys with different laser powers measured by the Archimedes ’ method. (b) 3D visualization, (c) 2D XCT 
+images, (d) equivalent diameter and sphericity of pore defects in YWO@W-2000 alloys. (x-y: Scanning plane; x-z: Building plane).
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+7 \nwhich is primarily attributed to the uniformly distributed YWO/YWO@W NPs acting as heterogeneous nucleation sites for fine grains 
+under the strong Marangoni convection effect (governed by the power gradient). The proportion of Low-angle grain boundaries 
+(LAGBs) in YWO@W-2000 alloy is 47.7%, indicating the presence of numerous structures such as martensitic laths and dislocations 
+within the coarse grains ( Ju et al., 2025 ). The phase map (PM) in Fig. 8 (c) reveals that W (YWO@W NPs) is dispersed in FG/CG 
+heterogeneous microstructure. Fig. 8 (f, g) shows that FG within in CG exhibits low dislocation density and low Schmid factors, 
+primarily relying on grain boundary pinning to restrict dislocation motion. Fig. 8 (d, e) presents the kernel average misorientation 
+(KAM) and geometrically necessary dislocations (GND) maps of the YWO@W-2000 sample. The local lattice strain and GND density 
+exhibit fluctuations within the CG. Fig. 8 (h), a magnified view of the KAM map, further reveals that high-defect zones (HDZ) and 
+low-defect zones (LDZ) are alternately distributed within the coarse grains, forming a heterogeneous structure. Fig. 8 (i) further 
+confirms the alternating distribution of HDZ an LDZ within the CG, with this phenomenon not observed in the FG ( Fig. 8 (j)).
+TEM analysis ( Fig. 9 (a, b)) shows that YWO NPs are highly dispersed within both the fine and coarse grains of the YWO@W-2000 
+sample. The presence of YWO NPs in the fine grains directly supports the mechanism of heterogeneous nucleation, where the fine 
+grains nucleate and grow from the YWO sites (Fig. S5). Simultaneously, Fig. 9 (a, b) also provides evidence of the alternating dis -
+tribution of LDZ and HDZ within the coarse grains, which is consistent with the EBSD analysis results shown in Fig. 8 (d, i). For the 
+martensite phase in Fig. 9 (a), the dislocations were imaged under two-beam conditions with the foil tilted to the [110] zone axis. The 
+operating reflection g = (0 0 2) was used, which provides strong diffraction contrast for dislocations with Burgers vectors b = a/2 <
+111 > (the primary slip direction in BCC martensite). Under this condition (g ⋅ b ∕= 0), dislocations appear as dark lines due to local 
+lattice distortion around the dislocation core, which bends the adjacent crystal planes back into the Bragg-diffracting condition. 
+HRTEM analysis ( Fig. 9 (c, d)) reveals the presence of ~10 nm YWO NPs in the LDZ. Meanwhile, YWO NPs exhibit a coherent interface 
+relationship with the matrix ([-5 5 2]
+YWO
+‖ [1 1 0]
+M
+, (-1 -3 5)
+YWO
+‖ (0 0 2)
+M
+; δ = 2.02%).
+Fig. S9 indicates that theY
+2
+O
+3
+– 2000 sample contains high-density dislocation regions — a characteristic feature typical of 
+martensite — with no observed alternating distribution of HDZ and LDZ. It can thus be inferred that the YWO@W core-shell precursor is 
+responsible for driving the formation of the LDZ-HDZ heterogeneous structure in YWO@W-2000 sample. As shown in Fig. 9 (e, f), the 
+YWO NPs containing a small fraction of W are identified in the vicinity of the LDZ. Meanwhile, the W content within the LDZ is higher 
+than that in the HDZ. This suggests that a portion of W from the YWO@W particles dissolves into the matrix. During AM, the high 
+cooling rate inhibits the uniform diffusion of W atoms, leading to the segregation of W in localized micro-regions and the formation of 
+Fig. 5. (a) XRD analysis of the YWO@W-2000 sample. Phase distribution (EBSD) maps of the YWO@W-2000 alloy on the (b) X-Y and (c) X-Z planes.
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+8 \nlocalized high-W solid solution zones. As illustrated in Figs. 9 (g) and S10, during the austenite-to-martensite transformation, regions 
+enriched in W exhibit enhanced ferrite stability (lower austenite fraction) and a lower martensite transformation (Ms) temperature, 
+which can retard or even suppress martensitic transformation. Meanwhile, the dispersed W-rich regions act as buffer zones, which 
+accommodate the high-density defects generated by the martensitic transformation in the adjacent low-W regions, thereby increasing 
+the area fraction of the LDZ. In contrast, regions with lower W content have a higher Ms temperature, allowing martensite with high 
+dislocation density to form preferentially. This asynchronous phase transformation results in inhomogeneous martensitic trans -
+formation across the alloy. Areas undergoing earlier transformation (low-W regions) promote dislocation nucleation and multipli -
+cation, forming high-defect zones, whereas regions transforming later (high-W regions and adjacent low-W regions) experience slower 
+dislocation activity, resulting in low-defect zones. The alternating distribution of HDZ and LDZ within the coarse grains plays a critical 
+role in enhancing the mechanical properties of the YWO@W-2000 alloy: under loading, the LDZ facilitates dislocation glide and 
+storage, thereby improving ductility; whereas the HDZ effectively promote dislocation entanglement and pinning, thereby enhancing 
+strength by impeding dislocation motion. The alternating arrangement of HDZ and LDZ also helps to effectively release local lattice 
+strain, thereby suppressing premature crack initiation.
+3.4. Mechanical properties
+Fig. 10 (a) presents the engineering stress-strain curves of the YWO@W and Y
+2
+O
+3 
+alloys at room temperature. The stress-strain 
+curves from three measurements are presented in Fig. S11 and Table S1 (Supplementary Material), with a standard deviation of 
+< 5%. For the YWO@W samples, the ultimate tensile strength ( R
+m
+) marginally increases with higher printing power from 1600 to 2000 
+W. The YWO@W-2000 sample ultimately achieves a R
+m 
+of 1214 MPa and a yield strength ( R
+p0.2
+) of 808 MPa. With the increase in 
+printing power, the total extension at maximum force ( A
+gt
+) increases significantly, reaching 10.3% for the YWO@W-2000 sample. The 
+R
+m 
+of the YWO@W-2200 sample is comparable to that of the 2000 W sample; however, its A
+gt 
+value drops significantly from 10.3% to 
+4.6%. This confirms that 2000 W represents the turning point in ductility, beyond which the comprehensive mechanical properties 
+deteriorate. This degradation in 2200 W is attributed to the formation of keyhole-induced porosity at higher laser powers, consistent 
+with established literature on AM processing ( King et al., 2014 ). For the Y
+2
+O
+3
+– 2000 sample, the R
+m 
+and A
+gt 
+are 834 MPa and 4.2%, 
+indicating significantly inferior overall performance compared to the YWO@W-2000 sample. Analysis of the work hardening rate for 
+Fig. 6. The TEM images of the YWO@W-2000 alloy: (a) bright-field image; (b, c) HRTEM and corresponding FFT image of different nanoparticles in 
+the X-Y plane; (d) EDS-maps of nanoparticles in the X-Y plane; (e) bright-field image and (f-h) magnified TEM images of different nanoparticles in 
+the X-Z plane.
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+9 \nvarious samples ( Fig. 10 (b)) reveals that the YWO@W-2000 sample demonstrates a higher work hardening capability compared to 
+other alloys. This is strongly correlated with the interaction between heterostructures and dislocations, which will be analyzed in detail 
+in Section 3.5 .
+Fig. 10 (c) and Table 2 present a comparison of the mechanical properties between advanced ODS/Non-ODS steels and this work. 
+The comparison primarily includes PM ODS steels fabricated by conventional mechanical alloying (MA) and HIP, as well as ODS and 
+non-ODS steels produced via additive manufacturing. PM ODS steels achieve favorable Orowan dispersion strengthening through the 
+uniform and dispersed distribution of Y
+2
+O
+3 
+or Y – Ti – O NPs that pin dislocation movement ( McClintock et al., 2009 ). However, their 
+ductility remains relatively low, primarily because stress concentration tends to occur at the nanoparticle-matrix interfaces ( Dong 
+et al., 2021 ). Furthermore, conventional PM ODS alloys processed via HIP struggle to form heterogeneous structures, limiting im -
+provements in ductility. The mechanical properties of AM-Non ODS steels heavily reliant on post-heat treatment processes ( Shang 
+et al., 2019 ); however, performance comparisons indicate that the strength is scarcely achievable without oxide dispersion 
+strengthening effect. As for AM ODS steels, Y
+2
+O
+3 
+or Y – Ti – O NPs tend to float and agglomerate within the molten pool, ultimately 
+deteriorating both strength and ductility ( Wilms et al., 2023 ). Conversely, the YWO@W-2000 alloy not only ensures the uniform 
+dispersion of nano-oxides within the matrix but also achieves a multi-level heterogeneous structure, thereby breaking the conventional 
+strength-ductility trade-off.
+Note S4 and Fig. S12 (Supplementary Material) indicate that the fracture mechanism of YWO@W samples transitions from brittle 
+fracture (1600 W, caused by pores) to mixed-mode fracture (1800 W), and ultimately to ductile fracture (2000 W, characterized by 
+bimodal grain distribution and high densification). In contrast, the Y
+2
+O
+3
+– 2000 sample exhibits significantly fewer dimples and con -
+tains numerous brittle fracture regions resulting from the agglomeration and coarsening of Y
+2
+O
+3
+.
+3.5. Strengthening and toughening mechanisms of YWO@W alloys
+Fig. 11 (a) shows that grains with 〈 110 〉 orientation are elongated under loading, exhibiting a weak fiber texture with 〈 110 〉 parallel 
+to the tensile axis. In conjunction with the GOS-IQ map analysis in Fig. 11 (b), grains with 〈 110 〉 orientation exhibit higher strain. As 
+shown in the grain reference orientation deviation (GROD) axis distribution map in Fig. 11 (f) and the GROD angle map in Fig. 11 (g), 
+Fig. 7. Comparison of the nano-oxides size in additively manufactured ODS alloys reported in the literature ( Wilms et al., 2023 ) and Fig. 6 : (a): X-Y 
+plane and (b): X-Z plane of YWO@W-2000 sample; (c): maximum and minimum sizes reported in the literature; (d): average size reported in 
+the literature.
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+10 \nthe 〈 111 〉 slip systems in some grains are activated. Dislocation slip occurs along the 〈 111 〉 crystal direction, leading to continuous 
+lattice rotation around the slip direction, forming fiber texture ( α ) with 〈 110 〉 parallel to the tensile axis. Fig. 11 (d, e) shows that, 
+compared to the undeformed grains (Fig. S6), the fractions of both LAGBs and GNDs increase markedly, indicating substantial 
+dislocation multiplication in the initial deformation stage. Fig. 11 (a, b, f, g) shows that the irregularly shaped grains exhibit a random 
+orientation distribution and low stain, indicating that their slip systems have not yet been activated. Schmid Factor (SF) map in Fig. 11
+(c) reveals that during subsequent deformation, the activation of {110} < 111 > slip system encounters greater difficulty in some 
+irregularly shaped grains.
+Fig. 11 (h, i) presents EBSD analyses of two distinct grain morphologies, and both grain types share identical phase composition. 
+However, the grain with serrated grain (irregularly shaped grains) boundaries maintains 〈 111 〉 orientation, while the elongated grain 
+progressively reorients toward the 〈 110 〉 orientation ( α fiber texture). GROD analysis further confirms that no slip systems are acti -
+vated in the grain with serrated boundaries, exhibiting a near-random orientation distribution. In contrast, the grain with smooth grain 
+boundaries undergoes 〈 111 〉 slip. Schmid factor analysis indicates that the grain with serrated boundaries exhibits higher resistance to 
+slip activation during subsequent deformation, whereas grains with smooth boundaries readily activate 〈 111 〉 slip systems (Schmid 
+factors approaching 0.5).
+The temperature gradient field during AM influences the Schmid factor of grains due to the specific relationship between the crystal 
+orientation ( < 211 > //X, Note S3 and Fig. S (7, 8) of Supplementary Materials) and the slip system ( Saville et al., 2022 ). As can be seen 
+from the magnified region in Fig. 12 (b), YWO@W and YWO NPs exhibit varying pinning effects at different positions of grain 
+Fig. 8. EBSD analysis of individual grain for the YWO@W-2000 sample (X-Y plane): (a) Image quality-Grain boundary (IQ-GB); (b) Inverse pole 
+figure (IPF); (c) Phase maps (PM); (d) Kernel average misorientation (KAM); (e) Geometrically necessary dislocations (GND); (f) Grain orientation 
+spread (GOS); (g) Schmid factor (SF) along the load direction; (h) Local magnification of (d); (i) line scan analysis for coarse grains and (j) fine grains 
+in (h). (The high defect zone (red dashed lines) and fine grains (white dashed lines) in Fig. 8 (h) are distinguished based on the IQ-GB and IPF maps 
+shown in Fig. 8 (a, b), respectively).
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+11 \nboundaries in low Schmid factors. This pinning leads to the formation of serrated grain boundaries during grain growth. This is mainly 
+because YWO/YWO@W NPs do not exhibit a linear uniform distribution in the matrix, but rather an irregular dispersed distribution. 
+The non-linearity of pinning points leads to the formation of serrated grain boundaries. Furthermore, the pronounced crystallographic 
+anisotropy of these grains further suppresses the uniform equiaxed growth during grain boundary migration, further accelerating the 
+non-uniform pinning of grain boundaries by YWO/YWO@W NPs. The dual coupling effect of low Schmid factors and serrated grain 
+boundaries ultimately leads to the formation of the non-deformation zones (NDZ) under loading. As shown in Figs. 8 (g) and S5, NDZ in 
+the initial undeformed state already exhibit low Schmid factors (SF) and serrated boundaries. During subsequent deformation, these 
+features — namely the low SF values and serrated boundaries — impede dislocation slip, thereby contributing to the overall strength -
+ening of the alloy. The density of geometrically necessary dislocations (GNDs) increases significantly at the interfaces of the DZ/NDZ 
+heterogeneous structure. This is primarily attributed to the substantial lattice strain generated at heterogeneous interfaces. The high 
+density of GNDs induces a strong back stress, which further impedes dislocation motion, ultimately forming back stress strengthening.
+Fig. 12 (a) shows that within the DZ, high-defect regions (HDZs) and dislocation tangles are evident. Fig. 12 (c – e) reveals the 
+formation of dislocation walls resulting from dislocation glide on the {110} plane within the matrix. Furthermore, an interwoven 
+distribution of HDZ and LDZ is observed in the matrix in Fig. 12 (d – e). Fig. 12 (f) further reveals that dislocations continue to multiply 
+when encountering nanoparticles in the early deformation stage. As screw dislocations encounter NPs (highlighted by yellow circles), 
+they exhibit a wavy motion ( Fig. 12 (d, e)), indicating the activation of cross-slip ( Lei et al., 2018 ; Lu et al., 2023 ). Additionally, as 
+shown in Fig. 12 (d), dislocations deflect upon interacting with NPs. These NPs subsequently act as pinning points, facilitating 
+dislocation multiplication via the Frank-Read source mechanism ( Lei et al., 2018 ), ultimately strengthening through the Orowan 
+Fig. 9. TEM analysis of the YWO@W-2000 sample (X-Y plane): (a, b) bright-field image; (c) HRTEM image and corresponding (d) FFT pattern (Red 
+arrow: dislocation); (e) HAADF image and corresponding EDS maps; and (f) EDS line scan in (e). (g) The dependence of the martensite trans -
+formation temperature (Ms) on the W content in 9Cr-W steels, as derived from Fig. S10.
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+12 \nmechanism. The high-density dislocation structure glides along the {110} < 111 > slip system, forming dislocation walls. Fig. 12 (g – j) 
+confirms that NPs of different sizes are Y
+6
+WO
+12 
+and YWO@W. Based on the analysis above, both YWO and YWO@W NPs contribute 
+positively to enhancing the strength and ductility.
+As shown in Fig. 13 (a, b), EDS mapping reveals a uniform distribution of all elements, indicating that the YWO@W/YWO NPs 
+remain homogeneously dispersed in the later deformation stage. The load can be resolved into two components, S1 and S2. S1 drives 
+dislocation glide along the 〈 111 〉 direction, ultimately showing slip bands in Fig. 13 (c). S2 induces shear stress that causes grain 
+fragmentation and crack formation in the later deformation stage ( Wang and Schiavone, 2024 ). This is validated by the fine grains 
+formed near the slip bands and the resulting high KAM values, as shown in Fig. 13 (d, e).
+Fig. 13 (f) reveals deformable zone (DZ) and non-deformable zone (NDZ). At the same time, the irregular grain boundaries in both 
+the NDZ and DZ provide extended paths for crack propagation, which facilitate crack deflection. Fig. 13 (g) indicates that during the 
+late stage of deformation, both the {110} < 111 > and {112} < 111 > slip systems are simultaneously activated within the DZ zone, 
+ultimately forming dislocation cells ( Fig. 13 (h)). Furthermore, a higher-magnification images in Fig. 13 (i) reveals that numerous 
+YWO@W and YWO NPs (indicated by yellow arrows) are dispersed around the dislocation cells. The pinning effect of YWO@W and 
+YWO NPs on dislocations promotes extensive dislocation multiplication within the DZ. The multiplied dislocations subsequently 
+migrate to the high defect zone, where they further entangle with pre-existing dislocations in the matrix, ultimately leading to the 
+formation of dislocation cells ( Wang et al., 2023 ). During the later stages of deformation, the simultaneous activation of both the 
+{110} < 111 > and {112} < 111 > slip systems enhances the ductility of YWO@W-2000 alloy. Additionally, the LDZ within the HDZ/LDZ 
+heterogeneous structure and the CG in the CG/FG heterogeneous structure facilitate dislocation storage and multiplication, thereby 
+absorbing more energy to enhance ductility.
+To further analyze the mechanism of dislocation activation on the {112} < 111 > slip system, Fig. 13 (j) presents the HRTEM analysis 
+Fig. 10. (a) Engineering stress-strain curves and (b) true stress/work hardening rate-strain curves of X-Y plane in various samples at room tem -
+perature. (c) the comparison of mechanical properties between this work and the reported steels in the literature ( Arkhurst et al., 2021 ; Cayron 
+et al., 2004 ; Huang et al., 2018 ; Jia et al., 2022 ; Jiang et al., 2019 ; Liu et al., 2019 ; Shi et al., 2019 ; Wang et al., 2020 , 2025b ; Xu et al., 2019 ; 
+Zhai et al., 2019 ; Zhang et al., 2023 ; Zhong et al., 2021 ; Zhou et al., 2022a , 2022b ). (PM: powder metallurgy; AM: additive manufacturing).
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+13 \nof the YWO@W-2000 sample at fracture. Combined with the FFT analysis in Fig. 13 (k), in addition to the matrix, YWO NPs ( < 10 nm) 
+are also formed. Meanwhile, a coherent interface relationship exists between the YWO NPs and the matrix. Compared to the 
+pre   eformation state, the coherent interface relationship has changed: transitioning from the pre-deformation interface orientation 
+relationship ([-5 5 2]
+YWO
+‖ [1 1 0]
+M
+, (1 3 -5)
+YWO
+‖ (0 0 -2)
+M
+, Fig. 9 (c, d)) to the post-deformation orientation relationship ([0 2 
+-1]
+YWO
+‖ [0 -1 -1]
+M
+, (0 -2 -4)
+YWO
+‖ (0 1 -1)
+M
+; δ = 2.32%). Fig. 13 (l-n) indicates that during the later stage of deformation, the insertion of 
+atomic layers within the (2 0 0) plane leads to the formation of an edge dislocation, with a Burgers vector b of a/2 < 111 > , while 
+virtually no dislocations are formed in the (0 1 -1) plane. This is primarily attributed to the coherent interface orientation relationship 
+between the (0 1ࣥ1) plane of the matrix and the (0 -2 -4) plane of YWO NPs. The atomic layers of the (0 -2 -4) plane in YWO NPs exert a 
+strong pinning effect on the atomic layers of the (0 1 -1) plane in the matrix, thereby suppressing dislocation nucleation within (0 1 -1) 
+plane in matrix during martensitic transformation. Geometric phase analysis (GPA) of Fig. 13 (p) further demonstrates that the lattice 
+strain in the x-direction (corresponding to the (2 0 0) plane) is greater than that in the y-direction ( (0 1 -1) plane), indicating that the 
+formation of a high density of dislocations in the (2 0 0) plane of the matrix. Fig. 13 (o) illustrates the slip planes for dislocation motion 
+on different crystallographic planes. The calculation method for the slip planes is shown in Eqs. (2 ) – (4) : 
+ξ ⋅ b = 0 (2) 
+ξ ⋅ n = 0 (3) 
+w = ξ × b (4) 
+Herein, ξ represents the dislocation line direction, b is the Burgers vector (a/2 < 111 > ), n denotes the crystallographic plane where the 
+dislocation resides, and w indicates the slip plane of the dislocation during deformation. In the initial stage of un-deformation, the 
+{200} plane is pinned by the YWO coherent interface ( Fig. 9 (c, d)), thereby hindering the formation of dislocations. Fig. 13 (o) shows 
+that dislocations in the {2 0 0} plane primarily move along the {2 1 1} slip plane. Therefore, during the initial stage, YWO NPs suppress 
+the slip of dislocations on the {2 1 1} slip system. Dislocations on other crystallographic planes of matrix, such as the {0 1 1} plane, 
+primarily slip on the {1 1 0} plane ( Fig. 13 (o)) during the initial deformation. As a result, {110} < 111 > slip is the predominant 
+deformation mechanism during the initial deformation stage. However, with increasing deformation, the coherent relationship be -
+tween the matrix and the YWO NPs changes, leading to the nucleation of dislocations within the (2 0 0) plane. This may promotes the 
+slip of edge dislocations on the {2 1 1} plane. Meanwhile, during the later stage of deformation, the {0 1 1} plane is pinned by the 
+Table 2 
+The comparison of mechanical properties between this work and the reported steels in the literature. ( Arkhurst et al., 2021 ; 
+Cayron et al., 2004 ; Huang et al., 2018 ; Jia et al., 2022 ; Jiang et al., 2019 ; Liu et al., 2019 ; Shi et al., 2019 ; Wang et al., 2020 , 
+2025b ; Xu et al., 2019 ; Zhai et al., 2019 ; Zhang et al., 2023 ; Zhong et al., 2021 ; Zhou et al., 2022a , 2022b ).
+Alloy R
+m (
+MPa) A
+gt (
+%)
+AM-ODS 9Cr ~900 6
+15Cr ~720 4.3
+22Cr ~790 7.8
+14CrTe ~900 7
+9Cr-HIP ~1040 7.3
+9Cr ~800 5.2
+9Cr 860 5.7
+22Cr ~800 6.4
+RAFM ~770 8.3
+AM-Non ODS 9Cr ~800 6
+CLAM ~900 5.8
+G91 ~1010 4
+HT9 ~970 3.7
+CLAM ~960 5.2
+RAFM ~860 8.9
+CLAM-QT ~760 7.1
+CLAM-HIP-QT ~710 10
+9Cr-QT ~665 8.6
+CLF-1-QT ~690 9
+CLAM-rolling ~960 4.6
+CLAM-rolling ~980 4.7
+PM-ODS 9Cr ~985 6
+9Cr ~900 6.3
+ODS-Eufofer ~940 6.1
+ODS-Eufofer ~1070 5.9
+9Cr ~820 6.7
+This work YWO@W-2000 1214 10.3
+YWO@W-2200 1212 4.6
+YWO@W-1800 1192 4.9
+YWO@W-1600 1183 2.9
+Y
+2
+O
+3
+– 2000 834 4.2
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+14 \ncoherent interface formed between the YWO NPs and the matrix, which suppresses dislocation formation in the matrix and thereby 
+restrains slip on the {1 1 0} plane. Consequently, during the later stage of deformation, dislocations may be activated in multiple slip 
+systems — specifically {1 1 0} < 1 1 1 > and {1 2 1} < 1 1 1 > — as illustrated in Fig. 13 (g). Compared to single-slip system activity, such 
+multi-slip behavior more effectively facilitates the movement and storage of dislocations.
+At room temperature, the yield strength σ
+y
+of YWO@W-2000 alloys is shown in Eq. (5) ( Li et al., 2025d ; Yang et al., 2026 ): 
+σ
+y
+= σ
+0
++ σ
+ss
++ σ
+gb
++
+̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅ ̅
+σ
+dis
+2
++ σ
+p
+2
+√
++ σ
+hetero
+(5) 
+where σ
+0
+is the friction force of atoms on dislocation motion in pure iron, which is generally 54 MPa ( Yang et al., 
+2026 ). σ
+ss
+, σ
+gb
+, σ
+dis
+and σ
+p
+are the contribution values of solid solution strengthening, grain boundary strengthening, dislocation 
+strengthening and dispersion strengthening to yield strength, respectively. In addition, the heterogeneous structure in the 
+YWO@W-2000 sample exerts a significant contribution to the yield strength through back stress, designated as σ
+hetero 
+( Zhang et al., 
+2026 ).
+In 9Cr ODS alloys, alloying elements are dissolved into the matrix in the form of substitutional atom as shown in Eq. (6) ( Yang et al., 
+2026 ): 
+σ
+ss
+= 0 . 698
+[
+14
+ 
+X
+wt
+Cr
+)
+0 . 75
+]
+(6) 
+where X
+wt
+Cr
+is the weight percentage of alloying element Cr. In 9Cr ODS alloy, the primary element contributing to solid solution 
+strengthening is chromium, with a contribution value of 51 MPa.
+The contribution of grain boundary strengthening is calculated according to the Hall-Petch in Eq. (7) ( Gu et al., 2023 ). 
+Fig. 11. EBSD analysis of the YWO@W-2000 alloy (X-Y plane) at 5% deformation: (a) Inverse pole Figure (IPF) map; (b) Grain orientation spread- 
+image quality (GOS-IQ) map; (c) Schmid factor (SF) map; (d) Image quality-grain boundary (IQ-GB) map; (e) Kernel average misorientation (KAM) 
+map; (f) Grain reference orientation deviation axis (GROD Axis) map; (g) Grain reference orientation deviation angle (GROD Angle) map. (h, i) EBSD 
+analysis of two individually selected deformed grains.
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+15 \nσ
+gb
+= Kgb × D
+  0 . 5
+(7) 
+where the K gb value of 9Cr-ODS alloy is 210 MPa ⋅ um 
+1/2 
+(Preininger et al., 2004; Xie et al., 2017), and D is mean high-angle grain 
+(HAG) size. The mean HAG size (4.5 μ m) is obtained by EBSD analysis of the Fig. S5. Therefore, the σ
+gb
+of YWO@W-2000 sample is 99 
+MPa.
+Dislocation strengthening primarily involves the statistically stored dislocations (SSD) in homogeneous regions, such as within fine 
+grains. The calculation equation of dislocation strengthening σ
+dis
+is shown in Eq. (8) ( Fan et al., 2025 ; Liu et al., 2022 ): 
+σ
+dis
+= M × α × G × b ×
+̅̅̅̅̅̅̅̅ ̅
+ρ
+SSD
+√
+(8) 
+where ρ
+SSD 
+is the SSD density, G is the shear modulus of 60 GPa, b is the Burgers vector of 0.25 nm, M is the Taylor factor of 3.06, and α 
+is a constant of ~0.3 ( Yang et al., 2026 ). According to the XRD in Fig. 5 (a), the dislocation density is calculated by modified 
+Williamson-Hall equation ( Li et al., 2022 ; Yang et al., 2026 ). Based on the XRD results, the total dislocation density (including both SSD 
+and GND densities) of the YWO@W alloy is 1.13 × 10
+15 
+m
+– 2
+. According to the EBSD results from Fig. S6, the GND density of the 
+YWO@W-2000 sample is 6.73 × 10
+14 
+m
+– 2
+. Therefore, the SSD density of YWO@W-2000 alloy is 4.57 × 10
+14 
+m
+– 2
+. According to Eq. (8) , 
+the dislocation strengthening contribution value is 294 MPa.
+It should be noted that although Cottrell atmosphere strengthening is a recognized mechanism in as-quenched martensitic steels, 
+the present DED-printed steel exhibits negligible upper/lower yield point behavior in its stress – strain response ( Fig. 10 ). Fig. S13 
+indicates that carbon has precipitated as M
+23
+C
+6 
+carbides (Rod-shaped precipitate) rather than forming atmosphere pinning. This is 
+likely because the DED process, through its repeated thermal cycling, effectively subjects the material to an in-situ tempering effect. 
+This drives carbon migration toward carbide precipitation rather than the formation of Cottrell atmospheres. Consequently, the 
+dislocation strengthening contribution in martensite arises primarily from high dislocation density itself, rather than from Cottrell 
+atmosphere pinning.
+The precipitation strengthening σ
+p
+of 9Cr ODS alloy mainly includes the contribution value of YWO/YWO@W NPs. σ
+p
+is governed 
+by the Orowan bypass mechanism, with the corresponding quantitative formulation explicitly derived in Eqs. (9 ) – (11) ( Bai et al., 
+2025 ; Shen et al., 2016 ). 
+Fig. 12. TEM analysis of the YWO@W-2000 alloy (X-Y plane) at 5% deformation: (a-f) Bright-field TEM images of NDZ and DZ (HDZ: high-defect 
+zone; LDZ: low-defect zone; DZ: deformable zone; NDZ: non-deformable zone); (g-j) HAADF and FFT images of different nanoparticle in DZ.
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+16 \nσ
+p
+=
+0 . 81 M × G × b
+2 π ( 1   v )
+0 . 5
+ln
+(
+2 r s
+r
+0
+)
+λ   2 r
+s
+(9) 
+λ = 2
+̅̅ ̅
+2
+3
+√
+r
+[(
+π
+4 f
+p
+)
+0 . 5
+  1
+]
+(10) 
+f
+p
+= 0 . 5618 × 10
+  2
+× wt% (11) 
+where r is the radius of the YWO/YWO@W NPs (2r = 25 nm, Fig. 7 ), λ is the particle spacing, v is the Poisson's ratio (0.334), r
+0 
+is the 
+internal truncation radius of the dislocation core (0.25 nm), b is equal to the value of the Burgers vector (0.25), r
+s 
+is the average plane 
+radius of the YWO/YWO@W NPs cross section, r
+s
+= 0.816 × r , and f
+p 
+is the volume fraction of YWO/YWO@W NPs. The Orowan 
+strength of the YWO@W-2000 alloys is calculated to be 123 MPa. Fig. S13 shows that the M
+23
+C
+6 
+precipitates exhibit a size of 
+approximately 100 nm and are uniformly distributed in the martensitic matrix, which could enhance the yield strength to a certain 
+extent through Orowan strengthening. However, since the size of M
+23
+C
+6 
+is larger than that of the YWO/YWO@W NPs (~25 nm), Eqs. 
+(9 ) – (11) indicates that a smaller second-phase size corresponds to a greater strengthening effect. Consequently, the strengthening 
+Fig. 13. Microstructural of the YWO@W-2000 (X-Y plane) alloy of the fracture cross-section: (a) SEM image; (b) EDS maps; (c) magnified SEM 
+morphology of the (a); (d, e) IPF and GND maps of local regions in (c); (f-h) bright-field TEM images (DZ: deformable zone; NDZ: non-deformable 
+zone); (i) magnified bright-field image of (h); (j) HRTEM and corresponding (k) FFT analysis of elected area in (i); (l) IFFT analysis of the green 
+boxed region in (j); (m, n) IFFT analysis of the yellow boxed region in (j) for the (0 1 1) plane and (2 0 0) plane, respectively; (o) schematic diagram 
+of dislocation glide planes on different crystallographic planes (b: Burgers vector; ξ : direction of dislocation motion); (p) geometric phase analysis 
+(GPA) of the red boxed region in (j) (i: strain in the xx-direction (direction of the red coordinate axis in (j)); ii: strain in the x-y direction; iii: strain in 
+the y-y direction).
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+17 \ncontribution of M
+23
+C
+6 
+is much less than that of YWO/YWO@W.
+At the interface of heterogeneous structure (such as CG/DG, HDZ/LDZ and DZ/UDZ), deformation incompatibility generates a 
+strain gradient ( Zhao et al., 2026 ), which forms geometrically necessary dislocation density ( ρ
+GND
+) . The GND density generates back 
+stress at the interface of the heterogeneous zone, ultimately enhancing the yield strength ( Li et al., 2025c , 2026 ). 
+σ
+hetero
+= M × α × G × b ×
+̅̅̅̅̅̅̅̅̅ ̅
+ρ
+GND
+√
+(12) 
+According to the EBSD results from Fig. S6, the GNDs density of the YWO@W-2000 sample is 6.73 × 10
+14 
+m
+– 2
+. Therefore, the 
+contribution value of heterogeneous zones is 357 MPa.
+Fig. 14 presents the histograms of calculated and experimentally obtained strengthening contributions in the YWO@W-2000 alloy. 
+The error between the calculated and experimental values is < 10%, indicating that the use of Eq. (5) to calculate the yield strength is 
+highly reliable. Further analysis reveals that the direct introduction of YWO@W precursor into CLAM steel induces the formation of a 
+multilevel heterogeneous structure. Ultimately, this enhances the yield strength through contributions from the multilevel matrix 
+heterogeneous structure ( σ
+hetero
+) and the YWO@W/YWO NPs ( σ
+p
+), which amount to 357 MPa and 123 MPa, respectively. Multilevel 
+heterogeneous matrixes (CG/SG, HDZ/LDZ, DZ/UDZ) provide strengthening through back stress formed at the interfaces, while YWO/ 
+YWO@W nanoparticles contribute to strengthening via the Orowan mechanism.
+As shown in Fig. S9 of the Supplementary Material, the grain distribution (IPF) in the Y
+2
+O
+3 
+sample is relatively narrow, with no fine 
+grains observed. Meanwhile, TEM bright-field images reveal a high dislocation distribution, lacking the heterogeneous defect zones in 
+the Y
+2
+O
+3 
+alloy. The dense dislocation structure formed in Y
+2
+O
+3 
+alloy is primarily attributed to martensitic transformation induced by 
+the rapid temperature gradient field after DED printing, with minimal direct relation to Y
+2
+O
+3
+. These high-density dislocations can 
+enhance strengthening contributions through dislocation strengthening (Taylor hardening), whereas in terms of improving ductility, 
+the entanglement and pinning among dislocations hinder their slip, which tends to reduce ductility. Fig. S9 shows that the matrix is 
+virtually devoid of detectable Y
+2
+O
+3 
+NPs, presumably as a consequence of buoyancy-driven flotation during AM processing. In ODS 
+alloys, nano-oxides primarily contribute to strengthening through the Orowan mechanism. According to Eqs. (9 ) – (11) , for the same 
+volume fraction, the radius of the nano-oxide particles determines the magnitude of the Orowan strengthening contribution. The 
+smaller the radius of the nano-oxide particles, the greater the Orowan strengthening effect. In the case of additively manufactured Y
+2
+O
+3 
+alloy, due to the significant density difference and the large contact angle between Y
+2
+O
+3 
+and molten steel, Y
+2
+O
+3 
+tends to float and 
+agglomerate. This results in particle sizes reaching the micrometer scale and an inability to achieve a uniform dispersion in the bulk 
+alloys, leading to nearly zero contribution to Orowan strengthening. Based on these observations, no heterogeneous structure formed 
+in the Y
+2
+O
+3 
+sample, corresponding to its significantly lower strength and ductility compared to the YWO@W-2000 alloy. Fig. 14 shows 
+that the back stress strengthening provided by the heterogeneous structure of YWO@W-2000 alloy is 357 MPa, a value close to the 
+yield strength gap between the YWO@W-2000 and Y
+2
+O
+3 
+alloy (281 MPa). These results indicate that, compared to conventional Y
+2
+O
+3
+- 
+containing ODS alloys, the YWO@W-2000 alloy achieves a synergistic enhancement of strength and ductility due to the formation of 
+the heterogeneous structure.
+Fig. 10 (a) show that the YWO@W-2000 sample ultimately achieves a R
+m 
+of 1214 MPa and a yield strength ( R
+p0.2
+) of 808 MPa. 
+Therefore, the difference between the tensile strength and yield strength of the YWO@W-2000 alloy is 406 MPa. The GND of the 
+YWO@W ‑ 2000 alloy at yielding (Fig. S6) and at in the uniform plastic deformation region of fracture ( Fig. 13 (e)) are 6.73 × 10
+14 
+m
+– 2 
+and 11.78 × 10
+14 
+m
+– 2
+, respectively. Therefore, the increment of GNDs during the work hardening stage is 5.05 × 10
+14 
+m
+– 2
+. Based on 
+Eq. (8) , the strengthening provided by GNDs during the work hardening stage is 310 MPa. Therefore, the dislocation strengthening 
+contributed by SSDs is 96 MPa. Based on the above analysis, the back stress and forest dislocation strengthening from GNDs play a 
+dominant role in enhancing the work hardening capability, with a positive contribution from SSD dislocation strengthening as well.
+Fig. 15 illustrates the deformation mechanism schematic of the YWO@W-2000 alloy. The matrix of the YWO@W-2000 alloy 
+features a multi-heterogeneous structure, comprising coarse-grain/fine-grain (CG/FG) regions as well as high-/low-defect zones 
+(HDZ/LDZ) within the coarse-grained regions. The high density of grain boundaries in these FG effectively pins dislocation motion. 
+The formation of the HDZ/LDZ is due to the asynchronous transformation of martensite caused by the YWO@W precursor. The 
+interwoven distribution of HDZ and LDZ within CG regions plays a critical role in enhancing the mechanical properties of the 
+YWO@W-2000 alloy. The LDZ facilitates dislocation glide and storage under high loading conditions, thereby improving ductility. 
+Conversely, the HDZ promotes dislocation entanglement, leading to enhanced strength. Furthermore, the alternating arrangement of 
+HDZ and LDZ effectively mitigates local lattice strain and suppresses premature crack initiation. During deformation, a heterogeneous 
+structure consisting of deformable and non-deformable zones (DZ and NDZ) forms. The low Schmid factor grains, formed under the 
+influence of crystal orientation, are strongly pinned by YWO@W/YWO NPs, forming serrated grain boundaries, which ultimately leads 
+to the formation of the NDZ. These NDZs enhance mechanical strength by impeding dislocation glide. Simultaneously, their serrated 
+grain boundaries promote microcrack deflection, which inhibits the initiation of main cracks. During the initial deformation stage, 
+dislocations within the DZ primarily undergo slip on the {1 1 0} < 1 1 1 > system. As deformation progresses, multiple slip systems may 
+be activated simultaneously, specifically {1 1 0} < 1 1 1 > and {1 2 1} < 1 1 1 > , enhancing the ductility. Moreover, the heterogeneous 
+microstructure interfaces generate substantial geometrically necessary dislocations, the back stress generated by dislocation pile-ups at 
+the interfaces of these heterogeneous structures further impedes the continued motion of dislocations, thereby significantly enhancing 
+the strength.
+During the AM, YWO@W core-shell structure with matrix density matching is used as the precursor, which effectively prevents the 
+flotation and agglomeration of oxides in the molten pool, ultimately achieving a uniform distribution of both YWO@W and YWO NPs 
+in the matrix. This significantly enhanced the Orowan strengthening effect. For the YWO@W NPs, due to the very thin W shell (1 – 2 nm, 
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+18 \nFig. 6 ), the Orowan strengthening mechanism provided by YWO@W NPs remains almost unchanged compared to that of YWO NPs. 
+During deformation, when encounter YWO@W and YWO NPs, dislocations tend to multiplication via Frank-Read sources, entan -
+glement, and ultimately the formation of dislocation walls and cells. Moreover, the interaction of dislocations with YWO@W and YWO 
+NPs induces cross-slip. During the later stages of deformation, the YWO NPs may promote dislocation slip on the {1 2 1} < 1 1 1 >
+system by altering their non-coherent interface relationship with the matrix, ultimately activating multiple slip systems. Based on the 
+above analysis, owing to the formation of a multi-heterogeneous structure induced by YWO@W precursor, the YWO@W-2000 alloy 
+achieves a simultaneous enhancement in both strength and ductility.
+The cellular structures formed during AM are primarily caused by repeated thermal cycling and solute segregation ( Ren et al., 
+2023 ). Unlike 316 L austenitic stainless steel, 9Cr ODS martensitic steel undergoes a complete solid-state phase transformation 
+sequence of solidification →δ -ferrite → austenite → martensite ( Yang et al., 2026 ). The cellular structures formed during the solidifi -
+cation stage are inherited and reconstructed during the subsequent martensitic shear transformation, eventually evolving into 
+dislocation walls. Therefore, the strengthening and toughening contribution provided by the cellular structures in martensite is 
+relatively limited ( Su et al., 2025 ). The cellular structures mainly contribute to strengthening through dislocation and solid solution 
+strengthening. As shown in Fig. 14 , the maximum contribution can reach 345 MPa (dislocation and solid solution strengthening). 
+However, considering that martensitic transformation also introduces significant dislocations, the strengthening contribution from 
+cellular structures is far < 345 MPa. In contrast, YWO NPs and their induced heterogeneous structures provide strengthening through 
+Orowan and back stress mechanisms, achieving 480 MPa.
+Under high-temperature conditions, the fine and dispersed YWO NPs not only provide excellent Orowan strengthening but also 
+significantly pin the matrix grain boundaries, thereby introducing a high density of high-angle grain boundaries. Relevant studies ( Yin 
+et al., 2023 ) have shown that abundant high-angle grain boundaries can contribute to higher high-temperature tensile strength. 
+Additionally, the Partial W provides notable solid solution strengthening at elevated temperatures. Research indicates that solid 
+Fig. 14. The histograms of calculated and experimental strengthening contributions in the YWO@W-2000 alloy. (The individual contributions of 
+the homogeneous matrix and heterogeneous structure to the yield strength in the YWO@W-2000 alloy have been separately provided).
+Fig. 15. Schematic diagram illustrating the deformation mechanism of YWO@W-2000 alloy. (CG: coarse-grained region; DG: fine-grained region; 
+HDZ: high-defect zone; LDZ: low-defect zone; DZ: deformable zone; NDZ: non-deformable zone).
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+19 \nsolution strengthening not only enhances yield strength but also increases the work-hardening rate by promoting planar slip. High 
+concentrations of solute atoms impede dislocation cross-slip, shifting dislocation motion from wavy slip to planar slip ( Sohrabi et al., 
+2024 ).
+4. Conclusion
+In this work, we present a novel additive manufacturing strategy to overcome the strength-ductility trade-off in 9Cr ODS alloys, and 
+the strengthening and toughening mechanisms are thoroughly investigated, leading to the following conclusions: 
+(1) During AM, the W shell effectively counteracts the density mismatch between Y
+6
+WO
+12 
+and the matrix, preventing the floating of 
+YWO NPs. The oxide nanoparticles, uniformly distributed in the YWO@W alloy matrix, have an average size of ~25 nm, which 
+contributes significantly to the strength via the Orowan mechanism.
+(2) The YWO@W precursor induces the formation of a multi-heterogeneous structure, including coarse/fine grains (CG/FG), high/ 
+low defect zones (HDZ/LDZ), non-deformation /deformation zones (NDZ/DZ) and YWO@W/YWO NPs. Asynchronous 
+martensitic transformation results in the formation of heterogeneous defect zones. At the same time, uniformly distributed 
+YWO@W/YWO NPs induce the formation of FG by acting as heterogeneous nucleation sites. The grain boundary pinning effect 
+of YWO/YWO@W NPs results in the formation of serrated grain boundaries and NDZ in the low Schmid factor grain.
+(3) The high-density grain boundaries in the FG zones, dislocation tangles in the HDZ, the low Schmid factor and serrated grain 
+boundaries in the NDZ, along with the YWO/YWO@W NPs, play a critical role in hindering dislocation slip. Meanwhile, the 
+back stress generated at the interfaces of the heterogeneous structures further impedes the dislocation motion, significantly 
+enhancing the strength. Moreover, the LDZ and DZ facilitate dislocation storage and slip, while the YWO/YWO@W NPs pro -
+mote dislocation cross-slip. At the same time, the YWO NPs, through non-coherent interface with the matrix, may induce 
+dislocation slip along the {1 2 1} < 1 1 1 > slip system, ultimately significantly improving the ductility.
+(4) Compared with the Y
+2
+O
+3 
+sample, the contributions to yield strength from the multi-heterogeneous matrix (back stress) and the 
+YWO@W/YWO NPs (Orowan dispersion strengthening) of YWO@W-2000 sample are 357 MPa and 123 MPa, respectively. As a 
+result, the YWO@W-2000 alloy exhibits outstanding mechanical properties: an ultimate tensile strength of 1214 MPa and an 
+elongation of 10.3%, representing increases of 45.6% and 145.2%, respectively, compared to the Y
+2
+O
+3 
+sample.
+CRediT authorship contribution statement
+Mingsheng Yang: Writing – review & editing, Writing – original draft, Visualization, Validation, Software, Resources, Method -
+ology, Investigation, Formal analysis, Data curation, Conceptualization. Yisheng Dong: Investigation, Data curation, Conceptuali -
+zation. Zhichen Wang: Investigation, Data curation. Yuxiao Gong: Writing – review & editing, Formal analysis. Wanyuan Gui: 
+Writing – review & editing, Supervision, Project administration, Data curation. Tong Liu: Writing – review & editing, Supervision, 
+Project administration, Investigation, Funding acquisition, Conceptualization.
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to 
+influence the work reported in this paper.
+Acknowledgments
+The authors acknowledge the support of this work by the National Science and Technology Major Project (2017-VI   0008 – 0078), 
+National Key Research and Development Program of China (No. 2022YFB3803802), and the National Natural Science Foundation of 
+China (No. U1560106). The authors gratefully acknowledge the support of this work by the Analysis and Testing Center of Beihang 
+University. The authors gratefully acknowledge the support of Engineers (Mingming Wang and Shuangyu Wang) of Zijing Microscopy 
+(Beijing) Technology Co., Ltd.
+Supplementary materials
+Supplementary material associated with this article can be found, in the online version, at doi:10.1016/j.ijplas.2026.104730 .
+Data availability
+Data will be made available on request.
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+20 \nReferences
+An, Z., Mao, S., Vayyala, A., et al., 2024. Multiscale hierarchical heterostructure yields combined high strength and excellent ductility in a Co-Cr-Fe-Ni-Al negative 
+enthalpy alloy. Acta Mater. 281, 120366 .
+Arkhurst, B.M., Bae, J.H., Na, M.Y., et al., 2021. Effect of tellurium on the microstructure and mechanical properties of Fe-14Cr oxide-dispersion-strengthened steels 
+produced by additive manufacturing. J. Mater. Sci. Technol. 95, 114–126 .
+Bai, X., Xie, H., Zhang, X., et al., 2024. Heat-resistant super-dispersed oxide strengthened aluminium alloys. Nat. Mater. 23, 747–754 .
+Bai, Y., Li, Y., Liu, Y., et al., 2025. Deformation behavior and strengthening mechanisms of an additively manufactured high-entropy alloy with hierarchical 
+heterostructures. Int. J. Plast. 189, 104347 .
+Cai, Y., Wang, L., Li, J., et al., 2023. Influences of adding Y
+2
+Ti
+2
+O
+7 
+and HfH
+1.98 
+nanoparticles on the microstructure and mechanical properties of oxide dispersion 
+strengthen steels. Mater. Charact. 202, 113040 .
+Cayron, C., Rath, E., Chu, I., et al., 2004. Microstructural evolution of Y
+2
+O
+3 
+and MgAl
+2
+O
+4 
+ODS EUROFER steels during their elaboration by mechanical milling and hot 
+isostatic pressing. J. Nucl. Mater. 335, 83–102 .
+Chang, H.J., Cho, H.Y., Kim, J.H., 2015. Stability of Y–Ti–O nanoparticles during laser melting of advanced oxide dispersion-strengthened steel powder. J. Alloys 
+Compd. 653, 528–533 .
+Chibowski, E., 2007. On some relations between advancing, receding and Young's contact angles. Adv. Colloid Interface Sci. 133, 51–59 .
+Chu, C., Chen, W., Huang, L., et al., 2024. Exceptional strength-ductility synergy at room and liquid nitrogen temperatures of Al7.5Co20.5Fe24Ni24Cr24 high-entropy 
+alloy with hierarchical precipitate heterogeneous structure. Int. J. Plast. 175, 103939 .
+Das, S., Das, S., Das, K., 2014. Synthesis and thermal behavior of Cu/Y
+2
+W
+3
+O
+12 
+composite. Ceram. Int. 40, 6465–6472 .
+Deng, L., Luo, J.R., Tu, J., et al., 2023. Achieving excellent mechanical properties of ODS steel by Y2O3 addition. Mater. Sci. Eng. A 872, 145008 .
+Ding, R., Azadehranjbar, S., Padilla Espinosa, I.M., et al., 2024. Separating geometric and diffusive contributions to the surface nucleation of dislocations in 
+nanoparticles. ACS Nano 18, 4170–4179 .
+Dong, Z., Ma, Z., Yu, L., et al., 2021. Achieving high strength and ductility in ODS-W alloy by employing oxide@W core-shell nanopowder as precursor. Nat. Commun. 
+12, 5052 .
+Doumenc, G., Courant, B., Couturier, L., et al., 2024. Investigation of residual stresses and modeling of tensile deformation in wire-arc additive manufactured 6061 
+aluminum alloy: diffraction and elastoplastic self-consistent model. Mater. Sci. Eng. A 890, 145891 .
+Fan, X., Li, Y., Liu, J., et al., 2025. κ-carbide induced dual-heterogeneous structure pursuing ultrahigh strength and ductility in lightweight steels. Int. J. Plast. 195, 
+104512 .
+Gohil, D.R., Shankar, A., Bhatt, N.K., 2023. Mass transport and thermal properties of liquid (melting to boiling point) tungsten: a molecular dynamics simulations. 
+Phys. Scr. 98, 115963 .
+Gu, Y., Cappola, J., Wang, J., et al., 2023. A Hall-Petch-like relationship linking nanoscale heterogeneity to yield stress of heterogeneous metallic glasses. Int. J. Plast. 
+170, 103759 .
+Huang, B., Zhai, Y., Liu, S., et al., 2018. Microstructure anisotropy and its effect on mechanical properties of reduced activation ferritic/martensitic steel fabricated by 
+selective laser melting. J. Nucl. Mater. 500, 33–41 .
+Jia, H., Zhou, Z., Li, S., 2022. A new strategy for additive manufacturing ODS steel using Y-containing gas atomized powder. Mater. Charact. 187, 111876 .
+Jiang, M.G., Chen, Z.W., Tong, J.D., et al., 2019. Strong and ductile reduced activation ferritic/martensitic steel additively manufactured by selective laser melting. 
+Mater. Res. Lett. 7, 426–432 .
+Ju, Y., Li, S., Yang, X., et al., 2025. Interlayer orientation effects on mechanical response of wire-arc additive manufactured multi-grade steel hybrid sandwich 
+structures. Int. J. Plast. 192, 104435 .
+Kim, R.E., Gu, G.H., Ahn, S.Y., et al., 2024. Dual-gradient structure induced spreadable phase transformation for simultaneously improving strength and ductility. 
+Acta Mater. 275, 120060 .
+King, W.E., Barth, H.D., Castillo, V.M., et al., 2014. Observation of keyhole-mode laser melting in laser powder-bed fusion additive manufacturing. J. Mater. Process. 
+Technol. 214, 2915–2925 .
+Lee, C., Chou, Y., Kim, G., et al., 2020. Lattice-distortion-enhanced yield strength in a refractory high-entropy alloy. Adv. Mater. 32, 49 .
+Lei, Z., Liu, X., Wu, Y., et al., 2018. Enhanced strength and ductility in a high-entropy alloy via ordered oxygen complexes. Nature 563, 546–550 .
+Li, A., Chen, Q., Mao, J., et al., 2025a. Effect of hot isostatic pressing on the microstructure and mechanical properties of selective laser melting FeCrAl ODS alloys. 
+J. Alloys Compd. 1021, 179691 .
+Li, H., Lu, Z., Jin, F., et al., 2025b. Achieving columnar to equiaxed grain transformation in additively manufactured ODS-FeCrAl alloy via inhomogeneous 
+composition distribution in melt pool. J. Alloys Compd. 1013, 178557 .
+Li, J., Guan, Z., Chen, J., et al., 2025c. A novel constitutive model emphasizing disclination-induced back stress in strain hardening. Int. J. Plast. 194, 104486 .
+Li, K., Yang, J., Yi, Y., et al., 2023. Enhanced strength-ductility synergy and mechanisms of heterostructured Ti6Al4V-Cu alloys produced by laser powder bed fusion. 
+Acta Mater. 256, 119112 .
+Li, N., Lei, X., Li, Y., et al., 2025d. Heterogeneous microstructures by combining laser additive manufacturing with auxiliary ultrasound field for strength-ductility 
+betterment. Int. J. Plast. 194, 104481 .
+Li, X., Li, W., Wang, X., et al., 2026. New insights into the hetero-deformation-induced (HDI) hardening and elevated back stress in additively manufactured 316L 
+stainless steel. Int. J. Plast. 199, 104633 .
+Li, X., Lou, T., Sun, X., et al., 2004. Highly sensitive WO
+3 
+hollow-sphere gas sensors. Inorg. Chem. 43, 5442–5449 .
+Li, Y.Z., Liang, Z.Y., Huang, M.X., 2022. Strengthening contributions of dislocations and twins in warm-rolled TWIP steels. Int. J. Plast. 150, 103198 .
+Liu, C.Y., Tong, J.D., Jiang, M.G., et al., 2019. Effect of scanning strategy on microstructure and mechanical properties of selective laser melted reduced activation 
+ferritic/martensitic steel. Mater. Sci. Eng. A 766, 138364 .
+Liu, H., Yu, H., Guo, C., et al., 2023. Review on fatigue of additive manufactured metallic alloys: microstructure, performance, enhancement, and assessment methods. 
+Adv. Mater. 36, 17 .
+Liu, S.Y., Wang, H., Zhang, J.Y., et al., 2022. Trifunctional laves precipitates enabling dual-hierarchical FeCrAl alloys ultra-strong and ductile. Int. J. Plast. 159, 
+103438 .
+Liu, T., Wang, C., Shen, H., et al., 2015. Influence of YH
+2 
+nanoparticles addition on the microstructure and mechanical properties of oxide dispersion strengthened 
+ferritic alloys. Adv. Eng. Mater. 17, 689–696 .
+Liu, T., Wang, L., Wang, C., et al., 2016. Effect of Al content on the oxidation behavior of Y
+2
+Ti
+2
+O
+7
+-dispersed Fe-14Cr ferritic alloys. Corros. Sci. 104, 17–25 .
+Liu, T., Wang, L., Wang, C., et al., 2015. Feasibility of using Y
+2
+Ti
+2
+O
+7 
+nanoparticles to fabricate high strength oxide dispersion strengthened Fe–Cr–Al steels. Mater. 
+Des. 88, 862–870 .
+Lu, K., Chauhan, A., Litvinov, D., et al., 2023. Cooperative deformation mechanisms in a fatigued CoCrNi multi-principal element alloy: a case of low stacking fault 
+energy. J. Mech. Phys. Solids 180, 105419 .
+Lv, J., Lu, H., Liang, Y., et al., 2025. Stimulating multi-scale gradient heterostructure in laser direct energy deposited and hybrid additive manufactured AA7075 alloy 
+via double-aging heat treatment to realize strength-ductility synergy. Addit. Manuf. 109, 104861 .
+Lv, Y., Zhao, S., Liu, T., et al., 2023. Phase transformation and hydrogen reduction behavior of nanoscale W-Y
+2
+O
+3 
+powders synthesized by nano in-situ composite 
+method. Int. J. Refract. Met. Hard Mater. 110, 106030 .
+Ma, S., Yin, N., Zhao, B., et al., 2026. Exploring the origin of Mo alloy incompatibility with additive manufacturing for room-temperature strength-ductility synergy. 
+J. Mater. Process. Technol. 347, 119158 .
+McClintock, D.A., Sokolov, M.A., Hoelzer, D.T., et al., 2009. Mechanical properties of irradiated ODS-EUROFER and nanocluster strengthened 14YWT. J. Nucl. Mater. 
+392, 353–359 .
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+21 \nNiu, P., Li, R., Gan, K., et al., 2024. Manipulating stacking fault energy to achieve crack inhibition and superior strength–Ductility synergy in an additively 
+manufactured high-entropy alloy. Adv. Mater. 36, 34 .
+Peng, Y., Li, C., Song, M., et al., 2025. Breaking the strength-ductility trade-off in aluminum matrix composite through "dual-metal" heterogeneous structure and 
+interface control. Int. J. Plast. 185, 104216 .
+Ren, N., Li, J., Zhang, R., et al., 2023. Solute trapping and non-equilibrium microstructure during rapid solidification of additive manufacturing. Nat. Commun. 14, 
+7990 .
+Saville, A.I., Benzing, J.T., Vogel, S.C., et al., 2022. Schmid factor crack propagation and tracking crystallographic texture markers of microstructural condition in 
+direct energy deposition additive manufacturing of Ti-6Al-4V. Addit. Manuf. 58, 103023 .
+Shang, Z., Ding, J., Fan, C., et al., 2019. Tailoring the strength and ductility of T91 steel by partial tempering treatment. Acta Mater. 169, 209–224 .
+Shen, J., Li, Y., Li, F., et al., 2016. Microstructural characterization and strengthening mechanisms of a 12Cr-ODS steel. Mater. Sci. Eng. A 673, 624–632 .
+Shen, J., Zhang, C., Pan, Z., et al., 2025. Hetero-lamellar structure design for enhanced strength and ductility of Ti enabled via additive manufacturing. Mater. Res. 
+Lett. 1–9 .
+Shi, Y., Lu, Z., Xu, H., et al., 2019. Microstructure characterization and mechanical properties of laser additive manufactured oxide dispersion strengthened Fe-9Cr 
+alloy. J. Alloys Compd. 791, 121–133 .
+Smith, T.M., Kantzos, C.A., Zarkevich, N.A., et al., 2023. A 3D printable alloy designed for extreme environments. Nature 617, 513–518 .
+Sohail, Y., Zhang, C., Gao, S., et al., 2024. A complex concentrated alloy with record-high strength-toughness at 77 K. Adv. Mater. 37 .
+Sohrabi, M.J., Mirzadeh, H., Sadeghpour, S., et al., 2024. Interplay between temperature-dependent strengthening mechanisms and mechanical stability in high- 
+performance austenitic stainless steels. Int. J. Miner. Metall. Mater. 31, 2182–2188 .
+Spartacus, G., Malaplate, J., De Geuser, F., et al., 2024. Precipitation kinetics of ferritic /martensitic oxide dispersion strengthened steels: influence of the matrix phase 
+transformation. Acta Mater. 280, 120328 .
+Su, J., Chen, L., Van Petegem, S., et al., 2025. Additive manufacturing metallurgy guided machine learning design of versatile alloys. Mater. Today 88, 240–250 .
+Tan, Q., Chang, H., Liang, G., et al., 2024. High performance plain carbon steels obtained through 3D-printing. Nat. Commun. 15 .
+Tekumalla, S., Seita, M., Zaefferer, S., 2024. Delineating dislocation structures and residual stresses in additively manufactured alloys. Acta Mater. 262, 119413 .
+Wang, G., Li, Y., Zhang, J., et al., 2020. Design and preliminary characterization of a novel carbide-free 9Cr-ODS martensitic steel. Fusion Eng. Des. 160, 111824 .
+Wang, L., Ding, J., Chen, S., et al., 2023. Tailoring planar slip to achieve pure metal-like ductility in body-centred-cubic multi-principal element alloys. Nat. Mater. 22, 
+950–957 .
+Wang, L., Gao, S., Li, H., et al., 2025a. Effects of laser power and Y
+2
+O
+3
+/Ti contents on microstructure and hardness of ODS-CrFeNi medium entropy alloys by additive 
+manufacturing. Mater. Charact. 223, 114897 .
+Wang, R., Tang, Y., Ai, Y., et al., 2024. Strengthening and ductilization of a refractory high-entropy alloy over a wide strain rate range by multiple heterostructures. 
+Int. J. Plast. 173, 103882 .
+Wang, X., Schiavone, P., 2025. A Zener-Stroh crack along the interface of a rigid elliptical inhomogeneity in an anisotropic elastic matrix. Acta Mech. 236, 139–151 .
+Wang, Y., Peng, Y., Wang, B., et al., 2025b. Regulating heat input for additive manufacturing of oxide inclusions-free ODS-FeCrAl steel. J. Mater. Res. Technol. 36, 
+5978–5984 .
+Wilms, M.B., Rittinghaus, S.K., Goßling, M., et al., 2023. Additive manufacturing of oxide-dispersion strengthened alloys: materials, synthesis and manufacturing. 
+Prog. Mater. Sci. 133, 101049 .
+Wu, Y., Xu, S., Wu, R., et al., 2025. Microstructure-informed crystal plasticity modeling incorporating initial intragranular heterogeneities: insights into deformation 
+mechanisms of additively manufactured alloy. Int. J. Plast. 195 .
+Xing, Z., Shen, C., Li, C., 2020. Synthesis and microwave dielectric properties of an electronic ceramic Y2WO6 for wireless communications. Phys. Lett. A 384, 
+126811 .
+Xu, S., Zhou, Z., Zheng, W., et al., 2019. Mechanical properties evaluation and plastic instabilities of Fe-9%Cr ODS steels. Fusion Eng. Des. 149, 111335 .
+Xu, X.Y., Li, Y.Z., Huang, C.P., et al., 2025. Precipitation-induced thermal-athermal shift in dislocation plasticity of a Mg alloy. Int. J. Plast. 194, 104496 .
+Yang, M., Li, J., Dong, S., et al., 2026. Tailoring dislocation structure and constructing coherent Y2Ti2O7 and laves stacking faults in 9Cr ODS alloys: a multiple 
+strategy to enhance the strength and ductility. Int. J. Plast. 196, 104577 .
+Yang, Q., Wei, K., Qu, Z., et al., 2024. In-situ X-ray computed tomography of high-temperature tensile behavior for laser powder bed fused Invar 36 alloy. Addit. 
+Manuf. 83, 104072 .
+Yin, Y., Zhang, J., Pan, S., et al., 2023. Room- and elevated-temperature mechanical property of selective laser melting-fabricated Hastelloy X with different heat 
+treatments. Mater. Sci. Eng. A 886, 145697 .
+Zhai, Y., Huang, B., Mao, X., et al., 2019. Effect of hot isostatic pressing on microstructure and mechanical properties of CLAM steel produced by selective laser 
+melting. J. Nucl. Mater. 515, 111–121 .
+Zhang, C., Fu, J., Li, R., et al., 2014. Solute/impurity diffusivities in bcc Fe: a first-principles study. J. Nucl. Mater. 455, 354–359 .
+Zhang, H., Sun, L., He, Z., et al., 2026. Achieving high strength-ductility synergy in a body-centered cubic FeMnCoCrN compositionally complex alloy via multi- 
+heterostructure design. Int. J. Plast. 199, 104639 .
+Zhang, S., Li, K., Zhang, W., et al., 2023. A novel additive manufactured reduced activation ferritic/martensitic steel enhanced by in-situ nanoparticles benefiting from 
+oxygen addition. Scr. Mater. 235, 115627 .
+Zhang, Y., Chen, B., Guan, D., et al., 2021. Thermal-expansion offset for high-performance fuel cell cathodes. Nature 591, 246–251 .
+Zhao, H., Liu, T., Bai, Z., et al., 2020. Corrosion behavior of 14Cr ODS steel in supercritical water: the influence of substituting Y
+2
+O
+3 
+with Y
+2
+Ti
+2
+O
+7 
+nanoparticles. 
+Corros. Sci. 163, 108272 .
+Zhao, J., Zhang, X., Chen, H., et al., 2026. Dislocation mechanism-based strain gradient plasticity modeling of interface-dominated deformation in heterostructured 
+metals. Int. J. Plast. 199, 104650 .
+Zhao, S., Song, G., Zhang, T., 2024. Microstructures, electrical and mechanical properties of an ODS-Cu alloy containing multi-scale complex oxides. Mater. Sci. Eng. A 
+829, 142071 .
+Zheng, Q., Yin, Y., Lu, C., et al., 2025. Research progress on laser additive manufacturing of oxide dispersion-strengthened alloys—A review. Materials 18, 4094. 
+Basel) . 
+Zhong, W., Sridharan, N., Isheim, D., et al., 2021. Microstructures and mechanical properties of a modified 9Cr ferritic-martensitic steel in the as-built condition after 
+additive manufacturing. J. Nucl. Mater. 545, 152742 .
+Zhou, X., Li, G., Shen, X., et al., 2022a. Tensile strength improvement of martensitic ODS steels with Zr and Hf additions. Mater. Sci. Eng. A 829, 142071 .
+Zhou, Y., Yin, S., Jiang, Y., et al., 2022b. Wire and arc additive manufacturing fabrication of ODS-RAFM steels and preliminary evaluation on microstructures and 
+mechanical properties. J. Nucl. Mater. 572, 154068 .
+M. Yang et al.                                                                                                                                                                                                          International Journal of Plasticity 203 (2026) 104730 
+22 
